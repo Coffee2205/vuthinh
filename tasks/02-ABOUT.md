@@ -8,7 +8,7 @@
 - [x] Sứ mệnh.
 - [x] Giá trị cốt lõi.
 - [x] Triết lý giáo dục.
-- [ ] CTA đăng ký tư vấn/học thử.
+- [x] CTA đăng ký tư vấn/học thử.
 
 ## Tiêu chí
 
@@ -81,3 +81,20 @@
 - Accessibility: section dùng `aria-labelledby`, danh sách `ol`/`li`, cấu trúc `h2`/`h3`; số thứ tự trang trí được ẩn khỏi assistive technology.
 - Giới hạn: câu chữ Triết lý giáo dục chưa được khách hàng và đội ngũ chuyên môn duyệt bản cuối; chưa kiểm tra trực quan trên thiết bị thật/browser automation.
 - Commit: `f2cbd34` — `feat: add education philosophy section`.
+
+## Kết quả thực hiện — CTA đăng ký tư vấn/học thử
+
+- File tạo: `src/components/about/AboutCtaSection.tsx`.
+- File sửa: `src/app/about/page.tsx`, `src/data/about.ts`, `tasks/02-ABOUT.md` và các project log liên quan.
+- Quyết định: CTA dẫn tới `/#trial-registration`, là anchor có thật trên trang chủ; chưa dùng `/consultation` vì route này thuộc Task 04 và chưa tồn tại, không giả lập gửi hoặc lưu dữ liệu.
+- Kiểm tra: `npm.cmd run lint` đạt; `npm.cmd run build` đạt, `/` và `/about` được prerender tĩnh; production local trả HTTP 200 cho cả hai route, HTML build có href và id đích khớp nhau.
+- Responsive: nội dung căn giữa, padding mobile-first và nút có chiều cao tối thiểu 44px.
+- Accessibility: section dùng `aria-labelledby`, heading đúng cấp, link có focus-visible và chi tiết trang trí dùng `aria-hidden`.
+- Giới hạn: form đích vẫn ở trạng thái xem trước, chưa gửi/lưu dữ liệu đến Task 07; CTA tư vấn riêng chờ route `/consultation` trong Task 04; chưa kiểm tra trực quan trên thiết bị thật/browser automation.
+- Commit: chờ tạo commit.
+
+## Trạng thái Task 02
+
+- Hoàn thành toàn bộ 7 mục theo checklist Trang Giới thiệu.
+- Lint, build và production runtime đạt tại lần kiểm tra cuối ngày 2026-07-15.
+- Các nội dung cần khách hàng duyệt và giới hạn route/form tiếp tục được theo dõi trong `project-log/ISSUES.md`.

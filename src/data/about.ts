@@ -155,3 +155,15 @@ export const educationPhilosophyContent = {
   ],
   note: "Nội dung Triết lý giáo dục được diễn giải từ định vị dự án và cần khách hàng cùng đội ngũ chuyên môn duyệt trước khi công bố chính thức.",
 } as const;
+
+export const aboutCtaContent = {
+  eyebrow: "Bắt đầu hành trình",
+  title: "Cùng tìm hiểu hướng học phù hợp cho nhu cầu hiện tại",
+  description:
+    "Bạn có thể xem phần đăng ký học thử để tham khảo thông tin cần chuẩn bị trước khi Vũ Thịnh mở tiếp nhận và xác nhận nhu cầu.",
+  action: {
+    label: "Xem đăng ký học thử",
+    href: "/#trial-registration",
+  },
+  note: "Form hiện đang ở trạng thái xem trước và chưa gửi hoặc lưu dữ liệu.",
+} as const;

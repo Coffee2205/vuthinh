@@ -8,7 +8,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 
 ## Task hiện tại
 
-`Task 02 — Trang Giới thiệu` đang thực hiện theo từng phần. Sáu phần đầu đã hoàn thành; chưa bắt đầu CTA đăng ký tư vấn/học thử.
+`Task 02 — Trang Giới thiệu` đã hoàn thành toàn bộ 7 mục theo checklist. `Task 03 — Chương trình và khóa học` là task tiếp theo nhưng chưa bắt đầu.
 
 ## Đã hoàn thành
 
@@ -147,9 +147,19 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - Nội dung không tự tạo phương pháp giảng dạy, cam kết đầu ra hoặc tuyên bố chuyên môn.
 - Câu chữ được ghi rõ cần khách hàng và đội ngũ chuyên môn duyệt trước production.
 
+### Task 02 — CTA đăng ký tư vấn/học thử
+
+- Đã thêm CTA cuối `/about` dẫn tới anchor học thử có thật trên trang chủ.
+- CTA ghi rõ form đích đang ở trạng thái xem trước và chưa gửi hoặc lưu dữ liệu.
+- Không tạo route tư vấn, form backend hoặc chức năng thuộc Task 04/07.
+
+### Trạng thái Task 02
+
+- Hoàn thành toàn bộ checklist Trang Giới thiệu.
+- Task 02 không còn phần giao diện chưa hoàn thành.
+
 ## Chưa thực hiện
 
-- Các phần còn lại của Trang Giới thiệu.
 - Chương trình và khóa học.
 - Trang chuyên gia và đăng ký tư vấn.
 - Blog và tài liệu miễn phí.
@@ -164,7 +174,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - `node_modules`: Đã có; các dependency chính được nhận diện.
 - `npm.cmd run lint`: Đạt ngày 2026-07-15, không có lỗi ESLint.
 - `npm.cmd run build`: Đạt ngày 2026-07-15; compile, TypeScript và static generation thành công.
-- Runtime `/about`: HTTP 200, có đủ ba trụ cột Triết lý giáo dục; chưa có CTA đăng ký của Task 02.
+- Runtime `/about` và `/`: HTTP 200; CTA hiển thị, href `/#trial-registration` và id đích `trial-registration` cùng tồn tại trong HTML build.
 
 ## Trạng thái project local
 
@@ -188,7 +198,8 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - Mission Section đã được commit tại `8f55a44` — `feat: add about mission section`.
 - Core Values Section đã được commit tại `8b5821c` — `feat: add about core values section`.
 - Education Philosophy Section đã được commit tại `f2cbd34` — `feat: add education philosophy section`.
+- About CTA Section đã hoàn thành source và kiểm tra; chờ tạo commit.
 
 ## Task tiếp theo
 
-Tiếp tục `Task 02 — Trang Giới thiệu` bằng CTA đăng ký tư vấn/học thử. Chưa bắt đầu phần này.
+`Task 03 — Chương trình và khóa học`. Bước đầu tiên là danh sách nhóm chương trình; Task 03 chưa bắt đầu.

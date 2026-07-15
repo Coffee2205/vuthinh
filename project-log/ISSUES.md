@@ -285,3 +285,12 @@
 **Ảnh hưởng:** Không chặn kỹ thuật hoặc layout; cần duyệt nội dung trước production và không nên suy diễn thành phương pháp giảng dạy cụ thể.
 
 **Cần từ khách hàng:** Xác nhận hoặc chỉnh sửa tuyên bố chung cùng nội dung của ba trụ cột Trí tuệ, Ngôn ngữ và Nhân cách.
+
+---
+
+## Trạng thái CTA Trang Giới thiệu và Task 02
+
+- Không còn blocker kỹ thuật cho CTA hoặc giao diện Task 02; lint, build, runtime và liên kết nguồn/đích đều đạt.
+- CTA dẫn tới form preview đang khóa; giới hạn vận hành tiếp tục được theo dõi tại `ISSUE-015`.
+- Route `/consultation` chưa được triển khai vì thuộc Task 04; không tạo link tới route này trong Task 02.
+- Các nội dung thương hiệu cần duyệt tiếp tục được theo dõi tại `ISSUE-016` đến `ISSUE-020`.

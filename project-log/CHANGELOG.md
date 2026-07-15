@@ -480,3 +480,33 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 ### Commit
 
 - `f2cbd34` — `feat: add education philosophy section`.
+
+## 2026-07-15 — Task 02: CTA đăng ký và hoàn tất Trang Giới thiệu
+
+### Added
+
+- About CTA Section dẫn tới phần đăng ký học thử hiện hữu trên trang chủ.
+- Ghi chú minh bạch về trạng thái xem trước của form.
+
+### Changed
+
+- `/about` hoàn thành toàn bộ 7 phần theo checklist Task 02.
+- Trạng thái dự án chuyển sang Task 03 là task tiếp theo nhưng chưa bắt đầu.
+
+### Verified
+
+- `npm.cmd run lint` đạt.
+- `npm.cmd run build` đạt; `/` và `/about` được prerender tĩnh.
+- Production runtime trả HTTP 200 cho cả `/about` và `/`.
+- HTML build xác nhận CTA có `href="/#trial-registration"` và trang chủ có `id="trial-registration"`.
+- Heading, focus-visible, kích thước nút và breakpoint responsive đã được rà trong source.
+
+### Known issues
+
+- Form đích chưa gửi hoặc lưu dữ liệu; phần này thuộc Task 07.
+- CTA tư vấn riêng chờ route `/consultation` trong Task 04.
+- Chưa kiểm tra trực quan bằng browser automation hoặc thiết bị thật.
+
+### Commit
+
+- Chờ tạo commit.

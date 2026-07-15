@@ -213,3 +213,11 @@ Mỗi quyết định phải ghi ngày, nội dung, lý do và ảnh hưởng.
 **Lý do:** Đây là căn cứ rõ nhất cho quan điểm giáo dục hiện tại; project chưa có tài liệu xác nhận phương pháp sư phạm hoặc cam kết đầu ra cụ thể.
 
 **Ảnh hưởng:** Section chỉ mô tả định hướng Trí tuệ, Ngôn ngữ và Nhân cách, kèm yêu cầu khách hàng cùng đội ngũ chuyên môn duyệt trước production.
+
+## 2026-07-15 — CTA Trang Giới thiệu dùng anchor học thử hiện hữu
+
+**Quyết định:** CTA cuối `/about` dẫn tới `/#trial-registration` và nêu rõ form đang ở trạng thái xem trước.
+
+**Lý do:** Anchor đích đã tồn tại; `/consultation` thuộc Task 04 và chưa được triển khai nên không dùng làm link chết hoặc mở rộng phạm vi.
+
+**Ảnh hưởng:** Người dùng có thể điều hướng tới thông tin đăng ký hiện hữu mà không bị hiểu nhầm rằng dữ liệu đang được tiếp nhận; CTA tư vấn riêng chờ đúng task.
