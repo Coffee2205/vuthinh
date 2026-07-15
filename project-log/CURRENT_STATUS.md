@@ -145,7 +145,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - Parent Testimonials đã được commit tại `71f7096` — `feat: add parent testimonials empty state`.
 - Featured Content đã được commit tại `9ea640a` — `feat: add featured content empty states`.
 - Trial Registration đã được commit tại `d31578f` — `feat: add trial registration form preview`.
-- Final CTA đang chờ commit sau khi hoàn tất log.
+- Final CTA và Task 01 đã được commit tại `8e64187` — `feat: complete home page final cta`.
 
 ## Task tiếp theo
 

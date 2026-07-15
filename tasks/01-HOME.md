@@ -236,7 +236,7 @@ Tạo trang chủ thuyết phục phụ huynh và dẫn người dùng đến đ
 - Responsive: nội dung căn giữa, padding mobile-first và kích thước nút tối thiểu 44px.
 - Accessibility: `aria-labelledby`, heading đúng cấp, focus-visible và chi tiết trang trí `aria-hidden` đã được rà.
 - Giới hạn: CTA đưa về form preview đang khóa cho tới Task 07; chưa kiểm tra trực quan trên thiết bị thật/browser automation.
-- Commit: sẽ cập nhật sau khi commit.
+- Commit: `8e64187` — `feat: complete home page final cta`.
 
 ## Trạng thái Task 01
 

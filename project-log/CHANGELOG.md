@@ -315,4 +315,4 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 
 ### Commit
 
-- Sẽ cập nhật sau khi commit.
+- `8e64187` — `feat: complete home page final cta`.
