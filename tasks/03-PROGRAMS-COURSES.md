@@ -52,4 +52,4 @@
 - Responsive: nhóm nút tự xuống dòng; danh sách giữ một cột mobile, hai cột từ `sm`, ba cột từ `lg`.
 - Accessibility: bộ lọc có `role="group"`/`aria-label`, nút có `aria-pressed`, chiều cao tối thiểu 44px, focus-visible và kết quả dùng `role="status"`/`aria-live`.
 - Giới hạn: chưa kiểm tra thao tác click trực quan bằng browser automation/thiết bị thật; chưa làm danh sách khóa học hoặc phần tiếp theo.
-- Commit: chờ tạo commit.
+- Commit: `bd88cda` — `feat: add program category filter`.
