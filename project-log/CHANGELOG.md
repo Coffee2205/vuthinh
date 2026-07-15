@@ -288,3 +288,31 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 ### Commit
 
 - `d31578f` — `feat: add trial registration form preview`.
+
+## 2026-07-15 — Task 01: CTA cuối trang
+
+### Added
+
+- Final CTA Section với một hành động chính dẫn tới form học thử trên cùng trang.
+- Anchor `trial-registration` cho section form.
+
+### Changed
+
+- Trang chủ hoàn thành toàn bộ 10 section theo checklist Task 01.
+- Trạng thái dự án chuyển sang Task 02 là task tiếp theo nhưng chưa bắt đầu.
+
+### Verified
+
+- `npm.cmd run lint` đạt.
+- `npm.cmd run build` đạt; TypeScript, static generation và prerender route `/` thành công.
+- Production runtime local trả HTTP 200; CTA nằm sau form, href/id khớp và không có nội dung Task 02.
+- Semantic heading, focus-visible, kích thước nút và breakpoint responsive đã được rà trong source.
+
+### Known issues
+
+- Form đích vẫn bị khóa cho tới khi hoàn thành xử lý dữ liệu trong Task 07.
+- Chưa kiểm tra trực quan bằng browser automation hoặc thiết bị thật.
+
+### Commit
+
+- Sẽ cập nhật sau khi commit.

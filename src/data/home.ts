@@ -211,3 +211,11 @@ export const trialRegistrationContent = {
   ],
   submitLabel: "Chưa thể gửi đăng ký",
 } as const;
+
+export const finalCtaContent = {
+  eyebrow: "Bắt đầu từ một bước nhỏ",
+  title: "Cùng tìm hiểu hướng học phù hợp cho hành trình phía trước",
+  description:
+    "Xem thông tin cần chuẩn bị cho đăng ký học thử và lựa chọn chương trình phù hợp với nhu cầu của người học.",
+  action: { href: "#trial-registration", label: "Xem form đăng ký học thử" },
+} as const;

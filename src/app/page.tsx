@@ -1,5 +1,6 @@
 import { ExpertSection } from "@/components/home/ExpertSection";
 import { FeaturedContentSection } from "@/components/home/FeaturedContentSection";
+import { FinalCtaSection } from "@/components/home/FinalCtaSection";
 import { HeroSection } from "@/components/home/HeroSection";
 import { LearningJourneySection } from "@/components/home/LearningJourneySection";
 import { ParentTestimonialsSection } from "@/components/home/ParentTestimonialsSection";
@@ -20,6 +21,7 @@ export default function Home() {
       <ParentTestimonialsSection />
       <FeaturedContentSection />
       <TrialRegistrationSection />
+      <FinalCtaSection />
     </>
   );
 }

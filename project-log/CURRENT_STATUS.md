@@ -8,7 +8,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 
 ## Task hiện tại
 
-`Task 01 — Trang chủ` đang thực hiện theo từng section. Chín section đầu đã hoàn thành; chưa bắt đầu CTA cuối trang.
+`Task 01 — Trang chủ` đã hoàn thành toàn bộ 10 section trong phạm vi giao diện. `Task 02 — Trang Giới thiệu` là task tiếp theo và chưa bắt đầu.
 
 ## Đã hoàn thành
 
@@ -101,9 +101,18 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - Form đang bị khóa và thông báo rõ chưa mở nhận đăng ký; không làm thất lạc hoặc giả lập lưu dữ liệu.
 - Kết nối database, validation và trạng thái gửi nghiệp vụ vẫn thuộc Task 07.
 
+### Task 01 — CTA cuối trang
+
+- Đã thêm một CTA chính dẫn nội bộ tới form học thử trên cùng trang.
+- Anchor và đích liên kết tồn tại, không tạo route hoặc chức năng ngoài Task 01.
+
+### Trạng thái Task 01
+
+- Hoàn thành toàn bộ checklist giao diện trang chủ.
+- Task 02 chưa có code và chưa bắt đầu.
+
 ## Chưa thực hiện
 
-- Các section còn lại để hoàn thiện trang chủ.
 - Trang Giới thiệu.
 - Chương trình và khóa học.
 - Trang chuyên gia và đăng ký tư vấn.
@@ -119,7 +128,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - `node_modules`: Đã có; các dependency chính được nhận diện.
 - `npm.cmd run lint`: Đạt ngày 2026-07-15, không có lỗi ESLint.
 - `npm.cmd run build`: Đạt ngày 2026-07-15; compile, TypeScript và static generation thành công.
-- Runtime `/`: HTTP 200, có đủ trường Form đăng ký học thử ở trạng thái disabled; CTA cuối trang chưa xuất hiện.
+- Runtime `/`: HTTP 200, CTA cuối trang nằm sau form và liên kết đúng tới `#trial-registration`; không có nội dung Task 02.
 
 ## Trạng thái project local
 
@@ -136,7 +145,8 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - Parent Testimonials đã được commit tại `71f7096` — `feat: add parent testimonials empty state`.
 - Featured Content đã được commit tại `9ea640a` — `feat: add featured content empty states`.
 - Trial Registration đã được commit tại `d31578f` — `feat: add trial registration form preview`.
+- Final CTA đang chờ commit sau khi hoàn tất log.
 
 ## Task tiếp theo
 
-Tiếp tục `Task 01 — Trang chủ` bằng section “CTA cuối trang”. Chưa bắt đầu section này.
+`Task 02 — Trang Giới thiệu`. Bước đầu tiên là chỉ thực hiện phần “Giới thiệu trung tâm”; Task 02 chưa bắt đầu.

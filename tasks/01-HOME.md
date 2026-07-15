@@ -15,7 +15,7 @@ Tạo trang chủ thuyết phục phụ huynh và dẫn người dùng đến đ
 - [x] Cảm nhận phụ huynh.
 - [x] Bài viết/tài liệu nổi bật.
 - [x] Form đăng ký học thử.
-- [ ] CTA cuối trang.
+- [x] CTA cuối trang.
 
 ## Quy tắc
 
@@ -226,3 +226,20 @@ Tạo trang chủ thuyết phục phụ huynh và dẫn người dùng đến đ
 - Accessibility: label gắn trực tiếp với control, `fieldset`/`legend`, `aria-describedby`, `role=status`, autocomplete và loại input phù hợp đã được rà.
 - Giới hạn: form chưa thể submit, chưa có validation/loading/success/error nghiệp vụ hoặc lưu dữ liệu; các phần này thuộc Task 07. Chưa kiểm tra trực quan trên thiết bị thật/browser automation.
 - Commit: `d31578f` — `feat: add trial registration form preview`.
+
+## Kết quả thực hiện — CTA cuối trang
+
+- File tạo: `src/components/home/FinalCtaSection.tsx`.
+- File sửa: `src/components/home/TrialRegistrationSection.tsx`, `src/data/home.ts`, `src/app/page.tsx`, `tasks/01-HOME.md` và các project log liên quan.
+- Quyết định: chỉ dùng một CTA chính và liên kết nội bộ tới `#trial-registration`; không tạo route mới hoặc hành động thứ hai cùng mức độ nổi bật.
+- Kiểm tra: `npm.cmd run lint` đạt; `npm.cmd run build` đạt và route `/` được prerender tĩnh; runtime production local HTTP 200, href/id khớp, CTA nằm sau form và chưa có nội dung Task 02.
+- Responsive: nội dung căn giữa, padding mobile-first và kích thước nút tối thiểu 44px.
+- Accessibility: `aria-labelledby`, heading đúng cấp, focus-visible và chi tiết trang trí `aria-hidden` đã được rà.
+- Giới hạn: CTA đưa về form preview đang khóa cho tới Task 07; chưa kiểm tra trực quan trên thiết bị thật/browser automation.
+- Commit: sẽ cập nhật sau khi commit.
+
+## Trạng thái Task 01
+
+- Hoàn thành toàn bộ 10 section theo checklist ở phạm vi giao diện trang chủ.
+- Lint, build và production runtime đạt tại lần kiểm tra cuối ngày 2026-07-15.
+- Các giới hạn dữ liệu, route đích và form backend vẫn được theo dõi trong `project-log/ISSUES.md` và thuộc các task sau.

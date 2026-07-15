@@ -157,3 +157,11 @@ Mỗi quyết định phải ghi ngày, nội dung, lý do và ảnh hưởng.
 **Lý do:** Supabase, validation server, chống submit lặp và lưu `course_registrations` thuộc Task 07, chưa được triển khai.
 
 **Ảnh hưởng:** Người dùng thấy trước thông tin cần cung cấp nhưng không thể gửi dữ liệu vào một luồng chưa hoạt động; form sẽ được kích hoạt trong Task 07.
+
+## 2026-07-15 — CTA cuối trang liên kết nội bộ tới form học thử
+
+**Quyết định:** CTA cuối trang chỉ có một hành động chính, dùng anchor `#trial-registration` tới form preview hiện có.
+
+**Lý do:** CTA hoạt động ngay trong phạm vi trang chủ, tránh dẫn người dùng tới route `/trial-registration` chưa được triển khai và tuân thủ quy tắc không đặt nhiều CTA ngang cấp.
+
+**Ảnh hưởng:** CTA không tạo thêm route hoặc logic gửi dữ liệu; khi form được kích hoạt trong Task 07, liên kết nội bộ vẫn giữ nguyên giá trị sử dụng.

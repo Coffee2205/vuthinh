@@ -212,3 +212,11 @@
 **Ảnh hưởng:** Chưa thể nhận đăng ký thật. Không còn blocker kỹ thuật cho phần giao diện form của Task 01, nhưng đây là blocker vận hành trước production.
 
 **Cách xử lý dự kiến:** Kích hoạt form và kết nối bảng `course_registrations` trong Task 07 sau khi có schema, biến môi trường và RLS phù hợp.
+
+---
+
+## Trạng thái CTA cuối trang và Task 01
+
+- Không còn blocker kỹ thuật cho CTA cuối trang.
+- Toàn bộ checklist giao diện Task 01 đã hoàn thành; lint, build và runtime đạt.
+- CTA dẫn tới form preview đang khóa; giới hạn vận hành tiếp tục được theo dõi tại `ISSUE-015`.
