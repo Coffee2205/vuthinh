@@ -41,4 +41,4 @@
 - Responsive: một cột trên mobile, hai cột từ `sm` và ba cột từ `lg`.
 - Accessibility: page có `main`, section dùng `aria-labelledby`, một `h1`, danh sách `ul`/`li` và heading nhóm `h2`; số thứ tự trang trí được ẩn khỏi assistive technology.
 - Giới hạn: chưa có dữ liệu khóa học chi tiết được khách hàng xác nhận; chưa làm bộ lọc hoặc các phần tiếp theo; chưa kiểm tra trực quan trên thiết bị thật/browser automation.
-- Commit: chờ tạo commit.
+- Commit: `3119778` — `feat: add program group listing`.
