@@ -77,6 +77,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - Không có development server đang được duy trì sau phiên rà soát.
 - Task 00 đã được commit và push lên `origin/dev`.
 - Commit nền tảng gần nhất trước Hero: `3e5949b` — `feat: complete project foundation`.
+- Hero Section đã được commit tại `3a0e2b4` — `feat: add home hero section`.
 
 ## Task tiếp theo
 

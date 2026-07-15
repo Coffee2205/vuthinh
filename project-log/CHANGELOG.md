@@ -78,3 +78,7 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 - Chưa có ảnh thật cho Hero.
 - Các route đích của CTA chưa được triển khai.
 - Chưa kiểm tra trực quan bằng browser automation hoặc thiết bị thật.
+
+### Commit
+
+- `3a0e2b4` — `feat: add home hero section`.

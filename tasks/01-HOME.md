@@ -65,4 +65,4 @@ Tạo trang chủ thuyết phục phụ huynh và dẫn người dùng đến đ
 
 ### Commit
 
-- Chưa cập nhật; sẽ ghi sau khi tạo commit cho Hero Section.
+- `3a0e2b4` — `feat: add home hero section`.
