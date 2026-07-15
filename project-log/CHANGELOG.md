@@ -141,3 +141,26 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 ### Commit
 
 - `ebf2d2b` — `feat: add featured programs section`.
+
+## 2026-07-15 — Task 01: Hành trình học tập
+
+### Added
+
+- Timeline bốn bước từ chia sẻ nhu cầu đến bắt đầu và duy trì trao đổi.
+- Ghi chú minh bạch về tư vấn thủ công và chưa có roadmap tự động.
+
+### Changed
+
+- Trang chủ hiển thị Learning Journey sau Programs Section.
+- Bổ sung dữ liệu tĩnh trong `src/data/home.ts`.
+
+### Verified
+
+- Lint và build đạt; TypeScript/static generation thành công.
+- Runtime `/` trả HTTP 200 và có đủ bốn bước.
+- Ordered list, heading và breakpoint responsive đã được rà.
+
+### Known issues
+
+- Nội dung chưa được khách hàng duyệt bản cuối.
+- Chưa kiểm tra trực quan bằng thiết bị thật/browser automation.

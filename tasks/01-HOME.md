@@ -9,7 +9,7 @@ Tạo trang chủ thuyết phục phụ huynh và dẫn người dùng đến đ
 - [x] Hero.
 - [x] Vì sao phụ huynh tin tưởng.
 - [x] Chương trình học nổi bật.
-- [ ] Hành trình học tập.
+- [x] Hành trình học tập.
 - [ ] Giới thiệu chuyên gia.
 - [ ] Thành quả học viên.
 - [ ] Cảm nhận phụ huynh.
@@ -142,3 +142,39 @@ Tạo trang chủ thuyết phục phụ huynh và dẫn người dùng đến đ
 ### Commit
 
 - `ebf2d2b` — `feat: add featured programs section`.
+
+## Kết quả thực hiện — Hành trình học tập
+
+### File đã tạo
+
+- `src/components/home/LearningJourneySection.tsx`: timeline bốn bước responsive.
+
+### File đã sửa
+
+- `src/data/home.ts`: bổ sung dữ liệu hành trình.
+- `src/app/page.tsx`: gắn Learning Journey sau Programs Section.
+- `tasks/01-HOME.md` và các project log liên quan.
+
+### Quyết định kỹ thuật
+
+- Hành trình chỉ mô tả quy trình định hướng từ chia sẻ nhu cầu đến bắt đầu học; không tạo roadmap cá nhân hóa hay cam kết kết quả.
+- Dùng semantic ordered list và Server Component; dữ liệu tĩnh đặt trong `src/data/home.ts`.
+- Ghi rõ tư vấn/xác nhận thủ công và chưa có lộ trình tự động trong Giai đoạn 1.
+
+### Kiểm tra
+
+- `npm.cmd run lint`: Đạt ngày 2026-07-15.
+- `npm.cmd run build`: Đạt ngày 2026-07-15; TypeScript và static generation thành công.
+- Runtime `/`: HTTP 200, có heading, đủ bốn bước và ghi chú giới hạn.
+- Responsive: một cột mobile, hai cột tablet, bốn cột desktop; chưa kiểm tra trực quan trên thiết bị thật.
+- Accessibility: `aria-labelledby`, `ol`/`li`, `h2`/`h3` đúng semantic.
+
+### Giới hạn còn lại
+
+- Nội dung hành trình chưa được khách hàng duyệt bản cuối.
+- Chưa kiểm tra trực quan bằng thiết bị thật/browser automation.
+- Các section tiếp theo của Task 01 chưa thực hiện.
+
+### Commit
+
+- Chưa cập nhật; sẽ ghi sau khi tạo commit.

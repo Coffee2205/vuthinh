@@ -106,3 +106,36 @@ export const programsContent = {
     },
   ],
 } as const;
+
+export const learningJourneyContent = {
+  eyebrow: "Hành trình học tập",
+  title: "Mỗi hành trình bắt đầu từ việc hiểu đúng nhu cầu",
+  description:
+    "Một quy trình đơn giản giúp gia đình và người học có thêm thông tin trước khi lựa chọn chương trình phù hợp.",
+  steps: [
+    {
+      number: "01",
+      title: "Chia sẻ nhu cầu",
+      description:
+        "Cho biết độ tuổi, mục tiêu học tập và điều người học đang quan tâm hoặc gặp khó khăn.",
+    },
+    {
+      number: "02",
+      title: "Học thử hoặc tư vấn",
+      description:
+        "Trải nghiệm buổi học thử hoặc đăng ký trao đổi để hiểu thêm về hướng học phù hợp.",
+    },
+    {
+      number: "03",
+      title: "Lựa chọn chương trình",
+      description:
+        "Cân nhắc nội dung, mục tiêu và hình thức học trước khi quyết định đồng hành.",
+    },
+    {
+      number: "04",
+      title: "Bắt đầu và trao đổi",
+      description:
+        "Tham gia chương trình đã chọn và duy trì trao đổi với trung tâm trong quá trình học.",
+    },
+  ],
+} as const;

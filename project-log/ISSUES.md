@@ -134,3 +134,20 @@
 - Lint, build và runtime route `/` đều đạt.
 - CTA `/programs` chưa có route đích vì thuộc Task 03.
 - Chưa kiểm tra trực quan bằng browser automation hoặc thiết bị thật; responsive đã được rà theo source và breakpoint.
+
+---
+
+## ISSUE-010 — Nội dung hành trình chưa được khách hàng duyệt
+
+**Trạng thái:** Open
+
+**Mô tả:** Bốn bước được biên soạn từ user flow và phạm vi Giai đoạn 1, chưa phải quy trình vận hành đã được khách hàng duyệt bản cuối.
+
+**Ảnh hưởng:** Không chặn layout; cần xác nhận câu chữ trước production.
+
+---
+
+## Trạng thái Learning Journey
+
+- Không còn blocker kỹ thuật; lint, build và runtime đều đạt.
+- Chưa kiểm tra trực quan bằng browser automation hoặc thiết bị thật.

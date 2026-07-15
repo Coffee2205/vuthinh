@@ -8,7 +8,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 
 ## Task hiện tại
 
-`Task 01 — Trang chủ` đang thực hiện theo từng section. Hero, Trust và Programs Section đã hoàn thành; chưa bắt đầu Hành trình học tập.
+`Task 01 — Trang chủ` đang thực hiện theo từng section. Hero, Trust, Programs và Learning Journey đã hoàn thành; chưa bắt đầu Giới thiệu chuyên gia.
 
 ## Đã hoàn thành
 
@@ -65,7 +65,14 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - Tiếng Trung là thẻ trọng tâm với bốn hướng: thiếu nhi, giao tiếp, HSK và thương mại.
 - Kỹ năng/cảm xúc và giá trị sống/hạnh phúc được trình bày như hai nhóm bổ trợ.
 - Có CTA tới `/programs`; route đích chưa được triển khai vì thuộc Task 03.
-- Chưa bắt đầu Hành trình học tập.
+- Chưa bắt đầu các section sau Hành trình học tập.
+
+### Task 01 — Hành trình học tập
+
+- Đã thêm timeline bốn bước từ chia sẻ nhu cầu đến bắt đầu và duy trì trao đổi.
+- Không tạo roadmap tự động, cá nhân hóa hoặc cam kết kết quả.
+- Luồng tư vấn/xác nhận thủ công được ghi rõ.
+- Chưa bắt đầu Giới thiệu chuyên gia.
 
 ## Chưa thực hiện
 
@@ -85,7 +92,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - `node_modules`: Đã có; các dependency chính được nhận diện.
 - `npm.cmd run lint`: Đạt ngày 2026-07-15, không có lỗi ESLint.
 - `npm.cmd run build`: Đạt ngày 2026-07-15; compile, TypeScript và static generation thành công.
-- Runtime `/`: HTTP 200 và có đầy đủ nội dung Hero, Trust cùng Programs Section đã kiểm tra.
+- Runtime `/`: HTTP 200 và có đầy đủ bốn section đầu của trang chủ đã kiểm tra.
 
 ## Trạng thái project local
 
@@ -99,4 +106,4 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 
 ## Task tiếp theo
 
-Tiếp tục `Task 01 — Trang chủ` bằng section “Hành trình học tập”. Chưa bắt đầu section này.
+Tiếp tục `Task 01 — Trang chủ` bằng section “Giới thiệu chuyên gia”. Chưa bắt đầu section này.

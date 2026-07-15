@@ -109,3 +109,11 @@ Mỗi quyết định phải ghi ngày, nội dung, lý do và ảnh hưởng.
 **Lý do:** Các nhóm này có trong tài liệu dự án, trong khi thông tin khóa học chi tiết, học phí và lịch học chưa có dữ liệu thật.
 
 **Ảnh hưởng:** Tiếng Trung được trình bày bằng thẻ lớn với bốn hướng đã xác định. Dữ liệu khóa học cụ thể sẽ thuộc Task 03 và Task 07.
+
+## 2026-07-15 — Learning Journey là quy trình định hướng, không phải roadmap tự động
+
+**Quyết định:** Section mô tả bốn bước thủ công: chia sẻ nhu cầu, học thử/tư vấn, lựa chọn chương trình và bắt đầu/trao đổi.
+
+**Lý do:** Phù hợp user flow Giai đoạn 1 và không tạo chức năng roadmap cá nhân hóa ngoài phạm vi.
+
+**Ảnh hưởng:** Nội dung không cam kết kết quả và ghi rõ chưa có lộ trình tự động.
