@@ -177,4 +177,4 @@ Tạo trang chủ thuyết phục phụ huynh và dẫn người dùng đến đ
 
 ### Commit
 
-- Chưa cập nhật; sẽ ghi sau khi tạo commit.
+- `bd2b456` — `feat: add learning journey section`.

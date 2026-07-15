@@ -164,3 +164,7 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 
 - Nội dung chưa được khách hàng duyệt bản cuối.
 - Chưa kiểm tra trực quan bằng thiết bị thật/browser automation.
+
+### Commit
+
+- `bd2b456` — `feat: add learning journey section`.

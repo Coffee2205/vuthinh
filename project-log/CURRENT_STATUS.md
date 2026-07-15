@@ -103,6 +103,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - Hero Section đã được commit tại `3a0e2b4` — `feat: add home hero section`.
 - Trust Section đã được commit tại `637d763` — `feat: add home trust section`.
 - Programs Section đã được commit tại `ebf2d2b` — `feat: add featured programs section`.
+- Learning Journey đã được commit tại `bd2b456` — `feat: add learning journey section`.
 
 ## Task tiếp theo
 
