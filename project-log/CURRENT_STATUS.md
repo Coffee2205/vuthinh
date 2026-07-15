@@ -8,7 +8,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 
 ## Task hiện tại
 
-`Task 02 — Trang Giới thiệu` đã hoàn thành toàn bộ 7 mục theo checklist. `Task 03 — Chương trình và khóa học` là task tiếp theo nhưng chưa bắt đầu.
+`Task 03 — Chương trình và khóa học` đang thực hiện theo từng phần. Danh sách nhóm chương trình đã hoàn thành; chưa bắt đầu bộ lọc danh mục cơ bản.
 
 ## Đã hoàn thành
 
@@ -64,7 +64,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - Đã thêm ba nhóm chương trình ở cấp định hướng, không tạo dữ liệu khóa học giả.
 - Tiếng Trung là thẻ trọng tâm với bốn hướng: thiếu nhi, giao tiếp, HSK và thương mại.
 - Kỹ năng/cảm xúc và giá trị sống/hạnh phúc được trình bày như hai nhóm bổ trợ.
-- Có CTA tới `/programs`; route đích chưa được triển khai vì thuộc Task 03.
+- Có CTA tới `/programs`; route đích hiện đã hoạt động với danh sách nhóm chương trình của Task 03.
 - Chưa bắt đầu các section sau Hành trình học tập.
 
 ### Task 01 — Hành trình học tập
@@ -158,9 +158,15 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - Hoàn thành toàn bộ checklist Trang Giới thiệu.
 - Task 02 không còn phần giao diện chưa hoàn thành.
 
+### Task 03 — Danh sách nhóm chương trình
+
+- Đã tạo route `/programs` với metadata riêng và bảy nhóm chương trình theo checklist.
+- Bốn nhóm tiếng Trung được thể hiện là trọng tâm; kỹ năng sống, quản trị cảm xúc và giá trị sống là các hướng bổ trợ.
+- Không tạo dữ liệu khóa học, bộ lọc, CTA hoặc route `/courses` trong phần này.
+
 ## Chưa thực hiện
 
-- Chương trình và khóa học.
+- Các phần còn lại của Chương trình và khóa học.
 - Trang chuyên gia và đăng ký tư vấn.
 - Blog và tài liệu miễn phí.
 - Các trang hỗ trợ.
@@ -174,7 +180,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - `node_modules`: Đã có; các dependency chính được nhận diện.
 - `npm.cmd run lint`: Đạt ngày 2026-07-15, không có lỗi ESLint.
 - `npm.cmd run build`: Đạt ngày 2026-07-15; compile, TypeScript và static generation thành công.
-- Runtime `/about` và `/`: HTTP 200; CTA hiển thị, href `/#trial-registration` và id đích `trial-registration` cùng tồn tại trong HTML build.
+- Runtime `/programs`: HTTP 200, có đủ bảy nhóm chương trình; không có bộ lọc hoặc link khóa học.
 
 ## Trạng thái project local
 
@@ -199,7 +205,8 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - Core Values Section đã được commit tại `8b5821c` — `feat: add about core values section`.
 - Education Philosophy Section đã được commit tại `f2cbd34` — `feat: add education philosophy section`.
 - About CTA Section và Task 02 đã được commit tại `d2f6b49` — `feat: complete about page cta`.
+- Program Groups đã hoàn thành source và kiểm tra; chờ tạo commit.
 
 ## Task tiếp theo
 
-`Task 03 — Chương trình và khóa học`. Bước đầu tiên là danh sách nhóm chương trình; Task 03 chưa bắt đầu.
+Tiếp tục `Task 03 — Chương trình và khóa học` bằng “Bộ lọc danh mục cơ bản”. Chưa bắt đầu phần này.

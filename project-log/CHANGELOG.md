@@ -510,3 +510,33 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 ### Commit
 
 - `d2f6b49` — `feat: complete about page cta`.
+
+## 2026-07-15 — Task 03: Danh sách nhóm chương trình
+
+### Added
+
+- Route `/programs` với metadata tĩnh.
+- Danh sách bảy nhóm chương trình đã được tài liệu xác định.
+- Nguồn dữ liệu tĩnh riêng tại `src/data/programs.ts`.
+
+### Changed
+
+- Link Chương trình học hiện có route đích `/programs` hoạt động.
+- Task 03 chuyển sang trạng thái đang thực hiện theo từng phần.
+
+### Verified
+
+- `npm.cmd run lint` đạt.
+- `npm.cmd run build` đạt; `/programs` được prerender tĩnh.
+- Production runtime `/programs` trả HTTP 200 và có đủ bảy nhóm.
+- Không có bộ lọc, link khóa học hoặc nội dung thuộc phần tiếp theo.
+- Heading, danh sách semantic và breakpoint responsive đã được rà trong source.
+
+### Known issues
+
+- Chưa có dữ liệu khóa học chi tiết được khách hàng xác nhận.
+- Chưa kiểm tra trực quan bằng browser automation hoặc thiết bị thật.
+
+### Commit
+
+- Chờ tạo commit.

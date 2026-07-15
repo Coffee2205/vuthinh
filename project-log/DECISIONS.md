@@ -221,3 +221,11 @@ Mỗi quyết định phải ghi ngày, nội dung, lý do và ảnh hưởng.
 **Lý do:** Anchor đích đã tồn tại; `/consultation` thuộc Task 04 và chưa được triển khai nên không dùng làm link chết hoặc mở rộng phạm vi.
 
 **Ảnh hưởng:** Người dùng có thể điều hướng tới thông tin đăng ký hiện hữu mà không bị hiểu nhầm rằng dữ liệu đang được tiếp nhận; CTA tư vấn riêng chờ đúng task.
+
+## 2026-07-15 — Route chương trình bắt đầu bằng taxonomy tĩnh đã xác nhận
+
+**Quyết định:** `/programs` dùng dữ liệu tĩnh tách riêng để hiển thị đúng bảy nhóm trong Task 03, với bốn nhóm tiếng Trung là trọng tâm.
+
+**Lý do:** Taxonomy nhóm đã được tài liệu xác nhận nhưng chưa có dữ liệu khóa học chi tiết đáng tin cậy hoặc database.
+
+**Ảnh hưởng:** Route có thể cung cấp định hướng rõ ràng mà không tạo khóa học giả; bộ lọc, danh sách và chi tiết khóa học tiếp tục được triển khai theo từng mục sau.

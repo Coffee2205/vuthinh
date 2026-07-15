@@ -126,6 +126,11 @@
 
 **Cần từ khách hàng:** Danh sách khóa học và thông tin nghiệp vụ theo `docs/FUNCTIONAL_RULES.md`.
 
+### Trạng thái Danh sách nhóm chương trình
+
+- Route `/programs` đã hiển thị đủ bảy nhóm bằng dữ liệu tĩnh; không còn blocker kỹ thuật cho phần danh sách nhóm.
+- Dữ liệu khóa học chi tiết vẫn thiếu và tiếp tục được theo dõi trong `ISSUE-009` cho các phần sau của Task 03.
+
 ---
 
 ## Trạng thái Programs Section
