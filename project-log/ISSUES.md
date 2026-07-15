@@ -1,0 +1,77 @@
+# Vấn đề và giới hạn đang tồn tại
+
+## ISSUE-001 — Dependencies chưa được cài
+
+**Trạng thái:** Resolved — 2026-07-15
+
+**Mô tả ban đầu:** Project chưa có thư mục `node_modules`, do đó chưa thể xác nhận lint và production build.
+
+**Cách giải quyết:** Dependencies hiện đã có; `npm.cmd run lint` và `npm.cmd run build` đều chạy thành công ngày 2026-07-15.
+
+**Kết quả:** Không còn là blocker.
+
+---
+
+## ISSUE-002 — Chưa có logo chính thức
+
+**Trạng thái:** Open
+
+**Mô tả:** Header và Footer đang sử dụng logo chữ `VT` tạm thời.
+
+**Ảnh hưởng:** Không chặn phát triển giao diện.
+
+**Cần từ khách hàng:** Logo SVG/PNG chất lượng cao hoặc xác nhận sử dụng logo chữ.
+
+---
+
+## ISSUE-003 — Chưa có nội dung và hình ảnh thật
+
+**Trạng thái:** Open
+
+**Mô tả:** Chưa có đầy đủ nội dung trung tâm, khóa học, ảnh chuyên gia, ảnh lớp học, phản hồi phụ huynh và thành quả học viên.
+
+**Ảnh hưởng:** Có thể phát triển layout bằng placeholder trung tính, nhưng chưa thể hoàn thiện nội dung production.
+
+**Quy tắc:** Không tự tạo số liệu, chứng chỉ hoặc testimonial giả.
+
+---
+
+## ISSUE-004 — Chưa có thông tin liên hệ chính thức
+
+**Trạng thái:** Open
+
+**Cần cung cấp:**
+
+- Hotline.
+- Email.
+- Địa chỉ.
+- Facebook.
+- Zalo.
+- Google Maps.
+
+---
+
+## ISSUE-005 — Chưa tạo Supabase project
+
+**Trạng thái:** Planned
+
+**Mô tả:** Database, Auth và Storage sẽ được tạo trong Task 07, không thực hiện sớm hơn.
+
+---
+
+## ISSUE-006 — Tên miền chưa được xác nhận
+
+**Trạng thái:** Open
+
+**Mô tả:** Tên project là `vuthinh`, nhưng tên miền `.com` chính thức chưa được chốt hoặc mua.
+
+**Cần làm:** Kiểm tra tên miền còn trống và đăng ký bằng tài khoản của khách hàng trước deploy production.
+
+---
+
+## Trạng thái Task 00
+
+- Không còn blocker kỹ thuật cho Task 00.
+- Lint và production build hiện không có lỗi.
+- Build lần đầu cần kết nối mạng để `next/font` tải Be Vietnam Pro từ Google Fonts.
+- Các link tới route của task sau chưa hoạt động cho đến khi các route tương ứng được triển khai; đây không phải lỗi thuộc Task 00.
