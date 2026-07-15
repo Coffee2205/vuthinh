@@ -91,7 +91,7 @@
 - Responsive: nội dung căn giữa, padding mobile-first và nút có chiều cao tối thiểu 44px.
 - Accessibility: section dùng `aria-labelledby`, heading đúng cấp, link có focus-visible và chi tiết trang trí dùng `aria-hidden`.
 - Giới hạn: form đích vẫn ở trạng thái xem trước, chưa gửi/lưu dữ liệu đến Task 07; CTA tư vấn riêng chờ route `/consultation` trong Task 04; chưa kiểm tra trực quan trên thiết bị thật/browser automation.
-- Commit: chờ tạo commit.
+- Commit: `d2f6b49` — `feat: complete about page cta`.
 
 ## Trạng thái Task 02
 

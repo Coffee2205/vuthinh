@@ -509,4 +509,4 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 
 ### Commit
 
-- Chờ tạo commit.
+- `d2f6b49` — `feat: complete about page cta`.
