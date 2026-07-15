@@ -3,8 +3,7 @@ import { aboutIntroductionContent } from "@/data/about";
 
 export function AboutIntroduction() {
   return (
-    <main>
-      <section
+    <section
         className="overflow-hidden bg-white py-16 sm:py-20 lg:py-24"
         aria-labelledby="about-introduction-heading"
       >
@@ -54,7 +53,6 @@ export function AboutIntroduction() {
             {aboutIntroductionContent.note}
           </p>
         </Container>
-      </section>
-    </main>
+    </section>
   );
 }

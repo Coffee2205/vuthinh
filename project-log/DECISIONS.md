@@ -173,3 +173,11 @@ Mỗi quyết định phải ghi ngày, nội dung, lý do và ảnh hưởng.
 **Lý do:** Chưa có hồ sơ doanh nghiệp chính thức về lịch sử, đội ngũ, cơ sở hoặc thành tựu.
 
 **Ảnh hưởng:** Route giới thiệu có thể hoạt động mà không tạo claim chưa kiểm chứng; các dữ liệu thực tế sẽ được bổ sung ở đúng section sau khi khách hàng xác nhận.
+
+## 2026-07-15 — Câu chuyện hình thành dùng empty state
+
+**Quyết định:** Không suy diễn lịch sử từ định vị dự án; section chỉ thông báo trạng thái chờ và liệt kê thông tin cần khách hàng xác nhận.
+
+**Lý do:** Project không có năm thành lập, người sáng lập, bối cảnh khởi đầu hoặc mốc phát triển đáng tin cậy.
+
+**Ảnh hưởng:** Cấu trúc trang được hoàn thiện trong đúng phạm vi mà không tạo câu chuyện thương hiệu giả; `ISSUE-016` tiếp tục theo dõi dữ liệu còn thiếu.

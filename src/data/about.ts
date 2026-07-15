@@ -24,3 +24,18 @@ export const aboutIntroductionContent = {
   ],
   note: "Thông tin lịch sử hình thành, đội ngũ, cơ sở và thành tựu sẽ chỉ được bổ sung sau khi khách hàng xác nhận.",
 } as const;
+
+export const formationStoryContent = {
+  eyebrow: "Câu chuyện hình thành",
+  title: "Mỗi hành trình cần được kể bằng những dấu mốc có thật",
+  description:
+    "Câu chuyện về nguồn gốc và quá trình phát triển của Vũ Thịnh sẽ được trình bày khi hồ sơ chính thức được xác nhận.",
+  status: "Thông tin lịch sử đang được cập nhật",
+  note: "Chúng tôi không tự tạo năm thành lập, người sáng lập, động lực khởi đầu hoặc các mốc thành tựu khi chưa có dữ liệu từ khách hàng.",
+  requiredInformation: [
+    "Thời điểm và bối cảnh hình thành",
+    "Người sáng lập hoặc đội ngũ ban đầu",
+    "Động lực bắt đầu hành trình",
+    "Các mốc phát triển được phép công bố",
+  ],
+} as const;

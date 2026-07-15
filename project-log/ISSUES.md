@@ -232,3 +232,8 @@
 **Ảnh hưởng:** Phần Giới thiệu trung tâm chỉ dùng định vị đã có và ghi chú trạng thái chờ; không còn blocker kỹ thuật cho phần mở đầu `/about`.
 
 **Cần từ khách hàng:** Hồ sơ giới thiệu chính thức, các mốc lịch sử có thể công bố và hình ảnh kèm quyền sử dụng.
+
+### Trạng thái Câu chuyện hình thành
+
+- Section đã có empty state; không còn blocker kỹ thuật cho layout.
+- Dữ liệu production vẫn bị chặn bởi cùng nội dung còn thiếu của `ISSUE-016`.

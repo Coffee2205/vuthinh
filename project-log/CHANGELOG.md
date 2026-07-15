@@ -340,3 +340,31 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 ### Commit
 
 - `2955001` — `feat: add about introduction`.
+
+## 2026-07-15 — Task 02: Câu chuyện hình thành
+
+### Added
+
+- Formation Story Section với trạng thái lịch sử đang cập nhật.
+- Danh sách thông tin lịch sử cần khách hàng xác nhận.
+
+### Changed
+
+- `main` của `/about` được chuyển lên page để bao bọc nhiều section semantic.
+- Bổ sung dữ liệu tĩnh trong `src/data/about.ts`.
+
+### Verified
+
+- `npm.cmd run lint` đạt.
+- `npm.cmd run build` đạt; `/about` được prerender tĩnh.
+- Production runtime `/about` trả HTTP 200, có empty state lịch sử và chưa có Tầm nhìn/Sứ mệnh.
+- Heading, danh sách semantic và breakpoint responsive đã được rà trong source.
+
+### Known issues
+
+- Chưa có dữ liệu lịch sử hoặc hình ảnh thật được xác nhận.
+- Chưa kiểm tra trực quan bằng browser automation hoặc thiết bị thật.
+
+### Commit
+
+- Sẽ cập nhật sau khi commit.

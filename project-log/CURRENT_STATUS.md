@@ -8,7 +8,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 
 ## Task hiện tại
 
-`Task 02 — Trang Giới thiệu` đang thực hiện theo từng phần. “Giới thiệu trung tâm” đã hoàn thành; chưa bắt đầu “Câu chuyện hình thành”.
+`Task 02 — Trang Giới thiệu` đang thực hiện theo từng phần. Hai phần đầu đã hoàn thành; chưa bắt đầu “Tầm nhìn”.
 
 ## Đã hoàn thành
 
@@ -117,6 +117,12 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - Tiếng Trung được trình bày là trọng tâm; kỹ năng sống, cảm xúc và phát triển nội lực là các mảng bổ trợ.
 - Không dùng lịch sử, số liệu, thành tựu, đội ngũ hoặc cơ sở chưa được xác nhận.
 
+### Task 02 — Câu chuyện hình thành
+
+- Đã thêm empty state minh bạch vì chưa có hồ sơ lịch sử được xác nhận.
+- Section liệt kê bốn nhóm thông tin cần khách hàng cung cấp, không tạo mốc hoặc nhân vật giả.
+- `main` được quản lý tại page để bao bọc các section của `/about`.
+
 ## Chưa thực hiện
 
 - Các phần còn lại của Trang Giới thiệu.
@@ -134,7 +140,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - `node_modules`: Đã có; các dependency chính được nhận diện.
 - `npm.cmd run lint`: Đạt ngày 2026-07-15, không có lỗi ESLint.
 - `npm.cmd run build`: Đạt ngày 2026-07-15; compile, TypeScript và static generation thành công.
-- Runtime `/about`: HTTP 200, metadata và nội dung giới thiệu đúng; chưa có Câu chuyện hình thành, Tầm nhìn hoặc Sứ mệnh.
+- Runtime `/about`: HTTP 200, có Câu chuyện hình thành ở trạng thái chờ; chưa có Tầm nhìn hoặc Sứ mệnh.
 
 ## Trạng thái project local
 
@@ -153,7 +159,8 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - Trial Registration đã được commit tại `d31578f` — `feat: add trial registration form preview`.
 - Final CTA và Task 01 đã được commit tại `8e64187` — `feat: complete home page final cta`.
 - About Introduction đã được commit tại `2955001` — `feat: add about introduction`.
+- Formation Story đang chờ commit sau khi hoàn tất log.
 
 ## Task tiếp theo
 
-Tiếp tục `Task 02 — Trang Giới thiệu` bằng phần “Câu chuyện hình thành”. Chưa bắt đầu phần này.
+Tiếp tục `Task 02 — Trang Giới thiệu` bằng phần “Tầm nhìn”. Chưa bắt đầu phần này.
