@@ -141,3 +141,11 @@ Mỗi quyết định phải ghi ngày, nội dung, lý do và ảnh hưởng.
 **Lý do:** Project chưa có phản hồi thật hoặc bằng chứng về quyền sử dụng thông tin cá nhân.
 
 **Ảnh hưởng:** Section hiện thông báo trạng thái đang cập nhật và có thể được thay bằng dữ liệu thật mà không đổi vị trí trong trang chủ.
+
+## 2026-07-15 — Bài viết/tài liệu nổi bật dùng empty state
+
+**Quyết định:** Trang chủ không tạo bài viết hoặc tài liệu minh họa; hiển thị hai trạng thái chờ và link tới route Blog/Tài liệu theo sitemap.
+
+**Lý do:** Chưa có nội dung đáp ứng đủ trạng thái xuất bản, metadata và quyền sử dụng theo quy tắc nghiệp vụ.
+
+**Ảnh hưởng:** Layout sẵn sàng nhận dữ liệu thật; `/blog` và `/resources` vẫn thuộc Task 05 và chưa được tạo trong Task 01.

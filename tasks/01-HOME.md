@@ -13,7 +13,7 @@ Tạo trang chủ thuyết phục phụ huynh và dẫn người dùng đến đ
 - [x] Giới thiệu chuyên gia.
 - [x] Thành quả học viên.
 - [x] Cảm nhận phụ huynh.
-- [ ] Bài viết/tài liệu nổi bật.
+- [x] Bài viết/tài liệu nổi bật.
 - [ ] Form đăng ký học thử.
 - [ ] CTA cuối trang.
 
@@ -205,3 +205,13 @@ Tạo trang chủ thuyết phục phụ huynh và dẫn người dùng đến đ
 - Responsive: bố cục một cột trên mobile và hai vùng từ `lg`; semantic `section`, `aria-labelledby`, `h2`/`h3` đã rà trong source.
 - Giới hạn: chưa có phản hồi phụ huynh thật hoặc kiểm tra trực quan trên thiết bị thật/browser automation.
 - Commit: `71f7096` — `feat: add parent testimonials empty state`.
+
+## Kết quả thực hiện — Bài viết/tài liệu nổi bật
+
+- File tạo: `src/components/home/FeaturedContentSection.tsx`.
+- File sửa: `src/data/home.ts`, `src/app/page.tsx`, `tasks/01-HOME.md` và các project log liên quan.
+- Quyết định: dùng hai empty state thay cho bài viết/tài liệu giả; chỉ nội dung có trạng thái xuất bản và quyền sử dụng hợp lệ mới được hiển thị.
+- Kiểm tra: `npm.cmd run lint` đạt; `npm.cmd run build` đạt và route `/` được prerender tĩnh; runtime production local HTTP 200, có hai trạng thái chờ cùng link `/blog`, `/resources`, chưa có form học thử.
+- Responsive: một cột trên mobile, hai cột từ `md`; `section`, `article`, `aria-labelledby`, heading và focus-visible đã rà trong source.
+- Giới hạn: chưa có bài viết/tài liệu thật; hai route đích thuộc Task 05 chưa được triển khai; chưa kiểm tra trực quan trên thiết bị thật/browser automation.
+- Commit: sẽ cập nhật sau khi commit.

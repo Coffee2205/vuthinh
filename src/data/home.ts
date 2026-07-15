@@ -169,3 +169,25 @@ export const parentTestimonialsContent = {
   status: "Cảm nhận phụ huynh đang được cập nhật",
   note: "Chúng tôi chỉ đăng tải chia sẻ, tên và hình ảnh khi nội dung đã được phụ huynh xác nhận và đồng ý công bố.",
 } as const;
+
+export const featuredContent = {
+  eyebrow: "Góc kiến thức",
+  title: "Nội dung đồng hành cùng việc học và nuôi dưỡng gia đình",
+  description:
+    "Blog và tài liệu miễn phí sẽ chia sẻ kiến thức về tiếng Trung, kỹ năng sống và phát triển con người.",
+  channels: [
+    {
+      symbol: "文",
+      title: "Bài viết nổi bật",
+      status: "Các bài viết đã được biên tập và xuất bản đang được cập nhật.",
+      action: { href: "/blog", label: "Khám phá Blog" },
+    },
+    {
+      symbol: "本",
+      title: "Tài liệu miễn phí",
+      status: "Các tài liệu có link xem hoặc tải hợp lệ đang được cập nhật.",
+      action: { href: "/resources", label: "Xem Tài liệu" },
+    },
+  ],
+  note: "Chỉ nội dung đã được xác nhận trạng thái xuất bản và quyền sử dụng mới xuất hiện tại đây.",
+} as const;

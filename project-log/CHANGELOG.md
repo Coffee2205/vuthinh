@@ -231,3 +231,32 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 ### Commit
 
 - `71f7096` — `feat: add parent testimonials empty state`.
+
+## 2026-07-15 — Task 01: Bài viết/tài liệu nổi bật
+
+### Added
+
+- Featured Content Section với hai empty state cho Blog và Tài liệu miễn phí.
+- Link điều hướng tới `/blog` và `/resources` theo sitemap.
+
+### Changed
+
+- Trang chủ hiển thị nội dung kiến thức sau Cảm nhận phụ huynh.
+- Bổ sung dữ liệu tĩnh trong `src/data/home.ts`.
+
+### Verified
+
+- `npm.cmd run lint` đạt.
+- `npm.cmd run build` đạt; TypeScript, static generation và prerender route `/` thành công.
+- Production runtime local trả HTTP 200, có hai empty state, đúng hai href và chưa có Form đăng ký học thử.
+- Semantic article/heading, focus-visible và breakpoint responsive đã được rà trong source.
+
+### Known issues
+
+- Chưa có bài viết hoặc tài liệu thật được xác nhận xuất bản.
+- `/blog` và `/resources` thuộc Task 05 nên chưa có route đích.
+- Chưa kiểm tra trực quan bằng browser automation hoặc thiết bị thật.
+
+### Commit
+
+- Sẽ cập nhật sau khi commit.

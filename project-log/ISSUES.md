@@ -188,3 +188,15 @@
 **Ảnh hưởng:** Section dùng empty state minh bạch; không còn blocker kỹ thuật cho phần Cảm nhận phụ huynh.
 
 **Cần từ khách hàng:** Phản hồi nguyên văn đã duyệt, thông tin được phép hiển thị và xác nhận quyền sử dụng hình ảnh nếu có.
+
+---
+
+## ISSUE-014 — Chưa có bài viết và tài liệu được xuất bản
+
+**Trạng thái:** Open
+
+**Mô tả:** Chưa có bài viết hoặc tài liệu đáp ứng đủ tiêu đề, nội dung, metadata, trạng thái xuất bản, link hợp lệ và quyền sử dụng hình ảnh/tệp.
+
+**Ảnh hưởng:** Section trang chủ dùng empty state; `/blog` và `/resources` chưa được triển khai vì thuộc Task 05. Không còn blocker kỹ thuật cho section Bài viết/tài liệu nổi bật.
+
+**Cần từ khách hàng:** Nội dung bài viết, thông tin tác giả, ảnh được phép sử dụng và tệp/link tài liệu đã xác nhận.
