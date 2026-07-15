@@ -106,3 +106,7 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 
 - Nội dung Trust Section chưa được khách hàng duyệt bản cuối.
 - Chưa kiểm tra trực quan bằng browser automation hoặc thiết bị thật.
+
+### Commit
+
+- `637d763` — `feat: add home trust section`.
