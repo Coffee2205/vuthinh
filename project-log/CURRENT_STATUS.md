@@ -128,7 +128,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - Expert Section đã được commit tại `7b5d838` — `feat: add home expert section`.
 - Student Outcomes đã được commit tại `5743558` — `feat: add student outcomes empty state`.
 - Parent Testimonials đã được commit tại `71f7096` — `feat: add parent testimonials empty state`.
-- Featured Content đang chờ commit sau khi hoàn tất log.
+- Featured Content đã được commit tại `9ea640a` — `feat: add featured content empty states`.
 
 ## Task tiếp theo
 

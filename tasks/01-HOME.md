@@ -214,4 +214,4 @@ Tạo trang chủ thuyết phục phụ huynh và dẫn người dùng đến đ
 - Kiểm tra: `npm.cmd run lint` đạt; `npm.cmd run build` đạt và route `/` được prerender tĩnh; runtime production local HTTP 200, có hai trạng thái chờ cùng link `/blog`, `/resources`, chưa có form học thử.
 - Responsive: một cột trên mobile, hai cột từ `md`; `section`, `article`, `aria-labelledby`, heading và focus-visible đã rà trong source.
 - Giới hạn: chưa có bài viết/tài liệu thật; hai route đích thuộc Task 05 chưa được triển khai; chưa kiểm tra trực quan trên thiết bị thật/browser automation.
-- Commit: sẽ cập nhật sau khi commit.
+- Commit: `9ea640a` — `feat: add featured content empty states`.

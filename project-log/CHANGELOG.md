@@ -259,4 +259,4 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 
 ### Commit
 
-- Sẽ cập nhật sau khi commit.
+- `9ea640a` — `feat: add featured content empty states`.
