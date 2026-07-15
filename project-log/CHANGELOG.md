@@ -182,3 +182,7 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 ### Known issues
 
 - Chưa có dữ liệu chuyên gia thật; hai route CTA chưa triển khai; chưa kiểm tra trực quan trên thiết bị thật.
+
+### Commit
+
+- `7b5d838` — `feat: add home expert section`.

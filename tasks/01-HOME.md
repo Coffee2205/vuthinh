@@ -186,4 +186,4 @@ Tạo trang chủ thuyết phục phụ huynh và dẫn người dùng đến đ
 - Quyết định: hiển thị trạng thái hồ sơ đang cập nhật; không tạo tên, ảnh, kinh nghiệm hoặc chứng chỉ giả; Server Component, CTA `/expert` và `/consultation`.
 - Kiểm tra: lint/build đạt; runtime `/` HTTP 200 và có trạng thái hồ sơ cùng hai CTA; responsive một cột mobile, hai vùng desktop; heading/focus hợp lệ.
 - Giới hạn: thiếu toàn bộ dữ liệu chuyên gia thật; route CTA thuộc task sau; chưa kiểm tra trực quan trên thiết bị thật.
-- Commit: sẽ cập nhật sau khi tạo commit.
+- Commit: `7b5d838` — `feat: add home expert section`.
