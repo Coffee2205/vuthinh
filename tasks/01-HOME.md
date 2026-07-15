@@ -8,7 +8,7 @@ Tạo trang chủ thuyết phục phụ huynh và dẫn người dùng đến đ
 
 - [x] Hero.
 - [x] Vì sao phụ huynh tin tưởng.
-- [ ] Chương trình học nổi bật.
+- [x] Chương trình học nổi bật.
 - [ ] Hành trình học tập.
 - [ ] Giới thiệu chuyên gia.
 - [ ] Thành quả học viên.
@@ -104,3 +104,41 @@ Tạo trang chủ thuyết phục phụ huynh và dẫn người dùng đến đ
 ### Commit
 
 - `637d763` — `feat: add home trust section`.
+
+## Kết quả thực hiện — Chương trình học nổi bật
+
+### File đã tạo
+
+- `src/components/home/ProgramsSection.tsx`: section nhóm chương trình với tiếng Trung được ưu tiên thị giác.
+
+### File đã sửa
+
+- `src/data/home.ts`: bổ sung dữ liệu tĩnh cho ba nhóm chương trình.
+- `src/app/page.tsx`: gắn Programs Section sau Trust Section.
+- `tasks/01-HOME.md`: đánh dấu section đã hoàn thành và ghi kết quả.
+- Các file trạng thái liên quan trong `project-log/`.
+
+### Quyết định kỹ thuật
+
+- Chỉ giới thiệu nhóm chương trình đã có trong tài liệu, không tạo khóa học, học phí, lịch học hoặc kết quả giả.
+- Gộp các hướng tiếng Trung vào một thẻ trọng tâm lớn; kỹ năng/cảm xúc và giá trị sống là hai thẻ bổ trợ.
+- Section là Server Component và dùng dữ liệu tĩnh từ `src/data/home.ts`.
+- CTA dẫn tới `/programs` theo sitemap; route này thuộc Task 03 và chưa được triển khai.
+
+### Kiểm tra
+
+- `npm.cmd run lint`: Đạt ngày 2026-07-15, không có lỗi ESLint.
+- `npm.cmd run build`: Đạt ngày 2026-07-15; TypeScript và static generation thành công.
+- Runtime local: route `/` trả HTTP 200 và chứa đủ ba nhóm, bốn hướng tiếng Trung cùng CTA chương trình.
+- Responsive: một cột trên mobile, hai cột từ `lg`; thẻ tiếng Trung chiếm vùng lớn hơn trên desktop. Chưa kiểm tra trực quan bằng thiết bị thật/browser automation.
+- Accessibility: section dùng `aria-labelledby`, cấu trúc `h2`/`h3`, danh sách hướng học và focus-visible cho CTA.
+
+### Giới hạn còn lại
+
+- Nội dung mô tả chương trình chưa được khách hàng duyệt bản cuối.
+- CTA `/programs` hiện chưa có route đích vì thuộc Task 03.
+- Các section tiếp theo của Task 01 chưa thực hiện.
+
+### Commit
+
+- Chưa cập nhật; sẽ ghi sau khi tạo commit cho Programs Section.

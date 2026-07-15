@@ -8,7 +8,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 
 ## Task hiện tại
 
-`Task 01 — Trang chủ` đang thực hiện theo từng section. Hero và Trust Section đã hoàn thành; chưa bắt đầu section Chương trình học nổi bật.
+`Task 01 — Trang chủ` đang thực hiện theo từng section. Hero, Trust và Programs Section đã hoàn thành; chưa bắt đầu Hành trình học tập.
 
 ## Đã hoàn thành
 
@@ -57,7 +57,15 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - Nội dung nhấn mạnh mục tiêu rõ ràng, tiếng Trung trọng tâm, phát triển toàn diện và lắng nghe gia đình.
 - Không sử dụng số liệu, chứng chỉ, thành tích hoặc phản hồi giả.
 - Dữ liệu tĩnh nằm trong `src/data/home.ts`.
-- Chưa bắt đầu section Chương trình học nổi bật.
+- Chưa bắt đầu các section sau Chương trình học nổi bật.
+
+### Task 01 — Chương trình học nổi bật
+
+- Đã thêm ba nhóm chương trình ở cấp định hướng, không tạo dữ liệu khóa học giả.
+- Tiếng Trung là thẻ trọng tâm với bốn hướng: thiếu nhi, giao tiếp, HSK và thương mại.
+- Kỹ năng/cảm xúc và giá trị sống/hạnh phúc được trình bày như hai nhóm bổ trợ.
+- Có CTA tới `/programs`; route đích chưa được triển khai vì thuộc Task 03.
+- Chưa bắt đầu Hành trình học tập.
 
 ## Chưa thực hiện
 
@@ -77,7 +85,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - `node_modules`: Đã có; các dependency chính được nhận diện.
 - `npm.cmd run lint`: Đạt ngày 2026-07-15, không có lỗi ESLint.
 - `npm.cmd run build`: Đạt ngày 2026-07-15; compile, TypeScript và static generation thành công.
-- Runtime `/`: HTTP 200 và có đầy đủ nội dung Hero cùng Trust Section đã kiểm tra.
+- Runtime `/`: HTTP 200 và có đầy đủ nội dung Hero, Trust cùng Programs Section đã kiểm tra.
 
 ## Trạng thái project local
 
@@ -90,4 +98,4 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 
 ## Task tiếp theo
 
-Tiếp tục `Task 01 — Trang chủ` bằng section “Chương trình học nổi bật”. Chưa bắt đầu section này.
+Tiếp tục `Task 01 — Trang chủ` bằng section “Hành trình học tập”. Chưa bắt đầu section này.

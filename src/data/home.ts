@@ -63,3 +63,46 @@ export const trustContent = {
     },
   ],
 } as const;
+
+export const programsContent = {
+  eyebrow: "Chương trình học",
+  title: "Bắt đầu từ ngôn ngữ, mở rộng đến năng lực sống",
+  description:
+    "Khám phá các hướng học được xây dựng cho nhiều độ tuổi và mục tiêu, trong đó tiếng Trung là nền tảng đào tạo trọng tâm.",
+  action: {
+    href: "/programs",
+    label: "Xem tất cả chương trình",
+  },
+  groups: [
+    {
+      key: "chinese",
+      symbol: "中",
+      label: "Trọng tâm",
+      title: "Tiếng Trung",
+      description:
+        "Phát triển năng lực ngôn ngữ theo nhu cầu học tập, giao tiếp và công việc.",
+      topics: ["Thiếu nhi", "Giao tiếp", "HSK", "Thương mại"],
+      featured: true,
+    },
+    {
+      key: "life-skills",
+      symbol: "心",
+      label: "Năng lực sống",
+      title: "Kỹ năng & cảm xúc",
+      description:
+        "Bồi dưỡng tư duy, kỹ năng sống và khả năng nhận diện, quản trị cảm xúc.",
+      topics: ["Kỹ năng sống", "Quản trị cảm xúc"],
+      featured: false,
+    },
+    {
+      key: "inner-growth",
+      symbol: "光",
+      label: "Phát triển con người",
+      title: "Giá trị sống & hạnh phúc",
+      description:
+        "Nuôi dưỡng nhận thức, giá trị tích cực và sự phát triển nội tâm bền vững.",
+      topics: ["Giá trị sống", "Phát triển nội tâm"],
+      featured: false,
+    },
+  ],
+} as const;

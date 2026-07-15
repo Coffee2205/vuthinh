@@ -1,4 +1,5 @@
 import { HeroSection } from "@/components/home/HeroSection";
+import { ProgramsSection } from "@/components/home/ProgramsSection";
 import { TrustSection } from "@/components/home/TrustSection";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <>
       <HeroSection />
       <TrustSection />
+      <ProgramsSection />
     </>
   );
 }

@@ -101,3 +101,11 @@ Mỗi quyết định phải ghi ngày, nội dung, lý do và ảnh hưởng.
 **Lý do:** Đây là các định hướng đã có trong PRD, Project Vision và user flow; không cần tạo số liệu, thành tích hoặc social proof chưa được xác nhận.
 
 **Ảnh hưởng:** Section tạo niềm tin bằng tính minh bạch của định hướng thay vì claim định lượng. Nội dung vẫn cần khách hàng duyệt trước production.
+
+## 2026-07-15 — Programs Section chỉ giới thiệu nhóm chương trình
+
+**Quyết định:** Trang chủ chỉ hiển thị ba nhóm định hướng: tiếng Trung, kỹ năng/cảm xúc và giá trị sống/hạnh phúc; không tạo các khóa học cụ thể khi dữ liệu chưa được xác nhận.
+
+**Lý do:** Các nhóm này có trong tài liệu dự án, trong khi thông tin khóa học chi tiết, học phí và lịch học chưa có dữ liệu thật.
+
+**Ảnh hưởng:** Tiếng Trung được trình bày bằng thẻ lớn với bốn hướng đã xác định. Dữ liệu khóa học cụ thể sẽ thuộc Task 03 và Task 07.

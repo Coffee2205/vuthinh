@@ -2,18 +2,18 @@
 
 ## Nhiệm vụ gần nhất
 
-> Tiếp tục `Task 01 — Trang chủ` và chỉ thực hiện section “Chương trình học nổi bật”, chưa làm các section khác.
+> Tiếp tục `Task 01 — Trang chủ` và chỉ thực hiện section “Hành trình học tập”, chưa làm các section khác.
 
 ## Thứ tự thực hiện
 
-1. Đối chiếu các nhóm chương trình trong tài liệu và `tasks/01-HOME.md`.
-2. Làm nổi bật nhóm tiếng Trung hơn kỹ năng sống và phát triển nội tâm.
-3. Không tự tạo khóa học, học phí, số liệu hoặc kết quả chưa được xác nhận.
-4. Tách dữ liệu tĩnh khỏi component và giữ Server Component làm mặc định.
-5. Kiểm tra responsive/accessibility, chạy lint/build, cập nhật task và project log, rồi commit.
+1. Xác định các bước hành trình ở mức định hướng, không tạo cam kết kết quả hoặc lộ trình cá nhân hóa giả.
+2. Diễn đạt luồng từ tìm hiểu nhu cầu đến học thử, lựa chọn chương trình và đồng hành.
+3. Tách dữ liệu tĩnh khỏi component và giữ Server Component làm mặc định.
+4. Kiểm tra responsive/accessibility, chạy lint/build và runtime.
+5. Cập nhật task/project log, commit và push trước khi chuyển section.
 
 ## Chưa làm ngay
 
-- Hành trình học tập và các section sau Chương trình học nổi bật.
+- Giới thiệu chuyên gia và các section sau Hành trình học tập.
 - Database, form lưu dữ liệu thật và Supabase.
 - Admin, AI, thanh toán hoặc LMS.

@@ -110,3 +110,30 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 ### Commit
 
 - `637d763` — `feat: add home trust section`.
+
+## 2026-07-15 — Task 01: Chương trình học nổi bật
+
+### Added
+
+- Programs Section với ba nhóm chương trình đã được tài liệu xác nhận.
+- Thẻ tiếng Trung trọng tâm gồm thiếu nhi, giao tiếp, HSK và thương mại.
+- Hai thẻ bổ trợ cho kỹ năng/cảm xúc và giá trị sống/hạnh phúc.
+- CTA xem tất cả chương trình.
+
+### Changed
+
+- Trang chủ hiển thị Programs Section sau Trust Section.
+- Dữ liệu tĩnh trang chủ được bổ sung trong `src/data/home.ts`.
+
+### Verified
+
+- `npm.cmd run lint` đạt.
+- `npm.cmd run build` đạt; TypeScript và static generation thành công.
+- Production server local trả HTTP 200 và có đủ nhóm, hướng tiếng Trung cùng CTA.
+- Semantic heading, danh sách nội dung, focus-visible và breakpoint responsive đã được rà.
+
+### Known issues
+
+- Chưa có dữ liệu khóa học chi tiết được khách hàng xác nhận.
+- CTA `/programs` chưa có route đích vì thuộc Task 03.
+- Chưa kiểm tra trực quan bằng browser automation hoặc thiết bị thật.

@@ -113,3 +113,24 @@
 - Không còn blocker kỹ thuật cho Trust Section.
 - Lint, build và runtime route `/` đều đạt.
 - Chưa kiểm tra trực quan bằng browser automation hoặc thiết bị thật; responsive đã được rà theo source và breakpoint.
+
+---
+
+## ISSUE-009 — Nội dung chương trình chi tiết chưa được cung cấp
+
+**Trạng thái:** Open
+
+**Mô tả:** Programs Section hiện chỉ có các nhóm đã xác định trong tài liệu; chưa có tên khóa học, mô tả chi tiết, học phí, thời lượng hoặc lịch học được khách hàng xác nhận.
+
+**Ảnh hưởng:** Không chặn section giới thiệu nhóm chương trình; chưa thể hiển thị khóa học cụ thể trên trang chủ hoặc route chương trình.
+
+**Cần từ khách hàng:** Danh sách khóa học và thông tin nghiệp vụ theo `docs/FUNCTIONAL_RULES.md`.
+
+---
+
+## Trạng thái Programs Section
+
+- Không còn blocker kỹ thuật cho Programs Section.
+- Lint, build và runtime route `/` đều đạt.
+- CTA `/programs` chưa có route đích vì thuộc Task 03.
+- Chưa kiểm tra trực quan bằng browser automation hoặc thiết bị thật; responsive đã được rà theo source và breakpoint.
