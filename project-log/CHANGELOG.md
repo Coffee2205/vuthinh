@@ -367,4 +367,4 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 
 ### Commit
 
-- Sẽ cập nhật sau khi commit.
+- `a0004af` — `feat: add formation story empty state`.

@@ -159,7 +159,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - Trial Registration đã được commit tại `d31578f` — `feat: add trial registration form preview`.
 - Final CTA và Task 01 đã được commit tại `8e64187` — `feat: complete home page final cta`.
 - About Introduction đã được commit tại `2955001` — `feat: add about introduction`.
-- Formation Story đang chờ commit sau khi hoàn tất log.
+- Formation Story đã được commit tại `a0004af` — `feat: add formation story empty state`.
 
 ## Task tiếp theo
 

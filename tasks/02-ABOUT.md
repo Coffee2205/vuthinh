@@ -36,4 +36,4 @@
 - Responsive: một cột trên mobile, hai vùng từ `lg`; danh sách dữ liệu cần cung cấp chuyển hai cột từ `sm`.
 - Accessibility: page chỉ khai báo một `main` trong source; section dùng `aria-labelledby`, `h2`/`h3` và danh sách semantic.
 - Giới hạn: chưa có dữ liệu lịch sử thật hoặc hình ảnh được phép sử dụng; chưa kiểm tra trực quan trên thiết bị thật/browser automation.
-- Commit: sẽ cập nhật sau khi commit.
+- Commit: `a0004af` — `feat: add formation story empty state`.
