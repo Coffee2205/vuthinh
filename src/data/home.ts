@@ -139,3 +139,15 @@ export const learningJourneyContent = {
     },
   ],
 } as const;
+
+export const expertContent = {
+  eyebrow: "Chuyên gia đồng hành",
+  title: "Kết nối giáo dục với sự thấu hiểu mỗi gia đình",
+  description:
+    "Chuyên gia đồng hành trong việc lắng nghe nhu cầu, định hướng chương trình và kết nối ngôn ngữ với kỹ năng sống, cảm xúc và giá trị con người.",
+  status: "Thông tin hồ sơ chuyên gia đang được cập nhật",
+  note: "Tên, hình ảnh, kinh nghiệm và chứng chỉ sẽ chỉ hiển thị sau khi được xác nhận.",
+  focusAreas: ["Định hướng học tập", "Tiếng Trung", "Kỹ năng & cảm xúc"],
+  profileAction: { href: "/expert", label: "Xem trang chuyên gia" },
+  consultationAction: { href: "/consultation", label: "Đăng ký tư vấn" },
+} as const;

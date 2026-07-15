@@ -151,3 +151,18 @@
 
 - Không còn blocker kỹ thuật; lint, build và runtime đều đạt.
 - Chưa kiểm tra trực quan bằng browser automation hoặc thiết bị thật.
+
+---
+
+## ISSUE-011 — Chưa có hồ sơ chuyên gia thật
+
+**Trạng thái:** Open
+
+**Mô tả:** Thiếu tên, chức danh, ảnh, tiểu sử, kinh nghiệm, chuyên môn và chứng chỉ đã xác nhận.
+
+**Ảnh hưởng:** Expert Section hiện hiển thị trạng thái chờ nội dung; không chặn kỹ thuật.
+
+## Trạng thái Expert Section
+
+- Lint, build và runtime đạt; chưa kiểm tra trực quan trên thiết bị thật.
+- `/expert` và `/consultation` chưa được triển khai.

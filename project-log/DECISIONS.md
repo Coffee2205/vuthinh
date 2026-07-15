@@ -117,3 +117,11 @@ Mỗi quyết định phải ghi ngày, nội dung, lý do và ảnh hưởng.
 **Lý do:** Phù hợp user flow Giai đoạn 1 và không tạo chức năng roadmap cá nhân hóa ngoài phạm vi.
 
 **Ảnh hưởng:** Nội dung không cam kết kết quả và ghi rõ chưa có lộ trình tự động.
+
+## 2026-07-15 — Expert Section dùng trạng thái chờ nội dung
+
+**Quyết định:** Không tạo hồ sơ chuyên gia giả; hiển thị rõ tên, ảnh, kinh nghiệm và chứng chỉ đang chờ xác nhận.
+
+**Lý do:** Project chưa có dữ liệu chuyên gia thật.
+
+**Ảnh hưởng:** Layout và CTA sẵn sàng, nội dung hồ sơ phải được thay khi khách hàng cung cấp.

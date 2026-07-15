@@ -8,7 +8,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 
 ## Task hiện tại
 
-`Task 01 — Trang chủ` đang thực hiện theo từng section. Hero, Trust, Programs và Learning Journey đã hoàn thành; chưa bắt đầu Giới thiệu chuyên gia.
+`Task 01 — Trang chủ` đang thực hiện theo từng section. Năm section đầu đã hoàn thành; chưa bắt đầu Thành quả học viên.
 
 ## Đã hoàn thành
 
@@ -72,7 +72,13 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - Đã thêm timeline bốn bước từ chia sẻ nhu cầu đến bắt đầu và duy trì trao đổi.
 - Không tạo roadmap tự động, cá nhân hóa hoặc cam kết kết quả.
 - Luồng tư vấn/xác nhận thủ công được ghi rõ.
-- Chưa bắt đầu Giới thiệu chuyên gia.
+- Chưa bắt đầu các section sau Giới thiệu chuyên gia.
+
+### Task 01 — Giới thiệu chuyên gia
+
+- Đã thêm section một chuyên gia với trạng thái hồ sơ đang cập nhật, không dùng dữ liệu giả.
+- Có CTA tới `/expert` và `/consultation`; hai route chưa triển khai.
+- Chưa bắt đầu Thành quả học viên.
 
 ## Chưa thực hiện
 
@@ -107,4 +113,4 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 
 ## Task tiếp theo
 
-Tiếp tục `Task 01 — Trang chủ` bằng section “Giới thiệu chuyên gia”. Chưa bắt đầu section này.
+Tiếp tục `Task 01 — Trang chủ` bằng section “Thành quả học viên”. Chưa bắt đầu section này.

@@ -168,3 +168,17 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 ### Commit
 
 - `bd2b456` — `feat: add learning journey section`.
+
+## 2026-07-15 — Task 01: Giới thiệu chuyên gia
+
+### Added
+
+- Expert Section với trạng thái hồ sơ đang cập nhật và CTA chuyên gia/tư vấn.
+
+### Verified
+
+- Lint, build và runtime `/` đạt; semantic heading/focus và breakpoint đã được rà.
+
+### Known issues
+
+- Chưa có dữ liệu chuyên gia thật; hai route CTA chưa triển khai; chưa kiểm tra trực quan trên thiết bị thật.

@@ -10,7 +10,7 @@ Tạo trang chủ thuyết phục phụ huynh và dẫn người dùng đến đ
 - [x] Vì sao phụ huynh tin tưởng.
 - [x] Chương trình học nổi bật.
 - [x] Hành trình học tập.
-- [ ] Giới thiệu chuyên gia.
+- [x] Giới thiệu chuyên gia.
 - [ ] Thành quả học viên.
 - [ ] Cảm nhận phụ huynh.
 - [ ] Bài viết/tài liệu nổi bật.
@@ -178,3 +178,12 @@ Tạo trang chủ thuyết phục phụ huynh và dẫn người dùng đến đ
 ### Commit
 
 - `bd2b456` — `feat: add learning journey section`.
+
+## Kết quả thực hiện — Giới thiệu chuyên gia
+
+- File tạo: `src/components/home/ExpertSection.tsx`.
+- File sửa: `src/data/home.ts`, `src/app/page.tsx`, task và project log.
+- Quyết định: hiển thị trạng thái hồ sơ đang cập nhật; không tạo tên, ảnh, kinh nghiệm hoặc chứng chỉ giả; Server Component, CTA `/expert` và `/consultation`.
+- Kiểm tra: lint/build đạt; runtime `/` HTTP 200 và có trạng thái hồ sơ cùng hai CTA; responsive một cột mobile, hai vùng desktop; heading/focus hợp lệ.
+- Giới hạn: thiếu toàn bộ dữ liệu chuyên gia thật; route CTA thuộc task sau; chưa kiểm tra trực quan trên thiết bị thật.
+- Commit: sẽ cập nhật sau khi tạo commit.
