@@ -64,4 +64,4 @@
 - Quyết định: không tạo khóa học, học phí, lịch học hoặc thông tin đầu ra giả; không làm trước Empty state vì đây là mục riêng phía sau trong checklist.
 - Kiểm tra source hiện tại: `npm.cmd run lint` đạt; `npm.cmd run build` đạt, `/`, `/about` và `/programs` tiếp tục được prerender tĩnh.
 - Giới hạn/blocker: cần ít nhất một bản ghi khóa học đã duyệt hoặc chỉ đạo rõ cho phép chuyển sang thực hiện mục Empty state theo đúng thứ tự.
-- Commit tài liệu: chờ tạo commit.
+- Commit tài liệu: `e777ef6` — `docs: record course data blocker`.

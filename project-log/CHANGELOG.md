@@ -587,4 +587,4 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 
 ### Commit
 
-- Chờ tạo commit tài liệu.
+- `e777ef6` — `docs: record course data blocker`.

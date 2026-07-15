@@ -220,6 +220,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - About CTA Section và Task 02 đã được commit tại `d2f6b49` — `feat: complete about page cta`.
 - Program Groups đã được commit tại `3119778` — `feat: add program group listing`.
 - Program Group Filter đã được commit tại `bd88cda` — `feat: add program category filter`.
+- Rà soát blocker dữ liệu Danh sách khóa học đã được commit tại `e777ef6` — `docs: record course data blocker`.
 
 ## Task tiếp theo
 
