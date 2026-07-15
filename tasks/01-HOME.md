@@ -225,4 +225,4 @@ Tạo trang chủ thuyết phục phụ huynh và dẫn người dùng đến đ
 - Responsive: một cột trên mobile, hai vùng từ `lg`; trường form một cột mobile và hai cột từ `sm`.
 - Accessibility: label gắn trực tiếp với control, `fieldset`/`legend`, `aria-describedby`, `role=status`, autocomplete và loại input phù hợp đã được rà.
 - Giới hạn: form chưa thể submit, chưa có validation/loading/success/error nghiệp vụ hoặc lưu dữ liệu; các phần này thuộc Task 07. Chưa kiểm tra trực quan trên thiết bị thật/browser automation.
-- Commit: sẽ cập nhật sau khi commit.
+- Commit: `d31578f` — `feat: add trial registration form preview`.

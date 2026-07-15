@@ -135,7 +135,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - Student Outcomes đã được commit tại `5743558` — `feat: add student outcomes empty state`.
 - Parent Testimonials đã được commit tại `71f7096` — `feat: add parent testimonials empty state`.
 - Featured Content đã được commit tại `9ea640a` — `feat: add featured content empty states`.
-- Trial Registration đang chờ commit sau khi hoàn tất log.
+- Trial Registration đã được commit tại `d31578f` — `feat: add trial registration form preview`.
 
 ## Task tiếp theo
 
