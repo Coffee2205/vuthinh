@@ -69,4 +69,4 @@
 - Responsive: một cột trên mobile, hai cột từ `sm` và bốn cột từ `lg`; khoảng cách mobile-first.
 - Accessibility: section dùng `aria-labelledby`, danh sách `ul`/`li`, cấu trúc `h2`/`h3`; số thứ tự trang trí được ẩn khỏi assistive technology.
 - Giới hạn: câu chữ Giá trị cốt lõi chưa được khách hàng duyệt bản cuối; chưa kiểm tra trực quan trên thiết bị thật/browser automation.
-- Commit: chờ tạo commit.
+- Commit: `8b5821c` — `feat: add about core values section`.

@@ -180,7 +180,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - Formation Story đã được commit tại `a0004af` — `feat: add formation story empty state`.
 - Vision Section đã được commit tại `59d635b` — `feat: add about vision section`.
 - Mission Section đã được commit tại `8f55a44` — `feat: add about mission section`.
-- Core Values Section đã hoàn thành source và kiểm tra; chờ tạo commit.
+- Core Values Section đã được commit tại `8b5821c` — `feat: add about core values section`.
 
 ## Task tiếp theo
 

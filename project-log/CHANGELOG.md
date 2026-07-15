@@ -451,4 +451,4 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 
 ### Commit
 
-- Chờ tạo commit.
+- `8b5821c` — `feat: add about core values section`.
