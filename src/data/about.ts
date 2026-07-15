@@ -39,3 +39,31 @@ export const formationStoryContent = {
     "Các mốc phát triển được phép công bố",
   ],
 } as const;
+
+export const visionContent = {
+  eyebrow: "Tầm nhìn",
+  title: "Hướng tới một hệ sinh thái giáo dục đồng hành lâu dài cùng gia đình",
+  description:
+    "Vũ Thịnh hướng tới việc kết nối năng lực ngôn ngữ với kỹ năng sống và sự phát triển con người trong một hành trình học tập có định hướng.",
+  directions: [
+    {
+      label: "Nền tảng",
+      title: "Ngôn ngữ mở ra kết nối",
+      description:
+        "Tiếng Trung tiếp tục là trọng tâm để người học xây nền tảng học tập, giao tiếp và ứng dụng.",
+    },
+    {
+      label: "Đồng hành",
+      title: "Năng lực sống đi cùng việc học",
+      description:
+        "Kỹ năng, tư duy và cảm xúc được nhìn nhận như những phần bổ trợ cần thiết trong quá trình trưởng thành.",
+    },
+    {
+      label: "Phát triển",
+      title: "Giá trị bền vững cho mỗi người",
+      description:
+        "Việc học được kết nối với giá trị sống, hạnh phúc và nội lực thay vì chỉ dừng ở kiến thức.",
+    },
+  ],
+  note: "Câu chữ tầm nhìn được biên soạn từ định vị dự án và cần khách hàng duyệt trước khi sử dụng chính thức.",
+} as const;

@@ -4,7 +4,7 @@
 
 - [x] Giới thiệu trung tâm.
 - [x] Câu chuyện hình thành.
-- [ ] Tầm nhìn.
+- [x] Tầm nhìn.
 - [ ] Sứ mệnh.
 - [ ] Giá trị cốt lõi.
 - [ ] Triết lý giáo dục.
@@ -37,3 +37,14 @@
 - Accessibility: page chỉ khai báo một `main` trong source; section dùng `aria-labelledby`, `h2`/`h3` và danh sách semantic.
 - Giới hạn: chưa có dữ liệu lịch sử thật hoặc hình ảnh được phép sử dụng; chưa kiểm tra trực quan trên thiết bị thật/browser automation.
 - Commit: `a0004af` — `feat: add formation story empty state`.
+
+## Kết quả thực hiện — Tầm nhìn
+
+- File tạo: `src/components/about/VisionSection.tsx`.
+- File sửa: `src/app/about/page.tsx`, `src/data/about.ts`, `tasks/02-ABOUT.md` và các project log liên quan.
+- Quyết định: diễn đạt Tầm nhìn từ định vị đã có; không dùng cam kết dẫn đầu, quy mô, thời hạn hoặc kết quả chưa xác nhận.
+- Kiểm tra: `npm.cmd run lint` đạt; `npm.cmd run build` đạt và `/about` được prerender tĩnh; runtime production local HTTP 200, có đủ ba hướng Tầm nhìn, ghi chú duyệt nội dung và chưa có Sứ mệnh/Giá trị cốt lõi.
+- Responsive: một cột trên mobile, ba cột từ `md`; nội dung và khoảng cách mobile-first.
+- Accessibility: section dùng `aria-labelledby`, cấu trúc `h2`/`h3`, các hướng dùng `article` và màu chữ tương phản trên nền tối.
+- Giới hạn: câu chữ Tầm nhìn chưa được khách hàng duyệt bản cuối; chưa kiểm tra trực quan trên thiết bị thật/browser automation.
+- Commit: sẽ cập nhật sau khi commit.

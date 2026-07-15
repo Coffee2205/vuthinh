@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { AboutIntroduction } from "@/components/about/AboutIntroduction";
 import { FormationStorySection } from "@/components/about/FormationStorySection";
+import { VisionSection } from "@/components/about/VisionSection";
 
 export const metadata: Metadata = {
   title: "Giới thiệu | Vũ Thịnh",
@@ -13,6 +14,7 @@ export default function AboutPage() {
     <main>
       <AboutIntroduction />
       <FormationStorySection />
+      <VisionSection />
     </main>
   );
 }

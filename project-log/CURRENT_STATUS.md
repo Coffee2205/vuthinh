@@ -8,7 +8,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 
 ## Task hiện tại
 
-`Task 02 — Trang Giới thiệu` đang thực hiện theo từng phần. Hai phần đầu đã hoàn thành; chưa bắt đầu “Tầm nhìn”.
+`Task 02 — Trang Giới thiệu` đang thực hiện theo từng phần. Ba phần đầu đã hoàn thành; chưa bắt đầu “Sứ mệnh”.
 
 ## Đã hoàn thành
 
@@ -123,6 +123,12 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - Section liệt kê bốn nhóm thông tin cần khách hàng cung cấp, không tạo mốc hoặc nhân vật giả.
 - `main` được quản lý tại page để bao bọc các section của `/about`.
 
+### Task 02 — Tầm nhìn
+
+- Đã thêm tuyên bố hướng tới hệ sinh thái giáo dục đồng hành lâu dài cùng gia đình.
+- Ba hướng gồm ngôn ngữ, năng lực sống và giá trị phát triển con người; không có cam kết quy mô hoặc vị thế.
+- Câu chữ được ghi rõ cần khách hàng duyệt trước production.
+
 ## Chưa thực hiện
 
 - Các phần còn lại của Trang Giới thiệu.
@@ -140,7 +146,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - `node_modules`: Đã có; các dependency chính được nhận diện.
 - `npm.cmd run lint`: Đạt ngày 2026-07-15, không có lỗi ESLint.
 - `npm.cmd run build`: Đạt ngày 2026-07-15; compile, TypeScript và static generation thành công.
-- Runtime `/about`: HTTP 200, có Câu chuyện hình thành ở trạng thái chờ; chưa có Tầm nhìn hoặc Sứ mệnh.
+- Runtime `/about`: HTTP 200, có đủ nội dung Tầm nhìn; chưa có Sứ mệnh hoặc Giá trị cốt lõi.
 
 ## Trạng thái project local
 
@@ -160,7 +166,8 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - Final CTA và Task 01 đã được commit tại `8e64187` — `feat: complete home page final cta`.
 - About Introduction đã được commit tại `2955001` — `feat: add about introduction`.
 - Formation Story đã được commit tại `a0004af` — `feat: add formation story empty state`.
+- Vision Section đang chờ commit sau khi hoàn tất log.
 
 ## Task tiếp theo
 
-Tiếp tục `Task 02 — Trang Giới thiệu` bằng phần “Tầm nhìn”. Chưa bắt đầu phần này.
+Tiếp tục `Task 02 — Trang Giới thiệu` bằng phần “Sứ mệnh”. Chưa bắt đầu phần này.

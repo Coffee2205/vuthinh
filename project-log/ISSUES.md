@@ -237,3 +237,15 @@
 
 - Section đã có empty state; không còn blocker kỹ thuật cho layout.
 - Dữ liệu production vẫn bị chặn bởi cùng nội dung còn thiếu của `ISSUE-016`.
+
+---
+
+## ISSUE-017 — Câu chữ Tầm nhìn chưa được khách hàng duyệt
+
+**Trạng thái:** Open
+
+**Mô tả:** Tầm nhìn hiện được biên soạn từ định vị trong Project Vision, chưa phải tuyên bố thương hiệu được khách hàng phê duyệt bản cuối.
+
+**Ảnh hưởng:** Không chặn kỹ thuật hoặc layout; cần duyệt câu chữ trước production.
+
+**Cần từ khách hàng:** Xác nhận hoặc chỉnh sửa tuyên bố Tầm nhìn và ba hướng định vị đi kèm.

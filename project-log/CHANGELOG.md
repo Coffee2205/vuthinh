@@ -368,3 +368,31 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 ### Commit
 
 - `a0004af` — `feat: add formation story empty state`.
+
+## 2026-07-15 — Task 02: Tầm nhìn
+
+### Added
+
+- Vision Section với tuyên bố định hướng hệ sinh thái giáo dục gia đình.
+- Ba hướng về ngôn ngữ, năng lực sống và phát triển con người.
+
+### Changed
+
+- `/about` hiển thị Tầm nhìn sau Câu chuyện hình thành.
+- Bổ sung dữ liệu tĩnh trong `src/data/about.ts`.
+
+### Verified
+
+- `npm.cmd run lint` đạt.
+- `npm.cmd run build` đạt; `/about` được prerender tĩnh.
+- Production runtime `/about` trả HTTP 200, có đủ ba hướng và chưa có Sứ mệnh/Giá trị cốt lõi.
+- Heading, semantic article, tương phản và breakpoint responsive đã được rà trong source.
+
+### Known issues
+
+- Câu chữ Tầm nhìn chưa được khách hàng duyệt bản cuối.
+- Chưa kiểm tra trực quan bằng browser automation hoặc thiết bị thật.
+
+### Commit
+
+- Sẽ cập nhật sau khi commit.

@@ -181,3 +181,11 @@ Mỗi quyết định phải ghi ngày, nội dung, lý do và ảnh hưởng.
 **Lý do:** Project không có năm thành lập, người sáng lập, bối cảnh khởi đầu hoặc mốc phát triển đáng tin cậy.
 
 **Ảnh hưởng:** Cấu trúc trang được hoàn thiện trong đúng phạm vi mà không tạo câu chuyện thương hiệu giả; `ISSUE-016` tiếp tục theo dõi dữ liệu còn thiếu.
+
+## 2026-07-15 — Tầm nhìn giới hạn ở định hướng đã có
+
+**Quyết định:** Tầm nhìn diễn đạt hướng kết nối ngôn ngữ, kỹ năng sống và phát triển con người trong hệ sinh thái giáo dục gia đình.
+
+**Lý do:** Đây là định vị dài hạn đã có trong Project Vision; project không có cơ sở cho claim dẫn đầu, quy mô hoặc mốc thời gian.
+
+**Ảnh hưởng:** Section có nội dung định hướng nhưng kèm ghi chú cần khách hàng duyệt bản cuối; không lấn sang Sứ mệnh.
