@@ -127,3 +127,31 @@ export const coreValuesContent = {
   ],
   note: "Câu chữ Giá trị cốt lõi được biên soạn từ các nguyên tắc hiện có của dự án và cần khách hàng duyệt trước khi công bố chính thức.",
 } as const;
+
+export const educationPhilosophyContent = {
+  eyebrow: "Triết lý giáo dục",
+  title: "Nuôi dưỡng trí tuệ – ngôn ngữ – nhân cách",
+  description:
+    "Việc học được nhìn nhận như một hành trình kết nối kiến thức với năng lực sống và sự trưởng thành của mỗi người, trong đó tiếng Trung là nền tảng trọng tâm của Vũ Thịnh.",
+  principles: [
+    {
+      label: "Trí tuệ",
+      title: "Học để hiểu và biết cách vận dụng",
+      description:
+        "Kiến thức tạo nền tảng để người học mở rộng tư duy, giao tiếp và từng bước ứng dụng vào nhu cầu học tập hoặc công việc.",
+    },
+    {
+      label: "Ngôn ngữ",
+      title: "Xây năng lực kết nối qua tiếng Trung",
+      description:
+        "Ngôn ngữ không chỉ là nội dung cần ghi nhớ mà còn là phương tiện để tiếp cận thông tin, trao đổi và mở rộng trải nghiệm.",
+    },
+    {
+      label: "Nhân cách",
+      title: "Đặt sự trưởng thành bên cạnh kiến thức",
+      description:
+        "Kỹ năng sống, cảm xúc, giá trị sống và nội lực được xem là những khía cạnh đồng hành trong quá trình phát triển con người.",
+    },
+  ],
+  note: "Nội dung Triết lý giáo dục được diễn giải từ định vị dự án và cần khách hàng cùng đội ngũ chuyên môn duyệt trước khi công bố chính thức.",
+} as const;

@@ -273,3 +273,15 @@
 **Ảnh hưởng:** Không chặn kỹ thuật hoặc layout; cần duyệt câu chữ trước production.
 
 **Cần từ khách hàng:** Xác nhận, điều chỉnh hoặc thay thế tên cùng mô tả của từng giá trị cốt lõi.
+
+---
+
+## ISSUE-020 — Câu chữ Triết lý giáo dục chưa được duyệt chuyên môn
+
+**Trạng thái:** Open
+
+**Mô tả:** Triết lý hiện được diễn giải từ thông điệp “Nuôi dưỡng trí tuệ – ngôn ngữ – nhân cách”, chưa phải tuyên bố giáo dục được khách hàng và đội ngũ chuyên môn phê duyệt bản cuối.
+
+**Ảnh hưởng:** Không chặn kỹ thuật hoặc layout; cần duyệt nội dung trước production và không nên suy diễn thành phương pháp giảng dạy cụ thể.
+
+**Cần từ khách hàng:** Xác nhận hoặc chỉnh sửa tuyên bố chung cùng nội dung của ba trụ cột Trí tuệ, Ngôn ngữ và Nhân cách.

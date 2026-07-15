@@ -205,3 +205,11 @@ Mỗi quyết định phải ghi ngày, nội dung, lý do và ảnh hưởng.
 **Lý do:** Trình bày định hướng nhất quán mà không tự gắn phẩm chất thương hiệu, thành tích hoặc cam kết chưa được xác nhận.
 
 **Ảnh hưởng:** Nội dung được giữ trong dữ liệu tĩnh, có ghi chú cần khách hàng duyệt và chưa được xem là tuyên bố thương hiệu chính thức.
+
+## 2026-07-15 — Triết lý giáo dục bám theo định vị ba trụ cột
+
+**Quyết định:** Diễn giải Triết lý giáo dục từ thông điệp “Nuôi dưỡng trí tuệ – ngôn ngữ – nhân cách” và phạm vi phát triển con người đã có trong Project Vision.
+
+**Lý do:** Đây là căn cứ rõ nhất cho quan điểm giáo dục hiện tại; project chưa có tài liệu xác nhận phương pháp sư phạm hoặc cam kết đầu ra cụ thể.
+
+**Ảnh hưởng:** Section chỉ mô tả định hướng Trí tuệ, Ngôn ngữ và Nhân cách, kèm yêu cầu khách hàng cùng đội ngũ chuyên môn duyệt trước production.

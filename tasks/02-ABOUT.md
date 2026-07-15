@@ -7,7 +7,7 @@
 - [x] Tầm nhìn.
 - [x] Sứ mệnh.
 - [x] Giá trị cốt lõi.
-- [ ] Triết lý giáo dục.
+- [x] Triết lý giáo dục.
 - [ ] CTA đăng ký tư vấn/học thử.
 
 ## Tiêu chí
@@ -70,3 +70,14 @@
 - Accessibility: section dùng `aria-labelledby`, danh sách `ul`/`li`, cấu trúc `h2`/`h3`; số thứ tự trang trí được ẩn khỏi assistive technology.
 - Giới hạn: câu chữ Giá trị cốt lõi chưa được khách hàng duyệt bản cuối; chưa kiểm tra trực quan trên thiết bị thật/browser automation.
 - Commit: `8b5821c` — `feat: add about core values section`.
+
+## Kết quả thực hiện — Triết lý giáo dục
+
+- File tạo: `src/components/about/EducationPhilosophySection.tsx`.
+- File sửa: `src/app/about/page.tsx`, `src/data/about.ts`, `tasks/02-ABOUT.md` và các project log liên quan.
+- Quyết định: diễn giải triết lý từ định vị “Nuôi dưỡng trí tuệ – ngôn ngữ – nhân cách”; không tự tạo phương pháp giảng dạy, cam kết đầu ra hoặc tuyên bố chuyên môn chưa được xác nhận.
+- Kiểm tra: `npm.cmd run lint` đạt; `npm.cmd run build` đạt và `/about` được prerender tĩnh; runtime production local HTTP 200, có đủ ba trụ cột và chưa có CTA đăng ký của Task 02.
+- Responsive: một cột trên mobile, bố cục hai vùng từ `lg`; từng nguyên tắc chuyển sang hai vùng từ `sm`.
+- Accessibility: section dùng `aria-labelledby`, danh sách `ol`/`li`, cấu trúc `h2`/`h3`; số thứ tự trang trí được ẩn khỏi assistive technology.
+- Giới hạn: câu chữ Triết lý giáo dục chưa được khách hàng và đội ngũ chuyên môn duyệt bản cuối; chưa kiểm tra trực quan trên thiết bị thật/browser automation.
+- Commit: chờ tạo commit.

@@ -452,3 +452,31 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 ### Commit
 
 - `8b5821c` — `feat: add about core values section`.
+
+## 2026-07-15 — Task 02: Triết lý giáo dục
+
+### Added
+
+- Education Philosophy Section với ba trụ cột Trí tuệ, Ngôn ngữ và Nhân cách.
+- Ghi chú yêu cầu khách hàng cùng đội ngũ chuyên môn duyệt nội dung.
+
+### Changed
+
+- `/about` hiển thị Triết lý giáo dục sau Giá trị cốt lõi.
+- Bổ sung dữ liệu tĩnh trong `src/data/about.ts`.
+
+### Verified
+
+- `npm.cmd run lint` đạt.
+- `npm.cmd run build` đạt; `/about` được prerender tĩnh.
+- Production runtime `/about` trả HTTP 200, có đủ ba trụ cột và chưa có CTA đăng ký của Task 02.
+- Danh sách semantic, heading, nội dung trang trí và breakpoint responsive đã được rà trong source.
+
+### Known issues
+
+- Câu chữ Triết lý giáo dục chưa được khách hàng và đội ngũ chuyên môn duyệt bản cuối.
+- Chưa kiểm tra trực quan bằng browser automation hoặc thiết bị thật.
+
+### Commit
+
+- Chờ tạo commit.
