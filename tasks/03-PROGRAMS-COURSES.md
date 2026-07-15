@@ -9,7 +9,7 @@
 ## Công việc
 
 - [x] Danh sách nhóm chương trình.
-- [ ] Bộ lọc danh mục cơ bản.
+- [x] Bộ lọc danh mục cơ bản.
 - [ ] Danh sách khóa học.
 - [ ] Chi tiết khóa học.
 - [ ] CTA đăng ký.
@@ -42,3 +42,14 @@
 - Accessibility: page có `main`, section dùng `aria-labelledby`, một `h1`, danh sách `ul`/`li` và heading nhóm `h2`; số thứ tự trang trí được ẩn khỏi assistive technology.
 - Giới hạn: chưa có dữ liệu khóa học chi tiết được khách hàng xác nhận; chưa làm bộ lọc hoặc các phần tiếp theo; chưa kiểm tra trực quan trên thiết bị thật/browser automation.
 - Commit: `3119778` — `feat: add program group listing`.
+
+## Kết quả thực hiện — Bộ lọc danh mục cơ bản
+
+- File tạo: `src/components/programs/ProgramGroupFilter.tsx`.
+- File sửa: `src/components/programs/ProgramGroupsSection.tsx`, `src/data/programs.ts`, `tasks/03-PROGRAMS-COURSES.md` và các project log liên quan.
+- Quyết định: giữ section/header là Server Component và cô lập state/event trong một Client Component nhỏ; lọc theo Tất cả, Tiếng Trung, Năng lực sống và Phát triển con người.
+- Kiểm tra: `npm.cmd run lint` đạt; `npm.cmd run build` đạt và `/programs` được prerender tĩnh; production local HTTP 200, artifact build có đủ bốn nút, `aria-pressed="true"` cho Tất cả và trạng thái ban đầu 7 nhóm; không có link khóa học.
+- Responsive: nhóm nút tự xuống dòng; danh sách giữ một cột mobile, hai cột từ `sm`, ba cột từ `lg`.
+- Accessibility: bộ lọc có `role="group"`/`aria-label`, nút có `aria-pressed`, chiều cao tối thiểu 44px, focus-visible và kết quả dùng `role="status"`/`aria-live`.
+- Giới hạn: chưa kiểm tra thao tác click trực quan bằng browser automation/thiết bị thật; chưa làm danh sách khóa học hoặc phần tiếp theo.
+- Commit: chờ tạo commit.

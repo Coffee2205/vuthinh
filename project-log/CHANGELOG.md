@@ -540,3 +540,32 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 ### Commit
 
 - `3119778` — `feat: add program group listing`.
+
+## 2026-07-15 — Task 03: Bộ lọc danh mục cơ bản
+
+### Added
+
+- Bộ lọc bốn lựa chọn cho danh sách nhóm chương trình.
+- Trạng thái live thông báo số nhóm đang hiển thị.
+
+### Changed
+
+- Danh sách nhóm được chuyển vào Client Component nhỏ để hỗ trợ state và event.
+- Ghi chú `/programs` được cập nhật theo trạng thái đã có bộ lọc.
+
+### Verified
+
+- `npm.cmd run lint` đạt.
+- `npm.cmd run build` đạt; `/programs` được prerender tĩnh.
+- Production runtime `/programs` trả HTTP 200 và có đủ bốn nhãn lọc.
+- Artifact build xác nhận Tất cả có `aria-pressed="true"` và trạng thái ban đầu hiển thị 7 nhóm.
+- Không có link hoặc danh sách khóa học thuộc phần tiếp theo.
+
+### Known issues
+
+- Chưa kiểm tra thao tác click trực quan bằng browser automation hoặc thiết bị thật.
+- Dữ liệu khóa học chi tiết vẫn chưa được khách hàng cung cấp.
+
+### Commit
+
+- Chờ tạo commit.

@@ -8,7 +8,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 
 ## Task hiện tại
 
-`Task 03 — Chương trình và khóa học` đang thực hiện theo từng phần. Danh sách nhóm chương trình đã hoàn thành; chưa bắt đầu bộ lọc danh mục cơ bản.
+`Task 03 — Chương trình và khóa học` đang thực hiện theo từng phần. Danh sách nhóm và bộ lọc danh mục cơ bản đã hoàn thành; chưa bắt đầu danh sách khóa học.
 
 ## Đã hoàn thành
 
@@ -164,6 +164,12 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - Bốn nhóm tiếng Trung được thể hiện là trọng tâm; kỹ năng sống, quản trị cảm xúc và giá trị sống là các hướng bổ trợ.
 - Không tạo dữ liệu khóa học, bộ lọc, CTA hoặc route `/courses` trong phần này.
 
+### Task 03 — Bộ lọc danh mục cơ bản
+
+- Đã thêm bốn lựa chọn lọc: Tất cả, Tiếng Trung, Năng lực sống và Phát triển con người.
+- Chỉ vùng bộ lọc/danh sách là Client Component; header và section tiếp tục render phía server.
+- Kết quả lọc có trạng thái live và không tạo dữ liệu hoặc route khóa học.
+
 ## Chưa thực hiện
 
 - Các phần còn lại của Chương trình và khóa học.
@@ -180,7 +186,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - `node_modules`: Đã có; các dependency chính được nhận diện.
 - `npm.cmd run lint`: Đạt ngày 2026-07-15, không có lỗi ESLint.
 - `npm.cmd run build`: Đạt ngày 2026-07-15; compile, TypeScript và static generation thành công.
-- Runtime `/programs`: HTTP 200, có đủ bảy nhóm chương trình; không có bộ lọc hoặc link khóa học.
+- Runtime `/programs`: HTTP 200; có đủ bốn lựa chọn lọc, trạng thái mặc định 7 nhóm và không có link khóa học.
 
 ## Trạng thái project local
 
@@ -206,7 +212,8 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - Education Philosophy Section đã được commit tại `f2cbd34` — `feat: add education philosophy section`.
 - About CTA Section và Task 02 đã được commit tại `d2f6b49` — `feat: complete about page cta`.
 - Program Groups đã được commit tại `3119778` — `feat: add program group listing`.
+- Program Group Filter đã hoàn thành source và kiểm tra; chờ tạo commit.
 
 ## Task tiếp theo
 
-Tiếp tục `Task 03 — Chương trình và khóa học` bằng “Bộ lọc danh mục cơ bản”. Chưa bắt đầu phần này.
+Tiếp tục `Task 03 — Chương trình và khóa học` bằng “Danh sách khóa học”. Chưa bắt đầu phần này.

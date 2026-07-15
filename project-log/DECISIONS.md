@@ -229,3 +229,11 @@ Mỗi quyết định phải ghi ngày, nội dung, lý do và ảnh hưởng.
 **Lý do:** Taxonomy nhóm đã được tài liệu xác nhận nhưng chưa có dữ liệu khóa học chi tiết đáng tin cậy hoặc database.
 
 **Ảnh hưởng:** Route có thể cung cấp định hướng rõ ràng mà không tạo khóa học giả; bộ lọc, danh sách và chi tiết khóa học tiếp tục được triển khai theo từng mục sau.
+
+## 2026-07-15 — Cô lập bộ lọc chương trình trong Client Component nhỏ
+
+**Quyết định:** Giữ page và section `/programs` là Server Components; chỉ `ProgramGroupFilter` dùng `use client` để quản lý lựa chọn và lọc danh sách tại chỗ.
+
+**Lý do:** Bộ lọc cần state/event trình duyệt, trong khi phần còn lại không cần JavaScript phía client.
+
+**Ảnh hưởng:** Bốn lựa chọn lọc hoạt động không cần database hoặc thư viện mới; dữ liệu vẫn nằm trong `src/data/programs.ts` và phạm vi client được giới hạn.

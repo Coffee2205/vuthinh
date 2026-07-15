@@ -47,5 +47,12 @@ export const programGroupsContent = {
         "Mở ra các chủ đề về giá trị sống, nội lực và sự phát triển con người trong hành trình trưởng thành.",
     },
   ],
-  note: "Thông tin khóa học cụ thể chỉ được bổ sung khi có dữ liệu được xác nhận; trang hiện chưa có bộ lọc hoặc danh sách khóa học.",
+  note: "Thông tin khóa học cụ thể chỉ được bổ sung khi có dữ liệu được xác nhận; trang hiện chưa có danh sách khóa học.",
 } as const;
+
+export const programGroupFilters = [
+  { label: "Tất cả", value: "all" },
+  { label: "Tiếng Trung", value: "Tiếng Trung" },
+  { label: "Năng lực sống", value: "Năng lực sống" },
+  { label: "Phát triển con người", value: "Phát triển con người" },
+] as const;

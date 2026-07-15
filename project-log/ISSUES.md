@@ -131,6 +131,11 @@
 - Route `/programs` đã hiển thị đủ bảy nhóm bằng dữ liệu tĩnh; không còn blocker kỹ thuật cho phần danh sách nhóm.
 - Dữ liệu khóa học chi tiết vẫn thiếu và tiếp tục được theo dõi trong `ISSUE-009` cho các phần sau của Task 03.
 
+### Trạng thái Bộ lọc danh mục cơ bản
+
+- Không còn blocker kỹ thuật cho bộ lọc bảy nhóm; lint, build, runtime và trạng thái HTML ban đầu đều đạt.
+- Chưa kiểm tra thao tác click trực quan bằng browser automation hoặc thiết bị thật.
+
 ---
 
 ## Trạng thái Programs Section
