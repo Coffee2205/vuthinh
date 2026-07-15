@@ -220,3 +220,15 @@
 - Không còn blocker kỹ thuật cho CTA cuối trang.
 - Toàn bộ checklist giao diện Task 01 đã hoàn thành; lint, build và runtime đạt.
 - CTA dẫn tới form preview đang khóa; giới hạn vận hành tiếp tục được theo dõi tại `ISSUE-015`.
+
+---
+
+## ISSUE-016 — Chưa có hồ sơ giới thiệu trung tâm chính thức
+
+**Trạng thái:** Open
+
+**Mô tả:** Chưa có lịch sử hình thành, thông tin người sáng lập/đội ngũ, cơ sở, mốc phát triển hoặc thành tựu được khách hàng xác nhận.
+
+**Ảnh hưởng:** Phần Giới thiệu trung tâm chỉ dùng định vị đã có và ghi chú trạng thái chờ; không còn blocker kỹ thuật cho phần mở đầu `/about`.
+
+**Cần từ khách hàng:** Hồ sơ giới thiệu chính thức, các mốc lịch sử có thể công bố và hình ảnh kèm quyền sử dụng.

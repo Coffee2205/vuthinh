@@ -2,7 +2,7 @@
 
 ## Nội dung
 
-- [ ] Giới thiệu trung tâm.
+- [x] Giới thiệu trung tâm.
 - [ ] Câu chuyện hình thành.
 - [ ] Tầm nhìn.
 - [ ] Sứ mệnh.
@@ -15,3 +15,14 @@
 - Nội dung dễ đọc.
 - Không lặp toàn bộ trang chủ.
 - Không tự tạo thành tựu chưa được xác nhận.
+
+## Kết quả thực hiện — Giới thiệu trung tâm
+
+- File tạo: `src/app/about/page.tsx`, `src/components/about/AboutIntroduction.tsx`, `src/data/about.ts`.
+- File sửa: `tasks/02-ABOUT.md` và các project log liên quan.
+- Quyết định: nội dung chỉ dùng định vị đã xác nhận trong PRD và Project Vision; không tạo lịch sử, đội ngũ, cơ sở, số liệu hoặc thành tựu.
+- Kiểm tra: `npm.cmd run lint` đạt; `npm.cmd run build` đạt và `/about` được prerender tĩnh; runtime production local HTTP 200, metadata cùng nội dung giới thiệu đúng và chưa có Câu chuyện/Tầm nhìn/Sứ mệnh.
+- Responsive: một cột trên mobile, hai vùng từ `lg`; các thẻ bổ trợ thay đổi theo `sm`/`lg`/`xl`.
+- Accessibility: một `h1`, heading đúng thứ tự, `aria-labelledby`, nội dung dạng `article` và độ tương phản đã được rà trong source.
+- Giới hạn: chưa có thông tin lịch sử, đội ngũ, cơ sở hoặc thành tựu được khách hàng xác nhận; chưa kiểm tra trực quan trên thiết bị thật/browser automation.
+- Commit: sẽ cập nhật sau khi commit.

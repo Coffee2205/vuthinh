@@ -316,3 +316,27 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 ### Commit
 
 - `8e64187` — `feat: complete home page final cta`.
+
+## 2026-07-15 — Task 02: Giới thiệu trung tâm
+
+### Added
+
+- Route `/about` với metadata riêng.
+- About Introduction trình bày định vị hệ sinh thái giáo dục gia đình và tiếng Trung là trọng tâm.
+- Nguồn dữ liệu tĩnh riêng tại `src/data/about.ts`.
+
+### Verified
+
+- `npm.cmd run lint` đạt.
+- `npm.cmd run build` đạt; `/about` được prerender tĩnh.
+- Production runtime `/about` trả HTTP 200, metadata/nội dung đúng và chưa có các section tiếp theo.
+- Heading, semantic article và breakpoint responsive đã được rà trong source.
+
+### Known issues
+
+- Chưa có lịch sử, đội ngũ, cơ sở, thành tựu hoặc hình ảnh thật được xác nhận.
+- Chưa kiểm tra trực quan bằng browser automation hoặc thiết bị thật.
+
+### Commit
+
+- Sẽ cập nhật sau khi commit.

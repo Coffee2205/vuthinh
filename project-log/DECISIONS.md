@@ -165,3 +165,11 @@ Mỗi quyết định phải ghi ngày, nội dung, lý do và ảnh hưởng.
 **Lý do:** CTA hoạt động ngay trong phạm vi trang chủ, tránh dẫn người dùng tới route `/trial-registration` chưa được triển khai và tuân thủ quy tắc không đặt nhiều CTA ngang cấp.
 
 **Ảnh hưởng:** CTA không tạo thêm route hoặc logic gửi dữ liệu; khi form được kích hoạt trong Task 07, liên kết nội bộ vẫn giữ nguyên giá trị sử dụng.
+
+## 2026-07-15 — Phần giới thiệu chỉ dùng định vị đã xác nhận
+
+**Quyết định:** Nội dung mở đầu `/about` chỉ diễn đạt định vị hệ sinh thái giáo dục gia đình, tiếng Trung trọng tâm và các mảng phát triển bổ trợ từ PRD/Project Vision.
+
+**Lý do:** Chưa có hồ sơ doanh nghiệp chính thức về lịch sử, đội ngũ, cơ sở hoặc thành tựu.
+
+**Ảnh hưởng:** Route giới thiệu có thể hoạt động mà không tạo claim chưa kiểm chứng; các dữ liệu thực tế sẽ được bổ sung ở đúng section sau khi khách hàng xác nhận.

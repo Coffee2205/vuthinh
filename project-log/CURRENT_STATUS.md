@@ -8,7 +8,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 
 ## Task hiện tại
 
-`Task 01 — Trang chủ` đã hoàn thành toàn bộ 10 section trong phạm vi giao diện. `Task 02 — Trang Giới thiệu` là task tiếp theo và chưa bắt đầu.
+`Task 02 — Trang Giới thiệu` đang thực hiện theo từng phần. “Giới thiệu trung tâm” đã hoàn thành; chưa bắt đầu “Câu chuyện hình thành”.
 
 ## Đã hoàn thành
 
@@ -109,11 +109,17 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 ### Trạng thái Task 01
 
 - Hoàn thành toàn bộ checklist giao diện trang chủ.
-- Task 02 chưa có code và chưa bắt đầu.
+- Task 01 không còn section giao diện chưa hoàn thành.
+
+### Task 02 — Giới thiệu trung tâm
+
+- Đã tạo route `/about` với metadata riêng và phần giới thiệu định vị Vũ Thịnh.
+- Tiếng Trung được trình bày là trọng tâm; kỹ năng sống, cảm xúc và phát triển nội lực là các mảng bổ trợ.
+- Không dùng lịch sử, số liệu, thành tựu, đội ngũ hoặc cơ sở chưa được xác nhận.
 
 ## Chưa thực hiện
 
-- Trang Giới thiệu.
+- Các phần còn lại của Trang Giới thiệu.
 - Chương trình và khóa học.
 - Trang chuyên gia và đăng ký tư vấn.
 - Blog và tài liệu miễn phí.
@@ -128,7 +134,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - `node_modules`: Đã có; các dependency chính được nhận diện.
 - `npm.cmd run lint`: Đạt ngày 2026-07-15, không có lỗi ESLint.
 - `npm.cmd run build`: Đạt ngày 2026-07-15; compile, TypeScript và static generation thành công.
-- Runtime `/`: HTTP 200, CTA cuối trang nằm sau form và liên kết đúng tới `#trial-registration`; không có nội dung Task 02.
+- Runtime `/about`: HTTP 200, metadata và nội dung giới thiệu đúng; chưa có Câu chuyện hình thành, Tầm nhìn hoặc Sứ mệnh.
 
 ## Trạng thái project local
 
@@ -146,7 +152,8 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - Featured Content đã được commit tại `9ea640a` — `feat: add featured content empty states`.
 - Trial Registration đã được commit tại `d31578f` — `feat: add trial registration form preview`.
 - Final CTA và Task 01 đã được commit tại `8e64187` — `feat: complete home page final cta`.
+- About Introduction đang chờ commit sau khi hoàn tất log.
 
 ## Task tiếp theo
 
-`Task 02 — Trang Giới thiệu`. Bước đầu tiên là chỉ thực hiện phần “Giới thiệu trung tâm”; Task 02 chưa bắt đầu.
+Tiếp tục `Task 02 — Trang Giới thiệu` bằng phần “Câu chuyện hình thành”. Chưa bắt đầu phần này.

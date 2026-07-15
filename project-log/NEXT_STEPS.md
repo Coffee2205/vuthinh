@@ -2,18 +2,18 @@
 
 ## Nhiệm vụ gần nhất
 
-> Đọc `tasks/02-ABOUT.md` và chỉ thực hiện phần “Giới thiệu trung tâm”, chưa làm các phần khác của Task 02.
+> Tiếp tục `Task 02 — Trang Giới thiệu` và chỉ thực hiện phần “Câu chuyện hình thành”, chưa làm các phần khác.
 
 ## Thứ tự thực hiện
 
-1. Đối chiếu nội dung giới thiệu đã được xác nhận trong PRD và Project Vision.
-2. Không tự tạo lịch sử, thành tựu, số liệu hoặc thông tin trung tâm chưa được khách hàng cung cấp.
-3. Chỉ tạo route `/about` và phần Giới thiệu trung tâm; chưa làm câu chuyện, tầm nhìn, sứ mệnh hoặc các phần sau.
+1. Kiểm tra dữ liệu lịch sử hình thành thực tế đã được khách hàng cung cấp hay chưa.
+2. Không tự tạo mốc thời gian, người sáng lập, động lực thành lập, thành tựu hoặc số liệu.
+3. Nếu chưa có dữ liệu xác nhận, dùng trạng thái chờ minh bạch trong đúng phạm vi Câu chuyện hình thành.
 4. Kiểm tra responsive/accessibility, link, lint/build/runtime.
 5. Cập nhật task/log, commit và push trước khi chuyển section.
 
 ## Chưa làm ngay
 
-- Các phần sau “Giới thiệu trung tâm” của Task 02 và các task tiếp theo.
+- Tầm nhìn, Sứ mệnh và các phần sau Câu chuyện hình thành.
 - Database, form lưu dữ liệu thật và Supabase.
 - Admin, AI, thanh toán hoặc LMS.
