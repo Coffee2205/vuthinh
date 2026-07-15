@@ -80,4 +80,4 @@
 - Responsive: một cột trên mobile, bố cục hai vùng từ `lg`; từng nguyên tắc chuyển sang hai vùng từ `sm`.
 - Accessibility: section dùng `aria-labelledby`, danh sách `ol`/`li`, cấu trúc `h2`/`h3`; số thứ tự trang trí được ẩn khỏi assistive technology.
 - Giới hạn: câu chữ Triết lý giáo dục chưa được khách hàng và đội ngũ chuyên môn duyệt bản cuối; chưa kiểm tra trực quan trên thiết bị thật/browser automation.
-- Commit: chờ tạo commit.
+- Commit: `f2cbd34` — `feat: add education philosophy section`.

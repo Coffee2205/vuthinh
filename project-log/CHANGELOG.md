@@ -479,4 +479,4 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 
 ### Commit
 
-- Chờ tạo commit.
+- `f2cbd34` — `feat: add education philosophy section`.

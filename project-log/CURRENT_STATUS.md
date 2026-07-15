@@ -187,7 +187,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - Vision Section đã được commit tại `59d635b` — `feat: add about vision section`.
 - Mission Section đã được commit tại `8f55a44` — `feat: add about mission section`.
 - Core Values Section đã được commit tại `8b5821c` — `feat: add about core values section`.
-- Education Philosophy Section đã hoàn thành source và kiểm tra; chờ tạo commit.
+- Education Philosophy Section đã được commit tại `f2cbd34` — `feat: add education philosophy section`.
 
 ## Task tiếp theo
 
