@@ -395,4 +395,4 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 
 ### Commit
 
-- Sẽ cập nhật sau khi commit.
+- `59d635b` — `feat: add about vision section`.

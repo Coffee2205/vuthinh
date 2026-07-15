@@ -166,7 +166,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - Final CTA và Task 01 đã được commit tại `8e64187` — `feat: complete home page final cta`.
 - About Introduction đã được commit tại `2955001` — `feat: add about introduction`.
 - Formation Story đã được commit tại `a0004af` — `feat: add formation story empty state`.
-- Vision Section đang chờ commit sau khi hoàn tất log.
+- Vision Section đã được commit tại `59d635b` — `feat: add about vision section`.
 
 ## Task tiếp theo
 

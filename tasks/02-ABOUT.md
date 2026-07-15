@@ -47,4 +47,4 @@
 - Responsive: một cột trên mobile, ba cột từ `md`; nội dung và khoảng cách mobile-first.
 - Accessibility: section dùng `aria-labelledby`, cấu trúc `h2`/`h3`, các hướng dùng `article` và màu chữ tương phản trên nền tối.
 - Giới hạn: câu chữ Tầm nhìn chưa được khách hàng duyệt bản cuối; chưa kiểm tra trực quan trên thiết bị thật/browser automation.
-- Commit: sẽ cập nhật sau khi commit.
+- Commit: `59d635b` — `feat: add about vision section`.
