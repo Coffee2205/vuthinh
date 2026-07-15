@@ -8,7 +8,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 
 ## Task hiện tại
 
-`Task 03 — Chương trình và khóa học` đang thực hiện theo từng phần. Danh sách nhóm và bộ lọc danh mục cơ bản đã hoàn thành; chưa bắt đầu danh sách khóa học.
+`Task 03 — Chương trình và khóa học` đang thực hiện theo từng phần. Danh sách nhóm và bộ lọc danh mục cơ bản đã hoàn thành; phần Danh sách khóa học bị chặn do chưa có dữ liệu được xác nhận.
 
 ## Đã hoàn thành
 
@@ -170,6 +170,12 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - Chỉ vùng bộ lọc/danh sách là Client Component; header và section tiếp tục render phía server.
 - Kết quả lọc có trạng thái live và không tạo dữ liệu hoặc route khóa học.
 
+### Task 03 — Danh sách khóa học
+
+- Đã rà toàn bộ source và tài liệu; không có bản ghi khóa học thực tế để hiển thị.
+- Không tạo khóa học giả và chưa tạo route `/courses` hoặc Empty state vì các phần này chưa đến lượt theo checklist.
+- Checkbox Danh sách khóa học vẫn chưa hoàn thành; đang chờ dữ liệu nghiệp vụ từ khách hàng.
+
 ## Chưa thực hiện
 
 - Các phần còn lại của Chương trình và khóa học.
@@ -187,6 +193,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - `npm.cmd run lint`: Đạt ngày 2026-07-15, không có lỗi ESLint.
 - `npm.cmd run build`: Đạt ngày 2026-07-15; compile, TypeScript và static generation thành công.
 - Runtime `/programs`: HTTP 200; có đủ bốn lựa chọn lọc, trạng thái mặc định 7 nhóm và không có link khóa học.
+- Rà soát Danh sách khóa học: không có lỗi kỹ thuật; blocker duy nhất là thiếu dữ liệu nghiệp vụ đã xác nhận.
 
 ## Trạng thái project local
 
@@ -216,4 +223,4 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 
 ## Task tiếp theo
 
-Tiếp tục `Task 03 — Chương trình và khóa học` bằng “Danh sách khóa học”. Chưa bắt đầu phần này.
+Tiếp tục “Danh sách khóa học” sau khi khách hàng cung cấp dữ liệu tối thiểu theo `docs/FUNCTIONAL_RULES.md`. Chưa chuyển sang phần kế tiếp.

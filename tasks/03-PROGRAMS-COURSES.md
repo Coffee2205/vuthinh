@@ -53,3 +53,15 @@
 - Accessibility: bộ lọc có `role="group"`/`aria-label`, nút có `aria-pressed`, chiều cao tối thiểu 44px, focus-visible và kết quả dùng `role="status"`/`aria-live`.
 - Giới hạn: chưa kiểm tra thao tác click trực quan bằng browser automation/thiết bị thật; chưa làm danh sách khóa học hoặc phần tiếp theo.
 - Commit: `bd88cda` — `feat: add program category filter`.
+
+## Kết quả rà soát — Danh sách khóa học
+
+- Trạng thái: bị chặn do chưa có dữ liệu khóa học được khách hàng xác nhận; checkbox vẫn để `[ ]`.
+- File tạo: không có.
+- File sửa: `tasks/03-PROGRAMS-COURSES.md` và các project log liên quan; không sửa source chức năng.
+- Dữ liệu đã kiểm tra: toàn bộ `src/`, `docs/`, `tasks/` và `project-log/` chỉ có taxonomy nhóm, yêu cầu trường và schema dự kiến; không có bản ghi khóa học thật.
+- Dữ liệu tối thiểu cần cung cấp cho mỗi khóa học: tên, slug, nhóm chương trình, mô tả ngắn, đối tượng, mục tiêu, nội dung chính, thời lượng, hình thức học, học phí hoặc trạng thái Liên hệ và trạng thái xuất bản.
+- Quyết định: không tạo khóa học, học phí, lịch học hoặc thông tin đầu ra giả; không làm trước Empty state vì đây là mục riêng phía sau trong checklist.
+- Kiểm tra source hiện tại: `npm.cmd run lint` đạt; `npm.cmd run build` đạt, `/`, `/about` và `/programs` tiếp tục được prerender tĩnh.
+- Giới hạn/blocker: cần ít nhất một bản ghi khóa học đã duyệt hoặc chỉ đạo rõ cho phép chuyển sang thực hiện mục Empty state theo đúng thứ tự.
+- Commit tài liệu: chờ tạo commit.

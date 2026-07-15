@@ -569,3 +569,22 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 ### Commit
 
 - `bd88cda` — `feat: add program category filter`.
+
+## 2026-07-15 — Task 03: Rà soát dữ liệu Danh sách khóa học
+
+### Verified
+
+- Rà toàn bộ `src/`, `docs/`, `tasks/` và `project-log/` để tìm dữ liệu khóa học thực tế.
+- `npm.cmd run lint` đạt.
+- `npm.cmd run build` đạt; `/`, `/about` và `/programs` tiếp tục được prerender tĩnh.
+- Checklist Danh sách khóa học được giữ chưa hoàn thành vì không có dữ liệu hợp lệ.
+
+### Known issues
+
+- Chưa có bản ghi khóa học được khách hàng xác nhận theo các trường tối thiểu trong `docs/FUNCTIONAL_RULES.md`.
+- Danh sách khóa học bị chặn bởi dữ liệu nghiệp vụ; không có blocker kỹ thuật.
+- Không triển khai trước Empty state, chi tiết khóa học, CTA hoặc metadata động.
+
+### Commit
+
+- Chờ tạo commit tài liệu.

@@ -126,6 +126,13 @@
 
 **Cần từ khách hàng:** Danh sách khóa học và thông tin nghiệp vụ theo `docs/FUNCTIONAL_RULES.md`.
 
+### Trạng thái blocker Danh sách khóa học — 2026-07-15
+
+- Đã kiểm tra toàn bộ source và tài liệu: không có bản ghi khóa học thật, chỉ có nhóm chương trình và schema dự kiến.
+- Phần Danh sách khóa học của Task 03 không thể hoàn thành trung thực khi thiếu tên, slug, nhóm, mô tả, đối tượng, mục tiêu, nội dung, thời lượng, hình thức, học phí/trạng thái Liên hệ và trạng thái xuất bản.
+- Không tạo route `/courses` với dữ liệu giả và không làm trước mục Empty state.
+- Lint/build hiện tại đạt; đây là blocker dữ liệu nghiệp vụ, không phải blocker kỹ thuật.
+
 ### Trạng thái Danh sách nhóm chương trình
 
 - Route `/programs` đã hiển thị đủ bảy nhóm bằng dữ liệu tĩnh; không còn blocker kỹ thuật cho phần danh sách nhóm.
