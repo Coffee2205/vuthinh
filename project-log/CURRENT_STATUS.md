@@ -173,7 +173,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - About Introduction đã được commit tại `2955001` — `feat: add about introduction`.
 - Formation Story đã được commit tại `a0004af` — `feat: add formation story empty state`.
 - Vision Section đã được commit tại `59d635b` — `feat: add about vision section`.
-- Mission Section đang chờ commit sau khi hoàn tất log.
+- Mission Section đã được commit tại `8f55a44` — `feat: add about mission section`.
 
 ## Task tiếp theo
 

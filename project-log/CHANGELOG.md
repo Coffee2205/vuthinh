@@ -423,4 +423,4 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 
 ### Commit
 
-- Sẽ cập nhật sau khi commit.
+- `8f55a44` — `feat: add about mission section`.

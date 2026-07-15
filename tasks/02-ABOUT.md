@@ -58,4 +58,4 @@
 - Responsive: một cột trên mobile; danh sách hai cột từ `sm`, bố cục nội dung hai vùng từ `lg`.
 - Accessibility: section dùng `aria-labelledby`, `ol`/`li`, cấu trúc `h2`/`h3`; số thứ tự trang trí được ẩn khỏi assistive technology.
 - Giới hạn: câu chữ Sứ mệnh chưa được khách hàng duyệt bản cuối; chưa kiểm tra trực quan trên thiết bị thật/browser automation.
-- Commit: sẽ cập nhật sau khi commit.
+- Commit: `8f55a44` — `feat: add about mission section`.
