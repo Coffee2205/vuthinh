@@ -6,7 +6,7 @@
 - [x] Câu chuyện hình thành.
 - [x] Tầm nhìn.
 - [x] Sứ mệnh.
-- [ ] Giá trị cốt lõi.
+- [x] Giá trị cốt lõi.
 - [ ] Triết lý giáo dục.
 - [ ] CTA đăng ký tư vấn/học thử.
 
@@ -59,3 +59,14 @@
 - Accessibility: section dùng `aria-labelledby`, `ol`/`li`, cấu trúc `h2`/`h3`; số thứ tự trang trí được ẩn khỏi assistive technology.
 - Giới hạn: câu chữ Sứ mệnh chưa được khách hàng duyệt bản cuối; chưa kiểm tra trực quan trên thiết bị thật/browser automation.
 - Commit: `8f55a44` — `feat: add about mission section`.
+
+## Kết quả thực hiện — Giá trị cốt lõi
+
+- File tạo: `src/components/about/CoreValuesSection.tsx`.
+- File sửa: `src/app/about/page.tsx`, `src/data/about.ts`, `tasks/02-ABOUT.md` và các project log liên quan.
+- Quyết định: tổng hợp bốn nguyên tắc Rõ ràng, Lắng nghe, Phát triển toàn diện và Trung thực từ PRD cùng quy tắc dự án; không coi đây là claim thương hiệu đã được khách hàng phê duyệt.
+- Kiểm tra: `npm.cmd run lint` đạt; `npm.cmd run build` đạt và `/about` được prerender tĩnh; runtime production local HTTP 200, có đủ bốn giá trị và chưa có Triết lý giáo dục.
+- Responsive: một cột trên mobile, hai cột từ `sm` và bốn cột từ `lg`; khoảng cách mobile-first.
+- Accessibility: section dùng `aria-labelledby`, danh sách `ul`/`li`, cấu trúc `h2`/`h3`; số thứ tự trang trí được ẩn khỏi assistive technology.
+- Giới hạn: câu chữ Giá trị cốt lõi chưa được khách hàng duyệt bản cuối; chưa kiểm tra trực quan trên thiết bị thật/browser automation.
+- Commit: chờ tạo commit.

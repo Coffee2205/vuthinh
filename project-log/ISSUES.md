@@ -261,3 +261,15 @@
 **Ảnh hưởng:** Không chặn kỹ thuật hoặc layout; cần duyệt câu chữ trước production.
 
 **Cần từ khách hàng:** Xác nhận hoặc chỉnh sửa tuyên bố Sứ mệnh và bốn trách nhiệm đi kèm.
+
+---
+
+## ISSUE-019 — Câu chữ Giá trị cốt lõi chưa được khách hàng duyệt
+
+**Trạng thái:** Open
+
+**Mô tả:** Bốn giá trị Rõ ràng, Lắng nghe, Phát triển toàn diện và Trung thực được tổng hợp từ các nguyên tắc trong tài liệu dự án, chưa phải bộ giá trị thương hiệu được khách hàng phê duyệt bản cuối.
+
+**Ảnh hưởng:** Không chặn kỹ thuật hoặc layout; cần duyệt câu chữ trước production.
+
+**Cần từ khách hàng:** Xác nhận, điều chỉnh hoặc thay thế tên cùng mô tả của từng giá trị cốt lõi.

@@ -8,7 +8,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 
 ## Task hiện tại
 
-`Task 02 — Trang Giới thiệu` đang thực hiện theo từng phần. Bốn phần đầu đã hoàn thành; chưa bắt đầu “Giá trị cốt lõi”.
+`Task 02 — Trang Giới thiệu` đang thực hiện theo từng phần. Năm phần đầu đã hoàn thành; chưa bắt đầu “Triết lý giáo dục”.
 
 ## Đã hoàn thành
 
@@ -135,6 +135,12 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - Nội dung không cam kết kết quả học tập hoặc khả năng vận hành chưa được triển khai.
 - Câu chữ được ghi rõ cần khách hàng duyệt trước production.
 
+### Task 02 — Giá trị cốt lõi
+
+- Đã thêm bốn nguyên tắc Rõ ràng, Lắng nghe, Phát triển toàn diện và Trung thực từ căn cứ hiện có của dự án.
+- Nội dung tĩnh được tách khỏi Server Component và không dùng claim, thành tích hoặc cam kết chưa xác nhận.
+- Câu chữ được ghi rõ cần khách hàng duyệt trước production.
+
 ## Chưa thực hiện
 
 - Các phần còn lại của Trang Giới thiệu.
@@ -152,7 +158,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - `node_modules`: Đã có; các dependency chính được nhận diện.
 - `npm.cmd run lint`: Đạt ngày 2026-07-15, không có lỗi ESLint.
 - `npm.cmd run build`: Đạt ngày 2026-07-15; compile, TypeScript và static generation thành công.
-- Runtime `/about`: HTTP 200, có đủ bốn trách nhiệm Sứ mệnh; chưa có Giá trị cốt lõi hoặc Triết lý giáo dục.
+- Runtime `/about`: HTTP 200, có đủ bốn Giá trị cốt lõi; chưa có Triết lý giáo dục.
 
 ## Trạng thái project local
 
@@ -174,7 +180,8 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - Formation Story đã được commit tại `a0004af` — `feat: add formation story empty state`.
 - Vision Section đã được commit tại `59d635b` — `feat: add about vision section`.
 - Mission Section đã được commit tại `8f55a44` — `feat: add about mission section`.
+- Core Values Section đã hoàn thành source và kiểm tra; chờ tạo commit.
 
 ## Task tiếp theo
 
-Tiếp tục `Task 02 — Trang Giới thiệu` bằng phần “Giá trị cốt lõi”. Chưa bắt đầu phần này.
+Tiếp tục `Task 02 — Trang Giới thiệu` bằng phần “Triết lý giáo dục”. Chưa bắt đầu phần này.

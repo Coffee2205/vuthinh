@@ -97,3 +97,33 @@ export const missionContent = {
   ],
   note: "Nội dung Sứ mệnh được biên soạn từ phạm vi hoạt động trong PRD và cần khách hàng duyệt trước khi công bố chính thức.",
 } as const;
+
+export const coreValuesContent = {
+  eyebrow: "Giá trị cốt lõi",
+  title: "Những nguyên tắc định hướng cách Vũ Thịnh đồng hành",
+  description:
+    "Các giá trị này được tổng hợp từ định hướng giáo dục và nguyên tắc cung cấp thông tin của dự án, làm cơ sở cho cách kết nối với người học và gia đình.",
+  values: [
+    {
+      title: "Rõ ràng",
+      description:
+        "Trình bày mục tiêu, đối tượng và hướng học dễ hiểu để mỗi gia đình có thêm cơ sở cân nhắc.",
+    },
+    {
+      title: "Lắng nghe",
+      description:
+        "Tạo không gian trao đổi để nhu cầu của người học và gia đình được ghi nhận trước khi lựa chọn chương trình.",
+    },
+    {
+      title: "Phát triển toàn diện",
+      description:
+        "Kết nối nền tảng ngôn ngữ với kỹ năng, tư duy, cảm xúc và những giá trị cần thiết cho quá trình trưởng thành.",
+    },
+    {
+      title: "Trung thực",
+      description:
+        "Chỉ sử dụng thông tin, thành tựu và cam kết đã có căn cứ; những dữ liệu chưa xác nhận được thể hiện minh bạch.",
+    },
+  ],
+  note: "Câu chữ Giá trị cốt lõi được biên soạn từ các nguyên tắc hiện có của dự án và cần khách hàng duyệt trước khi công bố chính thức.",
+} as const;

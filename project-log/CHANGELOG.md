@@ -424,3 +424,31 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 ### Commit
 
 - `8f55a44` — `feat: add about mission section`.
+
+## 2026-07-15 — Task 02: Giá trị cốt lõi
+
+### Added
+
+- Core Values Section với bốn nguyên tắc có căn cứ trong tài liệu dự án.
+- Ghi chú yêu cầu khách hàng duyệt câu chữ trước production.
+
+### Changed
+
+- `/about` hiển thị Giá trị cốt lõi sau Sứ mệnh.
+- Bổ sung dữ liệu tĩnh trong `src/data/about.ts`.
+
+### Verified
+
+- `npm.cmd run lint` đạt.
+- `npm.cmd run build` đạt; `/about` được prerender tĩnh.
+- Production runtime `/about` trả HTTP 200, có đủ bốn giá trị và chưa có Triết lý giáo dục.
+- Danh sách semantic, heading, nội dung trang trí và breakpoint responsive đã được rà trong source.
+
+### Known issues
+
+- Câu chữ Giá trị cốt lõi chưa được khách hàng duyệt bản cuối.
+- Chưa kiểm tra trực quan bằng browser automation hoặc thiết bị thật.
+
+### Commit
+
+- Chờ tạo commit.

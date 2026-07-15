@@ -197,3 +197,11 @@ Mỗi quyết định phải ghi ngày, nội dung, lý do và ảnh hưởng.
 **Lý do:** PRD xác nhận các hoạt động này nhưng không cung cấp cơ sở cho cam kết đầu ra hoặc claim chất lượng tuyệt đối.
 
 **Ảnh hưởng:** Nội dung phân biệt với Tầm nhìn và không lấn sang Giá trị cốt lõi; câu chữ vẫn cần khách hàng duyệt.
+
+## 2026-07-15 — Giá trị cốt lõi chỉ dùng nguyên tắc có căn cứ
+
+**Quyết định:** Section Giá trị cốt lõi tổng hợp bốn nguyên tắc Rõ ràng, Lắng nghe, Phát triển toàn diện và Trung thực từ PRD, Project Vision và quy tắc nội dung hiện có.
+
+**Lý do:** Trình bày định hướng nhất quán mà không tự gắn phẩm chất thương hiệu, thành tích hoặc cam kết chưa được xác nhận.
+
+**Ảnh hưởng:** Nội dung được giữ trong dữ liệu tĩnh, có ghi chú cần khách hàng duyệt và chưa được xem là tuyên bố thương hiệu chính thức.
