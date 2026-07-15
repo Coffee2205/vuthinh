@@ -7,7 +7,7 @@ Tạo trang chủ thuyết phục phụ huynh và dẫn người dùng đến đ
 ## Sections
 
 - [x] Hero.
-- [ ] Vì sao phụ huynh tin tưởng.
+- [x] Vì sao phụ huynh tin tưởng.
 - [ ] Chương trình học nổi bật.
 - [ ] Hành trình học tập.
 - [ ] Giới thiệu chuyên gia.
@@ -66,3 +66,41 @@ Tạo trang chủ thuyết phục phụ huynh và dẫn người dùng đến đ
 ### Commit
 
 - `3a0e2b4` — `feat: add home hero section`.
+
+## Kết quả thực hiện — Vì sao phụ huynh tin tưởng
+
+### File đã tạo
+
+- `src/components/home/TrustSection.tsx`: section nguyên tắc đồng hành với bố cục card responsive.
+
+### File đã sửa
+
+- `src/data/home.ts`: bổ sung nội dung tĩnh cho Trust Section.
+- `src/app/page.tsx`: gắn Trust Section ngay sau Hero.
+- `tasks/01-HOME.md`: đánh dấu section đã hoàn thành và ghi kết quả.
+- Các file trạng thái liên quan trong `project-log/`.
+
+### Quyết định kỹ thuật
+
+- Trust Section là Server Component, không thêm thư viện hoặc JavaScript phía client.
+- Các lý do tin tưởng chỉ diễn đạt định hướng đã có trong PRD và tài liệu dự án; không dùng số liệu, thành tích, chứng chỉ hoặc testimonial.
+- Dùng số thứ tự `01`–`04` để hỗ trợ quét nội dung; đây là thứ tự trình bày, không phải số liệu thành tích.
+- Nội dung Trust Section tiếp tục dùng nguồn dữ liệu tĩnh chung `src/data/home.ts`.
+
+### Kiểm tra
+
+- `npm.cmd run lint`: Đạt ngày 2026-07-15, không có lỗi ESLint.
+- `npm.cmd run build`: Đạt ngày 2026-07-15; TypeScript và static generation thành công.
+- Runtime local: route `/` trả HTTP 200 và chứa heading cùng đủ bốn nguyên tắc của Trust Section.
+- Responsive: cấu trúc một cột trên mobile, hai cột từ breakpoint `sm` và bố cục hai vùng từ `lg`; chưa kiểm tra trực quan bằng thiết bị thật/browser automation.
+- Accessibility: section dùng `aria-labelledby`, cấu trúc `h2`/`h3` hợp lệ và chi tiết trang trí có `aria-hidden`.
+
+### Giới hạn còn lại
+
+- Nội dung chưa được khách hàng duyệt bản cuối.
+- Chưa có kiểm tra trực quan trên thiết bị thật.
+- Các section tiếp theo của Task 01 chưa thực hiện.
+
+### Commit
+
+- Chưa cập nhật; sẽ ghi sau khi tạo commit cho Trust Section.

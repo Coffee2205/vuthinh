@@ -93,3 +93,11 @@ Mỗi quyết định phải ghi ngày, nội dung, lý do và ảnh hưởng.
 **Lý do:** Tuân thủ quy tắc kiến trúc và chuẩn bị cho các section trang chủ tiếp theo.
 
 **Ảnh hưởng:** Nội dung trang chủ có một nguồn dữ liệu tĩnh riêng, chưa kết nối database.
+
+## 2026-07-15 — Trust Section chỉ dùng nguyên tắc có trong định hướng dự án
+
+**Quyết định:** Nội dung Trust Section được giới hạn ở mục tiêu học rõ ràng, tiếng Trung trọng tâm, phát triển toàn diện và khả năng học thử/tư vấn.
+
+**Lý do:** Đây là các định hướng đã có trong PRD, Project Vision và user flow; không cần tạo số liệu, thành tích hoặc social proof chưa được xác nhận.
+
+**Ảnh hưởng:** Section tạo niềm tin bằng tính minh bạch của định hướng thay vì claim định lượng. Nội dung vẫn cần khách hàng duyệt trước production.

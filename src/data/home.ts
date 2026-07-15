@@ -30,3 +30,36 @@ export const heroContent = {
     },
   ],
 } as const;
+
+export const trustContent = {
+  eyebrow: "Đồng hành có định hướng",
+  title: "Điều phụ huynh có thể kỳ vọng trong hành trình học",
+  description:
+    "Mỗi chương trình được định hướng để người học phát triển ngôn ngữ song song với tư duy, cảm xúc và những giá trị bền vững.",
+  principles: [
+    {
+      number: "01",
+      title: "Mục tiêu học tập rõ ràng",
+      description:
+        "Chương trình được giới thiệu theo độ tuổi, nhu cầu và mục tiêu để gia đình dễ lựa chọn hướng học phù hợp.",
+    },
+    {
+      number: "02",
+      title: "Tiếng Trung là nền tảng trọng tâm",
+      description:
+        "Nội dung ngôn ngữ được ưu tiên, từ thiếu nhi, giao tiếp đến HSK và tiếng Trung thương mại.",
+    },
+    {
+      number: "03",
+      title: "Phát triển vượt ra ngoài ngôn ngữ",
+      description:
+        "Tư duy, kỹ năng sống và quản trị cảm xúc được kết nối để hỗ trợ sự trưởng thành toàn diện.",
+    },
+    {
+      number: "04",
+      title: "Gia đình được lắng nghe",
+      description:
+        "Phụ huynh và người học có thể đăng ký học thử hoặc tư vấn trước khi lựa chọn chương trình đồng hành.",
+    },
+  ],
+} as const;

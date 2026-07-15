@@ -2,18 +2,18 @@
 
 ## Nhiệm vụ gần nhất
 
-> Tiếp tục `Task 01 — Trang chủ` và chỉ thực hiện section “Vì sao phụ huynh tin tưởng”, chưa làm các section khác.
+> Tiếp tục `Task 01 — Trang chủ` và chỉ thực hiện section “Chương trình học nổi bật”, chưa làm các section khác.
 
 ## Thứ tự thực hiện
 
-1. Đối chiếu yêu cầu Trust Section với `tasks/01-HOME.md` và tài liệu dự án.
-2. Chỉ dùng các lý do tin tưởng có thể diễn đạt từ phương pháp/định hướng; không tạo số liệu, chứng chỉ hoặc thành tích giả.
-3. Tách dữ liệu tĩnh khỏi component.
-4. Kiểm tra desktop, tablet, mobile và accessibility cơ bản.
-5. Chạy lint/build, cập nhật task và project log, rồi commit trước khi chuyển section.
+1. Đối chiếu các nhóm chương trình trong tài liệu và `tasks/01-HOME.md`.
+2. Làm nổi bật nhóm tiếng Trung hơn kỹ năng sống và phát triển nội tâm.
+3. Không tự tạo khóa học, học phí, số liệu hoặc kết quả chưa được xác nhận.
+4. Tách dữ liệu tĩnh khỏi component và giữ Server Component làm mặc định.
+5. Kiểm tra responsive/accessibility, chạy lint/build, cập nhật task và project log, rồi commit.
 
 ## Chưa làm ngay
 
-- Chương trình học nổi bật và các section sau Trust Section.
+- Hành trình học tập và các section sau Chương trình học nổi bật.
 - Database, form lưu dữ liệu thật và Supabase.
 - Admin, AI, thanh toán hoặc LMS.

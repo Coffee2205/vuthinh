@@ -8,7 +8,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 
 ## Task hiện tại
 
-`Task 01 — Trang chủ` đang thực hiện theo từng section. Hero Section đã hoàn thành; chưa bắt đầu Trust Section.
+`Task 01 — Trang chủ` đang thực hiện theo từng section. Hero và Trust Section đã hoàn thành; chưa bắt đầu section Chương trình học nổi bật.
 
 ## Đã hoàn thành
 
@@ -49,7 +49,15 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - Tiếng Trung là mảng được ưu tiên trong nội dung và thị giác.
 - Có CTA chính tới đăng ký học thử và CTA phụ tới chương trình học.
 - Nội dung tĩnh đã tách khỏi component.
-- Chưa triển khai Trust Section hoặc các section tiếp theo.
+- Chưa triển khai các section sau Trust Section.
+
+### Task 01 — Vì sao phụ huynh tin tưởng
+
+- Đã thêm section trình bày bốn nguyên tắc đồng hành dựa trên định hướng dự án.
+- Nội dung nhấn mạnh mục tiêu rõ ràng, tiếng Trung trọng tâm, phát triển toàn diện và lắng nghe gia đình.
+- Không sử dụng số liệu, chứng chỉ, thành tích hoặc phản hồi giả.
+- Dữ liệu tĩnh nằm trong `src/data/home.ts`.
+- Chưa bắt đầu section Chương trình học nổi bật.
 
 ## Chưa thực hiện
 
@@ -69,7 +77,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - `node_modules`: Đã có; các dependency chính được nhận diện.
 - `npm.cmd run lint`: Đạt ngày 2026-07-15, không có lỗi ESLint.
 - `npm.cmd run build`: Đạt ngày 2026-07-15; compile, TypeScript và static generation thành công.
-- Runtime `/`: HTTP 200 và có đầy đủ nội dung Hero đã kiểm tra.
+- Runtime `/`: HTTP 200 và có đầy đủ nội dung Hero cùng Trust Section đã kiểm tra.
 
 ## Trạng thái project local
 
@@ -81,4 +89,4 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 
 ## Task tiếp theo
 
-Tiếp tục `Task 01 — Trang chủ` bằng section “Vì sao phụ huynh tin tưởng”. Chưa bắt đầu section này.
+Tiếp tục `Task 01 — Trang chủ` bằng section “Chương trình học nổi bật”. Chưa bắt đầu section này.

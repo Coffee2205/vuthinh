@@ -95,3 +95,21 @@
 - Không còn blocker kỹ thuật cho Hero Section.
 - Các CTA dẫn tới `/trial-registration` và `/programs`; hai route này chưa được triển khai trong task hiện tại.
 - Chưa có kiểm tra trực quan bằng browser automation hoặc thiết bị thật; responsive đã được rà theo source và breakpoint.
+
+---
+
+## ISSUE-008 — Nội dung Trust Section chưa được khách hàng duyệt
+
+**Trạng thái:** Open
+
+**Mô tả:** Bốn nguyên tắc trong Trust Section được biên soạn từ PRD và định vị dự án, chưa phải nội dung thương hiệu đã được khách hàng duyệt bản cuối.
+
+**Ảnh hưởng:** Không chặn phát triển layout; cần rà soát câu chữ trước production.
+
+---
+
+## Trạng thái Trust Section
+
+- Không còn blocker kỹ thuật cho Trust Section.
+- Lint, build và runtime route `/` đều đạt.
+- Chưa kiểm tra trực quan bằng browser automation hoặc thiết bị thật; responsive đã được rà theo source và breakpoint.

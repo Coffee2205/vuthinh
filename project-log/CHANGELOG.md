@@ -82,3 +82,27 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 ### Commit
 
 - `3a0e2b4` — `feat: add home hero section`.
+
+## 2026-07-15 — Task 01: Vì sao phụ huynh tin tưởng
+
+### Added
+
+- Trust Section với bốn nguyên tắc đồng hành dành cho phụ huynh và người học.
+- Nội dung tĩnh Trust Section trong `src/data/home.ts`.
+
+### Changed
+
+- Trang chủ hiển thị Trust Section ngay sau Hero.
+
+### Verified
+
+- `npm.cmd run lint` đạt.
+- `npm.cmd run build` đạt; TypeScript và static generation thành công.
+- Production server local trên cổng kiểm tra riêng trả HTTP 200 và có đủ heading cùng bốn nguyên tắc.
+- Cấu trúc heading, `aria-labelledby` và chi tiết trang trí đã được rà.
+- Breakpoint mobile/tablet/desktop đã được rà trong source.
+
+### Known issues
+
+- Nội dung Trust Section chưa được khách hàng duyệt bản cuối.
+- Chưa kiểm tra trực quan bằng browser automation hoặc thiết bị thật.
