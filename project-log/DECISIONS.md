@@ -133,3 +133,11 @@ Mỗi quyết định phải ghi ngày, nội dung, lý do và ảnh hưởng.
 **Lý do:** Chưa có thành quả, ảnh hoặc số liệu thật từ khách hàng.
 
 **Ảnh hưởng:** Section sẵn sàng thay bằng case study thật sau này.
+
+## 2026-07-15 — Cảm nhận phụ huynh dùng empty state có điều kiện đồng ý
+
+**Quyết định:** Không tạo testimonial minh họa; chỉ hiển thị phản hồi, tên và hình ảnh sau khi phụ huynh xác nhận nội dung và đồng ý công bố.
+
+**Lý do:** Project chưa có phản hồi thật hoặc bằng chứng về quyền sử dụng thông tin cá nhân.
+
+**Ảnh hưởng:** Section hiện thông báo trạng thái đang cập nhật và có thể được thay bằng dữ liệu thật mà không đổi vị trí trong trang chủ.

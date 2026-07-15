@@ -12,7 +12,7 @@ Tạo trang chủ thuyết phục phụ huynh và dẫn người dùng đến đ
 - [x] Hành trình học tập.
 - [x] Giới thiệu chuyên gia.
 - [x] Thành quả học viên.
-- [ ] Cảm nhận phụ huynh.
+- [x] Cảm nhận phụ huynh.
 - [ ] Bài viết/tài liệu nổi bật.
 - [ ] Form đăng ký học thử.
 - [ ] CTA cuối trang.
@@ -195,3 +195,13 @@ Tạo trang chủ thuyết phục phụ huynh và dẫn người dùng đến đ
 - Lint/build đạt; responsive và semantic heading/focus đã rà trong source.
 - Giới hạn: chưa có dữ liệu thật, route CTA chưa triển khai, chưa kiểm tra trực quan thiết bị thật.
 - Commit: `5743558` — `feat: add student outcomes empty state`.
+
+## Kết quả thực hiện — Cảm nhận phụ huynh
+
+- File tạo: `src/components/home/ParentTestimonialsSection.tsx`.
+- File sửa: `src/data/home.ts`, `src/app/page.tsx`, `tasks/01-HOME.md` và các project log liên quan.
+- Quyết định: dùng empty state thay cho testimonial giả; chỉ công bố chia sẻ, tên và hình ảnh sau khi phụ huynh xác nhận và đồng ý.
+- Kiểm tra: `npm.cmd run lint` đạt; `npm.cmd run build` đạt, route `/` được prerender tĩnh; runtime production local HTTP 200 và có đúng nội dung empty state, chưa có section bài viết.
+- Responsive: bố cục một cột trên mobile và hai vùng từ `lg`; semantic `section`, `aria-labelledby`, `h2`/`h3` đã rà trong source.
+- Giới hạn: chưa có phản hồi phụ huynh thật hoặc kiểm tra trực quan trên thiết bị thật/browser automation.
+- Commit: sẽ cập nhật sau khi commit.

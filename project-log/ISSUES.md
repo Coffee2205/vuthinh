@@ -176,3 +176,15 @@
 **Mô tả:** Thiếu case study, hình ảnh và kết quả có sự đồng ý công bố.
 
 **Ảnh hưởng:** Section dùng empty state; lint/build đạt, không có blocker kỹ thuật.
+
+---
+
+## ISSUE-013 — Chưa có cảm nhận phụ huynh được xác nhận
+
+**Trạng thái:** Open
+
+**Mô tả:** Chưa có nội dung phản hồi, tên, hình ảnh và sự đồng ý công bố từ phụ huynh.
+
+**Ảnh hưởng:** Section dùng empty state minh bạch; không còn blocker kỹ thuật cho phần Cảm nhận phụ huynh.
+
+**Cần từ khách hàng:** Phản hồi nguyên văn đã duyệt, thông tin được phép hiển thị và xác nhận quyền sử dụng hình ảnh nếu có.

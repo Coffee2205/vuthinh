@@ -204,3 +204,30 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 ### Commit
 
 - `5743558` — `feat: add student outcomes empty state`.
+
+## 2026-07-15 — Task 01: Cảm nhận phụ huynh
+
+### Added
+
+- Parent Testimonials Section với empty state minh bạch, không dùng phản hồi hoặc thông tin nhận dạng giả.
+
+### Changed
+
+- Trang chủ hiển thị Cảm nhận phụ huynh sau Thành quả học viên.
+- Bổ sung nội dung tĩnh trong `src/data/home.ts`.
+
+### Verified
+
+- `npm.cmd run lint` đạt.
+- `npm.cmd run build` đạt; TypeScript, static generation và prerender route `/` thành công.
+- Production runtime local trả HTTP 200, có nội dung empty state và chưa có section Bài viết/tài liệu.
+- Semantic heading và breakpoint responsive đã được rà trong source.
+
+### Known issues
+
+- Chưa có phản hồi phụ huynh thật hoặc quyền đồng ý công bố.
+- Chưa kiểm tra trực quan bằng browser automation hoặc thiết bị thật.
+
+### Commit
+
+- Sẽ cập nhật sau khi commit.

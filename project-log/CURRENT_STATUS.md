@@ -8,7 +8,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 
 ## Task hiện tại
 
-`Task 01 — Trang chủ` đang thực hiện theo từng section. Sáu section đầu đã hoàn thành; chưa bắt đầu Cảm nhận phụ huynh.
+`Task 01 — Trang chủ` đang thực hiện theo từng section. Bảy section đầu đã hoàn thành; chưa bắt đầu Bài viết/tài liệu nổi bật.
 
 ## Đã hoàn thành
 
@@ -85,6 +85,11 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - Đã thêm empty state minh bạch; không dùng social proof giả.
 - CTA `/success-stories` chưa có route đích.
 
+### Task 01 — Cảm nhận phụ huynh
+
+- Đã thêm empty state minh bạch, không dùng lời nhận xét, tên, ảnh hoặc đánh giá giả.
+- Chỉ công bố phản hồi sau khi phụ huynh xác nhận nội dung và đồng ý sử dụng thông tin.
+
 ## Chưa thực hiện
 
 - Các section còn lại để hoàn thiện trang chủ.
@@ -103,7 +108,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - `node_modules`: Đã có; các dependency chính được nhận diện.
 - `npm.cmd run lint`: Đạt ngày 2026-07-15, không có lỗi ESLint.
 - `npm.cmd run build`: Đạt ngày 2026-07-15; compile, TypeScript và static generation thành công.
-- Runtime `/`: HTTP 200 và có đầy đủ bốn section đầu của trang chủ đã kiểm tra.
+- Runtime `/`: HTTP 200 và có section Cảm nhận phụ huynh đúng nội dung empty state; section Bài viết/tài liệu chưa xuất hiện.
 
 ## Trạng thái project local
 
@@ -117,7 +122,8 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - Learning Journey đã được commit tại `bd2b456` — `feat: add learning journey section`.
 - Expert Section đã được commit tại `7b5d838` — `feat: add home expert section`.
 - Student Outcomes đã được commit tại `5743558` — `feat: add student outcomes empty state`.
+- Parent Testimonials đang chờ commit sau khi hoàn tất log.
 
 ## Task tiếp theo
 
-Tiếp tục `Task 01 — Trang chủ` bằng section “Cảm nhận phụ huynh”. Chưa bắt đầu section này.
+Tiếp tục `Task 01 — Trang chủ` bằng section “Bài viết/tài liệu nổi bật”. Chưa bắt đầu section này.

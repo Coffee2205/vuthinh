@@ -160,3 +160,12 @@ export const studentOutcomesContent = {
   note: "Chúng tôi không sử dụng số liệu, hình ảnh hoặc kết quả minh họa chưa được kiểm chứng.",
   action: { href: "/success-stories", label: "Xem trang thành quả" },
 } as const;
+
+export const parentTestimonialsContent = {
+  eyebrow: "Cảm nhận phụ huynh",
+  title: "Lắng nghe những chia sẻ được xác nhận từ gia đình",
+  description:
+    "Phản hồi từ phụ huynh giúp hành trình đồng hành trở nên rõ ràng và đáng tin cậy hơn.",
+  status: "Cảm nhận phụ huynh đang được cập nhật",
+  note: "Chúng tôi chỉ đăng tải chia sẻ, tên và hình ảnh khi nội dung đã được phụ huynh xác nhận và đồng ý công bố.",
+} as const;
