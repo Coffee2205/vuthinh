@@ -125,3 +125,11 @@ Mỗi quyết định phải ghi ngày, nội dung, lý do và ảnh hưởng.
 **Lý do:** Project chưa có dữ liệu chuyên gia thật.
 
 **Ảnh hưởng:** Layout và CTA sẵn sàng, nội dung hồ sơ phải được thay khi khách hàng cung cấp.
+
+## 2026-07-15 — Thành quả học viên dùng empty state
+
+**Quyết định:** Không hiển thị kết quả giả; dùng trạng thái chờ dữ liệu đã xác nhận.
+
+**Lý do:** Chưa có thành quả, ảnh hoặc số liệu thật từ khách hàng.
+
+**Ảnh hưởng:** Section sẵn sàng thay bằng case study thật sau này.

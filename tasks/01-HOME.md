@@ -11,7 +11,7 @@ Tạo trang chủ thuyết phục phụ huynh và dẫn người dùng đến đ
 - [x] Chương trình học nổi bật.
 - [x] Hành trình học tập.
 - [x] Giới thiệu chuyên gia.
-- [ ] Thành quả học viên.
+- [x] Thành quả học viên.
 - [ ] Cảm nhận phụ huynh.
 - [ ] Bài viết/tài liệu nổi bật.
 - [ ] Form đăng ký học thử.
@@ -187,3 +187,11 @@ Tạo trang chủ thuyết phục phụ huynh và dẫn người dùng đến đ
 - Kiểm tra: lint/build đạt; runtime `/` HTTP 200 và có trạng thái hồ sơ cùng hai CTA; responsive một cột mobile, hai vùng desktop; heading/focus hợp lệ.
 - Giới hạn: thiếu toàn bộ dữ liệu chuyên gia thật; route CTA thuộc task sau; chưa kiểm tra trực quan trên thiết bị thật.
 - Commit: `7b5d838` — `feat: add home expert section`.
+
+## Kết quả thực hiện — Thành quả học viên
+
+- Tạo `src/components/home/StudentOutcomesSection.tsx`; sửa `src/data/home.ts`, `src/app/page.tsx` và log.
+- Hiển thị empty state minh bạch, không dùng số liệu, ảnh hoặc kết quả giả; CTA `/success-stories`.
+- Lint/build đạt; responsive và semantic heading/focus đã rà trong source.
+- Giới hạn: chưa có dữ liệu thật, route CTA chưa triển khai, chưa kiểm tra trực quan thiết bị thật.
+- Commit: sẽ cập nhật sau.

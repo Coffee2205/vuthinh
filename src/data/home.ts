@@ -151,3 +151,12 @@ export const expertContent = {
   profileAction: { href: "/expert", label: "Xem trang chuyên gia" },
   consultationAction: { href: "/consultation", label: "Đăng ký tư vấn" },
 } as const;
+
+export const studentOutcomesContent = {
+  eyebrow: "Thành quả học viên",
+  title: "Ghi nhận hành trình bằng những câu chuyện có thật",
+  description: "Khu vực này sẽ chỉ công bố kết quả và hình ảnh đã được học viên, phụ huynh cùng trung tâm xác nhận.",
+  status: "Dữ liệu thành quả đang được cập nhật",
+  note: "Chúng tôi không sử dụng số liệu, hình ảnh hoặc kết quả minh họa chưa được kiểm chứng.",
+  action: { href: "/success-stories", label: "Xem trang thành quả" },
+} as const;

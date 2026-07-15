@@ -166,3 +166,13 @@
 
 - Lint, build và runtime đạt; chưa kiểm tra trực quan trên thiết bị thật.
 - `/expert` và `/consultation` chưa được triển khai.
+
+---
+
+## ISSUE-012 — Chưa có thành quả học viên được xác nhận
+
+**Trạng thái:** Open
+
+**Mô tả:** Thiếu case study, hình ảnh và kết quả có sự đồng ý công bố.
+
+**Ảnh hưởng:** Section dùng empty state; lint/build đạt, không có blocker kỹ thuật.

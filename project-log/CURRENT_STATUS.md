@@ -8,7 +8,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 
 ## Task hiện tại
 
-`Task 01 — Trang chủ` đang thực hiện theo từng section. Năm section đầu đã hoàn thành; chưa bắt đầu Thành quả học viên.
+`Task 01 — Trang chủ` đang thực hiện theo từng section. Sáu section đầu đã hoàn thành; chưa bắt đầu Cảm nhận phụ huynh.
 
 ## Đã hoàn thành
 
@@ -78,7 +78,12 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 
 - Đã thêm section một chuyên gia với trạng thái hồ sơ đang cập nhật, không dùng dữ liệu giả.
 - Có CTA tới `/expert` và `/consultation`; hai route chưa triển khai.
-- Chưa bắt đầu Thành quả học viên.
+- Chưa bắt đầu các section sau Thành quả học viên.
+
+### Task 01 — Thành quả học viên
+
+- Đã thêm empty state minh bạch; không dùng social proof giả.
+- CTA `/success-stories` chưa có route đích.
 
 ## Chưa thực hiện
 
@@ -114,4 +119,4 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 
 ## Task tiếp theo
 
-Tiếp tục `Task 01 — Trang chủ` bằng section “Thành quả học viên”. Chưa bắt đầu section này.
+Tiếp tục `Task 01 — Trang chủ` bằng section “Cảm nhận phụ huynh”. Chưa bắt đầu section này.

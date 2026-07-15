@@ -186,3 +186,17 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 ### Commit
 
 - `7b5d838` — `feat: add home expert section`.
+
+## 2026-07-15 — Task 01: Thành quả học viên
+
+### Added
+
+- Student Outcomes empty state minh bạch và CTA thành quả.
+
+### Verified
+
+- Lint/build đạt; responsive, heading và focus đã rà.
+
+### Known issues
+
+- Chưa có dữ liệu thật và `/success-stories` chưa triển khai.

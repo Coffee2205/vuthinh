@@ -2,7 +2,7 @@
 
 ## Nhiệm vụ gần nhất
 
-> Tiếp tục `Task 01 — Trang chủ` và chỉ thực hiện section “Thành quả học viên”, chưa làm các section khác.
+> Tiếp tục `Task 01 — Trang chủ` và chỉ thực hiện section “Cảm nhận phụ huynh”, chưa làm các section khác.
 
 ## Thứ tự thực hiện
 
@@ -14,6 +14,6 @@
 
 ## Chưa làm ngay
 
-- Cảm nhận phụ huynh và các section sau Thành quả học viên.
+- Bài viết/tài liệu nổi bật và các section sau Cảm nhận phụ huynh.
 - Database, form lưu dữ liệu thật và Supabase.
 - Admin, AI, thanh toán hoặc LMS.
