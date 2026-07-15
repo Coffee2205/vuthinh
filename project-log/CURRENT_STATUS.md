@@ -122,7 +122,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - Learning Journey đã được commit tại `bd2b456` — `feat: add learning journey section`.
 - Expert Section đã được commit tại `7b5d838` — `feat: add home expert section`.
 - Student Outcomes đã được commit tại `5743558` — `feat: add student outcomes empty state`.
-- Parent Testimonials đang chờ commit sau khi hoàn tất log.
+- Parent Testimonials đã được commit tại `71f7096` — `feat: add parent testimonials empty state`.
 
 ## Task tiếp theo
 

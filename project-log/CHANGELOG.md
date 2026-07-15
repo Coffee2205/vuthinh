@@ -230,4 +230,4 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 
 ### Commit
 
-- Sẽ cập nhật sau khi commit.
+- `71f7096` — `feat: add parent testimonials empty state`.

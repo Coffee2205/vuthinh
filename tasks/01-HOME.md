@@ -204,4 +204,4 @@ Tạo trang chủ thuyết phục phụ huynh và dẫn người dùng đến đ
 - Kiểm tra: `npm.cmd run lint` đạt; `npm.cmd run build` đạt, route `/` được prerender tĩnh; runtime production local HTTP 200 và có đúng nội dung empty state, chưa có section bài viết.
 - Responsive: bố cục một cột trên mobile và hai vùng từ `lg`; semantic `section`, `aria-labelledby`, `h2`/`h3` đã rà trong source.
 - Giới hạn: chưa có phản hồi phụ huynh thật hoặc kiểm tra trực quan trên thiết bị thật/browser automation.
-- Commit: sẽ cập nhật sau khi commit.
+- Commit: `71f7096` — `feat: add parent testimonials empty state`.
