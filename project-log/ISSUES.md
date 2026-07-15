@@ -75,3 +75,23 @@
 - Lint và production build hiện không có lỗi.
 - Build lần đầu cần kết nối mạng để `next/font` tải Be Vietnam Pro từ Google Fonts.
 - Các link tới route của task sau chưa hoạt động cho đến khi các route tương ứng được triển khai; đây không phải lỗi thuộc Task 00.
+
+---
+
+## ISSUE-007 — Hero chưa có ảnh thật
+
+**Trạng thái:** Open
+
+**Mô tả:** Hero hiện dùng visual card trung tính vì chưa có ảnh giáo viên, học viên hoặc hoạt động học tập đã được khách hàng cung cấp và xác nhận.
+
+**Ảnh hưởng:** Không chặn hoàn thành cấu trúc Hero; cần thay thế hoặc bổ sung ảnh thật trước khi hoàn thiện nội dung production.
+
+**Cần từ khách hàng:** Ảnh ngang chất lượng cao phù hợp Hero và quyền sử dụng ảnh.
+
+---
+
+## Trạng thái Hero Section
+
+- Không còn blocker kỹ thuật cho Hero Section.
+- Các CTA dẫn tới `/trial-registration` và `/programs`; hai route này chưa được triển khai trong task hiện tại.
+- Chưa có kiểm tra trực quan bằng browser automation hoặc thiết bị thật; responsive đã được rà theo source và breakpoint.

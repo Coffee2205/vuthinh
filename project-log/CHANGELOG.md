@@ -49,4 +49,32 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 ### Ghi chú
 
 - Task 01 chưa bắt đầu.
-- Commit gần nhất vẫn là `237e4eb` — `Initial commit from Create Next App`; thay đổi Task 00 chưa được commit.
+- Task 00 sau đó đã được commit tại `3e5949b` — `feat: complete project foundation` và push lên `origin/dev`.
+
+## 2026-07-15 — Task 01: Hero Section
+
+### Added
+
+- Hero Section responsive cho trang chủ.
+- Nội dung định vị hệ sinh thái giáo dục gia đình, ưu tiên tiếng Trung.
+- CTA đăng ký học thử và CTA khám phá chương trình.
+- Visual card cho tiếng Trung và kỹ năng/nội lực, không dùng số liệu hoặc hình ảnh giả.
+- Dữ liệu tĩnh Hero trong `src/data/home.ts`.
+
+### Changed
+
+- Thay trang chủ tạm bằng `HeroSection`.
+
+### Verified
+
+- `npm.cmd run lint` đạt.
+- `npm.cmd run build` đạt; route `/` được prerender tĩnh.
+- Production server local trả HTTP 200 cho `/` và có headline, CTA cùng lĩnh vực trọng tâm.
+- Responsive mobile-first và breakpoint `sm`/`lg` đã được rà trong source.
+- Semantic heading, focus-visible và nội dung trang trí ẩn khỏi assistive technology đã được rà.
+
+### Known issues
+
+- Chưa có ảnh thật cho Hero.
+- Các route đích của CTA chưa được triển khai.
+- Chưa kiểm tra trực quan bằng browser automation hoặc thiết bị thật.

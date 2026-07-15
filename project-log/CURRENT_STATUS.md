@@ -8,7 +8,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 
 ## Task hiện tại
 
-Task 00 đã hoàn thành. Task tiếp theo là `Task 01 — Trang chủ`, nhưng chưa bắt đầu triển khai.
+`Task 01 — Trang chủ` đang thực hiện theo từng section. Hero Section đã hoàn thành; chưa bắt đầu Trust Section.
 
 ## Đã hoàn thành
 
@@ -42,9 +42,18 @@ Task 00 đã hoàn thành. Task tiếp theo là `Task 01 — Trang chủ`, nhưn
 - Header và Footer được gắn tại root layout nên xuất hiện trên route `/`.
 - Route `/` được production build prerender thành static content.
 
+### Task 01 — Hero Section
+
+- Đã thay trang chủ tạm bằng Hero Section thực tế.
+- Thông điệp định vị hệ sinh thái giáo dục gia đình hiển thị ngay đầu trang.
+- Tiếng Trung là mảng được ưu tiên trong nội dung và thị giác.
+- Có CTA chính tới đăng ký học thử và CTA phụ tới chương trình học.
+- Nội dung tĩnh đã tách khỏi component.
+- Chưa triển khai Trust Section hoặc các section tiếp theo.
+
 ## Chưa thực hiện
 
-- Trang chủ hoàn chỉnh.
+- Các section còn lại để hoàn thiện trang chủ.
 - Trang Giới thiệu.
 - Chương trình và khóa học.
 - Trang chuyên gia và đăng ký tư vấn.
@@ -60,14 +69,15 @@ Task 00 đã hoàn thành. Task tiếp theo là `Task 01 — Trang chủ`, nhưn
 - `node_modules`: Đã có; các dependency chính được nhận diện.
 - `npm.cmd run lint`: Đạt ngày 2026-07-15, không có lỗi ESLint.
 - `npm.cmd run build`: Đạt ngày 2026-07-15; compile, TypeScript và static generation thành công.
+- Runtime `/`: HTTP 200 và có đầy đủ nội dung Hero đã kiểm tra.
 
 ## Trạng thái project local
 
 - Project có thể lint và production build trong môi trường hiện tại.
 - Không có development server đang được duy trì sau phiên rà soát.
-- Working tree đang có thay đổi chưa commit của Task 00, tài liệu và project log.
-- Commit gần nhất: `237e4eb` — `Initial commit from Create Next App`.
+- Task 00 đã được commit và push lên `origin/dev`.
+- Commit nền tảng gần nhất trước Hero: `3e5949b` — `feat: complete project foundation`.
 
 ## Task tiếp theo
 
-`Task 01 — Trang chủ`, bắt đầu bằng Hero Section. Chưa có code Task 01.
+Tiếp tục `Task 01 — Trang chủ` bằng section “Vì sao phụ huynh tin tưởng”. Chưa bắt đầu section này.

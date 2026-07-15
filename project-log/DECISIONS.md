@@ -77,3 +77,19 @@ Mỗi quyết định phải ghi ngày, nội dung, lý do và ảnh hưởng.
 **Lý do:** Supabase thuộc Task 07; Task 00 chỉ xây bộ khung nền tảng bằng stack hiện có.
 
 **Ảnh hưởng:** Hiện chưa có database, Auth, Storage hay component từ UI framework bên thứ ba.
+
+## 2026-07-15 — Hero không dùng ảnh giả hoặc ảnh chưa xác nhận
+
+**Quyết định:** Hero dùng typography, design tokens và các visual card thể hiện lĩnh vực đào tạo; chưa dùng ảnh cho đến khi có ảnh thật từ khách hàng.
+
+**Lý do:** Tuân thủ yêu cầu ưu tiên ảnh thật và không tự tạo dữ liệu/hình ảnh gây hiểu nhầm.
+
+**Ảnh hưởng:** Visual hiện tại có thể được thay bằng ảnh thật trong một phiên sau mà không đổi cấu trúc nội dung chính.
+
+## 2026-07-15 — Nội dung trang chủ tách khỏi component
+
+**Quyết định:** Đặt nội dung tĩnh của Hero trong `src/data/home.ts`; `HeroSection` chỉ chịu trách nhiệm trình bày.
+
+**Lý do:** Tuân thủ quy tắc kiến trúc và chuẩn bị cho các section trang chủ tiếp theo.
+
+**Ảnh hưởng:** Nội dung trang chủ có một nguồn dữ liệu tĩnh riêng, chưa kết nối database.
