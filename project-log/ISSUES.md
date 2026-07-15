@@ -249,3 +249,15 @@
 **Ảnh hưởng:** Không chặn kỹ thuật hoặc layout; cần duyệt câu chữ trước production.
 
 **Cần từ khách hàng:** Xác nhận hoặc chỉnh sửa tuyên bố Tầm nhìn và ba hướng định vị đi kèm.
+
+---
+
+## ISSUE-018 — Câu chữ Sứ mệnh chưa được khách hàng duyệt
+
+**Trạng thái:** Open
+
+**Mô tả:** Sứ mệnh hiện được biên soạn từ vai trò trong PRD và Project Vision, chưa phải tuyên bố thương hiệu được phê duyệt bản cuối.
+
+**Ảnh hưởng:** Không chặn kỹ thuật hoặc layout; cần duyệt câu chữ trước production.
+
+**Cần từ khách hàng:** Xác nhận hoặc chỉnh sửa tuyên bố Sứ mệnh và bốn trách nhiệm đi kèm.

@@ -2,18 +2,18 @@
 
 ## Nhiệm vụ gần nhất
 
-> Tiếp tục `Task 02 — Trang Giới thiệu` và chỉ thực hiện phần “Sứ mệnh”, chưa làm các phần khác.
+> Tiếp tục `Task 02 — Trang Giới thiệu` và chỉ thực hiện phần “Giá trị cốt lõi”, chưa làm các phần khác.
 
 ## Thứ tự thực hiện
 
-1. Đối chiếu vai trò thực tế của trung tâm với PRD và Project Vision.
-2. Phân biệt Sứ mệnh với Tầm nhìn và Giá trị cốt lõi; chưa làm Giá trị cốt lõi trong cùng phiên.
-3. Không tạo cam kết kết quả học tập hoặc trách nhiệm vận hành chưa được xác nhận.
+1. Đối chiếu các nguyên tắc đã có trong PRD, Project Vision và nội dung trang chủ.
+2. Phân biệt Giá trị cốt lõi với Sứ mệnh và Triết lý giáo dục; chưa làm Triết lý trong cùng phiên.
+3. Không tự gắn các phẩm chất thương hiệu chưa có cơ sở hoặc chưa được khách hàng duyệt.
 4. Kiểm tra responsive/accessibility, link, lint/build/runtime.
 5. Cập nhật task/log, commit và push trước khi chuyển section.
 
 ## Chưa làm ngay
 
-- Giá trị cốt lõi và các phần sau Sứ mệnh.
+- Triết lý giáo dục và các phần sau Giá trị cốt lõi.
 - Database, form lưu dữ liệu thật và Supabase.
 - Admin, AI, thanh toán hoặc LMS.

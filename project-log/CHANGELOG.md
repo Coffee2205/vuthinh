@@ -396,3 +396,31 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 ### Commit
 
 - `59d635b` — `feat: add about vision section`.
+
+## 2026-07-15 — Task 02: Sứ mệnh
+
+### Added
+
+- Mission Section với bốn vai trò dựa trên phạm vi hoạt động trong PRD.
+- Ghi chú yêu cầu duyệt câu chữ trước production.
+
+### Changed
+
+- `/about` hiển thị Sứ mệnh sau Tầm nhìn.
+- Bổ sung dữ liệu tĩnh trong `src/data/about.ts`.
+
+### Verified
+
+- `npm.cmd run lint` đạt.
+- `npm.cmd run build` đạt; `/about` được prerender tĩnh.
+- Production runtime `/about` trả HTTP 200, có đủ bốn trách nhiệm và chưa có Giá trị cốt lõi/Triết lý giáo dục.
+- Ordered list, heading và breakpoint responsive đã được rà trong source.
+
+### Known issues
+
+- Câu chữ Sứ mệnh chưa được khách hàng duyệt bản cuối.
+- Chưa kiểm tra trực quan bằng browser automation hoặc thiết bị thật.
+
+### Commit
+
+- Sẽ cập nhật sau khi commit.

@@ -189,3 +189,11 @@ Mỗi quyết định phải ghi ngày, nội dung, lý do và ảnh hưởng.
 **Lý do:** Đây là định vị dài hạn đã có trong Project Vision; project không có cơ sở cho claim dẫn đầu, quy mô hoặc mốc thời gian.
 
 **Ảnh hưởng:** Section có nội dung định hướng nhưng kèm ghi chú cần khách hàng duyệt bản cuối; không lấn sang Sứ mệnh.
+
+## 2026-07-15 — Sứ mệnh mô tả vai trò, không cam kết kết quả
+
+**Quyết định:** Section Sứ mệnh chỉ diễn đạt các vai trò có trong phạm vi dự án: giới thiệu hướng học, ưu tiên tiếng Trung, kết nối năng lực sống và tạo kênh học thử/tư vấn.
+
+**Lý do:** PRD xác nhận các hoạt động này nhưng không cung cấp cơ sở cho cam kết đầu ra hoặc claim chất lượng tuyệt đối.
+
+**Ảnh hưởng:** Nội dung phân biệt với Tầm nhìn và không lấn sang Giá trị cốt lõi; câu chữ vẫn cần khách hàng duyệt.

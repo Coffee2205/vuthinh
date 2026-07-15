@@ -67,3 +67,33 @@ export const visionContent = {
   ],
   note: "Câu chữ tầm nhìn được biên soạn từ định vị dự án và cần khách hàng duyệt trước khi sử dụng chính thức.",
 } as const;
+
+export const missionContent = {
+  eyebrow: "Sứ mệnh",
+  title: "Tạo những điểm chạm rõ ràng giữa việc học và nhu cầu của mỗi gia đình",
+  description:
+    "Vũ Thịnh xác định vai trò đồng hành bằng việc cung cấp thông tin dễ hiểu, mở ra cơ hội tìm hiểu chương trình và kết nối các khía cạnh phát triển của người học.",
+  responsibilities: [
+    {
+      title: "Làm rõ lựa chọn học tập",
+      description:
+        "Giới thiệu chương trình, đối tượng và hướng học để phụ huynh cùng người học có thêm cơ sở cân nhắc.",
+    },
+    {
+      title: "Ưu tiên nền tảng tiếng Trung",
+      description:
+        "Phát triển các hướng học ngôn ngữ phù hợp với nhu cầu học tập, giao tiếp, HSK và công việc.",
+    },
+    {
+      title: "Kết nối năng lực toàn diện",
+      description:
+        "Đặt kỹ năng sống, tư duy, cảm xúc và giá trị con người bên cạnh quá trình học ngôn ngữ.",
+    },
+    {
+      title: "Mở đường cho trao đổi",
+      description:
+        "Tạo kênh học thử và tư vấn để gia đình chia sẻ nhu cầu trước khi lựa chọn chương trình.",
+    },
+  ],
+  note: "Nội dung Sứ mệnh được biên soạn từ phạm vi hoạt động trong PRD và cần khách hàng duyệt trước khi công bố chính thức.",
+} as const;

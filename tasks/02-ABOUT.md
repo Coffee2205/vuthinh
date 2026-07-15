@@ -5,7 +5,7 @@
 - [x] Giới thiệu trung tâm.
 - [x] Câu chuyện hình thành.
 - [x] Tầm nhìn.
-- [ ] Sứ mệnh.
+- [x] Sứ mệnh.
 - [ ] Giá trị cốt lõi.
 - [ ] Triết lý giáo dục.
 - [ ] CTA đăng ký tư vấn/học thử.
@@ -48,3 +48,14 @@
 - Accessibility: section dùng `aria-labelledby`, cấu trúc `h2`/`h3`, các hướng dùng `article` và màu chữ tương phản trên nền tối.
 - Giới hạn: câu chữ Tầm nhìn chưa được khách hàng duyệt bản cuối; chưa kiểm tra trực quan trên thiết bị thật/browser automation.
 - Commit: `59d635b` — `feat: add about vision section`.
+
+## Kết quả thực hiện — Sứ mệnh
+
+- File tạo: `src/components/about/MissionSection.tsx`.
+- File sửa: `src/app/about/page.tsx`, `src/data/about.ts`, `tasks/02-ABOUT.md` và các project log liên quan.
+- Quyết định: mô tả Sứ mệnh bằng các vai trò có trong PRD; không tạo cam kết kết quả học tập, trách nhiệm vận hành hoặc claim chất lượng chưa xác nhận.
+- Kiểm tra: `npm.cmd run lint` đạt; `npm.cmd run build` đạt và `/about` được prerender tĩnh; runtime production local HTTP 200, có đủ bốn trách nhiệm, ghi chú duyệt nội dung và chưa có Giá trị cốt lõi/Triết lý giáo dục.
+- Responsive: một cột trên mobile; danh sách hai cột từ `sm`, bố cục nội dung hai vùng từ `lg`.
+- Accessibility: section dùng `aria-labelledby`, `ol`/`li`, cấu trúc `h2`/`h3`; số thứ tự trang trí được ẩn khỏi assistive technology.
+- Giới hạn: câu chữ Sứ mệnh chưa được khách hàng duyệt bản cuối; chưa kiểm tra trực quan trên thiết bị thật/browser automation.
+- Commit: sẽ cập nhật sau khi commit.
