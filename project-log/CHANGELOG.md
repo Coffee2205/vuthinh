@@ -260,3 +260,31 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 ### Commit
 
 - `9ea640a` — `feat: add featured content empty states`.
+
+## 2026-07-15 — Task 01: Form đăng ký học thử
+
+### Added
+
+- Giao diện form học thử với 6 trường theo user flow và danh sách nhóm chương trình đã xác định.
+- Trạng thái thông báo form chưa mở nhận đăng ký.
+
+### Changed
+
+- Trang chủ hiển thị form preview sau Bài viết/tài liệu nổi bật.
+- Bổ sung nội dung tĩnh trong `src/data/home.ts`.
+
+### Verified
+
+- `npm.cmd run lint` đạt.
+- `npm.cmd run build` đạt; TypeScript, static generation và prerender route `/` thành công.
+- Production runtime local trả HTTP 200, có đủ field, fieldset disabled và chưa có CTA cuối trang.
+- Label, fieldset/legend, trạng thái mô tả và breakpoint responsive đã được rà trong source.
+
+### Known issues
+
+- Form chưa thể gửi hoặc lưu dữ liệu; validation/loading/success/error nghiệp vụ thuộc Task 07.
+- Chưa kiểm tra trực quan bằng browser automation hoặc thiết bị thật.
+
+### Commit
+
+- Sẽ cập nhật sau khi commit.

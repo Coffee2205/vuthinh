@@ -200,3 +200,15 @@
 **Ảnh hưởng:** Section trang chủ dùng empty state; `/blog` và `/resources` chưa được triển khai vì thuộc Task 05. Không còn blocker kỹ thuật cho section Bài viết/tài liệu nổi bật.
 
 **Cần từ khách hàng:** Nội dung bài viết, thông tin tác giả, ảnh được phép sử dụng và tệp/link tài liệu đã xác nhận.
+
+---
+
+## ISSUE-015 — Form học thử chưa kết nối xử lý dữ liệu
+
+**Trạng thái:** Planned — Task 07
+
+**Mô tả:** Giao diện form đã có nhưng đang bị khóa vì chưa có Supabase, validation server, chống submit lặp hoặc phản hồi thành công/thất bại.
+
+**Ảnh hưởng:** Chưa thể nhận đăng ký thật. Không còn blocker kỹ thuật cho phần giao diện form của Task 01, nhưng đây là blocker vận hành trước production.
+
+**Cách xử lý dự kiến:** Kích hoạt form và kết nối bảng `course_registrations` trong Task 07 sau khi có schema, biến môi trường và RLS phù hợp.

@@ -14,7 +14,7 @@ Tạo trang chủ thuyết phục phụ huynh và dẫn người dùng đến đ
 - [x] Thành quả học viên.
 - [x] Cảm nhận phụ huynh.
 - [x] Bài viết/tài liệu nổi bật.
-- [ ] Form đăng ký học thử.
+- [x] Form đăng ký học thử.
 - [ ] CTA cuối trang.
 
 ## Quy tắc
@@ -215,3 +215,14 @@ Tạo trang chủ thuyết phục phụ huynh và dẫn người dùng đến đ
 - Responsive: một cột trên mobile, hai cột từ `md`; `section`, `article`, `aria-labelledby`, heading và focus-visible đã rà trong source.
 - Giới hạn: chưa có bài viết/tài liệu thật; hai route đích thuộc Task 05 chưa được triển khai; chưa kiểm tra trực quan trên thiết bị thật/browser automation.
 - Commit: `9ea640a` — `feat: add featured content empty states`.
+
+## Kết quả thực hiện — Form đăng ký học thử
+
+- File tạo: `src/components/home/TrialRegistrationSection.tsx`.
+- File sửa: `src/data/home.ts`, `src/app/page.tsx`, `tasks/01-HOME.md` và các project log liên quan.
+- Quyết định: hoàn thành giao diện form ở trạng thái khóa; không nhận hoặc giả lập gửi dữ liệu khi Supabase, validation server và xử lý form thuộc Task 07.
+- Kiểm tra: `npm.cmd run lint` đạt; `npm.cmd run build` đạt và route `/` được prerender tĩnh; runtime production local HTTP 200, có đủ 6 trường, `fieldset` disabled, thông báo giới hạn và chưa có CTA cuối trang.
+- Responsive: một cột trên mobile, hai vùng từ `lg`; trường form một cột mobile và hai cột từ `sm`.
+- Accessibility: label gắn trực tiếp với control, `fieldset`/`legend`, `aria-describedby`, `role=status`, autocomplete và loại input phù hợp đã được rà.
+- Giới hạn: form chưa thể submit, chưa có validation/loading/success/error nghiệp vụ hoặc lưu dữ liệu; các phần này thuộc Task 07. Chưa kiểm tra trực quan trên thiết bị thật/browser automation.
+- Commit: sẽ cập nhật sau khi commit.

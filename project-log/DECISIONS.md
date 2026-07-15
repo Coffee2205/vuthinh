@@ -149,3 +149,11 @@ Mỗi quyết định phải ghi ngày, nội dung, lý do và ảnh hưởng.
 **Lý do:** Chưa có nội dung đáp ứng đủ trạng thái xuất bản, metadata và quyền sử dụng theo quy tắc nghiệp vụ.
 
 **Ảnh hưởng:** Layout sẵn sàng nhận dữ liệu thật; `/blog` và `/resources` vẫn thuộc Task 05 và chưa được tạo trong Task 01.
+
+## 2026-07-15 — Khóa form học thử cho đến khi có xử lý dữ liệu thật
+
+**Quyết định:** Hiển thị đầy đủ giao diện form trong Task 01 nhưng vô hiệu hóa toàn bộ fieldset và nút gửi; không giả lập trạng thái thành công.
+
+**Lý do:** Supabase, validation server, chống submit lặp và lưu `course_registrations` thuộc Task 07, chưa được triển khai.
+
+**Ảnh hưởng:** Người dùng thấy trước thông tin cần cung cấp nhưng không thể gửi dữ liệu vào một luồng chưa hoạt động; form sẽ được kích hoạt trong Task 07.

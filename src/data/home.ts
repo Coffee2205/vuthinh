@@ -191,3 +191,23 @@ export const featuredContent = {
   ],
   note: "Chỉ nội dung đã được xác nhận trạng thái xuất bản và quyền sử dụng mới xuất hiện tại đây.",
 } as const;
+
+export const trialRegistrationContent = {
+  eyebrow: "Đăng ký học thử",
+  title: "Chia sẻ nhu cầu để chuẩn bị cho buổi học phù hợp",
+  description:
+    "Phiếu đăng ký gồm những thông tin cơ bản để trung tâm hiểu độ tuổi, mục tiêu và chương trình người học quan tâm.",
+  status: "Form trực tuyến chưa mở nhận đăng ký",
+  note: "Kết nối lưu dữ liệu và phản hồi gửi thành công hoặc thất bại sẽ được triển khai trong Task 07. Hiện tại form được khóa để không làm thất lạc thông tin.",
+  formTitle: "Thông tin đăng ký",
+  programs: [
+    "Tiếng Trung thiếu nhi",
+    "Tiếng Trung giao tiếp",
+    "HSK",
+    "Tiếng Trung thương mại",
+    "Kỹ năng sống",
+    "Quản trị cảm xúc",
+    "Giá trị sống và hạnh phúc",
+  ],
+  submitLabel: "Chưa thể gửi đăng ký",
+} as const;

@@ -6,6 +6,7 @@ import { ParentTestimonialsSection } from "@/components/home/ParentTestimonialsS
 import { ProgramsSection } from "@/components/home/ProgramsSection";
 import { StudentOutcomesSection } from "@/components/home/StudentOutcomesSection";
 import { TrustSection } from "@/components/home/TrustSection";
+import { TrialRegistrationSection } from "@/components/home/TrialRegistrationSection";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <StudentOutcomesSection />
       <ParentTestimonialsSection />
       <FeaturedContentSection />
+      <TrialRegistrationSection />
     </>
   );
 }

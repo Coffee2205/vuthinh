@@ -2,18 +2,18 @@
 
 ## Nhiệm vụ gần nhất
 
-> Tiếp tục `Task 01 — Trang chủ` và chỉ thực hiện section “Form đăng ký học thử”, chưa làm CTA cuối trang.
+> Tiếp tục `Task 01 — Trang chủ` và chỉ thực hiện section “CTA cuối trang”, chưa bắt đầu Task 02.
 
 ## Thứ tự thực hiện
 
-1. Đọc quy tắc form và luồng đăng ký học thử trong tài liệu dự án.
-2. Xác định phạm vi form trang chủ khi database thuộc Task 07 và chưa được kết nối.
-3. Có label, validation/trạng thái phù hợp với phạm vi thực tế; không giả vờ lưu dữ liệu.
-4. Kiểm tra responsive/accessibility, lint/build/runtime.
+1. Đọc nguyên tắc CTA và các đường dẫn đã xác định trong sitemap.
+2. Chọn một CTA chính, không đặt nhiều hành động cùng mức độ nổi bật.
+3. Không triển khai route hoặc chức năng thuộc task sau.
+4. Kiểm tra responsive/accessibility, link, lint/build/runtime.
 5. Cập nhật task/log, commit và push trước khi chuyển section.
 
 ## Chưa làm ngay
 
-- CTA cuối trang và các task sau Task 01.
+- Task 02 và các task sau.
 - Database, form lưu dữ liệu thật và Supabase.
 - Admin, AI, thanh toán hoặc LMS.

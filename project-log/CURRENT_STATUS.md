@@ -8,7 +8,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 
 ## Task hiện tại
 
-`Task 01 — Trang chủ` đang thực hiện theo từng section. Tám section đầu đã hoàn thành; chưa bắt đầu Form đăng ký học thử.
+`Task 01 — Trang chủ` đang thực hiện theo từng section. Chín section đầu đã hoàn thành; chưa bắt đầu CTA cuối trang.
 
 ## Đã hoàn thành
 
@@ -95,6 +95,12 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - Đã thêm hai empty state cho Blog và Tài liệu miễn phí, không tạo nội dung xuất bản giả.
 - Có link tới `/blog` và `/resources`; route đích chưa được triển khai vì thuộc Task 05.
 
+### Task 01 — Form đăng ký học thử
+
+- Đã thêm giao diện form gồm họ tên, điện thoại, email, độ tuổi, chương trình quan tâm và ghi chú.
+- Form đang bị khóa và thông báo rõ chưa mở nhận đăng ký; không làm thất lạc hoặc giả lập lưu dữ liệu.
+- Kết nối database, validation và trạng thái gửi nghiệp vụ vẫn thuộc Task 07.
+
 ## Chưa thực hiện
 
 - Các section còn lại để hoàn thiện trang chủ.
@@ -113,7 +119,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - `node_modules`: Đã có; các dependency chính được nhận diện.
 - `npm.cmd run lint`: Đạt ngày 2026-07-15, không có lỗi ESLint.
 - `npm.cmd run build`: Đạt ngày 2026-07-15; compile, TypeScript và static generation thành công.
-- Runtime `/`: HTTP 200, có section Bài viết/tài liệu với hai empty state và link đúng; Form đăng ký học thử chưa xuất hiện.
+- Runtime `/`: HTTP 200, có đủ trường Form đăng ký học thử ở trạng thái disabled; CTA cuối trang chưa xuất hiện.
 
 ## Trạng thái project local
 
@@ -129,7 +135,8 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - Student Outcomes đã được commit tại `5743558` — `feat: add student outcomes empty state`.
 - Parent Testimonials đã được commit tại `71f7096` — `feat: add parent testimonials empty state`.
 - Featured Content đã được commit tại `9ea640a` — `feat: add featured content empty states`.
+- Trial Registration đang chờ commit sau khi hoàn tất log.
 
 ## Task tiếp theo
 
-Tiếp tục `Task 01 — Trang chủ` bằng section “Form đăng ký học thử”. Chưa bắt đầu section này.
+Tiếp tục `Task 01 — Trang chủ` bằng section “CTA cuối trang”. Chưa bắt đầu section này.
