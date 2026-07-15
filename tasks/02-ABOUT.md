@@ -25,4 +25,4 @@
 - Responsive: một cột trên mobile, hai vùng từ `lg`; các thẻ bổ trợ thay đổi theo `sm`/`lg`/`xl`.
 - Accessibility: một `h1`, heading đúng thứ tự, `aria-labelledby`, nội dung dạng `article` và độ tương phản đã được rà trong source.
 - Giới hạn: chưa có thông tin lịch sử, đội ngũ, cơ sở hoặc thành tựu được khách hàng xác nhận; chưa kiểm tra trực quan trên thiết bị thật/browser automation.
-- Commit: sẽ cập nhật sau khi commit.
+- Commit: `2955001` — `feat: add about introduction`.
