@@ -194,4 +194,4 @@ Tạo trang chủ thuyết phục phụ huynh và dẫn người dùng đến đ
 - Hiển thị empty state minh bạch, không dùng số liệu, ảnh hoặc kết quả giả; CTA `/success-stories`.
 - Lint/build đạt; responsive và semantic heading/focus đã rà trong source.
 - Giới hạn: chưa có dữ liệu thật, route CTA chưa triển khai, chưa kiểm tra trực quan thiết bị thật.
-- Commit: sẽ cập nhật sau.
+- Commit: `5743558` — `feat: add student outcomes empty state`.

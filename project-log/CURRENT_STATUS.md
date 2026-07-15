@@ -116,6 +116,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - Programs Section đã được commit tại `ebf2d2b` — `feat: add featured programs section`.
 - Learning Journey đã được commit tại `bd2b456` — `feat: add learning journey section`.
 - Expert Section đã được commit tại `7b5d838` — `feat: add home expert section`.
+- Student Outcomes đã được commit tại `5743558` — `feat: add student outcomes empty state`.
 
 ## Task tiếp theo
 

@@ -200,3 +200,7 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 ### Known issues
 
 - Chưa có dữ liệu thật và `/success-stories` chưa triển khai.
+
+### Commit
+
+- `5743558` — `feat: add student outcomes empty state`.
