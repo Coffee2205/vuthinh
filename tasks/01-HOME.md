@@ -141,4 +141,4 @@ Tạo trang chủ thuyết phục phụ huynh và dẫn người dùng đến đ
 
 ### Commit
 
-- Chưa cập nhật; sẽ ghi sau khi tạo commit cho Programs Section.
+- `ebf2d2b` — `feat: add featured programs section`.

@@ -137,3 +137,7 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 - Chưa có dữ liệu khóa học chi tiết được khách hàng xác nhận.
 - CTA `/programs` chưa có route đích vì thuộc Task 03.
 - Chưa kiểm tra trực quan bằng browser automation hoặc thiết bị thật.
+
+### Commit
+
+- `ebf2d2b` — `feat: add featured programs section`.

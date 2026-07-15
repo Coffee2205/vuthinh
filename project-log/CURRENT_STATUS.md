@@ -95,6 +95,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - Commit nền tảng gần nhất trước Hero: `3e5949b` — `feat: complete project foundation`.
 - Hero Section đã được commit tại `3a0e2b4` — `feat: add home hero section`.
 - Trust Section đã được commit tại `637d763` — `feat: add home trust section`.
+- Programs Section đã được commit tại `ebf2d2b` — `feat: add featured programs section`.
 
 ## Task tiếp theo
 
