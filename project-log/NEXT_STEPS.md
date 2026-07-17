@@ -4,6 +4,8 @@
 
 > Chờ dữ liệu khóa học đã được khách hàng xác nhận, sau đó chỉ thực hiện phần “Danh sách khóa học”; chưa làm chi tiết khóa học hoặc các phần khác.
 
+Khách hàng có thể dùng `docs/CONTENT_REQUIREMENTS.md` làm checklist bàn giao. Ưu tiên trước mắt là các mục P0, đặc biệt toàn bộ khóa học đang tuyển sinh, thông tin thương hiệu/liên hệ, hồ sơ chuyên gia và xác nhận tên miền.
+
 ## Thứ tự thực hiện
 
 1. Nhận tối thiểu tên, slug, nhóm, mô tả, đối tượng, mục tiêu, nội dung, thời lượng, hình thức, học phí/trạng thái Liên hệ và trạng thái xuất bản.

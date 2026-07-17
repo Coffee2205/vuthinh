@@ -133,6 +133,12 @@
 - Không tạo route `/courses` với dữ liệu giả và không làm trước mục Empty state.
 - Lint/build hiện tại đạt; đây là blocker dữ liệu nghiệp vụ, không phải blocker kỹ thuật.
 
+### Xác nhận lại blocker — 2026-07-17
+
+- Đã đối chiếu lại source, checklist và toàn bộ tài liệu theo quy trình tiếp tục dự án; vẫn không có bản ghi khóa học thật hoặc nội dung mới được phép công bố.
+- Danh sách trường, số lượng và định dạng bàn giao đã được tổng hợp tại `docs/CONTENT_REQUIREMENTS.md`.
+- `ISSUE-009` tiếp tục ở trạng thái Open; không tạo `/courses`, dữ liệu giả hoặc làm trước mục Empty state.
+
 ### Trạng thái Danh sách nhóm chương trình
 
 - Route `/programs` đã hiển thị đủ bảy nhóm bằng dữ liệu tĩnh; không còn blocker kỹ thuật cho phần danh sách nhóm.

@@ -1,6 +1,6 @@
 # Trạng thái hiện tại
 
-_Cập nhật gần nhất: 2026-07-15_
+_Cập nhật gần nhất: 2026-07-17_
 
 ## Giai đoạn hiện tại
 
@@ -190,8 +190,8 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 ## Trạng thái kiểm tra
 
 - `node_modules`: Đã có; các dependency chính được nhận diện.
-- `npm.cmd run lint`: Đạt ngày 2026-07-15, không có lỗi ESLint.
-- `npm.cmd run build`: Đạt ngày 2026-07-15; compile, TypeScript và static generation thành công.
+- `npm.cmd run lint`: Đạt ngày 2026-07-17, không có lỗi ESLint.
+- `npm.cmd run build`: Đạt ngày 2026-07-17; compile, TypeScript và static generation thành công cho `/`, `/about` và `/programs`.
 - Runtime `/programs`: HTTP 200; có đủ bốn lựa chọn lọc, trạng thái mặc định 7 nhóm và không có link khóa học.
 - Rà soát Danh sách khóa học: không có lỗi kỹ thuật; blocker duy nhất là thiếu dữ liệu nghiệp vụ đã xác nhận.
 
@@ -225,3 +225,9 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 ## Task tiếp theo
 
 Tiếp tục “Danh sách khóa học” sau khi khách hàng cung cấp dữ liệu tối thiểu theo `docs/FUNCTIONAL_RULES.md`. Chưa chuyển sang phần kế tiếp.
+
+## Cập nhật tài liệu yêu cầu nội dung — 2026-07-17
+
+- Đã rà lại toàn bộ `project-log/ISSUES.md`, `docs/` và `tasks/`.
+- Đã tạo `docs/CONTENT_REQUIREMENTS.md`, tổng hợp thông tin còn thiếu, số lượng tối thiểu/khuyến nghị, định dạng bàn giao, trường dữ liệu, loại nội dung và vị trí sử dụng để hoàn thiện website Giai đoạn 1.
+- Không thay đổi source chức năng; lint/build đạt và blocker gần nhất vẫn là dữ liệu khóa học thật đã được duyệt.

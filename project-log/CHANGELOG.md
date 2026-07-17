@@ -588,3 +588,26 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 ### Commit
 
 - `e777ef6` — `docs: record course data blocker`.
+
+## 2026-07-17 — Tổng hợp yêu cầu nội dung còn thiếu
+
+### Added
+
+- `docs/CONTENT_REQUIREMENTS.md` làm checklist bàn giao nội dung cho toàn bộ website Giai đoạn 1.
+- Số lượng tối thiểu/khuyến nghị, định dạng tệp, trường dữ liệu và vị trí sử dụng cho từng nhóm nội dung.
+- Checklist về quyền hình ảnh, phê duyệt nội dung, form, SEO, pháp lý và hạ tầng production.
+
+### Changed
+
+- Cập nhật trạng thái và bước tiếp theo để tham chiếu tài liệu bàn giao mới.
+
+### Verified
+
+- Đối chiếu với toàn bộ issue đang mở, PRD, thiết kế kỹ thuật, quy tắc nghiệp vụ, sitemap, user flow và các task Giai đoạn 1.
+- Đối chiếu lại source: chưa có bản ghi khóa học thật; `ISSUE-009` tiếp tục là blocker dữ liệu và không có thay đổi source chức năng.
+- `npm.cmd run lint` đạt ngày 2026-07-17.
+- `npm.cmd run build` đạt; `/`, `/about` và `/programs` được prerender tĩnh.
+
+### Known issues
+
+- Danh sách khóa học vẫn bị chặn cho đến khi có tối thiểu một bản ghi đã được phép công bố.

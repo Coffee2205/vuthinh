@@ -65,3 +65,11 @@
 - Kiểm tra source hiện tại: `npm.cmd run lint` đạt; `npm.cmd run build` đạt, `/`, `/about` và `/programs` tiếp tục được prerender tĩnh.
 - Giới hạn/blocker: cần ít nhất một bản ghi khóa học đã duyệt hoặc chỉ đạo rõ cho phép chuyển sang thực hiện mục Empty state theo đúng thứ tự.
 - Commit tài liệu: `e777ef6` — `docs: record course data blocker`.
+
+## Bổ sung tài liệu bàn giao nội dung — 2026-07-17
+
+- File tạo: `docs/CONTENT_REQUIREMENTS.md`.
+- File sửa: `tasks/03-PROGRAMS-COURSES.md` và các project log liên quan.
+- Quyết định: tổng hợp yêu cầu nội dung toàn website nhưng giữ nguyên phạm vi thực thi Task 03; không tạo dữ liệu khóa học giả hoặc chuyển sang mục tiếp theo.
+- Vấn đề còn lại: cần tối thiểu một khóa học được phép công bố; khuyến nghị cung cấp toàn bộ khóa đang tuyển sinh theo cấu trúc trong tài liệu mới.
+- Kiểm tra: đã đối chiếu với `ISSUES.md`, toàn bộ `docs/`, `tasks/` và source; không có bản ghi khóa học thật mới. `npm.cmd run lint` và `npm.cmd run build` đều đạt ngày 2026-07-17; các route `/`, `/about` và `/programs` tiếp tục được prerender tĩnh.
