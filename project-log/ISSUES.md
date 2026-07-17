@@ -185,6 +185,11 @@
 
 **Ảnh hưởng:** Expert Section hiện hiển thị trạng thái chờ nội dung; không chặn kỹ thuật.
 
+### Cập nhật Task 04 — 2026-07-17
+
+- Đã tạo route `/expert` với empty state minh bạch và danh sách thông tin cần khách hàng xác nhận.
+- Hồ sơ một chuyên gia vẫn chưa thể hoàn thành production; không có tên, ảnh, tiểu sử, kinh nghiệm, chuyên môn hoặc chứng chỉ giả được thêm vào.
+
 ## Trạng thái Expert Section
 
 - Lint, build và runtime đạt; chưa kiểm tra trực quan trên thiết bị thật.

@@ -611,3 +611,27 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 ### Known issues
 
 - Danh sách khóa học vẫn bị chặn cho đến khi có tối thiểu một bản ghi đã được phép công bố.
+
+## 2026-07-17 — Bắt đầu Task 04 với khung hồ sơ chuyên gia
+
+### Added
+
+- Route `/expert` với metadata riêng.
+- Empty state hồ sơ một chuyên gia và danh sách thông tin cần xác nhận.
+- Nguồn nội dung tĩnh riêng tại `src/data/expert.ts`.
+
+### Changed
+
+- Task 03 được ghi nhận tạm hoãn theo chỉ đạo; Task 04 trở thành task hiện tại.
+
+### Known issues
+
+- Chưa có hồ sơ chuyên gia thật; `ISSUE-011` tiếp tục Open.
+- Chưa làm các mục Chuyên môn trở đi hoặc route `/consultation`.
+
+### Verified
+
+- `npm.cmd run lint` đạt.
+- `npm.cmd run build` đạt; `/expert` được prerender tĩnh.
+- Production runtime `/expert` trả HTTP 200 và có đủ nội dung empty state.
+- Source có một `main`, một `h1`, section liên kết heading bằng `aria-labelledby` và danh sách semantic.

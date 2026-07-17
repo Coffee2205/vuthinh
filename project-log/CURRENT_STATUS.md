@@ -8,7 +8,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 
 ## Task hiện tại
 
-`Task 03 — Chương trình và khóa học` đang thực hiện theo từng phần. Danh sách nhóm và bộ lọc danh mục cơ bản đã hoàn thành; phần Danh sách khóa học bị chặn do chưa có dữ liệu được xác nhận.
+`Task 04 — Chuyên gia và tư vấn` đang thực hiện theo từng phần sau khi người dùng yêu cầu tạm bỏ qua Task 03. Phần đầu tiên là Hồ sơ một chuyên gia; dữ liệu hồ sơ thật vẫn thiếu theo `ISSUE-011`.
 
 ## Đã hoàn thành
 
@@ -176,10 +176,16 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - Không tạo khóa học giả và chưa tạo route `/courses` hoặc Empty state vì các phần này chưa đến lượt theo checklist.
 - Checkbox Danh sách khóa học vẫn chưa hoàn thành; đang chờ dữ liệu nghiệp vụ từ khách hàng.
 
+### Task 04 — Khung hồ sơ chuyên gia
+
+- Đã tạo route `/expert` với metadata riêng và empty state minh bạch cho một chuyên gia.
+- Nội dung tĩnh được tách tại `src/data/expert.ts`; không tạo tên, ảnh, kinh nghiệm, chuyên môn hoặc chứng chỉ giả.
+- Mục Hồ sơ một chuyên gia chưa được đánh dấu hoàn thành vì vẫn thiếu dữ liệu thật và quyền công bố.
+
 ## Chưa thực hiện
 
-- Các phần còn lại của Chương trình và khóa học.
-- Trang chuyên gia và đăng ký tư vấn.
+- Các phần còn lại của Chương trình và khóa học đang được tạm hoãn theo chỉ đạo.
+- Hồ sơ chuyên gia thật, các phần còn lại của trang chuyên gia và đăng ký tư vấn.
 - Blog và tài liệu miễn phí.
 - Các trang hỗ trợ.
 - Supabase và database.
@@ -191,8 +197,9 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 
 - `node_modules`: Đã có; các dependency chính được nhận diện.
 - `npm.cmd run lint`: Đạt ngày 2026-07-17, không có lỗi ESLint.
-- `npm.cmd run build`: Đạt ngày 2026-07-17; compile, TypeScript và static generation thành công cho `/`, `/about` và `/programs`.
+- `npm.cmd run build`: Đạt ngày 2026-07-17; compile, TypeScript và static generation thành công cho `/`, `/about`, `/expert` và `/programs`.
 - Runtime `/programs`: HTTP 200; có đủ bốn lựa chọn lọc, trạng thái mặc định 7 nhóm và không có link khóa học.
+- Runtime `/expert`: HTTP 200; có trạng thái hồ sơ đang cập nhật và danh sách thông tin cần xác nhận.
 - Rà soát Danh sách khóa học: không có lỗi kỹ thuật; blocker duy nhất là thiếu dữ liệu nghiệp vụ đã xác nhận.
 
 ## Trạng thái project local
@@ -224,7 +231,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 
 ## Task tiếp theo
 
-Tiếp tục “Danh sách khóa học” sau khi khách hàng cung cấp dữ liệu tối thiểu theo `docs/FUNCTIONAL_RULES.md`. Chưa chuyển sang phần kế tiếp.
+Tiếp tục Task 04 từ mục Hồ sơ một chuyên gia. Chỉ bổ sung hồ sơ thật sau khi khách hàng cung cấp dữ liệu được phép công bố; chưa làm trước mục Chuyên môn.
 
 ## Cập nhật tài liệu yêu cầu nội dung — 2026-07-17
 

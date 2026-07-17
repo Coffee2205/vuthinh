@@ -73,3 +73,9 @@
 - Quyết định: tổng hợp yêu cầu nội dung toàn website nhưng giữ nguyên phạm vi thực thi Task 03; không tạo dữ liệu khóa học giả hoặc chuyển sang mục tiếp theo.
 - Vấn đề còn lại: cần tối thiểu một khóa học được phép công bố; khuyến nghị cung cấp toàn bộ khóa đang tuyển sinh theo cấu trúc trong tài liệu mới.
 - Kiểm tra: đã đối chiếu với `ISSUES.md`, toàn bộ `docs/`, `tasks/` và source; không có bản ghi khóa học thật mới. `npm.cmd run lint` và `npm.cmd run build` đều đạt ngày 2026-07-17; các route `/`, `/about` và `/programs` tiếp tục được prerender tĩnh.
+
+## Trạng thái tạm hoãn — 2026-07-17
+
+- Theo chỉ đạo của người dùng, tạm bỏ qua các mục còn lại của Task 03 để chuyển sang Task 04.
+- Task 03 không được đánh dấu hoàn thành; các checkbox Danh sách khóa học, Chi tiết khóa học, CTA đăng ký, Empty state và Metadata động vẫn giữ `[ ]`.
+- Khi quay lại, tiếp tục từ Danh sách khóa học sau khi có dữ liệu được phép công bố.

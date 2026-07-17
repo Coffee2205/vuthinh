@@ -2,6 +2,14 @@
 
 Mỗi quyết định phải ghi ngày, nội dung, lý do và ảnh hưởng.
 
+## 2026-07-17 — Tạm hoãn phần còn lại của Task 03
+
+**Quyết định:** Theo chỉ đạo của người dùng, tạm bỏ qua các mục chưa hoàn thành của Task 03 và chuyển Task 04 thành task hiện tại.
+
+**Lý do:** Danh sách khóa học đang bị chặn bởi dữ liệu nghiệp vụ; người dùng chủ động yêu cầu ghi nhận việc bỏ qua và tiếp tục task kế tiếp.
+
+**Ảnh hưởng:** Task 03 không được coi là hoàn thành và các checkbox còn lại không thay đổi. `ISSUE-009` tiếp tục Open; khi quay lại phải bắt đầu từ Danh sách khóa học, không bỏ qua dữ liệu bắt buộc.
+
 ## 2026-07-15 — Chia dự án thành nhiều giai đoạn
 
 **Quyết định:** Giai đoạn 1 phải tạo ra website hoàn chỉnh, đã deploy và có thể phục vụ giới thiệu, tuyển sinh và nhận tư vấn.
