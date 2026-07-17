@@ -635,3 +635,27 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 - `npm.cmd run build` đạt; `/expert` được prerender tĩnh.
 - Production runtime `/expert` trả HTTP 200 và có đủ nội dung empty state.
 - Source có một `main`, một `h1`, section liên kết heading bằng `aria-labelledby` và danh sách semantic.
+
+## 2026-07-17 — Bắt đầu Task 05 với khung danh mục Blog
+
+### Added
+
+- Route `/blog` với metadata riêng.
+- Empty state danh mục Blog và danh sách thông tin cần xác nhận.
+- Nguồn nội dung tĩnh riêng tại `src/data/blog.ts`.
+
+### Changed
+
+- Task 04 được ghi nhận tạm hoãn theo chỉ đạo; Task 05 trở thành task hiện tại.
+
+### Known issues
+
+- Chưa có taxonomy hoặc bài viết thật; `ISSUE-014` tiếp tục Open.
+- Chưa làm các mục Danh sách bài trở đi hoặc route `/resources`.
+
+### Verified
+
+- `npm.cmd run lint` đạt.
+- `npm.cmd run build` đạt; `/blog` được prerender tĩnh.
+- Production runtime `/blog` trả HTTP 200 và có đủ nội dung empty state.
+- Source có một `main`, một `h1`, section liên kết heading bằng `aria-labelledby` và danh sách semantic.

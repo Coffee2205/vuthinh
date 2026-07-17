@@ -229,6 +229,11 @@
 
 **Cần từ khách hàng:** Nội dung bài viết, thông tin tác giả, ảnh được phép sử dụng và tệp/link tài liệu đã xác nhận.
 
+### Cập nhật Task 05 — 2026-07-17
+
+- Đã tạo route `/blog` với empty state minh bạch và danh sách dữ liệu cần xác nhận cho taxonomy.
+- Danh mục Blog vẫn chưa thể hoàn thành production; không có taxonomy hoặc bài viết giả được thêm vào.
+
 ---
 
 ## ISSUE-015 — Form học thử chưa kết nối xử lý dữ liệu

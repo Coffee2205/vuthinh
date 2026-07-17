@@ -2,20 +2,22 @@
 
 ## Nhiệm vụ gần nhất
 
-> Task 03 được tạm hoãn theo chỉ đạo. Task hiện tại là Task 04; hoàn thiện mục “Hồ sơ một chuyên gia” trước khi chuyển sang Chuyên môn.
+> Task 04 được tạm hoãn theo chỉ đạo. Task hiện tại là Task 05; hoàn thiện mục “Danh mục blog” trước khi chuyển sang Danh sách bài.
 
-Khách hàng có thể dùng `docs/CONTENT_REQUIREMENTS.md` làm checklist bàn giao. Với Task 04 hiện tại, ưu tiên trước mắt là hồ sơ chuyên gia, ảnh có quyền sử dụng và thông tin dịch vụ tư vấn; dữ liệu khóa học vẫn được lưu để quay lại Task 03 sau.
+Khách hàng có thể dùng `docs/CONTENT_REQUIREMENTS.md` làm checklist bàn giao. Với Task 05 hiện tại, ưu tiên trước mắt là tên/slug/mô tả danh mục và ít nhất một bài viết đã duyệt; dữ liệu của Task 03–04 vẫn được lưu để quay lại sau.
 
-## Thứ tự thực hiện Task 04
+## Thứ tự thực hiện Task 05
 
-1. Nhận họ tên, chức danh, ảnh, tiểu sử, kinh nghiệm và xác nhận quyền công bố của một chuyên gia.
-2. Thay empty state trên `/expert` bằng hồ sơ thật đã duyệt.
-3. Kiểm tra responsive/accessibility, metadata, lint/build/runtime.
-4. Cập nhật task/log, commit và push trước khi chuyển sang mục Chuyên môn.
+1. Nhận tên, slug, mô tả, thứ tự và trạng thái của các danh mục Blog.
+2. Xác nhận ít nhất một bài viết có danh mục, tác giả, ngày xuất bản và quyền sử dụng ảnh hợp lệ.
+3. Thay empty state danh mục trên `/blog` bằng taxonomy đã duyệt.
+4. Kiểm tra responsive/accessibility, metadata, lint/build/runtime.
+5. Cập nhật task/log, commit và push trước khi chuyển sang mục Danh sách bài.
 
 ## Chưa làm ngay
 
 - Các phần còn lại của Task 03 cho đến khi có chỉ đạo quay lại.
-- Chuyên môn và các mục sau Hồ sơ một chuyên gia của Task 04.
+- Các phần còn lại của Task 04 cho đến khi có chỉ đạo quay lại.
+- Danh sách bài và các mục sau Danh mục blog của Task 05.
 - Database, form lưu dữ liệu thật và Supabase.
 - Admin, AI, thanh toán hoặc LMS.

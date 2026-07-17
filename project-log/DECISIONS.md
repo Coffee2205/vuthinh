@@ -2,6 +2,14 @@
 
 Mỗi quyết định phải ghi ngày, nội dung, lý do và ảnh hưởng.
 
+## 2026-07-17 — Tạm hoãn phần còn lại của Task 04
+
+**Quyết định:** Theo chỉ đạo của người dùng, tạm bỏ qua các mục chưa hoàn thành của Task 04 và chuyển Task 05 thành task hiện tại.
+
+**Lý do:** Hồ sơ chuyên gia thật đang thiếu; người dùng chủ động yêu cầu ghi nhận việc bỏ qua và tiếp tục task kế tiếp.
+
+**Ảnh hưởng:** Task 04 không được coi là hoàn thành và các checkbox không thay đổi. `ISSUE-011` tiếp tục Open; route `/expert` giữ empty state và `/consultation` chưa được triển khai.
+
 ## 2026-07-17 — Tạm hoãn phần còn lại của Task 03
 
 **Quyết định:** Theo chỉ đạo của người dùng, tạm bỏ qua các mục chưa hoàn thành của Task 03 và chuyển Task 04 thành task hiện tại.

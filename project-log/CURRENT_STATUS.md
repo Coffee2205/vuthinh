@@ -8,7 +8,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 
 ## Task hiện tại
 
-`Task 04 — Chuyên gia và tư vấn` đang thực hiện theo từng phần sau khi người dùng yêu cầu tạm bỏ qua Task 03. Phần đầu tiên là Hồ sơ một chuyên gia; dữ liệu hồ sơ thật vẫn thiếu theo `ISSUE-011`.
+`Task 05 — Blog và tài liệu` đang thực hiện theo từng phần sau khi người dùng yêu cầu tạm bỏ qua Task 04. Phần đầu tiên là Danh mục blog; taxonomy và bài viết thật vẫn thiếu theo `ISSUE-014`.
 
 ## Đã hoàn thành
 
@@ -182,11 +182,17 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 - Nội dung tĩnh được tách tại `src/data/expert.ts`; không tạo tên, ảnh, kinh nghiệm, chuyên môn hoặc chứng chỉ giả.
 - Mục Hồ sơ một chuyên gia chưa được đánh dấu hoàn thành vì vẫn thiếu dữ liệu thật và quyền công bố.
 
+### Task 05 — Khung danh mục Blog
+
+- Đã tạo route `/blog` với metadata riêng và empty state minh bạch cho danh mục.
+- Nội dung tĩnh được tách tại `src/data/blog.ts`; không tạo taxonomy, bài viết, tác giả, ngày đăng hoặc ảnh giả.
+- Mục Danh mục blog chưa được đánh dấu hoàn thành vì vẫn thiếu dữ liệu thật được duyệt.
+
 ## Chưa thực hiện
 
 - Các phần còn lại của Chương trình và khóa học đang được tạm hoãn theo chỉ đạo.
-- Hồ sơ chuyên gia thật, các phần còn lại của trang chuyên gia và đăng ký tư vấn.
-- Blog và tài liệu miễn phí.
+- Hồ sơ chuyên gia thật, các phần còn lại của trang chuyên gia và đăng ký tư vấn đang được tạm hoãn.
+- Danh mục/blog thật, danh sách và chi tiết bài viết, tài liệu miễn phí.
 - Các trang hỗ trợ.
 - Supabase và database.
 - Form lưu dữ liệu thật.
@@ -197,9 +203,10 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 
 - `node_modules`: Đã có; các dependency chính được nhận diện.
 - `npm.cmd run lint`: Đạt ngày 2026-07-17, không có lỗi ESLint.
-- `npm.cmd run build`: Đạt ngày 2026-07-17; compile, TypeScript và static generation thành công cho `/`, `/about`, `/expert` và `/programs`.
+- `npm.cmd run build`: Đạt ngày 2026-07-17; compile, TypeScript và static generation thành công cho `/`, `/about`, `/blog`, `/expert` và `/programs`.
 - Runtime `/programs`: HTTP 200; có đủ bốn lựa chọn lọc, trạng thái mặc định 7 nhóm và không có link khóa học.
 - Runtime `/expert`: HTTP 200; có trạng thái hồ sơ đang cập nhật và danh sách thông tin cần xác nhận.
+- Runtime `/blog`: HTTP 200; có trạng thái danh mục đang cập nhật, dữ liệu cần xác nhận và ghi chú không tự suy diễn taxonomy.
 - Rà soát Danh sách khóa học: không có lỗi kỹ thuật; blocker duy nhất là thiếu dữ liệu nghiệp vụ đã xác nhận.
 
 ## Trạng thái project local
@@ -231,7 +238,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 
 ## Task tiếp theo
 
-Tiếp tục Task 04 từ mục Hồ sơ một chuyên gia. Chỉ bổ sung hồ sơ thật sau khi khách hàng cung cấp dữ liệu được phép công bố; chưa làm trước mục Chuyên môn.
+Tiếp tục Task 05 từ mục Danh mục blog. Chỉ bổ sung taxonomy thật sau khi khách hàng xác nhận; chưa làm trước mục Danh sách bài.
 
 ## Cập nhật tài liệu yêu cầu nội dung — 2026-07-17
 

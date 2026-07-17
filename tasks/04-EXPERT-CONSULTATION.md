@@ -34,3 +34,9 @@
 - Accessibility: một `h1`, heading đúng thứ tự, section có `aria-labelledby`, danh sách semantic và chi tiết trang trí được ẩn khỏi assistive technology.
 - Giới hạn: hồ sơ production vẫn chờ dữ liệu theo `ISSUE-011`; chưa làm các mục Chuyên môn trở đi và chưa tạo `/consultation`.
 - Kiểm tra: `npm.cmd run lint` đạt; `npm.cmd run build` đạt và `/expert` được prerender tĩnh; production runtime `/expert` trả HTTP 200, có đủ trạng thái chờ và danh sách thông tin cần xác nhận.
+
+## Trạng thái tạm hoãn — 2026-07-17
+
+- Theo chỉ đạo của người dùng, tạm bỏ qua các mục còn lại của Task 04 để chuyển sang Task 05.
+- Task 04 không được đánh dấu hoàn thành; toàn bộ checkbox vẫn giữ `[ ]`.
+- Khi quay lại, tiếp tục từ Hồ sơ một chuyên gia sau khi có dữ liệu và quyền công bố.
