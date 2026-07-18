@@ -283,3 +283,9 @@ Chờ người dùng chỉ định. Catalog đã kết nối Supabase; bước v
 - Lint và production build đạt; hai route Blog là dynamic server-rendered.
 - Supabase project đang cấu hình trả HTTP 404 cho bảy bảng blog; chưa thể kiểm tra 4 seed post hoặc relation ở runtime.
 - `/resources` chưa thực hiện và Task 05 chưa hoàn thành toàn bộ.
+
+## Rà soát thứ tự task — 2026-07-18
+
+- Task chưa hoàn thành đầu tiên là Task 04, do mục Kinh nghiệm vẫn `[ ]`.
+- Query Supabase xác nhận expert `vu-thinh` không có trường hoặc nội dung kinh nghiệm để hiển thị.
+- Không sửa source chức năng và không chuyển sang phần `/resources` của Task 05.

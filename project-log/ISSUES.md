@@ -419,3 +419,9 @@
 ## ISSUE-029 — Nội dung và tài sản Blog chưa sẵn sàng cho production
 
 **Trạng thái:** Open — Blog chưa có cover/OG image thật; nội dung mẫu cần chuyên gia kiểm duyệt, thông tin HSK cần rà lại khi quy chế thay đổi; chưa có admin editor và quy trình duyệt bài.
+
+## ISSUE-030 — Thiếu schema và dữ liệu kinh nghiệm chuyên gia
+
+**Trạng thái:** Open — Blocker hoàn thành Task 04
+
+Public query expert `vu-thinh` ngày 2026-07-18 xác nhận không có `experience_years`, `experience` hoặc nội dung tương đương. Cần khách hàng cung cấp nội dung đã duyệt và quyết định cấu trúc lưu trữ trước khi triển khai; không dùng dữ liệu suy đoán.

@@ -16,6 +16,7 @@
 1. Admin đối chiếu và xóa request QA `TEST_ONLY_TASK04_20260718` sau khi kiểm tra status `new`.
 2. Cung cấp nội dung kinh nghiệm nếu muốn hiển thị trên `/expert`.
 3. Cấu hình env trên Vercel và kiểm tra form deployment khi tới bước deploy.
+4. Khi có dữ liệu kinh nghiệm đã duyệt, bổ sung schema/bảng phù hợp, cập nhật type/service và section `/expert`; chưa thực hiện trước khi có dữ liệu.
 
 ## Bước vận hành catalog còn lại
 

@@ -60,3 +60,10 @@
 - Checkbox Kinh nghiệm giữ chưa hoàn thành vì database không có số năm/nội dung kinh nghiệm được xác nhận; UI không tự tạo dữ liệu.
 - Bản ghi QA: `TEST_ONLY_TASK04_20260718`, tên `Codex QA Task 04`; admin có thể xóa sau khi đối chiếu.
 - Kiểm tra cuối: `npm.cmd run lint` đạt; `npm.cmd run build` đạt với `.env.local`; `/expert`, `/consultation`, ba service slug, invalid slug và `/consultation/success` đều HTTP 200.
+
+## Rà soát mục Kinh nghiệm — 2026-07-18
+
+- Public query bản ghi `vu-thinh` xác nhận bảng `experts` hiện không có cột `experience_years`, `experience` hoặc nội dung kinh nghiệm tương đương.
+- Không có bảng/logic kinh nghiệm trong service và type hiện tại; checkbox giữ `[ ]` để không tạo số năm hay timeline giả.
+- Task 04 bị chặn ở dữ liệu/schema cho đúng một mục này; không chuyển sang Task 05 trong phiên rà soát.
+- Kiểm tra sau rà soát: `npm.cmd run lint` đạt; `npm.cmd run build` đạt (lần đầu trong sandbox lỗi tải Google Fonts, chạy lại có network thành công).

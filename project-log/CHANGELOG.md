@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-07-18 — Rà soát blocker Task 04
+
+- Xác minh trực tiếp Supabase: bản ghi expert không có trường/nội dung kinh nghiệm.
+- Giữ checklist Kinh nghiệm chưa hoàn thành; ghi blocker vào Task 04 và project log.
+- Không thay đổi source chức năng hoặc thực hiện Task 05 tiếp theo.
+
 ## 2026-07-18 — Kết nối module Blog với Supabase
 
 - Thêm types/service, `/blog`, `/blog/[slug]`, category filter, Markdown, metadata, related content và loading/error/empty/not-found.
