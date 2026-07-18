@@ -45,3 +45,9 @@
 - Các bảng expert/consultation đã được tạo và seed ngoài source; Task 07 không tạo lại.
 - Task 04 đã kết nối public read hồ sơ và public insert request qua RLS column grant tối thiểu.
 - Task 07 sau này chỉ bổ sung Auth/admin policy và các phần database/form còn thiếu.
+
+## Database blog
+
+- Schema blog được quản lý ngoài source; Task 05 không tạo lại các bảng hoặc migration blog.
+- Task 07 sau này chỉ bổ sung Auth và policy quản trị blog nếu cần.
+- Project Supabase local hiện chưa expose các bảng blog qua REST; cần áp dụng/xác minh schema ở đúng project trước khi kiểm thử dữ liệu public.

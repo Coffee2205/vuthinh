@@ -209,6 +209,17 @@ ConsultationForm → Server Action → Zod → consultation.service → consulta
 - published_at.
 - timestamps.
 
+### Blog triển khai ở Task 05
+
+```text
+/blog, /blog/[slug] → blog.service → Supabase server client
+```
+
+- Dùng các bảng `blog_categories`, `blog_tags`, `blog_posts` và các bảng nối course/service/relation đã được quản lý ngoài source.
+- Trang danh sách không lấy cột `content`; chỉ đọc bài published có ngày hợp lệ và lọc category qua URL.
+- Nội dung Markdown render bằng `react-markdown` và `remark-gfm`; không đưa HTML Markdown trực tiếp vào DOM.
+- Quan hệ chi tiết được tách thành query service để lỗi/quan hệ database không lan vào component trình bày.
+
 ### resources
 
 - id UUID PK.

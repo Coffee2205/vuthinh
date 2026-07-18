@@ -8,13 +8,13 @@
 
 ## Công việc
 
-- [ ] Danh mục blog.
-- [ ] Danh sách bài.
-- [ ] Chi tiết bài.
-- [ ] Bài liên quan.
+- [x] Danh mục blog.
+- [x] Danh sách bài.
+- [x] Chi tiết bài.
+- [x] Bài liên quan.
 - [ ] Danh sách tài liệu.
 - [ ] Link xem/tải.
-- [ ] CTA đến khóa học/tư vấn.
+- [x] CTA đến khóa học/tư vấn.
 
 ## Tiêu chí
 
@@ -32,3 +32,13 @@
 - Accessibility: một `h1`, heading đúng thứ tự, section có `aria-labelledby`, danh sách semantic và chi tiết trang trí được ẩn khỏi assistive technology.
 - Giới hạn: `ISSUE-014` tiếp tục Open; chưa làm các mục Danh sách bài trở đi hoặc route `/resources`.
 - Kiểm tra: `npm.cmd run lint` đạt; `npm.cmd run build` đạt và `/blog` được prerender tĩnh; production runtime `/blog` trả HTTP 200, có đủ trạng thái chờ, danh sách thông tin cần xác nhận và ghi chú taxonomy.
+
+## Kết quả triển khai module Blog — 2026-07-18
+
+- Đã tạo types/service và route động `/blog`, `/blog/[slug]` theo luồng Page → blog service → Supabase server client.
+- `/blog` có hero, bài nổi bật, danh mục active, filter URL, grid responsive, empty state và CTA khóa học/tư vấn.
+- Chi tiết có Markdown an toàn qua `react-markdown`/`remark-gfm`, metadata động, breadcrumb, tag, tác giả, nguồn, khóa học, dịch vụ và bài liên quan.
+- Có loading, error và not-found; không hard-code bài viết hoặc tự tạo schema/migration blog.
+- Supabase hiện trả HTTP 404 cho cả bảy bảng blog nên chưa thể xác nhận 4 bài mẫu hoặc runtime dữ liệu; theo dõi tại `ISSUE-021`.
+- `/resources` và hai mục tài liệu vẫn chưa thực hiện, đúng phạm vi phiên này.
+- Kiểm tra code: lint đạt; production build đạt ngày 2026-07-18. Build trong sandbox lần đầu bị Google Fonts network, chạy lại có network đạt.

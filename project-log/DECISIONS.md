@@ -291,3 +291,6 @@ Mỗi quyết định phải ghi ngày, nội dung, lý do và ảnh hưởng.
 **Lý do:** Bộ lọc cần state/event trình duyệt, trong khi phần còn lại không cần JavaScript phía client.
 
 **Ảnh hưởng:** Bốn lựa chọn lọc hoạt động không cần database hoặc thư viện mới; dữ liệu vẫn nằm trong `src/data/programs.ts` và phạm vi client được giới hạn.
+## 2026-07-18 — Blog dùng service nhiều query và Markdown an toàn
+
+Quyết định: routes Blog chỉ đọc qua `blog.service`; quan hệ được query riêng và Markdown render bằng `react-markdown`/`remark-gfm`. Không tạo schema, migration hoặc fallback bài viết khi database chưa expose bảng.

@@ -64,6 +64,14 @@ Giai đoạn 1 không khóa lịch realtime và không tự động chống trù
    - Đăng ký học thử.
    - Đăng ký tư vấn.
 
+### Luồng Blog triển khai ở Task 05
+
+1. `/blog` tải danh mục active, bài nổi bật và bài published từ Supabase.
+2. Người dùng chọn category; URL cập nhật bằng query `category` và server lọc lại dữ liệu.
+3. Người dùng mở `/blog/[slug]`; slug không hợp lệ đi tới trang không tìm thấy.
+4. Bài viết hiển thị Markdown, tác giả/nguồn và các quan hệ có trong database.
+5. Người dùng có thể mở khóa học liên quan hoặc form tư vấn đã chọn service.
+
 ## 4. Luồng quản trị nội dung
 
 1. Admin đăng nhập.

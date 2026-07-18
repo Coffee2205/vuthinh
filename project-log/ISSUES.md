@@ -412,3 +412,10 @@
 - CTA dẫn tới form preview đang khóa; giới hạn vận hành tiếp tục được theo dõi tại `ISSUE-015`.
 - Route `/consultation` chưa được triển khai vì thuộc Task 04; không tạo link tới route này trong Task 02.
 - Các nội dung thương hiệu cần duyệt tiếp tục được theo dõi tại `ISSUE-016` đến `ISSUE-020`.
+## ISSUE-028 — Schema Blog chưa được expose trong Supabase project hiện tại
+
+**Trạng thái:** Open — REST public trả HTTP 404 cho cả bảy bảng blog, nên chưa đọc được 4 bài mẫu hoặc xác minh relation/RLS runtime. Cần xác minh schema/seed ở đúng project, reload schema cache và public select policy.
+
+## ISSUE-029 — Nội dung và tài sản Blog chưa sẵn sàng cho production
+
+**Trạng thái:** Open — Blog chưa có cover/OG image thật; nội dung mẫu cần chuyên gia kiểm duyệt, thông tin HSK cần rà lại khi quy chế thay đổi; chưa có admin editor và quy trình duyệt bài.

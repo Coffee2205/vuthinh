@@ -276,3 +276,10 @@ Chờ người dùng chỉ định. Catalog đã kết nối Supabase; bước v
 - RLS column grant/policy đã áp dụng; request QA hợp lệ trả HTTP 201 và public select request trả mảng rỗng.
 - Form, server validation, database insert và success route đã hoạt động; chỉ mục Kinh nghiệm còn chờ dữ liệu xác nhận.
 - Lint/build cuối đạt; route expert/consultation và các biến thể query string đã kiểm tra HTTP 200.
+
+## Task 05 — Module Blog từ Supabase — 2026-07-18
+
+- Đã hoàn thiện code cho `/blog` và `/blog/[slug]`, service/types, category filter, Markdown, metadata, related content cùng loading/error/empty/not-found.
+- Lint và production build đạt; hai route Blog là dynamic server-rendered.
+- Supabase project đang cấu hình trả HTTP 404 cho bảy bảng blog; chưa thể kiểm tra 4 seed post hoặc relation ở runtime.
+- `/resources` chưa thực hiện và Task 05 chưa hoàn thành toàn bộ.

@@ -69,6 +69,13 @@ Mỗi bài viết có:
 
 Chỉ bài `published` và có ngày xuất bản hợp lệ mới xuất hiện công khai.
 
+### Blog triển khai ở Task 05
+
+- Danh mục public phải active; filter dùng category slug và slug không tồn tại trả danh sách rỗng thân thiện.
+- Card danh sách không tải nội dung Markdown đầy đủ.
+- Nguồn, tác giả, tag, khóa học, dịch vụ và bài liên quan chỉ hiển thị khi database có quan hệ tương ứng.
+- Link nguồn ngoài mở tab mới an toàn; không tự bổ sung nguồn hoặc claim nghiên cứu gốc.
+
 ## Tài liệu miễn phí
 
 Mỗi tài liệu có:

@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-07-18 — Kết nối module Blog với Supabase
+
+- Thêm types/service, `/blog`, `/blog/[slug]`, category filter, Markdown, metadata, related content và loading/error/empty/not-found.
+- Xóa placeholder/data blog tĩnh; thêm `react-markdown`, `remark-gfm`; lint và build đạt.
+- Bảy bảng blog hiện trả HTTP 404 nên chưa thể kiểm tra seed và runtime relation.
+
 ## 2026-07-18 — Task 04 expert/consultation
 
 ### Added

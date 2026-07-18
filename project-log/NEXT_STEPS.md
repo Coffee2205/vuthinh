@@ -4,6 +4,13 @@
 
 > Task 04 đã hoàn thành phần chức năng; không tự chuyển task. Mục Kinh nghiệm còn chờ dữ liệu khách hàng xác nhận.
 
+## Bước gần nhất Task 05
+
+1. Xác minh schema/seed blog đã được chạy trong đúng Supabase project `izgxirozmrrqyohqeqvq` và public select policy đã tồn tại.
+2. Kiểm tra 4 slug mẫu, category filter và toàn bộ relation sau khi REST nhận diện bảng.
+3. Bổ sung ảnh cover/OG được phép sử dụng và chuyên gia kiểm duyệt nội dung trước production.
+4. Tiếp tục `/resources` chỉ khi người dùng yêu cầu trong Task 05.
+
 ## Bước gần nhất Task 04
 
 1. Admin đối chiếu và xóa request QA `TEST_ONLY_TASK04_20260718` sau khi kiểm tra status `new`.
@@ -21,6 +28,6 @@
 ## Chưa làm ngay
 
 - Các phần còn lại của Task 04 cho đến khi có chỉ đạo quay lại.
-- Danh sách bài và các mục sau Danh mục blog của Task 05.
+- Runtime dữ liệu Blog và phần `/resources` còn lại của Task 05.
 - Các schema ngoài catalog, form lưu dữ liệu thật, Supabase Auth/Storage.
 - Admin, AI, thanh toán hoặc LMS.
