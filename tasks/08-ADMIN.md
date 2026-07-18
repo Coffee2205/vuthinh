@@ -32,3 +32,12 @@
 - Biểu đồ phức tạp.
 - Báo cáo doanh thu.
 - Export nâng cao.
+
+## Kết quả triển khai 2026-07-18
+
+- Đã tạo toàn bộ route bắt buộc, login/logout bằng Supabase Auth và bảo vệ route phía server qua `user_profiles`.
+- Đã tạo admin layout responsive, dashboard count, list/search/filter/pagination, editor whitelist và status action.
+- Cảm nhận không thể publish khi chưa xác nhận consent; tài nguyên chỉ nhận URL.
+- Lint/build đạt. Chưa đánh dấu checklist vì chưa có admin session để kiểm tra Auth và mutation thực tế.
+- Runtime chưa đăng nhập: `/admin/login` HTTP 200 có form/noindex; `/admin` redirect 307 tới `/admin/login`.
+- Editor quan hệ nhiều dòng chưa hoàn tất; Task 08 vẫn chưa hoàn thành.

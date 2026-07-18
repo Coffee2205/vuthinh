@@ -1,5 +1,13 @@
 # Trạng thái hiện tại
 
+## Cập nhật Task 08 — 2026-07-18
+
+- Task 08 — Admin cơ bản: **chưa hoàn thành**.
+- Đã triển khai login/logout, server route protection, admin layout responsive, robots noindex và toàn bộ route bắt buộc.
+- Dashboard, list, editor và status action đã compile; lint/build đạt.
+- Runtime unauthenticated đã xác nhận login HTTP 200 và route `/admin` redirect tới login.
+- Chưa có admin credentials/session để test Auth và mutation thực tế; checklist chưa được đánh dấu. Không bắt đầu Task 09.
+
 _Cập nhật gần nhất: 2026-07-18_
 
 ## Giai đoạn hiện tại

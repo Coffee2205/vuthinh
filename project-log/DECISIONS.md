@@ -1,5 +1,12 @@
 # Nhật ký quyết định
 
+## 2026-07-18 — Kiến trúc Task 08
+
+- Một cấp quyền `admin` từ `user_profiles`; không hard-code email/UUID.
+- Auth dùng Supabase SSR cookie; route quản trị kiểm tra phía server.
+- Mutation dùng Server Action, `requireAdmin`, whitelist field/enum.
+- Blog dùng textarea Markdown; tài nguyên chỉ nhập URL; không hard delete.
+
 Mỗi quyết định phải ghi ngày, nội dung, lý do và ảnh hưởng.
 
 ## 2026-07-18 — Form tư vấn dùng Server Action và RLS column grant

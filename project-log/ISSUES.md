@@ -1,5 +1,29 @@
 # Vấn đề và giới hạn đang tồn tại
 
+## ISSUE-035 — Chưa có tài khoản admin có thể kiểm tra
+
+**Trạng thái:** Open — blocker xác minh Auth/RLS/mutation
+
+Publishable key trả `[]` cho `user_profiles` và không thể liệt kê Auth users. Chủ dự án cần tự tạo/xác nhận Auth user và profile admin; không hard-code UUID.
+
+## ISSUE-036 — Quan hệ nội dung admin chưa hoàn tất
+
+**Trạng thái:** Open
+
+Editor mới whitelist cột chính. Collection quan hệ của khóa học, blog và tài liệu chưa có UI mutation đã kiểm tra; không đánh dấu CRUD hoàn thành.
+
+## ISSUE-037 — Storage và automated admin test chưa có
+
+**Trạng thái:** Open
+
+Tài nguyên chỉ hỗ trợ URL. Chưa có automated test và chưa test đủ responsive/keyboard/CRUD với admin session.
+
+## ISSUE-038 — Project log cũ không khớp source
+
+**Trạng thái:** Open
+
+Một số phần cũ vẫn mô tả Task 03/blocker Supabase, trong khi source/git đã có Task 06 và form học thử. Lịch sử cũ được giữ nguyên.
+
 ## ISSUE-025 — Public chưa thể insert yêu cầu tư vấn
 
 **Trạng thái:** Resolved — 2026-07-18

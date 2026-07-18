@@ -1,5 +1,12 @@
 # Việc tiếp theo
 
+## Task 08 — bước tiếp theo 2026-07-18
+
+1. Chủ dự án tạo/xác nhận Supabase Auth user và `user_profiles` role `admin`, trạng thái active.
+2. Kiểm tra login/logout, route protection và RLS bằng tài khoản đó.
+3. Kiểm tra từng CRUD/status mutation và hoàn thiện editor quan hệ nhiều dòng.
+4. Chỉ sau kiểm tra thực tế mới đánh dấu Task 08; không bắt đầu Task 09.
+
 ## Nhiệm vụ gần nhất
 
 > Task 04 đã hoàn thành phần chức năng; không tự chuyển task. Mục Kinh nghiệm còn chờ dữ liệu khách hàng xác nhận.

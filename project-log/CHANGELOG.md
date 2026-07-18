@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-07-18 — Task 08 admin foundation
+
+- Added: Supabase cookie auth, login/logout, server guard, responsive shell và toàn bộ route bắt buộc.
+- Added: dashboard, list/search/filter/pagination, whitelisted editor và request status actions.
+- Changed: ẩn public Header/Footer khi render admin shell.
+- Verified: ESLint/build đạt; public không đọc được `user_profiles`.
+- Verified: `/admin/login` HTTP 200/noindex và `/admin` trả redirect 307 khi chưa đăng nhập.
+- Known issues: chưa có admin session; quan hệ nhiều dòng và Storage upload chưa hoàn tất.
+
 ## 2026-07-18 — Kết nối form học thử trang chủ
 
 - Changed: thay form preview disabled bằng trial registration form dùng course Supabase.
