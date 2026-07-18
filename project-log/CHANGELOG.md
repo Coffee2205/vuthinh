@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-07-18 — Kết nối form học thử trang chủ
+
+- Changed: thay form preview disabled bằng trial registration form dùng course Supabase.
+- Added: home success redirect/state và reuse validation/service/Server Action Task 06.
+- Verified: lint/build, runtime HTTP 200, form fields và success state.
+
 ## 2026-07-18 — Hoàn thành Support Pages và public forms
 
 - Added: success stories, FAQ, careers/detail, contact, trial/course registration, privacy/terms và shared form/state components.

@@ -9,7 +9,8 @@ import { StudentOutcomesSection } from "@/components/home/StudentOutcomesSection
 import { TrustSection } from "@/components/home/TrustSection";
 import { TrialRegistrationSection } from "@/components/home/TrialRegistrationSection";
 
-export default function Home() {
+export default async function Home({ searchParams }: { searchParams: Promise<{ "trial-submitted"?: string }> }) {
+  const params = await searchParams;
   return (
     <>
       <HeroSection />
@@ -20,7 +21,7 @@ export default function Home() {
       <StudentOutcomesSection />
       <ParentTestimonialsSection />
       <FeaturedContentSection />
-      <TrialRegistrationSection />
+      <TrialRegistrationSection submitted={params["trial-submitted"] === "1"} />
       <FinalCtaSection />
     </>
   );

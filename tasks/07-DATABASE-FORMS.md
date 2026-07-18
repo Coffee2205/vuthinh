@@ -72,3 +72,6 @@
 - Đã thêm Zod cho contact, trial, course registration và job application; consultation schema tiếp tục dùng từ Task 04.
 - Contact/trial/course Server Actions insert payload allowlist; RLS insert/private select/forbidden status đã test thật.
 - Job application code hoàn thành nhưng chưa test insert hợp lệ vì chưa có job published; RLS tổng thể vẫn giữ `[ ]`.
+## Form học thử trang chủ — 2026-07-18
+
+- Form preview đã được mở khóa và nối `trial_registrations`; không truyền cột quản trị.

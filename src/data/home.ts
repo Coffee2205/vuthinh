@@ -197,8 +197,8 @@ export const trialRegistrationContent = {
   title: "Chia sẻ nhu cầu để chuẩn bị cho buổi học phù hợp",
   description:
     "Phiếu đăng ký gồm những thông tin cơ bản để trung tâm hiểu độ tuổi, mục tiêu và chương trình người học quan tâm.",
-  status: "Form trực tuyến chưa mở nhận đăng ký",
-  note: "Kết nối lưu dữ liệu và phản hồi gửi thành công hoặc thất bại sẽ được triển khai trong Task 07. Hiện tại form được khóa để không làm thất lạc thông tin.",
+  status: "Form trực tuyến đang nhận đăng ký",
+  note: "Thông tin được kiểm tra ở server và lưu vào Supabase để đội ngũ liên hệ xác nhận.",
   formTitle: "Thông tin đăng ký",
   programs: [
     "Tiếng Trung thiếu nhi",
@@ -209,7 +209,7 @@ export const trialRegistrationContent = {
     "Quản trị cảm xúc",
     "Giá trị sống và hạnh phúc",
   ],
-  submitLabel: "Chưa thể gửi đăng ký",
+  submitLabel: "Gửi đăng ký học thử",
 } as const;
 
 export const finalCtaContent = {

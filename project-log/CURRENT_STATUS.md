@@ -320,3 +320,7 @@ Chờ người dùng chỉ định. Catalog đã kết nối Supabase; bước v
 - FAQ/site settings đọc được dữ liệu; story/job chưa có published data nên dùng empty state.
 - Contact/trial/course RLS insert đạt; public select rỗng và cột status bị chặn. Job valid insert chờ job published.
 - Lint/build/runtime routes đạt; không chuyển Task 07 theo phạm vi phiên.
+## Form học thử trang chủ kết nối Supabase — 2026-07-18
+
+- Home tải course published và render form thật dùng Zod/Server Action/service trial registration.
+- Có error/pending/success, payload allowlist; lint/build/runtime đạt.

@@ -453,3 +453,6 @@ Chưa có success story consent-confirmed hoặc job published nên chưa test U
 **Trạng thái:** Open — Blocker Task 07
 
 Source chỉ có consultation form; contact/trial/course/job/resource registration chưa được triển khai. Các bảng tương ứng trả HTTP 404 và Supabase OpenAPI schema yêu cầu secret API key, nên không thể sinh database types hoặc test RLS đầy đủ chỉ bằng publishable key. Phần đã xác minh: public chỉ thấy course published/expert active, không đọc consultation submissions và không thể gửi cột `status`.
+## Cập nhật ISSUE-015 — Resolved 2026-07-18
+
+Form học thử trang chủ đã kết nối `trial_registrations` qua Zod/Server Action/service, có pending/error/success; RLS insert/private select đã kiểm tra.

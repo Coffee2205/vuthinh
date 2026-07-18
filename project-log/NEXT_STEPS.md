@@ -58,3 +58,7 @@
 2. Thêm story có consent và job published để kiểm tra card/detail/job application hợp lệ.
 3. Cung cấp contact settings thật và nội dung privacy/terms đã được tư vấn pháp lý duyệt.
 4. Không bắt đầu Task 07/08 cho đến khi người dùng yêu cầu.
+## Sau khi kích hoạt form trang chủ
+
+1. Admin xóa bản ghi QA Task 06 sau đối chiếu.
+2. Kiểm tra submission thật trên Vercel khi cấu hình env production.
