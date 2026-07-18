@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-07-18 — Hoàn thiện database-backed Resources
+
+- Added: category filter, resource detail route, metadata/not-found, related courses và Server Action download event.
+- Changed: card hiển thị category/type, author, file type và access requirement; public link chỉ redirect sau server validation/event.
+- Verified: lint/build đạt; `/resources` và `/resources/[slug]` dynamic.
+- Known issue: bốn bảng Resources vẫn trả HTTP 404 trong Supabase project đang cấu hình, nên runtime/RLS chưa xác minh.
+
 ## 2026-07-18 — Triển khai trang Tài liệu miễn phí
 
 - Added: type/service resource, `/resources`, card, metadata, loading/error/empty state.

@@ -296,3 +296,10 @@ Chờ người dùng chỉ định. Catalog đã kết nối Supabase; bước v
 - Đã hoàn thiện code `/resources`, type/service, card, metadata, loading/error/empty và link xem/tải an toàn.
 - Lint/build đạt; `/resources` là dynamic Server Component route.
 - Database `public.resources` trả HTTP 404 nên runtime dữ liệu/link thật chưa thể xác minh; Task 05 hoàn thành code nhưng còn blocker database.
+
+## Task 05 — Hoàn thiện Resources — 2026-07-18
+
+- Đã có category/filter, danh sách, chi tiết, metadata, related courses và download event qua Server Action.
+- Hỗ trợ `public` và `registration_required` mà không công khai link cần bảo vệ hoặc update count từ client.
+- Lint/build đạt; hai route Resources dynamic, có loading/error/empty/not-found.
+- Bốn bảng Resources vẫn trả HTTP 404 ở project local nên runtime database/RLS chưa xác minh; không chuyển Task 06.

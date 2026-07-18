@@ -1,0 +1,1 @@
+export default function ResourceLoading() { return <main className="mx-auto max-w-7xl px-4 py-20" aria-busy="true"><span className="sr-only">Đang tải tài liệu</span><div className="grid gap-10 lg:grid-cols-2"><div className="aspect-[16/10] animate-pulse rounded-3xl bg-slate-100"/><div className="h-80 animate-pulse rounded-3xl bg-slate-100"/></div></main> }

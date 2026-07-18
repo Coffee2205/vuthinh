@@ -52,3 +52,13 @@
 - Supabase hiện trả HTTP 404 vì chưa có `public.resources`; chưa kiểm tra được link dữ liệu thật. Blocker được theo dõi tại `ISSUE-031`.
 - File tạo: `src/types/resource.ts`, `src/services/resource.service.ts`, `src/components/resources/ResourceCard.tsx`, `src/app/resources/page.tsx`, `loading.tsx`, `error.tsx`.
 - Kiểm tra: `npm.cmd run lint` đạt; `npm.cmd run build` đạt và `/resources` là dynamic route.
+
+## Hoàn thiện module Resources theo database — 2026-07-18
+
+- Đã bổ sung `getActiveResourceCategories`, filter category qua URL, `getPublishedResources`, `getResourceBySlug` và `createResourceDownloadEvent`.
+- Tạo `/resources/[slug]` với metadata, not-found/loading, tác giả, file type, access type và tối đa các khóa học do `resource_courses` liên kết.
+- Tài nguyên `public` dùng Server Action: kiểm tra lại slug/bản ghi published/access type, ghi event rồi mới redirect tới URL HTTP/HTTPS.
+- Tài nguyên `registration_required` không lộ link; không tạo form newsletter/thu lead vì Task 05 không định nghĩa trường và quy trình xử lý.
+- Không update `download_count` từ client, không dùng service-role và không hard-code tài nguyên.
+- Supabase project đang cấu hình vẫn trả HTTP 404 cho cả bốn bảng Resources; source/build hoàn thành nhưng dữ liệu, nested relation, RLS insert event và redirect thật chưa thể kiểm tra runtime.
+- Kiểm tra: lint đạt; build đạt; `/resources` và `/resources/[slug]` đều là dynamic routes.

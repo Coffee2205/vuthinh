@@ -297,3 +297,6 @@ Quyết định: routes Blog chỉ đọc qua `blog.service`; quan hệ được
 ## 2026-07-18 — Tạm bỏ qua Task 04 và tiếp tục Task 05
 
 Theo chỉ đạo trực tiếp của người dùng, blocker Kinh nghiệm của Task 04 tiếp tục được giữ Open nhưng không chặn việc triển khai phần Tài liệu của Task 05. `/resources` dùng dynamic rendering và chỉ hiển thị URL HTTP/HTTPS từ database.
+## 2026-07-18 — Download tài nguyên public qua Server Action
+
+Resource public không liên kết trực tiếp từ card. Trang chi tiết gọi Server Action để kiểm tra lại resource published/public, ghi `resource_download_events` rồi redirect; resource cần đăng ký không lộ URL và chưa mở rộng thành newsletter/form thu lead.

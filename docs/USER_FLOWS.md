@@ -78,6 +78,8 @@ Giai đoạn 1 không khóa lịch realtime và không tự động chống trù
 2. Người dùng xem loại, mô tả và trạng thái tài liệu.
 3. Nếu có link hợp lệ, người dùng mở tệp hoặc nguồn ngoài trong tab mới.
 4. Nếu chưa có link hoặc chưa có tài liệu, giao diện thông báo rõ và không tạo lượt tải giả.
+5. Với tài nguyên public, Server Action kiểm tra lại bản ghi, ghi download event rồi chuyển tới file/link ngoài.
+6. Với tài nguyên cần đăng ký, website không lộ link; form nhận tài liệu chờ yêu cầu nghiệp vụ riêng.
 
 ## 4. Luồng quản trị nội dung
 

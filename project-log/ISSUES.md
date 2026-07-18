@@ -430,3 +430,8 @@ Public query expert `vu-thinh` ngày 2026-07-18 xác nhận không có `experien
 **Trạng thái:** Open — Blocker runtime Task 05
 
 REST public trả HTTP 404 và PostgREST báo không tìm thấy `public.resources` trong schema cache. Code `/resources` và production build đạt, nhưng cần schema/RLS cùng ít nhất một tài liệu có quyền phân phối để kiểm tra danh sách và link thật.
+
+### Cập nhật hoàn thiện Resources
+
+- Yêu cầu phiên cho biết bốn bảng đã tồn tại, nhưng public REST của project trong `.env.local` vẫn trả HTTP 404 cho cả `resource_categories`, `resources`, `resource_courses` và `resource_download_events`.
+- Chưa thể xác minh tên cột thực tế, nested course relation, public select policy hoặc public insert download event; issue tiếp tục Open.

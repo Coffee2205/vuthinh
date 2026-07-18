@@ -95,6 +95,9 @@ Không upload video lớn trực tiếp lên server.
 - Ưu tiên `file_url`, sau đó `external_url`; thiếu link thì không tạo CTA giả.
 - Link tài liệu chỉ chấp nhận HTTP/HTTPS và mở tab mới an toàn.
 - Khi chưa có dữ liệu, hiển thị empty state; lỗi Supabase không lộ chi tiết kỹ thuật.
+- Category chỉ hiển thị khi active; resource chỉ hiển thị khi published và ngày xuất bản hợp lệ.
+- Tài nguyên public phải ghi download event ở server trước khi redirect; browser không được update download count.
+- Tài nguyên cần đăng ký không công khai `file_url`/`external_url` trên giao diện.
 
 ## Form
 

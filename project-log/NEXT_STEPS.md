@@ -11,6 +11,7 @@
 1. Tạo/xác minh bảng `public.resources` trong đúng Supabase project và RLS public read cho bản ghi published.
 2. Thêm ít nhất một tài liệu có quyền phân phối cùng link HTTP/HTTPS hợp lệ để kiểm tra runtime.
 3. Kiểm tra `/resources` trên desktop/tablet/mobile và link thật sau khi database sẵn sàng.
+4. Sau khi REST nhận diện bảng, kiểm tra một resource public, một resource registration-required, course relation và insert download event bằng publishable key.
 
 ## Bước gần nhất Task 05
 

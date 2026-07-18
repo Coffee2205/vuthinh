@@ -1,0 +1,2 @@
+import Link from "next/link";
+export default function ResourceNotFound() { return <main className="mx-auto max-w-3xl px-4 py-24 text-center"><h1 className="text-3xl font-bold text-slate-950">Không tìm thấy tài liệu</h1><p className="mt-4 text-slate-600">Tài liệu có thể chưa được xuất bản hoặc đường dẫn không còn tồn tại.</p><Link href="/resources" className="button-primary mt-6">Quay lại thư viện</Link></main> }

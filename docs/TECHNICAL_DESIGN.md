@@ -243,6 +243,9 @@ ConsultationForm → Server Action → Zod → consultation.service → consulta
 - Chỉ đọc tài liệu `published` có ngày xuất bản hợp lệ; ưu tiên nổi bật, mới nhất và thứ tự hiển thị.
 - Route render động để lỗi/cấu hình database đi vào error boundary thay vì làm hỏng production build.
 - UI chỉ tạo link cho URL HTTP/HTTPS; không upload hoặc phục vụ video lớn từ ứng dụng Next.js.
+- `/resources/[slug]` đọc chi tiết và khóa học liên quan qua service; slug sai dùng `notFound()`.
+- Download public đi qua Server Action → kiểm tra resource published/public → insert `resource_download_events` → redirect URL hợp lệ.
+- `registration_required` không trả link trực tiếp; form thu thông tin chỉ bổ sung khi có yêu cầu trường dữ liệu và quy trình riêng.
 
 ### testimonials
 
