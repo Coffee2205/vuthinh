@@ -308,3 +308,9 @@ Chờ người dùng chỉ định. Catalog đã kết nối Supabase; bước v
 - Đã kiểm tra chín bảng được yêu cầu; toàn bộ trả HTTP 404 từ Supabase project hiện tại.
 - Không có schema nguồn local để xây payload form an toàn; Task 06 chưa bắt đầu sửa source và mọi checkbox giữ chưa hoàn thành.
 - Không tạo schema trùng, không hard-code dữ liệu và không chuyển Task 07.
+## Task 07 — Audit database/forms/RLS — 2026-07-18
+
+- Env example và Supabase server/browser client đạt yêu cầu không lộ service-role.
+- Consultation validation/service/action dùng allowlist và RLS kiểm thử đạt cho published/active content, private submissions và cột `status` bị cấm.
+- Source chưa có các form Task 06; nhiều bảng không được PostgREST expose, nên database types và RLS tổng thể chưa thể hoàn thành.
+- Lint/build đạt; Task 07 vẫn đang bị chặn và không chuyển Task 08.

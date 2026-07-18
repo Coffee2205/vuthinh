@@ -440,3 +440,8 @@ REST public trả HTTP 404 và PostgREST báo không tìm thấy `public.resourc
 **Trạng thái:** Open — Blocker Task 06
 
 Public REST trả HTTP 404 cho `success_stories`, `faq_categories`, `faqs`, `job_posts`, `job_applications`, `contact_messages`, `trial_registrations`, `course_registrations` và `site_settings`. Không có DDL local để xác minh cột bắt buộc/RLS, nên chưa thể triển khai hoặc test insert form an toàn. Cần kiểm tra đúng project URL và reload schema cache; không tạo lại schema trong source.
+## ISSUE-033 — Task 07 không thể hoàn tất types/forms/RLS với schema hiện tại
+
+**Trạng thái:** Open — Blocker Task 07
+
+Source chỉ có consultation form; contact/trial/course/job/resource registration chưa được triển khai. Các bảng tương ứng trả HTTP 404 và Supabase OpenAPI schema yêu cầu secret API key, nên không thể sinh database types hoặc test RLS đầy đủ chỉ bằng publishable key. Phần đã xác minh: public chỉ thấy course published/expert active, không đọc consultation submissions và không thể gửi cột `status`.

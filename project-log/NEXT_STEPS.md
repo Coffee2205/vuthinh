@@ -46,3 +46,9 @@
 1. Xác minh `NEXT_PUBLIC_SUPABASE_URL` đang trỏ tới project chứa chín bảng Support.
 2. Reload PostgREST schema cache hoặc cung cấp DDL/tên cột nếu bảng ở project khác.
 3. Sau khi REST đọc được bảng, triển khai lần lượt Success Stories, FAQ, Careers, Contact, Trial/Course Registration và trang pháp lý.
+## Bước gần nhất Task 07
+
+1. Cấu hình `.env.local` tới đúng project chứa toàn bộ schema hoặc expose/reload các bảng đang thiếu.
+2. Sinh `database.types.ts` bằng Supabase CLI/secret ở môi trường quản trị an toàn, không đưa secret vào browser/repository.
+3. Hoàn thành Task 06 forms trước, sau đó test allowlist, length, duplicate submit, public insert/private select cho từng bảng.
+4. Chỉ đánh dấu RLS hoàn thành khi mọi bảng content/form đã được kiểm tra bằng publishable key.

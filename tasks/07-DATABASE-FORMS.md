@@ -56,3 +56,13 @@
 
 - Task 05 đã triển khai service/UI theo bảng `resources` được mô tả trong thiết kế kỹ thuật; không tạo schema trùng trong phiên giao diện.
 - Supabase project hiện chưa có/expose `public.resources`; Task 07 cần tạo hoặc xác minh schema, RLS public read published và quyền admin sau này.
+
+## Rà soát Task 07 — 2026-07-18
+
+- `.env.example` chỉ chứa `NEXT_PUBLIC_SITE_URL`, Supabase URL và publishable key rỗng; không có secret/service-role.
+- Server client dùng `@supabase/supabase-js` không lưu session; browser client dùng `@supabase/ssr`. Cả hai chỉ đọc publishable key từ env.
+- Source thực tế chỉ có form/service/validation hoàn chỉnh cho consultation. Contact, trial, course registration, job application và resource registration chưa có schema/service/form; trạng thái này không khớp giả định “forms đã hoàn thành theo Task 05–06”.
+- Consultation payload được tạo allowlist ở Server Action; không nhận `status`, `admin_note`, `created_at`, `updated_at`. Zod có trim, min/max, format và privacy consent.
+- RLS publishable-key đã xác minh: đọc 4 course published; không đọc course non-published; đọc 1 expert active; không đọc expert inactive; public select consultation trả rỗng; payload truyền `status` bị HTTP 401.
+- Không thể sinh database types đầy đủ: chín bảng Task 06 và các bảng Blog/Resources trả HTTP 404; OpenAPI schema yêu cầu secret API key. Không dùng secret chỉ để vượt giới hạn này.
+- Checklist validation/form/RLS tổng thể giữ chưa hoàn thành vì chưa thể test thực tế các form còn lại. Lint/build đạt; build lần đầu trong sandbox lỗi Google Fonts và chạy lại có network thành công.

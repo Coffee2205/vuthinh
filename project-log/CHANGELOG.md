@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-07-18 — Audit Task 07 database/forms/RLS
+
+- Verified: env/client không dùng service-role; consultation allowlist/Zod; published/active content read; private consultation select; forbidden status insert.
+- Verified: lint/build đạt.
+- Known issue: form Task 06 chưa tồn tại trong source, nhiều bảng HTTP 404 và database types không thể sinh bằng publishable key.
+- Không tạo schema, không dùng secret và không chuyển Task 08.
+
 ## 2026-07-18 — Rà soát database Task 06
 
 - Verified: kiểm tra trực tiếp chín bảng Support bằng publishable key; tất cả trả HTTP 404.
