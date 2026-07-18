@@ -52,3 +52,9 @@
 2. Sinh `database.types.ts` bằng Supabase CLI/secret ở môi trường quản trị an toàn, không đưa secret vào browser/repository.
 3. Hoàn thành Task 06 forms trước, sau đó test allowlist, length, duplicate submit, public insert/private select cho từng bảng.
 4. Chỉ đánh dấu RLS hoàn thành khi mọi bảng content/form đã được kiểm tra bằng publishable key.
+## Sau Task 06
+
+1. Admin xóa ba bản ghi QA `Codex QA Task 06` sau khi đối chiếu trạng thái mặc định.
+2. Thêm story có consent và job published để kiểm tra card/detail/job application hợp lệ.
+3. Cung cấp contact settings thật và nội dung privacy/terms đã được tư vấn pháp lý duyệt.
+4. Không bắt đầu Task 07/08 cho đến khi người dùng yêu cầu.

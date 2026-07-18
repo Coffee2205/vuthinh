@@ -1,0 +1,1 @@
+import Link from"next/link";export default function NotFound(){return <main className="mx-auto max-w-3xl px-4 py-24 text-center"><h1 className="text-3xl font-bold">Không tìm thấy vị trí</h1><Link href="/careers" className="button-primary mt-6">Xem tuyển dụng</Link></main>}

@@ -440,6 +440,14 @@ REST public trả HTTP 404 và PostgREST báo không tìm thấy `public.resourc
 **Trạng thái:** Open — Blocker Task 06
 
 Public REST trả HTTP 404 cho `success_stories`, `faq_categories`, `faqs`, `job_posts`, `job_applications`, `contact_messages`, `trial_registrations`, `course_registrations` và `site_settings`. Không có DDL local để xác minh cột bắt buộc/RLS, nên chưa thể triển khai hoặc test insert form an toàn. Cần kiểm tra đúng project URL và reload schema cache; không tạo lại schema trong source.
+
+**Cập nhật:** Resolved ngày 2026-07-18 — các bảng đã được PostgREST expose; FAQ/site settings đọc được và form RLS đã kiểm tra.
+
+## ISSUE-034 — Dữ liệu production và kiểm thử còn thiếu cho Task 06
+
+**Trạng thái:** Open
+
+Chưa có success story consent-confirmed hoặc job published nên chưa test UI dữ liệu/job application hợp lệ. Contact settings đang null; CV private Storage chưa triển khai; privacy/terms cần phê duyệt pháp lý. Ba bản ghi QA Task 06 cần admin xóa.
 ## ISSUE-033 — Task 07 không thể hoàn tất types/forms/RLS với schema hiện tại
 
 **Trạng thái:** Open — Blocker Task 07

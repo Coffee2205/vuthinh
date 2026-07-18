@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-07-18 — Hoàn thành Support Pages và public forms
+
+- Added: success stories, FAQ, careers/detail, contact, trial/course registration, privacy/terms và shared form/state components.
+- Added: support service, types, Zod schemas và Server Actions payload allowlist.
+- Changed: course CTA nối tới course registration; privacy-policy redirect tới privacy.
+- Verified: lint/build, route runtime, FAQ data, site settings, contact/trial/course RLS insert/private select/forbidden status.
+- Known issues: story/job data, job valid insert, CV Storage, contact settings và legal approval còn thiếu.
+
 ## 2026-07-18 — Audit Task 07 database/forms/RLS
 
 - Verified: env/client không dùng service-role; consultation allowlist/Zod; published/active content read; private consultation select; forbidden status insert.

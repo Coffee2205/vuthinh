@@ -314,3 +314,9 @@ Chờ người dùng chỉ định. Catalog đã kết nối Supabase; bước v
 - Consultation validation/service/action dùng allowlist và RLS kiểm thử đạt cho published/active content, private submissions và cột `status` bị cấm.
 - Source chưa có các form Task 06; nhiều bảng không được PostgREST expose, nên database types và RLS tổng thể chưa thể hoàn thành.
 - Lint/build đạt; Task 07 vẫn đang bị chặn và không chuyển Task 08.
+## Task 06 — Support Pages hoàn thành chức năng — 2026-07-18
+
+- Đã triển khai success stories, FAQ, careers/detail/application, contact, trial/course registration, privacy và terms.
+- FAQ/site settings đọc được dữ liệu; story/job chưa có published data nên dùng empty state.
+- Contact/trial/course RLS insert đạt; public select rỗng và cột status bị chặn. Job valid insert chờ job published.
+- Lint/build/runtime routes đạt; không chuyển Task 07 theo phạm vi phiên.

@@ -330,6 +330,17 @@ src/
 
 ## 7. Definition of Done kỹ thuật
 
+## Support pages triển khai ở Task 06
+
+```text
+Support Page → support.service → Supabase server client
+Public form → Server Action → Zod → allowlisted service insert
+```
+
+- Content public lọc published/active/consent/deadline tại service.
+- Contact, trial, course và job forms không nhận cột quản trị từ browser; trạng thái mặc định do database đặt.
+- Thông tin tổ chức/liên hệ đọc từ public `site_settings`; pháp lý tĩnh phải có cảnh báo chờ duyệt.
+
 - Responsive.
 - Validation ở client và server khi phù hợp.
 - Có loading, empty và error state.

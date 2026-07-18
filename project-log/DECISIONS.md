@@ -300,3 +300,6 @@ Theo chỉ đạo trực tiếp của người dùng, blocker Kinh nghiệm củ
 ## 2026-07-18 — Download tài nguyên public qua Server Action
 
 Resource public không liên kết trực tiếp từ card. Trang chi tiết gọi Server Action để kiểm tra lại resource published/public, ghi `resource_download_events` rồi redirect; resource cần đăng ký không lộ URL và chưa mở rộng thành newsletter/form thu lead.
+## 2026-07-18 — Public forms Task 06 dùng một form component và payload allowlist
+
+Contact, trial/course và job application dùng chung Client Component cho pending/field errors, nhưng mỗi Server Action có Zod schema và danh sách cột riêng. CV không được upload khi private Storage chưa triển khai; pháp lý chỉ là nội dung tạm có cảnh báo cần duyệt.

@@ -100,6 +100,13 @@ Giai đoạn 1 không khóa lịch realtime và không tự động chống trù
    - Gửi dữ liệu.
 4. Admin nhận và xử lý thủ công.
 
+### Luồng public forms triển khai ở Task 06
+
+1. Server tải content/course/job/site settings hợp lệ từ Supabase.
+2. Người dùng điền form; client khóa nút trong lúc gửi và server validation lại bằng Zod.
+3. Service chỉ insert các cột form được phép; database tự đặt trạng thái/timestamps.
+4. Thành công redirect về route với xác nhận; lỗi validation giữ giá trị, lỗi database không lộ chi tiết.
+
 ## 6. Nguyên tắc CTA
 
 Mỗi trang public phải có ít nhất một CTA chính:

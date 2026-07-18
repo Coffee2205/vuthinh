@@ -110,6 +110,9 @@ Mọi form phải:
 - Có trạng thái loading.
 - Có thông báo thành công/thất bại.
 - Không để lộ lỗi kỹ thuật chi tiết cho người dùng.
+- Success story chỉ công khai khi published và consent confirmed.
+- Job chỉ công khai khi published và chưa hết hạn; gửi hồ sơ không đồng nghĩa được tuyển dụng.
+- Trial/course/contact/application dùng payload allowlist, privacy consent và trạng thái do database đặt.
 
 ## Admin
 

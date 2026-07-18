@@ -22,10 +22,10 @@
 - [ ] Thiết kế schema còn lại (schema khóa học đã hoàn thành ở Task 03).
 - [x] Tạo file mẫu và cấu hình biến môi trường local (`.env.local` không commit).
 - [x] Tạo server client cho catalog khóa học.
-- [ ] Tạo validation schemas.
-- [ ] Kết nối form đăng ký học.
+- [x] Tạo validation schemas.
+- [x] Kết nối form đăng ký học.
 - [x] Kết nối form tư vấn.
-- [ ] Kết nối form liên hệ.
+- [x] Kết nối form liên hệ.
 - [ ] Thiết lập RLS phù hợp.
 
 ## Tiêu chí
@@ -66,3 +66,9 @@
 - RLS publishable-key đã xác minh: đọc 4 course published; không đọc course non-published; đọc 1 expert active; không đọc expert inactive; public select consultation trả rỗng; payload truyền `status` bị HTTP 401.
 - Không thể sinh database types đầy đủ: chín bảng Task 06 và các bảng Blog/Resources trả HTTP 404; OpenAPI schema yêu cầu secret API key. Không dùng secret chỉ để vượt giới hạn này.
 - Checklist validation/form/RLS tổng thể giữ chưa hoàn thành vì chưa thể test thực tế các form còn lại. Lint/build đạt; build lần đầu trong sandbox lỗi Google Fonts và chạy lại có network thành công.
+
+## Forms triển khai sớm trong Task 06
+
+- Đã thêm Zod cho contact, trial, course registration và job application; consultation schema tiếp tục dùng từ Task 04.
+- Contact/trial/course Server Actions insert payload allowlist; RLS insert/private select/forbidden status đã test thật.
+- Job application code hoàn thành nhưng chưa test insert hợp lệ vì chưa có job published; RLS tổng thể vẫn giữ `[ ]`.
