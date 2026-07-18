@@ -41,3 +41,8 @@
 - Runtime dữ liệu Blog và phần `/resources` còn lại của Task 05.
 - Các schema ngoài catalog, form lưu dữ liệu thật, Supabase Auth/Storage.
 - Admin, AI, thanh toán hoặc LMS.
+## Bước gần nhất Task 06
+
+1. Xác minh `NEXT_PUBLIC_SUPABASE_URL` đang trỏ tới project chứa chín bảng Support.
+2. Reload PostgREST schema cache hoặc cung cấp DDL/tên cột nếu bảng ở project khác.
+3. Sau khi REST đọc được bảng, triển khai lần lượt Success Stories, FAQ, Careers, Contact, Trial/Course Registration và trang pháp lý.

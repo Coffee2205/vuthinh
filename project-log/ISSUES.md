@@ -435,3 +435,8 @@ REST public trả HTTP 404 và PostgREST báo không tìm thấy `public.resourc
 
 - Yêu cầu phiên cho biết bốn bảng đã tồn tại, nhưng public REST của project trong `.env.local` vẫn trả HTTP 404 cho cả `resource_categories`, `resources`, `resource_courses` và `resource_download_events`.
 - Chưa thể xác minh tên cột thực tế, nested course relation, public select policy hoặc public insert download event; issue tiếp tục Open.
+## ISSUE-032 — Chín bảng Support chưa được expose trong Supabase project hiện tại
+
+**Trạng thái:** Open — Blocker Task 06
+
+Public REST trả HTTP 404 cho `success_stories`, `faq_categories`, `faqs`, `job_posts`, `job_applications`, `contact_messages`, `trial_registrations`, `course_registrations` và `site_settings`. Không có DDL local để xác minh cột bắt buộc/RLS, nên chưa thể triển khai hoặc test insert form an toàn. Cần kiểm tra đúng project URL và reload schema cache; không tạo lại schema trong source.

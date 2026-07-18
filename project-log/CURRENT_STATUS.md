@@ -303,3 +303,8 @@ Chờ người dùng chỉ định. Catalog đã kết nối Supabase; bước v
 - Hỗ trợ `public` và `registration_required` mà không công khai link cần bảo vệ hoặc update count từ client.
 - Lint/build đạt; hai route Resources dynamic, có loading/error/empty/not-found.
 - Bốn bảng Resources vẫn trả HTTP 404 ở project local nên runtime database/RLS chưa xác minh; không chuyển Task 06.
+## Task 06 — Blocker database Support Pages — 2026-07-18
+
+- Đã kiểm tra chín bảng được yêu cầu; toàn bộ trả HTTP 404 từ Supabase project hiện tại.
+- Không có schema nguồn local để xây payload form an toàn; Task 06 chưa bắt đầu sửa source và mọi checkbox giữ chưa hoàn thành.
+- Không tạo schema trùng, không hard-code dữ liệu và không chuyển Task 07.

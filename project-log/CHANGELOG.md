@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-07-18 — Rà soát database Task 06
+
+- Verified: kiểm tra trực tiếp chín bảng Support bằng publishable key; tất cả trả HTTP 404.
+- Known issue: không có DDL local để xác minh schema/payload/RLS cho public forms.
+- Không thay đổi source chức năng, không tạo schema và không chuyển Task 07.
+
 ## 2026-07-18 — Hoàn thiện database-backed Resources
 
 - Added: category filter, resource detail route, metadata/not-found, related courses và Server Action download event.
