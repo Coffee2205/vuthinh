@@ -19,6 +19,14 @@ Mỗi khóa học tối thiểu có:
 
 Không hiển thị khóa học ở trạng thái nháp.
 
+### Catalog khóa học triển khai ở Task 03
+
+- Program/category chỉ hiển thị công khai khi `is_active = true`.
+- Course chỉ hiển thị khi `status = published` và có `published_at` hợp lệ.
+- Đối tượng, lộ trình, giáo trình và kết quả kỳ vọng là các bản ghi có thứ tự riêng, không gộp vào một JSON duy nhất.
+- Quy tắc giá: ưu tiên `price`; gạch giá gốc khi `original_price > price`; nếu thiếu giá dùng `price_display`, cuối cùng là `Liên hệ`.
+- Seed/fallback chỉ dùng phát triển và phải được thay bằng dữ liệu khách hàng duyệt trước production.
+
 ## Chuyên gia
 
 Giai đoạn 1 chỉ có một chuyên gia.

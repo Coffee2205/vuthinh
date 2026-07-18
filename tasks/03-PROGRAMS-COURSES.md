@@ -10,11 +10,11 @@
 
 - [x] Danh sách nhóm chương trình.
 - [x] Bộ lọc danh mục cơ bản.
-- [ ] Danh sách khóa học.
-- [ ] Chi tiết khóa học.
-- [ ] CTA đăng ký.
-- [ ] Empty state.
-- [ ] Metadata động cho khóa học.
+- [x] Danh sách khóa học.
+- [x] Chi tiết khóa học.
+- [x] CTA đăng ký.
+- [x] Empty state.
+- [x] Metadata động cho khóa học.
 
 ## Nhóm chương trình
 
@@ -79,3 +79,16 @@
 - Theo chỉ đạo của người dùng, tạm bỏ qua các mục còn lại của Task 03 để chuyển sang Task 04.
 - Task 03 không được đánh dấu hoàn thành; các checkbox Danh sách khóa học, Chi tiết khóa học, CTA đăng ký, Empty state và Metadata động vẫn giữ `[ ]`.
 - Khi quay lại, tiếp tục từ Danh sách khóa học sau khi có dữ liệu được phép công bố.
+
+## Kết quả hoàn thành Task 03 — 2026-07-18
+
+- Trạng thái: hoàn thành module giao diện và lớp dữ liệu; Supabase production chưa kết nối do chưa có project/env.
+- Route: `/programs`, `/courses`, `/courses/[slug]`; có filter/sort qua URL, loading, empty, error, not-found, CTA và metadata động.
+- Database: migration `supabase/migrations/202607180001_create_course_catalog.sql`, seed demo `supabase/seed.sql`; 7 bảng, FK/index/trigger/RLS và public chỉ đọc active/published.
+- File source chính tạo: `src/types/course.ts`, `src/lib/supabase/server.ts`, `src/services/course.service.ts`, `src/data/course-fallback-data.ts`, các component trong `src/components/courses/`, `ProgramCard`, `ProgramGrid` và các route/state liên quan.
+- File sửa: `.env.example`, `package.json`, `package-lock.json`, root layout, `/programs`, Task 03/07, tài liệu kỹ thuật/nghiệp vụ và project log.
+- Quyết định: seed/fallback là dữ liệu phát triển được ghi nhãn rõ; component dùng cùng type/service và chỉ fallback khi thiếu env. Nếu Supabase đã cấu hình mà query lỗi, error boundary xử lý thay vì che lỗi.
+- Responsive: card 1/2/3 cột mobile/tablet/desktop; detail chuyển 1 sang 2 vùng ở `lg`; filter mobile-first.
+- Accessibility/SEO: semantic heading/list/dl, một `main` mỗi page, breadcrumb, focus state, alt/placeholder ảnh, canonical/Open Graph, `notFound()` cho slug sai.
+- Kiểm tra: `npm.cmd run lint` đạt; `npm.cmd run build` đạt ngày 2026-07-18. Runtime `/courses` HTTP 200; chưa hoàn tất kiểm tra trực quan trên thiết bị thật/browser automation.
+- Vấn đề còn lại: cần tạo Supabase project, áp migration/seed và cung cấp env; cần thay toàn bộ seed demo bằng dữ liệu khách hàng duyệt trước production.

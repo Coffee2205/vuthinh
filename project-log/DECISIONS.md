@@ -2,6 +2,20 @@
 
 Mỗi quyết định phải ghi ngày, nội dung, lý do và ảnh hưởng.
 
+## 2026-07-18 — Đưa schema catalog và dữ liệu demo vào Task 03
+
+**Quyết định:** Triển khai sớm schema khóa học chuẩn hóa trong Task 03; Task 07 không tạo trùng. Dùng Supabase anon client phía server, service chung và fallback demo chỉ khi thiếu env.
+
+**Lý do:** Yêu cầu mới cần thêm khóa học sau này mà không sửa source, đồng thời vẫn phải kiểm tra UI khi project Supabase chưa được cấu hình.
+
+**Ảnh hưởng:** 7 bảng catalog có RLS public read-only; lỗi Supabase thật không bị fallback che giấu. Dữ liệu demo phải được thay trước production.
+
+## 2026-07-18 — Filter khóa học qua URL
+
+**Quyết định:** `/courses` dùng GET search params `program` và `sort`, không thêm Client Component.
+
+**Lý do:** URL chia sẻ được, hỗ trợ SEO và giữ JavaScript client tối thiểu.
+
 ## 2026-07-17 — Tạm hoãn phần còn lại của Task 04
 
 **Quyết định:** Theo chỉ đạo của người dùng, tạm bỏ qua các mục chưa hoàn thành của Task 04 và chuyển Task 05 thành task hiện tại.

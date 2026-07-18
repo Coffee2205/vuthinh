@@ -1,6 +1,6 @@
 # Trạng thái hiện tại
 
-_Cập nhật gần nhất: 2026-07-17_
+_Cập nhật gần nhất: 2026-07-18_
 
 ## Giai đoạn hiện tại
 
@@ -8,7 +8,7 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 
 ## Task hiện tại
 
-`Task 05 — Blog và tài liệu` đang thực hiện theo từng phần sau khi người dùng yêu cầu tạm bỏ qua Task 04. Phần đầu tiên là Danh mục blog; taxonomy và bài viết thật vẫn thiếu theo `ISSUE-014`.
+`Task 03 — Chương trình và khóa học` đã được người dùng mở lại và hoàn thành phần triển khai ngày 2026-07-18. Không tự chuyển sang task tiếp theo.
 
 ## Đã hoàn thành
 
@@ -190,11 +190,11 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 
 ## Chưa thực hiện
 
-- Các phần còn lại của Chương trình và khóa học đang được tạm hoãn theo chỉ đạo.
+- Task 03 đã hoàn thành về code/schema; dữ liệu production và kết nối Supabase thực tế còn thiếu.
 - Hồ sơ chuyên gia thật, các phần còn lại của trang chuyên gia và đăng ký tư vấn đang được tạm hoãn.
 - Danh mục/blog thật, danh sách và chi tiết bài viết, tài liệu miễn phí.
 - Các trang hỗ trợ.
-- Supabase và database.
+- Supabase project thực tế, Auth/Storage và các bảng ngoài catalog khóa học.
 - Form lưu dữ liệu thật.
 - Trang quản trị.
 - Kiểm thử tổng thể và deploy production.
@@ -238,7 +238,16 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 
 ## Task tiếp theo
 
-Tiếp tục Task 05 từ mục Danh mục blog. Chỉ bổ sung taxonomy thật sau khi khách hàng xác nhận; chưa làm trước mục Danh sách bài.
+Chờ người dùng chỉ định. Nếu tiếp tục vận hành catalog, bước gần nhất là tạo Supabase project, áp migration/seed và cấu hình env; không tự chuyển sang Task 04/05.
+
+## Task 03 — Hoàn thành module catalog khóa học (2026-07-18)
+
+- `/programs` đọc program qua service và hiển thị số course thực tế từ nguồn dữ liệu.
+- `/courses` có card đầy đủ, filter/sort URL, demo notice, loading/empty/error.
+- `/courses/[slug]` có metadata động, tóm tắt, các section chi tiết, related course và 404.
+- Đã tạo migration 7 bảng, seed 4 course demo, RLS, trigger/index và Supabase server client.
+- Supabase production chưa kết nối; local hiện dùng fallback demo tương đương seed.
+- Lint/build đạt ngày 2026-07-18; runtime `/courses` HTTP 200.
 
 ## Cập nhật tài liệu yêu cầu nội dung — 2026-07-17
 

@@ -1,5 +1,39 @@
 # Vấn đề và giới hạn đang tồn tại
 
+## ISSUE-021 — Supabase catalog chưa được áp dụng thực tế
+
+**Trạng thái:** Open
+
+**Mô tả:** Migration, seed, client và service đã có nhưng chưa có URL/anon key hoặc quyền truy cập project Supabase để áp dụng và kiểm tra.
+
+**Ảnh hưởng:** Local dùng fallback demo có ghi nhãn. Chưa thể tuyên bố database production hoạt động.
+
+**Cần làm:** Tạo project, áp migration/seed, cấu hình env và kiểm tra RLS/query thực tế.
+
+---
+
+## ISSUE-022 — Dữ liệu catalog hiện là demo
+
+**Trạng thái:** Open
+
+**Mô tả:** Bốn course, giá, thời lượng, lộ trình và giáo trình trong seed/fallback chỉ phục vụ phát triển theo chỉ đạo Task 03.
+
+**Ảnh hưởng:** Không được dùng làm nội dung production hoặc cam kết đầu ra.
+
+**Cần từ khách hàng:** Dữ liệu khóa học và ảnh đã duyệt theo `docs/CONTENT_REQUIREMENTS.md`.
+
+---
+
+## ISSUE-023 — Dependency audit có 2 cảnh báo moderate
+
+**Trạng thái:** Open
+
+**Mô tả:** Sau khi cài `@supabase/supabase-js`, npm audit báo 2 lỗ hổng mức moderate trong dependency tree.
+
+**Ảnh hưởng:** Không làm lint/build thất bại. Chưa chạy `npm audit fix --force` vì có thể gây breaking change ngoài phạm vi.
+
+---
+
 ## ISSUE-001 — Dependencies chưa được cài
 
 **Trạng thái:** Resolved — 2026-07-15
@@ -53,9 +87,11 @@
 
 ## ISSUE-005 — Chưa tạo Supabase project
 
-**Trạng thái:** Planned
+**Trạng thái:** Partially resolved — 2026-07-18
 
-**Mô tả:** Database, Auth và Storage sẽ được tạo trong Task 07, không thực hiện sớm hơn.
+**Mô tả:** Schema/client catalog đã được tạo sớm trong Task 03; project Supabase, Auth, Storage và việc áp migration thực tế vẫn chưa có.
+
+**Theo dõi tiếp:** Kết nối catalog thực tế tại `ISSUE-021`; Auth/Storage và schema form còn lại thuộc Task 07.
 
 ---
 
@@ -139,6 +175,11 @@
 - Danh sách trường, số lượng và định dạng bàn giao đã được tổng hợp tại `docs/CONTENT_REQUIREMENTS.md`.
 - `ISSUE-009` tiếp tục ở trạng thái Open; không tạo `/courses`, dữ liệu giả hoặc làm trước mục Empty state.
 
+### Cập nhật Task 03 — 2026-07-18
+
+- Yêu cầu mới cho phép seed/demo để triển khai và kiểm tra module; `/courses` đã hoàn thành về kỹ thuật.
+- `ISSUE-009` vẫn Open ở góc độ nội dung production: seed/fallback không thay thế dữ liệu khách hàng duyệt.
+
 ### Trạng thái Danh sách nhóm chương trình
 
 - Route `/programs` đã hiển thị đủ bảy nhóm bằng dữ liệu tĩnh; không còn blocker kỹ thuật cho phần danh sách nhóm.
@@ -155,7 +196,7 @@
 
 - Không còn blocker kỹ thuật cho Programs Section.
 - Lint, build và runtime route `/` đều đạt.
-- CTA `/programs` chưa có route đích vì thuộc Task 03.
+- CTA `/programs` hiện đã có route đích hoạt động.
 - Chưa kiểm tra trực quan bằng browser automation hoặc thiết bị thật; responsive đã được rà theo source và breakpoint.
 
 ---

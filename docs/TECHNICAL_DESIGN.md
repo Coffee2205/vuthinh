@@ -95,6 +95,24 @@ Không tách NestJS ở Giai đoạn 1.
 - created_by FK.
 - timestamps.
 
+> Cấu trúc trên đã được Task 03 thay thế chi tiết hơn: `level_label/from/to`, số buổi, phút mỗi buổi, sĩ số, giá gốc/giá hiện tại, discount, thứ tự và các bảng con chuẩn hóa. Không còn dùng `target_audience` hay `curriculum JSONB` trong bảng `courses`.
+
+### course_audiences / course_roadmap_stages / course_curriculum_items / course_outcomes
+
+- Mỗi nội dung là một bản ghi có `course_id`, `display_order` và timestamps.
+- Bảng con xóa cascade theo course; public chỉ đọc khi course cha đã published.
+
+### Truy cập catalog khóa học
+
+```text
+Page (Server Component) → course.service → Supabase server client
+                                      ↘ fallback demo khi thiếu env
+```
+
+- Migration: `supabase/migrations/202607180001_create_course_catalog.sql`.
+- Seed phát triển: `supabase/seed.sql`.
+- Biến môi trường công khai chỉ gồm URL và anon key; không dùng service-role key trong web app public.
+
 ### course_registrations
 
 - id UUID PK.

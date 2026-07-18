@@ -2,22 +2,19 @@
 
 ## Nhiệm vụ gần nhất
 
-> Task 04 được tạm hoãn theo chỉ đạo. Task hiện tại là Task 05; hoàn thiện mục “Danh mục blog” trước khi chuyển sang Danh sách bài.
+> Task 03 đã hoàn thành phần code/schema ngày 2026-07-18. Không tự chuyển task khi chưa có chỉ đạo mới.
 
-Khách hàng có thể dùng `docs/CONTENT_REQUIREMENTS.md` làm checklist bàn giao. Với Task 05 hiện tại, ưu tiên trước mắt là tên/slug/mô tả danh mục và ít nhất một bài viết đã duyệt; dữ liệu của Task 03–04 vẫn được lưu để quay lại sau.
+## Bước vận hành catalog còn lại
 
-## Thứ tự thực hiện Task 05
-
-1. Nhận tên, slug, mô tả, thứ tự và trạng thái của các danh mục Blog.
-2. Xác nhận ít nhất một bài viết có danh mục, tác giả, ngày xuất bản và quyền sử dụng ảnh hợp lệ.
-3. Thay empty state danh mục trên `/blog` bằng taxonomy đã duyệt.
-4. Kiểm tra responsive/accessibility, metadata, lint/build/runtime.
-5. Cập nhật task/log, commit và push trước khi chuyển sang mục Danh sách bài.
+1. Khách hàng tạo/cấp quyền Supabase project.
+2. Áp migration `202607180001_create_course_catalog.sql` và seed demo nếu cần staging.
+3. Cấu hình `NEXT_PUBLIC_SUPABASE_URL` và `NEXT_PUBLIC_SUPABASE_ANON_KEY`.
+4. Thay seed demo bằng dữ liệu khóa học, hình ảnh và giá đã duyệt.
+5. Kiểm tra RLS/query/runtime trên Supabase thực tế và thiết bị thật.
 
 ## Chưa làm ngay
 
-- Các phần còn lại của Task 03 cho đến khi có chỉ đạo quay lại.
 - Các phần còn lại của Task 04 cho đến khi có chỉ đạo quay lại.
 - Danh sách bài và các mục sau Danh mục blog của Task 05.
-- Database, form lưu dữ liệu thật và Supabase.
+- Các schema ngoài catalog, form lưu dữ liệu thật, Supabase Auth/Storage.
 - Admin, AI, thanh toán hoặc LMS.

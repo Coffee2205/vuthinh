@@ -1,13 +1,24 @@
 "use client";
 
 import { useState } from "react";
-import { programGroupFilters, programGroupsContent } from "@/data/programs";
+import { ProgramGrid } from "@/components/programs/ProgramGrid";
+import type { ProgramCategory } from "@/types/course";
 
-export function ProgramGroupFilter() {
+const filters = [
+  { label: "Tất cả", value: "all" },
+  { label: "Tiếng Trung", value: "chinese" },
+  { label: "Năng lực sống", value: "life" },
+  { label: "Phát triển con người", value: "human" },
+] as const;
+
+export function ProgramGroupFilter({ programs }: { programs: ProgramCategory[] }) {
   const [activeFilter, setActiveFilter] = useState("all");
-  const visibleGroups = programGroupsContent.groups.filter(
-    (group) => activeFilter === "all" || group.area === activeFilter,
-  );
+  const visiblePrograms = programs.filter((program) => {
+    if (activeFilter === "all") return true;
+    if (activeFilter === "chinese") return program.isCore;
+    if (activeFilter === "life") return ["ky-nang-song", "quan-tri-cam-xuc"].includes(program.slug);
+    return program.slug === "gia-tri-song-va-hanh-phuc";
+  });
 
   return (
     <div className="mt-10 lg:mt-12">
@@ -16,7 +27,7 @@ export function ProgramGroupFilter() {
         role="group"
         aria-label="Lọc nhóm chương trình"
       >
-        {programGroupFilters.map((filter) => {
+        {filters.map((filter) => {
           const isActive = activeFilter === filter.value;
 
           return (
@@ -38,32 +49,10 @@ export function ProgramGroupFilter() {
       </div>
 
       <p className="mt-5 text-sm text-slate-600" role="status" aria-live="polite">
-        Hiển thị {visibleGroups.length} nhóm chương trình
+        Hiển thị {visiblePrograms.length} nhóm chương trình
       </p>
 
-      <ul className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {visibleGroups.map((group, index) => (
-          <li
-            key={group.title}
-            className={`rounded-2xl border p-6 sm:p-7 ${
-              group.area === "Tiếng Trung"
-                ? "border-blue-200 bg-blue-50"
-                : "border-slate-200 bg-white"
-            }`}
-          >
-            <div className="flex items-center justify-between gap-4">
-              <span className="text-sm font-bold uppercase tracking-[0.12em] text-brand-blue">
-                {group.area}
-              </span>
-              <span className="text-sm font-bold text-slate-400" aria-hidden="true">
-                {String(index + 1).padStart(2, "0")}
-              </span>
-            </div>
-            <h2 className="mt-5 text-xl font-bold text-slate-950">{group.title}</h2>
-            <p className="mt-3 leading-7 text-slate-600">{group.description}</p>
-          </li>
-        ))}
-      </ul>
+      <div className="mt-5"><ProgramGrid programs={visiblePrograms} /></div>
     </div>
   );
 }

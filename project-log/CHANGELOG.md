@@ -1,5 +1,29 @@
 # Changelog
 
+## 2026-07-18 — Hoàn thành Task 03: Programs & database-backed courses
+
+### Added
+
+- Catalog Supabase chuẩn hóa gồm 7 bảng, migration, RLS, index/trigger và seed 4 khóa demo.
+- Supabase server client, types, course service và fallback demo tách riêng.
+- `/courses`, `/courses/[slug]`, card/filter/price/detail/related và loading/empty/error/not-found states.
+
+### Changed
+
+- `/programs` đọc dữ liệu qua service, hiển thị đối tượng, số course và CTA lọc sang `/courses`.
+- Root layout dùng wrapper `div` thay cho landmark `main`, tránh nested `main`; metadata có base URL từ env.
+- Tài liệu Task 03/07, Technical Design, Functional Rules và project log phản ánh schema được đưa vào sớm.
+
+### Verified
+
+- `npm.cmd run lint` đạt.
+- `npm.cmd run build` đạt; `/courses` và `/courses/[slug]` là dynamic server routes.
+- Production runtime `/courses` trả HTTP 200 với fallback demo.
+
+### Known issues
+
+- Chưa kết nối/kiểm tra Supabase thực tế; chưa kiểm tra trực quan trên thiết bị thật/browser automation.
+
 Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần ghi từng chỉnh sửa nhỏ về format.
 
 ## 2026-07-15
