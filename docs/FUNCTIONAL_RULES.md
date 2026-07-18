@@ -89,6 +89,13 @@ Mỗi tài liệu có:
 
 Không upload video lớn trực tiếp lên server.
 
+### Tài liệu triển khai ở Task 05
+
+- Public chỉ xem bản ghi `published` có ngày hợp lệ.
+- Ưu tiên `file_url`, sau đó `external_url`; thiếu link thì không tạo CTA giả.
+- Link tài liệu chỉ chấp nhận HTTP/HTTPS và mở tab mới an toàn.
+- Khi chưa có dữ liệu, hiển thị empty state; lỗi Supabase không lộ chi tiết kỹ thuật.
+
 ## Form
 
 Mọi form phải:

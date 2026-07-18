@@ -294,3 +294,6 @@ Mỗi quyết định phải ghi ngày, nội dung, lý do và ảnh hưởng.
 ## 2026-07-18 — Blog dùng service nhiều query và Markdown an toàn
 
 Quyết định: routes Blog chỉ đọc qua `blog.service`; quan hệ được query riêng và Markdown render bằng `react-markdown`/`remark-gfm`. Không tạo schema, migration hoặc fallback bài viết khi database chưa expose bảng.
+## 2026-07-18 — Tạm bỏ qua Task 04 và tiếp tục Task 05
+
+Theo chỉ đạo trực tiếp của người dùng, blocker Kinh nghiệm của Task 04 tiếp tục được giữ Open nhưng không chặn việc triển khai phần Tài liệu của Task 05. `/resources` dùng dynamic rendering và chỉ hiển thị URL HTTP/HTTPS từ database.

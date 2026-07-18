@@ -72,6 +72,13 @@ Giai đoạn 1 không khóa lịch realtime và không tự động chống trù
 4. Bài viết hiển thị Markdown, tác giả/nguồn và các quan hệ có trong database.
 5. Người dùng có thể mở khóa học liên quan hoặc form tư vấn đã chọn service.
 
+### Luồng Tài liệu triển khai ở Task 05
+
+1. `/resources` tải danh sách tài liệu published từ Supabase.
+2. Người dùng xem loại, mô tả và trạng thái tài liệu.
+3. Nếu có link hợp lệ, người dùng mở tệp hoặc nguồn ngoài trong tab mới.
+4. Nếu chưa có link hoặc chưa có tài liệu, giao diện thông báo rõ và không tạo lượt tải giả.
+
 ## 4. Luồng quản trị nội dung
 
 1. Admin đăng nhập.

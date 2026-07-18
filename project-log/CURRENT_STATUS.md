@@ -289,3 +289,10 @@ Chờ người dùng chỉ định. Catalog đã kết nối Supabase; bước v
 - Task chưa hoàn thành đầu tiên là Task 04, do mục Kinh nghiệm vẫn `[ ]`.
 - Query Supabase xác nhận expert `vu-thinh` không có trường hoặc nội dung kinh nghiệm để hiển thị.
 - Không sửa source chức năng và không chuyển sang phần `/resources` của Task 05.
+
+## Task 05 — Tài liệu miễn phí — 2026-07-18
+
+- Theo chỉ đạo người dùng, Task 04 được tạm bỏ qua với blocker Kinh nghiệm vẫn Open; Task 05 được tiếp tục.
+- Đã hoàn thiện code `/resources`, type/service, card, metadata, loading/error/empty và link xem/tải an toàn.
+- Lint/build đạt; `/resources` là dynamic Server Component route.
+- Database `public.resources` trả HTTP 404 nên runtime dữ liệu/link thật chưa thể xác minh; Task 05 hoàn thành code nhưng còn blocker database.

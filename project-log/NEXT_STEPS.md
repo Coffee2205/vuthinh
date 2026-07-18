@@ -4,6 +4,14 @@
 
 > Task 04 đã hoàn thành phần chức năng; không tự chuyển task. Mục Kinh nghiệm còn chờ dữ liệu khách hàng xác nhận.
 
+> Theo chỉ đạo mới ngày 2026-07-18, tạm bỏ qua Task 04 và tiếp tục Task 05. Task 04 không được đánh dấu hoàn thành.
+
+## Bước gần nhất Task 05
+
+1. Tạo/xác minh bảng `public.resources` trong đúng Supabase project và RLS public read cho bản ghi published.
+2. Thêm ít nhất một tài liệu có quyền phân phối cùng link HTTP/HTTPS hợp lệ để kiểm tra runtime.
+3. Kiểm tra `/resources` trên desktop/tablet/mobile và link thật sau khi database sẵn sàng.
+
 ## Bước gần nhất Task 05
 
 1. Xác minh schema/seed blog đã được chạy trong đúng Supabase project `izgxirozmrrqyohqeqvq` và public select policy đã tồn tại.

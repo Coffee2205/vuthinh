@@ -425,3 +425,8 @@
 **Trạng thái:** Open — Blocker hoàn thành Task 04
 
 Public query expert `vu-thinh` ngày 2026-07-18 xác nhận không có `experience_years`, `experience` hoặc nội dung tương đương. Cần khách hàng cung cấp nội dung đã duyệt và quyết định cấu trúc lưu trữ trước khi triển khai; không dùng dữ liệu suy đoán.
+## ISSUE-031 — Bảng resources chưa tồn tại trong Supabase
+
+**Trạng thái:** Open — Blocker runtime Task 05
+
+REST public trả HTTP 404 và PostgREST báo không tìm thấy `public.resources` trong schema cache. Code `/resources` và production build đạt, nhưng cần schema/RLS cùng ít nhất một tài liệu có quyền phân phối để kiểm tra danh sách và link thật.

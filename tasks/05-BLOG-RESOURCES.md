@@ -12,8 +12,8 @@
 - [x] Danh sách bài.
 - [x] Chi tiết bài.
 - [x] Bài liên quan.
-- [ ] Danh sách tài liệu.
-- [ ] Link xem/tải.
+- [x] Danh sách tài liệu.
+- [x] Link xem/tải.
 - [x] CTA đến khóa học/tư vấn.
 
 ## Tiêu chí
@@ -42,3 +42,13 @@
 - Supabase hiện trả HTTP 404 cho cả bảy bảng blog nên chưa thể xác nhận 4 bài mẫu hoặc runtime dữ liệu; theo dõi tại `ISSUE-021`.
 - `/resources` và hai mục tài liệu vẫn chưa thực hiện, đúng phạm vi phiên này.
 - Kiểm tra code: lint đạt; production build đạt ngày 2026-07-18. Build trong sandbox lần đầu bị Google Fonts network, chạy lại có network đạt.
+
+## Kết quả triển khai Tài liệu miễn phí — 2026-07-18
+
+- Theo chỉ đạo người dùng, tạm bỏ qua blocker Kinh nghiệm của Task 04 và tiếp tục Task 05.
+- Đã tạo `/resources` với danh sách tài liệu published từ `resource.service`, card responsive, ảnh/placeholder, loại tài liệu, link xem/tải và empty state.
+- URL tài liệu chỉ chấp nhận HTTP/HTTPS; link ngoài mở tab mới với `noopener noreferrer`; bản ghi thiếu link hiển thị trạng thái đang cập nhật.
+- Có loading/error boundary và metadata riêng; route dùng dynamic rendering để build không phụ thuộc database runtime.
+- Supabase hiện trả HTTP 404 vì chưa có `public.resources`; chưa kiểm tra được link dữ liệu thật. Blocker được theo dõi tại `ISSUE-031`.
+- File tạo: `src/types/resource.ts`, `src/services/resource.service.ts`, `src/components/resources/ResourceCard.tsx`, `src/app/resources/page.tsx`, `loading.tsx`, `error.tsx`.
+- Kiểm tra: `npm.cmd run lint` đạt; `npm.cmd run build` đạt và `/resources` là dynamic route.

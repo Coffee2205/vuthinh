@@ -234,6 +234,16 @@ ConsultationForm → Server Action → Zod → consultation.service → consulta
 - published_at.
 - timestamps.
 
+### Truy cập tài liệu ở Task 05
+
+```text
+/resources → resource.service → Supabase server client
+```
+
+- Chỉ đọc tài liệu `published` có ngày xuất bản hợp lệ; ưu tiên nổi bật, mới nhất và thứ tự hiển thị.
+- Route render động để lỗi/cấu hình database đi vào error boundary thay vì làm hỏng production build.
+- UI chỉ tạo link cho URL HTTP/HTTPS; không upload hoặc phục vụ video lớn từ ứng dụng Next.js.
+
 ### testimonials
 
 - id UUID PK.

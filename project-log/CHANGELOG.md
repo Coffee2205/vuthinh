@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-07-18 — Triển khai trang Tài liệu miễn phí
+
+- Added: type/service resource, `/resources`, card, metadata, loading/error/empty state.
+- Changed: ghi nhận chỉ đạo tạm bỏ qua Task 04; Task 05 hoàn thành phần source giao diện tài liệu.
+- Verified: lint/build đạt; route `/resources` dynamic.
+- Known issue: Supabase chưa có `public.resources`, chưa kiểm tra được dữ liệu và link thật.
+
 ## 2026-07-18 — Rà soát blocker Task 04
 
 - Xác minh trực tiếp Supabase: bản ghi expert không có trường/nội dung kinh nghiệm.

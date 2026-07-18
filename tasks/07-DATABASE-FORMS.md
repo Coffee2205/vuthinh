@@ -51,3 +51,8 @@
 - Schema blog được quản lý ngoài source; Task 05 không tạo lại các bảng hoặc migration blog.
 - Task 07 sau này chỉ bổ sung Auth và policy quản trị blog nếu cần.
 - Project Supabase local hiện chưa expose các bảng blog qua REST; cần áp dụng/xác minh schema ở đúng project trước khi kiểm thử dữ liệu public.
+
+## Database tài liệu
+
+- Task 05 đã triển khai service/UI theo bảng `resources` được mô tả trong thiết kế kỹ thuật; không tạo schema trùng trong phiên giao diện.
+- Supabase project hiện chưa có/expose `public.resources`; Task 07 cần tạo hoặc xác minh schema, RLS public read published và quyền admin sau này.
