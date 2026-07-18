@@ -1,5 +1,37 @@
 # Vấn đề và giới hạn đang tồn tại
 
+## ISSUE-025 — Public chưa thể insert yêu cầu tư vấn
+
+**Trạng thái:** Resolved — 2026-07-18
+
+**Mô tả:** Publishable key đọc được toàn bộ dữ liệu chuyên gia nhưng POST rỗng an toàn tới `consultation_requests` trả HTTP 401, xác nhận thiếu grant hoặc RLS insert policy.
+
+**Ảnh hưởng:** Form có thể hiển thị và validation nhưng chưa thể lưu request thật hoặc xác nhận success flow.
+
+**Cách giải quyết:** Đã áp migration tối thiểu; privacy=false/rỗng bị RLS chặn, privacy=true đi qua RLS, request hợp lệ trả HTTP 201. Public select vẫn không thấy request.
+
+---
+
+## ISSUE-026 — Nội dung chuyên gia/tư vấn còn thiếu
+
+**Trạng thái:** Open
+
+**Còn thiếu:** Ảnh chân dung thật; số năm/nội dung kinh nghiệm; xác nhận có tư vấn bằng tiếng Trung; địa điểm offline; chính sách đổi/hủy lịch; số buổi và thời hạn cụ thể cho gói định kỳ; review thật; phương thức thanh toán.
+
+**Ảnh hưởng:** Không chặn chức năng form. UI không tự suy diễn hoặc hiển thị các thông tin này.
+
+---
+
+## ISSUE-027 — Request QA Task 04 cần admin xóa
+
+**Trạng thái:** Open
+
+**Mô tả:** Bản ghi `Codex QA Task 04`, note `TEST_ONLY_TASK04_20260718`, được tạo để xác nhận insert/RLS HTTP 201.
+
+**Cần làm:** Admin đối chiếu `status = new` trong Dashboard rồi xóa bản ghi QA.
+
+---
+
 ## ISSUE-021 — Supabase catalog chưa được áp dụng thực tế
 
 **Trạng thái:** Resolved — 2026-07-18

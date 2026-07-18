@@ -174,6 +174,17 @@ Page (Server Component) → course.service → Supabase server client
 - admin_note.
 - timestamps.
 
+### Expert và consultation triển khai ở Task 04
+
+```text
+/expert, /consultation → expert.service → Supabase server client
+ConsultationForm → Server Action → Zod → consultation.service → consultation_requests
+```
+
+- Bảng đang dùng: `experts`, `expert_qualifications`, `expert_specializations`, `consultation_services`, `consultation_service_benefits`, `expert_faqs`, `consultation_requests`.
+- Client không query/insert Supabase trực tiếp; Server Action kiểm tra lại expert và service active.
+- Public insert bị giới hạn theo cột và RLS privacy policy; public không được select request.
+
 ### post_categories
 
 - id UUID PK.

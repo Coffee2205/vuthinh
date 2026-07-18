@@ -2,6 +2,14 @@
 
 Mỗi quyết định phải ghi ngày, nội dung, lý do và ảnh hưởng.
 
+## 2026-07-18 — Form tư vấn dùng Server Action và RLS column grant
+
+**Quyết định:** Form chỉ dùng Client Component cho tương tác, submit qua Server Action; Zod và service kiểm tra dữ liệu ở server. Public chỉ được grant insert các cột form và không được đọc request.
+
+**Lý do:** Không tin query string/client input, không đưa secret hoặc logic database quản trị xuống browser.
+
+**Ảnh hưởng:** Database tự quản lý status/admin fields. Một request QA có nhãn rõ đã được tạo để xác nhận HTTP 201 và cần admin xóa sau đối chiếu.
+
 ## 2026-07-18 — Supabase là nguồn catalog duy nhất
 
 **Quyết định:** Xóa toàn bộ fallback khóa học/program trong source và các file SQL cũ không còn được dùng; mọi route catalog bắt buộc truy vấn Supabase.

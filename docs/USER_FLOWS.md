@@ -37,11 +37,14 @@
    - Ngày mong muốn.
    - Khung giờ mong muốn.
    - Hình thức online/offline.
+   - Dịch vụ quan tâm, nếu đã xác định.
+   - Đồng ý chính sách bảo mật.
 4. Hệ thống kiểm tra dữ liệu.
-5. Lưu yêu cầu ở trạng thái `Mới`.
-6. Hiển thị xác nhận.
-7. Admin/chuyên gia liên hệ xác nhận thủ công.
-8. Admin cập nhật trạng thái:
+5. Server kiểm tra lại chuyên gia và dịch vụ active.
+6. Lưu yêu cầu ở trạng thái `Mới` do database tự đặt.
+7. Hiển thị xác nhận đã ghi nhận yêu cầu, chưa phải lịch hẹn.
+8. Admin/chuyên gia liên hệ xác nhận thủ công.
+9. Admin cập nhật trạng thái:
    - Mới.
    - Đã liên hệ.
    - Đã xác nhận.

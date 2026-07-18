@@ -1,0 +1,2 @@
+import Link from "next/link";
+export default function ExpertNotFound() { return <main className="grid min-h-[60vh] place-items-center bg-slate-50 px-4 py-16 text-center"><div><h1 className="text-3xl font-bold text-slate-950">Không tìm thấy hồ sơ chuyên gia</h1><p className="mt-4 text-slate-600">Hồ sơ có thể đang được cập nhật hoặc tạm ẩn.</p><Link href="/" className="button-primary mt-7">Về trang chủ</Link></div></main>; }

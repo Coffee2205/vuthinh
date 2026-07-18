@@ -1,5 +1,19 @@
 # Changelog
 
+## 2026-07-18 — Task 04 expert/consultation
+
+### Added
+
+- Types và service Supabase cho expert, qualification, specialization, service, benefit và FAQ.
+- `/expert`, `/consultation`, form Server Action/Zod và `/consultation/success`.
+- Migration RLS tối thiểu cho public consultation insert sau khi phát hiện HTTP 401.
+
+### Verified
+
+- Public expert/service/FAQ queries đạt; các route và service query string trả HTTP 200.
+- RLS insert đạt HTTP 201 với request QA; public select request trả rỗng.
+- Native client constraints, Zod server validation, active expert/service checks và success route đã được triển khai.
+
 ## 2026-07-18 — Dùng Supabase làm nguồn catalog duy nhất
 
 ### Removed

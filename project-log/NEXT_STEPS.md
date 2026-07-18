@@ -2,7 +2,13 @@
 
 ## Nhiệm vụ gần nhất
 
-> Task 03 đã hoàn thành phần code/schema ngày 2026-07-18. Không tự chuyển task khi chưa có chỉ đạo mới.
+> Task 04 đã hoàn thành phần chức năng; không tự chuyển task. Mục Kinh nghiệm còn chờ dữ liệu khách hàng xác nhận.
+
+## Bước gần nhất Task 04
+
+1. Admin đối chiếu và xóa request QA `TEST_ONLY_TASK04_20260718` sau khi kiểm tra status `new`.
+2. Cung cấp nội dung kinh nghiệm nếu muốn hiển thị trên `/expert`.
+3. Cấu hình env trên Vercel và kiểm tra form deployment khi tới bước deploy.
 
 ## Bước vận hành catalog còn lại
 

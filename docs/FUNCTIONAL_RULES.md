@@ -45,6 +45,14 @@ Trang chuyên gia hiển thị:
 
 Kiến trúc dữ liệu vẫn cho phép thêm nhiều chuyên gia sau này.
 
+### Tư vấn chuyên gia
+
+- Public chỉ hiển thị expert/service/FAQ active từ Supabase.
+- Service query string chỉ hợp lệ khi service active và thuộc expert đang hiển thị.
+- Server phải validation lại toàn bộ request và kiểm tra expert/service trước insert.
+- Public chỉ được insert các cột form, không được gửi status/admin_note/timestamps và không được đọc request.
+- Gửi request không đồng nghĩa lịch đã được xác nhận.
+
 ## Blog
 
 Mỗi bài viết có:

@@ -1,18 +1,7 @@
-export const expertProfileContent = {
-  eyebrow: "Chuyên gia đồng hành",
-  title: "Hồ sơ chuyên gia sẽ được công bố khi thông tin được xác nhận",
-  description:
-    "Giai đoạn 1 giới thiệu một chuyên gia đồng hành cùng người học và gia đình. Trang này đã sẵn sàng về cấu trúc nhưng chưa sử dụng tên, hình ảnh, kinh nghiệm hoặc chứng chỉ chưa được khách hàng duyệt.",
-  status: "Hồ sơ chuyên gia đang được cập nhật",
-  note: "Thông tin chính thức sẽ được bổ sung sau khi có hồ sơ đầy đủ và quyền công bố nội dung, hình ảnh liên quan.",
-  requiredInformation: [
-    "Họ tên và chức danh chính thức",
-    "Ảnh chân dung được phép sử dụng",
-    "Tiểu sử và kinh nghiệm đã xác nhận",
-    "Chuyên môn và dịch vụ tư vấn",
-    "Chứng chỉ muốn công bố, nếu có",
-    "Xác nhận quyền sử dụng nội dung và hình ảnh",
-  ],
-  supportingNote:
-    "Website không hiển thị danh sách nhiều chuyên gia, số năm kinh nghiệm hoặc chứng chỉ giả.",
-} as const;
+export const consultationProcess = [
+  { title: "Gửi yêu cầu", description: "Chia sẻ mục tiêu, hiện trạng và dịch vụ bạn quan tâm." },
+  { title: "Xác nhận lịch", description: "Trung tâm liên hệ để thống nhất thời gian và hình thức phù hợp." },
+  { title: "Đánh giá hiện trạng", description: "Trao đổi về điểm xuất phát, điều kiện học và khó khăn hiện tại." },
+  { title: "Đề xuất lộ trình", description: "Làm rõ hướng đi và kế hoạch học tập phù hợp với mục tiêu." },
+  { title: "Theo dõi và điều chỉnh", description: "Tiếp tục rà soát tiến độ khi sử dụng dịch vụ định kỳ." },
+] as const;

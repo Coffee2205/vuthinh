@@ -7,15 +7,15 @@
 
 ## Công việc
 
-- [ ] Hồ sơ một chuyên gia.
-- [ ] Chuyên môn.
+- [x] Hồ sơ một chuyên gia.
+- [x] Chuyên môn.
 - [ ] Kinh nghiệm.
-- [ ] Chứng chỉ nếu có.
-- [ ] Dịch vụ tư vấn.
-- [ ] Form đăng ký tư vấn.
-- [ ] Validation.
-- [ ] Lưu dữ liệu.
-- [ ] Trang/thông báo thành công.
+- [x] Chứng chỉ nếu có.
+- [x] Dịch vụ tư vấn.
+- [x] Form đăng ký tư vấn.
+- [x] Validation.
+- [x] Lưu dữ liệu.
+- [x] Trang/thông báo thành công.
 
 ## Lưu ý
 
@@ -40,3 +40,23 @@
 - Theo chỉ đạo của người dùng, tạm bỏ qua các mục còn lại của Task 04 để chuyển sang Task 05.
 - Task 04 không được đánh dấu hoàn thành; toàn bộ checkbox vẫn giữ `[ ]`.
 - Khi quay lại, tiếp tục từ Hồ sơ một chuyên gia sau khi có dữ liệu và quyền công bố.
+
+## Tiến độ kết nối Supabase — 2026-07-18
+
+- Đã tạo types/service và giao diện `/expert`, `/consultation`, `/consultation/success` từ dữ liệu Supabase thật.
+- Public query xác nhận: 1 expert, 1 qualification, 6 specialization, 3 service, 5 benefit và 6 FAQ active.
+- Lint/build đạt; runtime hồ sơ, ba service slug, invalid slug và success state đều HTTP 200.
+- Blocker: publishable key insert `consultation_requests` bị HTTP 401 do thiếu quyền/policy insert.
+- Đã tạo migration tối thiểu `202607180002_allow_public_consultation_requests.sql`; chưa áp dụng, chưa tạo request thử và chưa đánh dấu các mục form/lưu dữ liệu hoàn thành.
+
+## Kết quả triển khai Task 04 — 2026-07-18
+
+- `/expert` đọc hồ sơ `vu-thinh`, qualification, 6 specialization, 3 service, benefits và 6 FAQ active từ Supabase.
+- `/consultation` kiểm tra service query string bằng dữ liệu active; invalid slug không được tự chọn và hiển thị cảnh báo.
+- Form dùng native client constraints và Zod validation phía server; Server Action chỉ truyền các cột form cho service.
+- Service kiểm tra expert/service active và đúng quan hệ trước insert; không gửi `status`, `admin_note` hoặc timestamps.
+- RLS migration đã áp dụng lại thành công; payload thiếu trường trả NOT NULL, request QA hợp lệ trả HTTP 201, public select trả mảng rỗng.
+- Success route thông báo đã ghi nhận nhưng chưa xác nhận lịch, có link về chuyên gia và khóa học.
+- Checkbox Kinh nghiệm giữ chưa hoàn thành vì database không có số năm/nội dung kinh nghiệm được xác nhận; UI không tự tạo dữ liệu.
+- Bản ghi QA: `TEST_ONLY_TASK04_20260718`, tên `Codex QA Task 04`; admin có thể xóa sau khi đối chiếu.
+- Kiểm tra cuối: `npm.cmd run lint` đạt; `npm.cmd run build` đạt với `.env.local`; `/expert`, `/consultation`, ba service slug, invalid slug và `/consultation/success` đều HTTP 200.

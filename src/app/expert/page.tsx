@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
-import { ExpertProfileSection } from "@/components/expert/ExpertProfileSection";
+import { notFound } from "next/navigation";
+import { ExpertProfile } from "@/components/expert/ExpertProfile";
+import { getExpertProfileBySlug } from "@/services/expert.service";
 
-export const metadata: Metadata = {
-  title: "Chuyên gia | Vũ Thịnh",
-  description:
-    "Trang hồ sơ chuyên gia đồng hành của hệ sinh thái giáo dục gia đình Vũ Thịnh.",
-};
+const fallbackMetadata: Metadata = { title: "Chuyên gia Vũ Thịnh", description: "Tư vấn đánh giá năng lực, xây dựng và theo dõi lộ trình học tập cá nhân." };
+export async function generateMetadata(): Promise<Metadata> {
+  try { const expert = await getExpertProfileBySlug("vu-thinh"); return expert ? { title: `Chuyên gia ${expert.full_name}`, description: expert.short_bio ?? fallbackMetadata.description, alternates: { canonical: "/expert" }, openGraph: { title: `Chuyên gia ${expert.full_name}`, description: expert.short_bio ?? fallbackMetadata.description ?? "", url: "/expert", type: "profile" } } : fallbackMetadata; }
+  catch { return fallbackMetadata; }
+}
 
-export default function ExpertPage() {
-  return (
-    <main>
-      <ExpertProfileSection />
-    </main>
-  );
+export default async function ExpertPage() {
+  const expert = await getExpertProfileBySlug("vu-thinh");
+  if (!expert) notFound();
+  return <main><ExpertProfile expert={expert} /></main>;
 }

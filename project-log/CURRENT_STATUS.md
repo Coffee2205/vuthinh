@@ -268,3 +268,11 @@ Chờ người dùng chỉ định. Catalog đã kết nối Supabase; bước v
 - Đã rà lại toàn bộ `project-log/ISSUES.md`, `docs/` và `tasks/`.
 - Đã tạo `docs/CONTENT_REQUIREMENTS.md`, tổng hợp thông tin còn thiếu, số lượng tối thiểu/khuyến nghị, định dạng bàn giao, trường dữ liệu, loại nội dung và vị trí sử dụng để hoàn thiện website Giai đoạn 1.
 - Không thay đổi source chức năng; lint/build đạt và blocker gần nhất vẫn là dữ liệu khóa học thật đã được duyệt.
+
+## Task 04 — Chuyên gia và tư vấn triển khai chức năng — 2026-07-18
+
+- Hồ sơ, học vấn, 6 chuyên môn, 3 dịch vụ, benefits và 6 FAQ đã đọc được từ Supabase và hiển thị trên `/expert`.
+- `/consultation` có chọn service theo query string đã kiểm tra database, form client/server validation và success route.
+- RLS column grant/policy đã áp dụng; request QA hợp lệ trả HTTP 201 và public select request trả mảng rỗng.
+- Form, server validation, database insert và success route đã hoạt động; chỉ mục Kinh nghiệm còn chờ dữ liệu xác nhận.
+- Lint/build cuối đạt; route expert/consultation và các biến thể query string đã kiểm tra HTTP 200.
