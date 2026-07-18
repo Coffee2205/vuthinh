@@ -1,5 +1,4 @@
-import { fallbackCourses, fallbackPrograms } from "@/data/course-fallback-data";
-import { createSupabaseServerClient, hasSupabaseEnvironment } from "@/lib/supabase/server";
+import { createSupabaseServerClient } from "@/lib/supabase/server";
 import type { Course, CourseFilters, CourseSort, OrderedContent, ProgramCategory } from "@/types/course";
 
 type Row = Record<string, unknown>;
@@ -68,7 +67,6 @@ function sortCourses(courses: Course[], sort: CourseSort = "default") {
 }
 
 export async function getActivePrograms(): Promise<ProgramCategory[]> {
-  if (!hasSupabaseEnvironment()) return fallbackPrograms;
   const supabase = createSupabaseServerClient();
   const { data, error } = await supabase.from("program_categories").select("*,course_categories(courses(id,status))").eq("is_active", true).order("display_order");
   if (error) throw new Error(`Không thể tải chương trình: ${error.message}`);
@@ -80,10 +78,6 @@ export async function getActivePrograms(): Promise<ProgramCategory[]> {
 }
 
 export async function getPublishedCourses(filters: CourseFilters = {}): Promise<Course[]> {
-  if (!hasSupabaseEnvironment()) {
-    const filtered = filters.program ? fallbackCourses.filter((course) => course.category.program.slug === filters.program) : fallbackCourses;
-    return sortCourses(filtered, filters.sort);
-  }
   const supabase = createSupabaseServerClient();
   const { data, error } = await supabase.from("courses").select(courseSelect).eq("status", "published").order("display_order");
   if (error) throw new Error(`Không thể tải khóa học: ${error.message}`);
@@ -92,7 +86,6 @@ export async function getPublishedCourses(filters: CourseFilters = {}): Promise<
 }
 
 export async function getCourseBySlug(slug: string): Promise<Course | null> {
-  if (!hasSupabaseEnvironment()) return fallbackCourses.find((course) => course.slug === slug) ?? null;
   const supabase = createSupabaseServerClient();
   const { data, error } = await supabase.from("courses").select(courseSelect).eq("slug", slug).eq("status", "published").maybeSingle();
   if (error) throw new Error(`Không thể tải khóa học: ${error.message}`);
@@ -102,8 +95,4 @@ export async function getCourseBySlug(slug: string): Promise<Course | null> {
 export async function getRelatedCourses(courseId: string, categoryId: string): Promise<Course[]> {
   const courses = await getPublishedCourses();
   return courses.filter((course) => course.id !== courseId && course.category.id === categoryId).slice(0, 3);
-}
-
-export function isUsingCourseFallback() {
-  return !hasSupabaseEnvironment();
 }

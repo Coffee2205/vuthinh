@@ -25,7 +25,7 @@ Không hiển thị khóa học ở trạng thái nháp.
 - Course chỉ hiển thị khi `status = published` và có `published_at` hợp lệ.
 - Đối tượng, lộ trình, giáo trình và kết quả kỳ vọng là các bản ghi có thứ tự riêng, không gộp vào một JSON duy nhất.
 - Quy tắc giá: ưu tiên `price`; gạch giá gốc khi `original_price > price`; nếu thiếu giá dùng `price_display`, cuối cùng là `Liên hệ`.
-- Seed/fallback chỉ dùng phát triển và phải được thay bằng dữ liệu khách hàng duyệt trước production.
+- Toàn bộ program, category và course phải được đọc từ Supabase; source code không chứa dữ liệu khóa học fallback.
 
 ## Chuyên gia
 

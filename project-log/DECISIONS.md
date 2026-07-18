@@ -2,6 +2,22 @@
 
 Mỗi quyết định phải ghi ngày, nội dung, lý do và ảnh hưởng.
 
+## 2026-07-18 — Supabase là nguồn catalog duy nhất
+
+**Quyết định:** Xóa toàn bộ fallback khóa học/program trong source và các file SQL cũ không còn được dùng; mọi route catalog bắt buộc truy vấn Supabase.
+
+**Lý do:** Tránh hai nguồn dữ liệu lệch nhau và bảo đảm thay đổi nội dung trên Supabase được phản ánh trực tiếp lên website.
+
+**Ảnh hưởng:** Thiếu env hoặc lỗi database sẽ hiển thị error state. Thay đổi schema tương lai cần một baseline/migration mới khớp database thực tế.
+
+## 2026-07-18 — Kết nối catalog bằng publishable key
+
+**Quyết định:** Website local kết nối Supabase bằng Project URL và publishable key trong `.env.local`; không dùng service-role key.
+
+**Lý do:** Catalog chỉ cần quyền public select được kiểm soát bởi RLS; secret quản trị không được đưa vào ứng dụng public hoặc Git.
+
+**Ảnh hưởng:** Khi có env, service đọc Supabase thật và không fallback. Vercel vẫn cần cấu hình riêng các biến môi trường trước deploy.
+
 ## 2026-07-18 — Đưa schema catalog và dữ liệu demo vào Task 03
 
 **Quyết định:** Triển khai sớm schema khóa học chuẩn hóa trong Task 03; Task 07 không tạo trùng. Dùng Supabase anon client phía server, service chung và fallback demo chỉ khi thiếu env.

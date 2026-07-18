@@ -84,11 +84,26 @@
 
 - Trạng thái: hoàn thành module giao diện và lớp dữ liệu; Supabase production chưa kết nối do chưa có project/env.
 - Route: `/programs`, `/courses`, `/courses/[slug]`; có filter/sort qua URL, loading, empty, error, not-found, CTA và metadata động.
-- Database: migration `supabase/migrations/202607180001_create_course_catalog.sql`, seed demo `supabase/seed.sql`; 7 bảng, FK/index/trigger/RLS và public chỉ đọc active/published.
-- File source chính tạo: `src/types/course.ts`, `src/lib/supabase/server.ts`, `src/services/course.service.ts`, `src/data/course-fallback-data.ts`, các component trong `src/components/courses/`, `ProgramCard`, `ProgramGrid` và các route/state liên quan.
+- Database: catalog Supabase gồm 7 bảng quan hệ, FK/index/trigger/RLS và public chỉ đọc active/published; các file SQL cũ trong repo đã được xóa sau khi database thực tế trở thành nguồn duy nhất.
+- File source chính: `src/types/course.ts`, `src/lib/supabase/server.ts`, `src/services/course.service.ts`, các component trong `src/components/courses/`, `ProgramCard`, `ProgramGrid` và các route/state liên quan.
 - File sửa: `.env.example`, `package.json`, `package-lock.json`, root layout, `/programs`, Task 03/07, tài liệu kỹ thuật/nghiệp vụ và project log.
-- Quyết định: seed/fallback là dữ liệu phát triển được ghi nhãn rõ; component dùng cùng type/service và chỉ fallback khi thiếu env. Nếu Supabase đã cấu hình mà query lỗi, error boundary xử lý thay vì che lỗi.
+- Quyết định hiện tại: component dùng cùng type/service và bắt buộc đọc Supabase; thiếu env hoặc query lỗi được xử lý bởi error boundary.
 - Responsive: card 1/2/3 cột mobile/tablet/desktop; detail chuyển 1 sang 2 vùng ở `lg`; filter mobile-first.
 - Accessibility/SEO: semantic heading/list/dl, một `main` mỗi page, breadcrumb, focus state, alt/placeholder ảnh, canonical/Open Graph, `notFound()` cho slug sai.
 - Kiểm tra: `npm.cmd run lint` đạt; `npm.cmd run build` đạt ngày 2026-07-18. Runtime `/courses` HTTP 200; chưa hoàn tất kiểm tra trực quan trên thiết bị thật/browser automation.
-- Vấn đề còn lại: cần tạo Supabase project, áp migration/seed và cung cấp env; cần thay toàn bộ seed demo bằng dữ liệu khách hàng duyệt trước production.
+- Vấn đề còn lại: cần thay dữ liệu demo đang nằm trong Supabase bằng dữ liệu khách hàng duyệt trước production.
+
+## Kết nối Supabase thực tế — 2026-07-18
+
+- Đã cấu hình Project URL và publishable key trong `.env.local`; file này bị Git ignore và không được commit.
+- Database hiện có 3 program và 4 course demo từ bộ `01_schema.sql`/`02_seed.sql` đã chạy bằng Supabase SQL Editor.
+- REST public với publishable key trả HTTP 200; `/courses` và `/courses/mat-goc-den-hsk-3` chạy HTTP 200 bằng dữ liệu Supabase, không dùng fallback.
+- `npm.cmd run build` đạt với `.env.local`; Next.js nhận đúng môi trường Supabase.
+- Chưa thay seed demo bằng nội dung production; chưa cấu hình biến môi trường tương ứng trên Vercel.
+
+## Chuyển hoàn toàn sang dữ liệu Supabase — 2026-07-18
+
+- Đã xóa `src/data/course-fallback-data.ts`; service không còn nhánh dữ liệu hard-code.
+- Đã xóa các file SQL cũ trong `supabase/` vì không còn là schema đang được áp dụng cho project hiện tại.
+- `/programs`, `/courses` và `/courses/[slug]` bắt buộc đọc dữ liệu qua `course.service` → Supabase server client.
+- Thiếu env hoặc lỗi database sẽ hiển thị error state, không âm thầm dùng dữ liệu thay thế.

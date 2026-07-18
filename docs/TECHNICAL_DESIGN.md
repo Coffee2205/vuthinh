@@ -106,11 +106,10 @@ Không tách NestJS ở Giai đoạn 1.
 
 ```text
 Page (Server Component) → course.service → Supabase server client
-                                      ↘ fallback demo khi thiếu env
 ```
 
-- Migration: `supabase/migrations/202607180001_create_course_catalog.sql`.
-- Seed phát triển: `supabase/seed.sql`.
+- Schema catalog hiện được quản lý trực tiếp trên Supabase project; repository không giữ bản SQL cũ không còn sử dụng.
+- Thiếu biến môi trường hoặc lỗi Supabase phải đi vào error boundary; không fallback sang dữ liệu hard-code.
 - Biến môi trường công khai chỉ gồm URL và anon key; không dùng service-role key trong web app public.
 
 ### course_registrations

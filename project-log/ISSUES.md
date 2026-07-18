@@ -2,13 +2,25 @@
 
 ## ISSUE-021 — Supabase catalog chưa được áp dụng thực tế
 
-**Trạng thái:** Open
+**Trạng thái:** Resolved — 2026-07-18
 
 **Mô tả:** Migration, seed, client và service đã có nhưng chưa có URL/anon key hoặc quyền truy cập project Supabase để áp dụng và kiểm tra.
 
 **Ảnh hưởng:** Local dùng fallback demo có ghi nhãn. Chưa thể tuyên bố database production hoạt động.
 
-**Cần làm:** Tạo project, áp migration/seed, cấu hình env và kiểm tra RLS/query thực tế.
+**Cách giải quyết:** Project đã có schema/seed từ SQL Editor; `.env.local` đã cấu hình. REST public, production build, `/courses` và một slug hợp lệ đều chạy thành công bằng dữ liệu Supabase.
+
+---
+
+## ISSUE-024 — Schema Supabase đang chạy khác migration trong repo
+
+**Trạng thái:** Resolved — 2026-07-18
+
+**Mô tả:** Database hiện được tạo từ `01_schema.sql`/`02_seed.sql` trong Downloads (3 program, 4 course). Migration trong repo mô tả biến thể 7 program và constraints chặt hơn, nhưng chưa được áp trên project này.
+
+**Ảnh hưởng:** App hiện tương thích và chạy đúng, nhưng không nên áp chồng migration repo lên database đã có mà chưa lập migration đối chiếu.
+
+**Cách giải quyết:** Đã xóa migration/seed cũ khỏi repo để không còn nguy cơ áp chồng nhầm. Khi thay đổi schema trong tương lai phải tạo baseline/migration mới từ database thực tế.
 
 ---
 
@@ -16,7 +28,7 @@
 
 **Trạng thái:** Open
 
-**Mô tả:** Bốn course, giá, thời lượng, lộ trình và giáo trình trong seed/fallback chỉ phục vụ phát triển theo chỉ đạo Task 03.
+**Mô tả:** Bốn course, giá, thời lượng, lộ trình và giáo trình hiện có trong Supabase chỉ phục vụ phát triển theo chỉ đạo Task 03.
 
 **Ảnh hưởng:** Không được dùng làm nội dung production hoặc cam kết đầu ra.
 
@@ -178,7 +190,7 @@
 ### Cập nhật Task 03 — 2026-07-18
 
 - Yêu cầu mới cho phép seed/demo để triển khai và kiểm tra module; `/courses` đã hoàn thành về kỹ thuật.
-- `ISSUE-009` vẫn Open ở góc độ nội dung production: seed/fallback không thay thế dữ liệu khách hàng duyệt.
+- `ISSUE-009` vẫn Open ở góc độ nội dung production: dữ liệu demo trong Supabase không thay thế dữ liệu khách hàng duyệt.
 
 ### Trạng thái Danh sách nhóm chương trình
 

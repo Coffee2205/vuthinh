@@ -238,16 +238,30 @@ Giai đoạn 1 — Website giáo dục hoàn chỉnh có thể deploy và hoạt
 
 ## Task tiếp theo
 
-Chờ người dùng chỉ định. Nếu tiếp tục vận hành catalog, bước gần nhất là tạo Supabase project, áp migration/seed và cấu hình env; không tự chuyển sang Task 04/05.
+Chờ người dùng chỉ định. Catalog đã kết nối Supabase; bước vận hành gần nhất là thay dữ liệu demo trong database và cấu hình env trên Vercel.
 
 ## Task 03 — Hoàn thành module catalog khóa học (2026-07-18)
 
 - `/programs` đọc program qua service và hiển thị số course thực tế từ nguồn dữ liệu.
 - `/courses` có card đầy đủ, filter/sort URL, demo notice, loading/empty/error.
 - `/courses/[slug]` có metadata động, tóm tắt, các section chi tiết, related course và 404.
-- Đã tạo migration 7 bảng, seed 4 course demo, RLS, trigger/index và Supabase server client.
-- Supabase production chưa kết nối; local hiện dùng fallback demo tương đương seed.
+- Catalog 7 bảng, RLS, trigger/index và Supabase server client đã hoạt động trên project Supabase.
+- Local bắt buộc đọc Supabase; không còn fallback khóa học trong source.
 - Lint/build đạt ngày 2026-07-18; runtime `/courses` HTTP 200.
+
+## Kết nối Supabase catalog — 2026-07-18
+
+- Đã cấu hình `.env.local` bằng Project URL và publishable key; file được Git ignore.
+- Supabase REST public trả HTTP 200 và đọc được 3 program hiện có.
+- `/courses` cùng `/courses/mat-goc-den-hsk-3` trả HTTP 200 từ dữ liệu Supabase thật; fallback notice không xuất hiện.
+- Production build đạt với `.env.local`.
+- Database hiện dùng bộ schema/seed đã chạy qua SQL Editor trong Downloads, gồm 3 program và 4 course demo; chưa phải nội dung production.
+
+## Supabase là nguồn dữ liệu khóa học duy nhất — 2026-07-18
+
+- Đã xóa fallback program/course khỏi `src/data` và loại bỏ toàn bộ nhánh fallback trong service/UI.
+- Đã xóa hai file SQL cũ trong repository vì không còn được dùng để vận hành database hiện tại.
+- Mọi route catalog giờ phụ thuộc Supabase; lỗi cấu hình/kết nối đi vào error boundary.
 
 ## Cập nhật tài liệu yêu cầu nội dung — 2026-07-17
 

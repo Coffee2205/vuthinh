@@ -1,5 +1,35 @@
 # Changelog
 
+## 2026-07-18 — Dùng Supabase làm nguồn catalog duy nhất
+
+### Removed
+
+- `src/data/course-fallback-data.ts` và toàn bộ logic fallback trong course service/UI.
+- Hai file migration/seed SQL cũ trong `supabase/` không còn khớp database đang vận hành.
+
+### Changed
+
+- Program, category, course và toàn bộ nội dung chi tiết bắt buộc đọc qua Supabase.
+- Thiếu env hoặc lỗi query được chuyển tới error boundary thay vì dữ liệu hard-code.
+
+## 2026-07-18 — Kết nối catalog với Supabase project
+
+### Configured
+
+- `.env.local` chứa Project URL và publishable key, được Git ignore.
+- Catalog local chuyển từ fallback sang dữ liệu Supabase thật.
+
+### Verified
+
+- Public REST trả HTTP 200 và đọc được 3 program theo RLS.
+- `/courses` và `/courses/mat-goc-den-hsk-3` trả HTTP 200; không có fallback notice.
+- `npm.cmd run build` đạt với môi trường Supabase.
+
+### Known issues
+
+- Database dùng bộ SQL Editor trong Downloads, khác migration repo; theo dõi tại `ISSUE-024`.
+- Dữ liệu hiện vẫn là demo và Vercel chưa được cấu hình env.
+
 ## 2026-07-18 — Hoàn thành Task 03: Programs & database-backed courses
 
 ### Added

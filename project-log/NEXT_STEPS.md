@@ -6,11 +6,11 @@
 
 ## Bước vận hành catalog còn lại
 
-1. Khách hàng tạo/cấp quyền Supabase project.
-2. Áp migration `202607180001_create_course_catalog.sql` và seed demo nếu cần staging.
-3. Cấu hình `NEXT_PUBLIC_SUPABASE_URL` và `NEXT_PUBLIC_SUPABASE_ANON_KEY`.
-4. Thay seed demo bằng dữ liệu khóa học, hình ảnh và giá đã duyệt.
-5. Kiểm tra RLS/query/runtime trên Supabase thực tế và thiết bị thật.
+1. Thay dữ liệu demo trong Supabase bằng dữ liệu khóa học, hình ảnh và giá đã duyệt.
+2. Xác lập quy trình migration/baseline mới nếu cần thay đổi schema về sau.
+3. Cấu hình `NEXT_PUBLIC_SUPABASE_URL`, publishable key và `NEXT_PUBLIC_SITE_URL` trên Vercel.
+4. Kiểm tra lại RLS và runtime trên deployment Vercel.
+5. Tiếp tục schema form/Auth/Storage khi người dùng yêu cầu Task 07.
 
 ## Chưa làm ngay
 
