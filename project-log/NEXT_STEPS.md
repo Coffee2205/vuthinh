@@ -1,5 +1,12 @@
 # Việc tiếp theo
 
+## Sau khi hoàn thành Task 09
+
+1. Không còn bước kỹ thuật bắt buộc của Task 09.
+2. Chủ sở hữu đổi mật khẩu admin đã dùng trong phiên QA và tiếp tục quản lý quyền GitHub/Vercel/Supabase/domain.
+3. Khi bổ sung ảnh/nội dung production thật, kiểm tra quyền sử dụng, dung lượng và hiển thị responsive trước khi publish.
+4. Task 08 vẫn còn mutation CRUD/status; chỉ tiếp tục khi người dùng yêu cầu quay lại Task 08.
+
 ## Task 08 — mutation còn lại sau khi có admin session
 
 1. Tạo và cập nhật một bản ghi QA có thể xóa/hoàn tác cho từng module khóa học, bài viết, tài liệu, cảm nhận và FAQ.

@@ -1,5 +1,13 @@
 # Trạng thái hiện tại
 
+## Hoàn thành Task 09 — 2026-07-20
+
+- Commit `69124e1` đã push `origin/dev` và được Vercel triển khai thành công lên `https://vuthinh.io.vn`.
+- Desktop/tablet/mobile, route/link, metadata, sitemap/robots, 404, admin protection và Image Optimization đã kiểm tra production.
+- Form học thử đã kiểm tra validation và submission thật bằng bản ghi QA; bản ghi được đối chiếu rồi xóa sạch.
+- Sitemap có 23 URL, tất cả HTTP 200; lint/build đạt. Tài liệu bàn giao đã hoàn thiện và không lưu secret.
+- Task 09 hoàn thành Definition of Done.
+
 ## Xác minh Task 08 bằng admin production — 2026-07-20
 
 - Tài khoản được cung cấp đăng nhập Supabase Auth và form production thành công; hồ sơ có role `admin`, active.

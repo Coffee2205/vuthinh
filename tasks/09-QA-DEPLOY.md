@@ -2,13 +2,13 @@
 
 ## Kiểm thử
 
-- [ ] Desktop.
-- [ ] Tablet.
-- [ ] Mobile.
+- [x] Desktop.
+- [x] Tablet.
+- [x] Mobile.
 - [x] Menu.
 - [x] Links.
-- [ ] Forms.
-- [ ] Validation.
+- [x] Forms.
+- [x] Validation.
 - [x] Loading.
 - [x] Error.
 - [x] Empty state.
@@ -19,20 +19,20 @@
 ## Hiệu năng
 
 - [x] Dùng `next/image`.
-- [ ] Không tải ảnh quá lớn.
+- [x] Không tải ảnh quá lớn.
 - [x] Hạn chế client component.
 - [x] Không import thư viện thừa.
 
 ## Deploy
 
-- [ ] Push GitHub.
+- [x] Push GitHub.
 - [x] Deploy production.
 - [x] Cấu hình environment variables.
 - [x] Kết nối domain.
 - [x] HTTPS.
-- [ ] Kiểm tra form production.
+- [x] Kiểm tra form production.
 - [x] Sitemap và robots.
-- [ ] Bàn giao tài khoản và hướng dẫn.
+- [x] Bàn giao tài khoản và hướng dẫn.
 
 ## Definition of Done
 
@@ -68,15 +68,23 @@ Website hoạt động được trên domain thật và nhận đăng ký thực
 
 ### Còn lại
 
-- Chưa kiểm tra trực quan bằng browser thật ở ba viewport desktop/tablet/mobile.
-- Chưa test submit form production và validation bằng dữ liệu thật được phép; chưa xác nhận bản ghi qua admin/Supabase.
-- Chưa đăng nhập admin để kiểm tra protection theo role và mutation thực tế.
-- Chưa kiểm tra kích thước file ảnh production vì nội dung/ảnh thật chưa đầy đủ.
-- Source Task 9 chưa push/redeploy; production hiện vẫn trả 404 cho `/robots.txt` và `/sitemap.xml` cho tới deployment kế tiếp.
-- Chưa bàn giao quyền tài khoản GitHub/Vercel/Supabase/domain; tài liệu hướng dẫn đã sẵn sàng.
+- Không còn hạng mục Task 09 chưa hoàn thành.
+- Nội dung/ảnh production thật vẫn cần chủ sở hữu duyệt khi bổ sung; đây là công việc vận hành nội dung, không chặn QA/deploy.
 
 ### Kiểm tra
 
 - `npm.cmd run lint`: đạt ngày 2026-07-20.
 - `npm.cmd run build`: đạt ngày 2026-07-20; TypeScript và 25 route build thành công.
 - Production route audit: các route public chính HTTP 200; `/admin` 307; URL lạ 404; domain dùng HTTPS.
+
+## Xác minh cuối sau deploy — 2026-07-20
+
+- Commit `69124e1` đã push lên `origin/dev`; Vercel tự động triển khai lên `https://vuthinh.io.vn`.
+- `/robots.txt` và `/sitemap.xml` trả HTTP 200. Sitemap có 23 URL; toàn bộ trả 200 và không có title lặp tên thương hiệu.
+- Chụp trực quan trang chủ bằng browser production tại desktop 1440px, tablet 768px và mobile breakpoint 500px: layout, CTA, card và menu nằm đúng viewport.
+- Form học thử production: payload thiếu/sai trả validation state HTTP 200; payload QA hợp lệ trả 303 tới success URL và tạo đúng một bản ghi.
+- Bản ghi có marker `TEST_ONLY_TASK09_20260720` đã được xác minh qua admin JWT, xóa thành công HTTP 204 và kiểm tra còn lại bằng 0.
+- Admin production đăng nhập thành công, role active và route protection đã xác minh.
+- Không có ảnh nội dung thật được tải tại năm route chính ở thời điểm QA; source không có `<img>` thô và ảnh Supabase bắt buộc đi qua Image Optimization.
+- Tài liệu bàn giao nằm tại `docs/DEPLOYMENT_HANDOFF.md`; mật khẩu/secret không được lưu trong repository. Chủ sở hữu tiếp tục giữ và quản lý quyền GitHub, Vercel, Supabase và domain.
+- Task 09 hoàn thành Definition of Done: domain HTTPS hoạt động và form production nhận được đăng ký thực tế.

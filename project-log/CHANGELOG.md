@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-07-20 — Hoàn thành Task 09
+
+- Deployed: commit `69124e1` qua Vercel; robots, sitemap, metadata và 404 mới đã live.
+- Verified: ba viewport browser, 23 URL sitemap, form validation/submission production, admin protection và cleanup QA.
+- Handoff: thêm hướng dẫn vận hành/tài khoản; không lưu credential hoặc secret trong repository.
+- Status: Task 09 hoàn thành Definition of Done.
+
 ## 2026-07-20 — Xác minh admin production
 
 - Verified: Supabase Auth, hồ sơ role admin active, login Server Action 303, dashboard/session HTTP 200 và unauthenticated redirect.
