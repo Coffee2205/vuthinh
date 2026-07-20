@@ -504,3 +504,5 @@ Admin production đã đăng nhập và đọc được toàn bộ route/bảng 
 `Article` JSON-LD đã triển khai từ type/service blog nhưng database hiện không có bài published trong sitemap để kiểm tra runtime. Logo và OG image thương hiệu chính thức cũng chưa có; không tạo tài sản giả. Cần kiểm tra lại khi chủ sở hữu publish bài và cung cấp asset chính thức.
 
 **Cập nhật 2026-07-20:** Phần logo/OG image đã được giải quyết bằng ba asset chính thức do chủ sở hữu cung cấp. Issue vẫn Open chỉ vì chưa có bài blog published để xác minh `Article` JSON-LD runtime.
+
+Không có issue source mới từ thay đổi favicon; trình duyệt có thể cần xóa cache sau lần deploy đầu tiên.

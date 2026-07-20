@@ -366,3 +366,4 @@ Chờ người dùng chỉ định. Catalog đã kết nối Supabase; bước v
 
 - Ba asset logo chính thức đã nằm tại `public/images/brand` và được dùng đúng ngữ cảnh ở Header, Footer, favicon, metadata chia sẻ và JSON-LD tổ chức.
 - Lint/build đạt sau thay đổi; 25 route build thành công.
+- Favicon mẫu đã được thay bằng logo biểu tượng Vũ Thịnh 512×512; route `/icon.png` build tĩnh thành công.

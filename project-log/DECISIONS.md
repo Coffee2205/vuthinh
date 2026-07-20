@@ -326,3 +326,5 @@ Metadata dùng helper chung để giữ canonical/Open Graph/Twitter nhất quá
 ## 2026-07-20 — Phân vai ba biến thể logo chính thức
 
 Logo biểu tượng nền trong suốt dùng cho vị trí nhỏ và favicon; logo có chữ nền trong suốt dùng ở Footer; logo có chữ nền trắng dùng cho Open Graph/Twitter và `EducationalOrganization.logo` để nhận diện rõ trên nền do nền tảng tìm kiếm hoặc mạng xã hội kiểm soát.
+
+Favicon dùng file convention `src/app/icon.png` 512×512 của App Router thay cho `favicon.ico` mẫu; metadata để Next.js tự sinh đường dẫn icon nhằm tránh trình duyệt tiếp tục ưu tiên asset mặc định.

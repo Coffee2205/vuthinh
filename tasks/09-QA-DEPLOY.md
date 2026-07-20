@@ -132,3 +132,8 @@ Website hoạt động được trên domain thật và nhận đăng ký thực
 - Logo biểu tượng nền trong suốt dùng ở Header và favicon; logo có chữ nền trong suốt dùng ở Footer; logo có chữ nền trắng dùng làm ảnh Open Graph/Twitter mặc định và `EducationalOrganization.logo`.
 - `npm.cmd run lint`: đạt.
 - `npm.cmd run build`: đạt; TypeScript và 25 route build thành công.
+
+### Favicon thương hiệu
+
+- Đã thay `src/app/favicon.ico` mặc định bằng `src/app/icon.png` 512×512 tạo từ logo biểu tượng chính thức.
+- Next.js nhận diện `/icon.png`; lint và build đạt.

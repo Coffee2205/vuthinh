@@ -811,6 +811,12 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 - `npm.cmd run lint` đạt.
 - `npm.cmd run build` đạt; 25 route build thành công.
 
+## 2026-07-20 — Thay favicon mặc định
+
+- Xóa favicon mẫu và thêm `src/app/icon.png` 512×512 từ biểu tượng Vũ Thịnh.
+- Bỏ cấu hình icon thủ công để Next.js App Router tự xuất `/icon.png`.
+- Lint/build đạt; route icon được prerender tĩnh.
+
 ## 2026-07-17 — Bắt đầu Task 05 với khung danh mục Blog
 
 ### Added
