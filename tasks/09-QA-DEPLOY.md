@@ -156,3 +156,8 @@ Website hoạt động được trên domain thật và nhận đăng ký thực
 - Project không có test script riêng.
 - Runtime local production: `/`, `/about`, `/courses`, một course detail, `/blog`, một blog detail, `/robots.txt`, `/sitemap.xml`, `/admin/login` đều HTTP 200.
 - Các page HTML được kiểm tra có đúng một H1, description và canonical; public index/follow, admin login noindex/nofollow; Course/Article detail có BreadcrumbList hợp lệ.
+
+### Favicon trong kết quả tìm kiếm
+
+- Chuyển favicon sang URL ổn định `/favicon.png`, PNG vuông 512×512 và khai báo `rel="icon"`/`apple-touch-icon` trong root metadata.
+- Trang chủ và favicon đều được robots cho phép crawl; cần yêu cầu Google index lại trang chủ và chờ hệ thống xử lý.

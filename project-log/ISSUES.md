@@ -516,3 +516,5 @@ Database hiện có bài blog published và `Article` đã được kiểm tra r
 **Trạng thái:** Open — vận hành SEO
 
 Source, sitemap và robots đã sẵn sàng nhưng cần chủ sở hữu thêm/xác minh property domain, gửi sitemap và theo dõi index/rich results sau khi commit được Vercel triển khai.
+
+Favicon source đã đạt yêu cầu kỹ thuật; Google không bảo đảm hiển thị và có thể mất vài ngày đến vài tuần sau khi crawl lại trang chủ.

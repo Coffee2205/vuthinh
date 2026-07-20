@@ -15,6 +15,10 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
   creator: siteConfig.name,
   publisher: siteConfig.organizationName,
+  icons: {
+    icon: [{ url: "/favicon.png", type: "image/png", sizes: "512x512" }],
+    apple: [{ url: "/favicon.png", type: "image/png", sizes: "512x512" }],
+  },
   robots: { index: true, follow: true },
   openGraph: { type: "website", locale: "vi_VN", siteName: siteConfig.name, title: siteConfig.title, description: siteConfig.description, url: "/", images: [{ url: siteConfig.socialImage, alt: `Logo ${siteConfig.name}` }] },
   twitter: { card: "summary_large_image", title: siteConfig.title, description: siteConfig.description, images: [siteConfig.socialImage] },

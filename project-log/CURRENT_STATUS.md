@@ -373,3 +373,4 @@ Chờ người dùng chỉ định. Catalog đã kết nối Supabase; bước v
 - Root title/description và H1 trang chủ đã định vị rõ giáo dục tiếng Trung, HSK, kỹ năng sống, quản lý cảm xúc, phát triển bản thân và tư vấn học tập.
 - Public metadata/canonical/index control đạt; admin noindex/nofollow; course/blog/resource detail có BreadcrumbList khớp breadcrumb giao diện.
 - Lint/build và runtime audit các route bắt buộc đạt.
+- Favicon tìm kiếm dùng URL ổn định `/favicon.png`, kích thước 512×512 và được khai báo trực tiếp trong metadata.

@@ -332,3 +332,5 @@ Favicon dùng file convention `src/app/icon.png` 512×512 của App Router thay 
 ## 2026-07-20 — SEO dùng định vị rõ và breadcrumb khớp giao diện
 
 Tên hiển thị thương hiệu vẫn là `Vũ Thịnh`, còn tên tổ chức có ngữ cảnh là `Vũ Thịnh Education`. Root title/H1 nêu rõ giáo dục tiếng Trung và phát triển bản thân. BreadcrumbList được sinh cùng component breadcrumb giao diện, nên chỉ xuất hiện tại detail page thực sự hiển thị đường dẫn điều hướng.
+
+Favicon phục vụ Google Search dùng asset public tại `/favicon.png` thay cho URL file-convention có query hash, nhằm giữ URL ổn định giữa các lần build.

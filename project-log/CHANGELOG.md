@@ -835,6 +835,12 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 - Lint/build đạt; không có test script riêng.
 - Runtime audit list/detail, robots, sitemap và admin login đạt; mỗi page được kiểm tra có một H1 và metadata/index control đúng.
 
+## 2026-07-20 — Ổn định favicon cho Google Search
+
+- Chuyển favicon thương hiệu 512×512 sang `public/favicon.png`.
+- Root metadata khai báo icon và Apple icon bằng URL `/favicon.png` ổn định.
+- Xác minh production trước thay đổi đã crawl được trang chủ/icon và robots không chặn asset.
+
 ## 2026-07-17 — Bắt đầu Task 05 với khung danh mục Blog
 
 ### Added

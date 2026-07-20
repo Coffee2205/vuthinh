@@ -110,3 +110,4 @@
 
 1. Gửi sitemap production trong Google Search Console và yêu cầu index các URL ưu tiên.
 2. Theo dõi Page indexing, Rich results và Core Web Vitals sau khi Google crawl lại.
+3. Dùng URL Inspection yêu cầu index lại trang chủ để Google cập nhật favicon; thời gian xử lý có thể từ vài ngày đến vài tuần.
