@@ -105,3 +105,8 @@
 
 1. Push commit logo để Vercel triển khai, sau đó kiểm tra Header/Footer và ảnh chia sẻ trên domain production.
 2. Sau deploy, tải lại cứng hoặc xóa cache favicon nếu tab vẫn hiện icon cũ.
+
+## Sau SEO on-page
+
+1. Gửi sitemap production trong Google Search Console và yêu cầu index các URL ưu tiên.
+2. Theo dõi Page indexing, Rich results và Core Web Vitals sau khi Google crawl lại.

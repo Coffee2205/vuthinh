@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         publishedTime: post.published_at || undefined,
         modifiedTime: post.updated_at,
         authors: post.author ? [post.author.full_name] : undefined,
-        images: image ? [image] : undefined,
+        images: [image ?? { url: siteConfig.socialImage, alt: `Logo ${siteConfig.name}` }],
       },
     };
   } catch (error) {

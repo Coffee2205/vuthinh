@@ -14,7 +14,8 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   alternates: { canonical: "/" },
   creator: siteConfig.name,
-  publisher: siteConfig.name,
+  publisher: siteConfig.organizationName,
+  robots: { index: true, follow: true },
   openGraph: { type: "website", locale: "vi_VN", siteName: siteConfig.name, title: siteConfig.title, description: siteConfig.description, url: "/", images: [{ url: siteConfig.socialImage, alt: `Logo ${siteConfig.name}` }] },
   twitter: { card: "summary_large_image", title: siteConfig.title, description: siteConfig.description, images: [siteConfig.socialImage] },
 };

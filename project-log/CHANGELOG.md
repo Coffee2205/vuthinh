@@ -817,6 +817,24 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 - Bỏ cấu hình icon thủ công để Next.js App Router tự xuất `/icon.png`.
 - Lint/build đạt; route icon được prerender tĩnh.
 
+## 2026-07-20 — Hoàn thiện SEO on-page và structured data
+
+### Changed
+
+- Root title, description, publisher và robots theo định vị Vũ Thịnh Education.
+- H1 trang chủ nêu rõ giáo dục tiếng Trung và phát triển bản thân; Header có link `/courses`.
+- Admin login/protected layout có canonical riêng và noindex/nofollow.
+- Blog detail giữ ảnh OG mặc định khi bài chưa có cover.
+
+### Added
+
+- `BreadcrumbJsonLd` tái sử dụng cho course/blog/resource detail thông qua breadcrumb giao diện.
+
+### Verified
+
+- Lint/build đạt; không có test script riêng.
+- Runtime audit list/detail, robots, sitemap và admin login đạt; mỗi page được kiểm tra có một H1 và metadata/index control đúng.
+
 ## 2026-07-17 — Bắt đầu Task 05 với khung danh mục Blog
 
 ### Added

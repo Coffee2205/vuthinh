@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 
 export const siteConfig = {
   name: "Vũ Thịnh",
+  organizationName: "Vũ Thịnh Education",
   url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://vuthinh.io.vn").replace(/\/$/, ""),
-  title: "Vũ Thịnh | Hệ sinh thái giáo dục gia đình",
+  title: "Vũ Thịnh – Giáo dục tiếng Trung và phát triển bản thân",
   description:
-    "Vũ Thịnh đồng hành cùng gia đình qua chương trình tiếng Trung, kỹ năng sống và phát triển nội tâm.",
+    "Vũ Thịnh Education cung cấp chương trình tiếng Trung, luyện thi HSK, kỹ năng sống, quản lý cảm xúc và tư vấn học tập phù hợp cho từng gia đình.",
   mark: "/images/brand/vu-thinh-mark-transparent.png",
   wordmark: "/images/brand/vu-thinh-wordmark-transparent.png",
   socialImage: "/images/brand/vu-thinh-wordmark-white.png",

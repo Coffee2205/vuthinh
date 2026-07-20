@@ -367,3 +367,9 @@ Chờ người dùng chỉ định. Catalog đã kết nối Supabase; bước v
 - Ba asset logo chính thức đã nằm tại `public/images/brand` và được dùng đúng ngữ cảnh ở Header, Footer, favicon, metadata chia sẻ và JSON-LD tổ chức.
 - Lint/build đạt sau thay đổi; 25 route build thành công.
 - Favicon mẫu đã được thay bằng logo biểu tượng Vũ Thịnh 512×512; route `/icon.png` build tĩnh thành công.
+
+## SEO on-page hoàn chỉnh — 2026-07-20
+
+- Root title/description và H1 trang chủ đã định vị rõ giáo dục tiếng Trung, HSK, kỹ năng sống, quản lý cảm xúc, phát triển bản thân và tư vấn học tập.
+- Public metadata/canonical/index control đạt; admin noindex/nofollow; course/blog/resource detail có BreadcrumbList khớp breadcrumb giao diện.
+- Lint/build và runtime audit các route bắt buộc đạt.

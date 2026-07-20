@@ -137,3 +137,22 @@ Website hoạt động được trên domain thật và nhận đăng ký thực
 
 - Đã thay `src/app/favicon.ico` mặc định bằng `src/app/icon.png` 512×512 tạo từ logo biểu tượng chính thức.
 - Next.js nhận diện `/icon.png`; lint và build đạt.
+
+## Hoàn thiện SEO on-page và structured data — 2026-07-20
+
+### Đã hoàn thành
+
+- Root metadata dùng domain từ `NEXT_PUBLIC_SITE_URL`, fallback `https://vuthinh.io.vn`; title mặc định là `Vũ Thịnh – Giáo dục tiếng Trung và phát triển bản thân` và description bao quát tiếng Trung, HSK, kỹ năng sống, quản lý cảm xúc, tư vấn học tập.
+- Root khai báo index/follow; admin và admin login giữ noindex/nofollow, có canonical riêng để không kế thừa canonical trang chủ.
+- H1 trang chủ được làm rõ lĩnh vực giáo dục tiếng Trung và phát triển bản thân; Header bổ sung link nội bộ mô tả rõ tới `/courses`.
+- Thêm component `BreadcrumbJsonLd` tái sử dụng qua breadcrumb giao diện cho course, blog và resource detail; schema dùng URL tuyệt đối và dữ liệu title/slug đang render.
+- Giữ nguyên Organization, WebSite, Article, Course, Person và FAQPage từ dữ liệu thật; không thêm rating, review hoặc số liệu giả.
+- Blog detail không có cover vẫn dùng ảnh Open Graph thương hiệu mặc định.
+
+### Kiểm tra
+
+- `npm.cmd run lint`: đạt.
+- `npm.cmd run build`: đạt; 25 route và `/icon.png` build thành công.
+- Project không có test script riêng.
+- Runtime local production: `/`, `/about`, `/courses`, một course detail, `/blog`, một blog detail, `/robots.txt`, `/sitemap.xml`, `/admin/login` đều HTTP 200.
+- Các page HTML được kiểm tra có đúng một H1, description và canonical; public index/follow, admin login noindex/nofollow; Course/Article detail có BreadcrumbList hợp lệ.

@@ -506,3 +506,13 @@ Admin production đã đăng nhập và đọc được toàn bộ route/bảng 
 **Cập nhật 2026-07-20:** Phần logo/OG image đã được giải quyết bằng ba asset chính thức do chủ sở hữu cung cấp. Issue vẫn Open chỉ vì chưa có bài blog published để xác minh `Article` JSON-LD runtime.
 
 Không có issue source mới từ thay đổi favicon; trình duyệt có thể cần xóa cache sau lần deploy đầu tiên.
+
+## Cập nhật ISSUE-037 — Resolved 2026-07-20
+
+Database hiện có bài blog published và `Article` đã được kiểm tra runtime cùng `BreadcrumbList`. Logo/OG image chính thức cũng đã tích hợp. Không còn blocker structured data đã nêu trong ISSUE-037.
+
+## ISSUE-038 — Google Search Console cần xác minh sau deploy
+
+**Trạng thái:** Open — vận hành SEO
+
+Source, sitemap và robots đã sẵn sàng nhưng cần chủ sở hữu thêm/xác minh property domain, gửi sitemap và theo dõi index/rich results sau khi commit được Vercel triển khai.

@@ -328,3 +328,7 @@ Metadata dùng helper chung để giữ canonical/Open Graph/Twitter nhất quá
 Logo biểu tượng nền trong suốt dùng cho vị trí nhỏ và favicon; logo có chữ nền trong suốt dùng ở Footer; logo có chữ nền trắng dùng cho Open Graph/Twitter và `EducationalOrganization.logo` để nhận diện rõ trên nền do nền tảng tìm kiếm hoặc mạng xã hội kiểm soát.
 
 Favicon dùng file convention `src/app/icon.png` 512×512 của App Router thay cho `favicon.ico` mẫu; metadata để Next.js tự sinh đường dẫn icon nhằm tránh trình duyệt tiếp tục ưu tiên asset mặc định.
+
+## 2026-07-20 — SEO dùng định vị rõ và breadcrumb khớp giao diện
+
+Tên hiển thị thương hiệu vẫn là `Vũ Thịnh`, còn tên tổ chức có ngữ cảnh là `Vũ Thịnh Education`. Root title/H1 nêu rõ giáo dục tiếng Trung và phát triển bản thân. BreadcrumbList được sinh cùng component breadcrumb giao diện, nên chỉ xuất hiện tại detail page thực sự hiển thị đường dẫn điều hướng.
