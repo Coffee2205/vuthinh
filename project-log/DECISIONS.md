@@ -310,3 +310,11 @@ Resource public không liên kết trực tiếp từ card. Trang chi tiết g�
 ## 2026-07-18 — Public forms Task 06 dùng một form component và payload allowlist
 
 Contact, trial/course và job application dùng chung Client Component cho pending/field errors, nhưng mỗi Server Action có Zod schema và danh sách cột riêng. CV không được upload khi private Storage chưa triển khai; pháp lý chỉ là nội dung tạm có cảnh báo cần duyệt.
+
+## 2026-07-20 — Sitemap chịu lỗi từng nguồn và ảnh chỉ tối ưu từ Supabase
+
+Sitemap luôn xuất các route public tĩnh và dùng `Promise.allSettled` cho course/blog/resource để một bảng lỗi không làm route SEO trả 500. Image Optimization chỉ cho phép host HTTPS thuộc Supabase; không mở proxy ảnh cho mọi host. Không gửi dữ liệu QA giả vào form production khi chưa có admin session/quy trình xóa đối chiếu.
+
+## 2026-07-20 — Chỉ xác nhận CRUD sau mutation có thể hoàn tác
+
+Admin login, protection, dashboard và quyền đọc được đánh dấu khi đã kiểm tra production bằng session thật. Các mục CRUD/status tiếp tục để mở cho tới khi có bản ghi QA riêng, kiểm tra insert/update/delete hoặc archive và hoàn tác sạch; không dùng dữ liệu khách hàng thật để thử mutation.

@@ -5,7 +5,7 @@ import { BlogCategoryFilter } from "@/components/blog/BlogCategoryFilter";
 import { Container } from "@/components/common/Container";
 import { getActiveBlogCategories, getFeaturedBlogPosts, getPublishedBlogPosts } from "@/services/blog.service";
 
-export const metadata: Metadata = { title: "Blog kiến thức | Vũ Thịnh", description: "Kiến thức về tiếng Trung, HSK, phương pháp học và lộ trình học tập tại Vũ Thịnh." };
+export const metadata: Metadata = { title: "Blog kiến thức", description: "Kiến thức về tiếng Trung, HSK, phương pháp học và lộ trình học tập tại Vũ Thịnh." };
 export default async function BlogPage({ searchParams }: { searchParams: Promise<{ category?: string }> }) {
   const { category } = await searchParams;
   const [categories, posts, featured] = await Promise.all([getActiveBlogCategories(), getPublishedBlogPosts({ categorySlug: category }), getFeaturedBlogPosts()]);

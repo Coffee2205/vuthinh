@@ -7,7 +7,7 @@ import { CourseGrid } from "@/components/courses/CourseGrid";
 import { getActivePrograms, getPublishedCourses } from "@/services/course.service";
 import type { CourseSort } from "@/types/course";
 
-export const metadata: Metadata = { title: "Các khóa học | Vũ Thịnh", description: "Khám phá các khóa học tiếng Trung và chương trình phát triển năng lực tại Vũ Thịnh.", alternates: { canonical: "/courses" }, openGraph: { title: "Các khóa học | Vũ Thịnh", description: "Chọn khóa học phù hợp với mục tiêu học tập của bạn và gia đình.", url: "/courses", type: "website" } };
+export const metadata: Metadata = { title: "Các khóa học", description: "Khám phá các khóa học tiếng Trung và chương trình phát triển năng lực tại Vũ Thịnh.", alternates: { canonical: "/courses" }, openGraph: { title: "Các khóa học | Vũ Thịnh", description: "Chọn khóa học phù hợp với mục tiêu học tập của bạn và gia đình.", url: "/courses", type: "website" } };
 const sorts: CourseSort[] = ["default", "newest", "price-asc", "price-desc"];
 export default async function CoursesPage({ searchParams }: { searchParams: Promise<{ program?: string; sort?: string }> }) {
   const params = await searchParams; const sort = sorts.includes(params.sort as CourseSort) ? params.sort as CourseSort : "default";

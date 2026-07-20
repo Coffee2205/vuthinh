@@ -480,3 +480,17 @@ Source chỉ có consultation form; contact/trial/course/job/resource registrati
 ## Cập nhật ISSUE-015 — Resolved 2026-07-18
 
 Form học thử trang chủ đã kết nối `trial_registrations` qua Zod/Server Action/service, có pending/error/success; RLS insert/private select đã kiểm tra.
+
+## ISSUE-035 — Task 09 còn thiếu kiểm tra production có quyền
+
+**Trạng thái:** Open — Blocker hoàn thành Task 09
+
+Source QA đã lint/build đạt và domain HTTPS hoạt động, nhưng chưa có browser QA thật cho desktop/tablet/mobile, chưa có submission production được phép để đối chiếu, chưa có admin session để test role/mutation và chưa bàn giao quyền các dịch vụ. Source sitemap/robots/404/metadata mới chưa push/redeploy; production ngày 2026-07-20 vẫn trả 404 cho sitemap và robots.
+
+**Cập nhật 2026-07-20:** Đã có và xác minh admin session production; phần role/login/route read không còn là blocker. Mutation admin và form production vẫn chưa kiểm tra.
+
+## ISSUE-036 — Admin CRUD chưa có Delete và chưa xác minh mutation
+
+**Trạng thái:** Open — Blocker hoàn thành Task 08
+
+Admin production đã đăng nhập và đọc được toàn bộ route/bảng bắt buộc. Tuy nhiên editor mới có insert/update, chưa có Delete hoặc quy ước archive đầy đủ; quan hệ nhiều dòng chưa quản lý và chưa chạy mutation QA thực tế cho năm module nội dung cùng ba loại request.

@@ -1,5 +1,19 @@
 # Changelog
 
+## 2026-07-20 — Xác minh admin production
+
+- Verified: Supabase Auth, hồ sơ role admin active, login Server Action 303, dashboard/session HTTP 200 và unauthenticated redirect.
+- Verified: toàn bộ route courses/posts/resources/testimonials/faqs/registrations/consultations tải HTTP 200 trong admin session.
+- Changed docs: đánh dấu login, protection, dashboard và hai trang request đã hoàn thành.
+- Remaining: mutation CRUD/status, Delete/archive và editor quan hệ nhiều dòng.
+
+## 2026-07-20 — Task 09 QA và chuẩn bị redeploy
+
+- Added: sitemap động chịu lỗi từng nguồn, robots, trang 404 và hướng dẫn bàn giao production.
+- Changed: loại bỏ title thương hiệu bị lặp; bật Next Image Optimization cho ảnh Supabase.
+- Verified: production domain/HTTPS/routes/admin redirect/404; ESLint và production build đạt.
+- Remaining: browser QA ba viewport, form production + admin session, kiểm tra kích thước ảnh thật, commit/push/redeploy và bàn giao tài khoản.
+
 ## 2026-07-18 — Task 08 admin foundation
 
 - Added: Supabase cookie auth, login/logout, server guard, responsive shell và toàn bộ route bắt buộc.

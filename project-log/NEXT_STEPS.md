@@ -1,5 +1,22 @@
 # Việc tiếp theo
 
+## Task 08 — mutation còn lại sau khi có admin session
+
+1. Tạo và cập nhật một bản ghi QA có thể xóa/hoàn tác cho từng module khóa học, bài viết, tài liệu, cảm nhận và FAQ.
+2. Kiểm tra cập nhật trạng thái/ghi chú cho đăng ký học, học thử và tư vấn bằng bản ghi QA, không sửa dữ liệu khách hàng thật.
+3. Bổ sung thao tác Delete hoặc thống nhất dùng archive để hoàn tất ý nghĩa CRUD.
+4. Hoàn thiện editor quan hệ nhiều dòng và selector danh mục thay cho nhập UUID thủ công.
+5. Chỉ đánh dấu các mục CRUD/status sau khi xác minh RLS và mutation production thành công.
+
+## Task 09 — bước tiếp theo 2026-07-20
+
+1. Rà soát trực quan production ở desktop, tablet và mobile; kiểm tra menu bằng thao tác thật.
+2. Dùng một đăng ký thật được chủ sở hữu cho phép để test form/validation production, sau đó đối chiếu bản ghi trong admin hoặc Supabase.
+3. Đăng nhập tài khoản admin active để kiểm tra role protection và mutation thực tế.
+4. Tách/xác nhận các thay đổi Task 08 đang có trong worktree, commit/push Task 9 và chờ Vercel redeploy.
+5. Sau deploy, xác nhận `/robots.txt`, `/sitemap.xml`, title không lặp và trang 404 tùy biến trên `vuthinh.io.vn`.
+6. Bàn giao quyền GitHub, Vercel, Supabase và domain theo `docs/DEPLOYMENT_HANDOFF.md`.
+
 ## Task 08 — bước tiếp theo 2026-07-18
 
 1. Chủ dự án tạo/xác nhận Supabase Auth user và `user_profiles` role `admin`, trạng thái active.

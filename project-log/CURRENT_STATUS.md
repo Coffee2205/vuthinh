@@ -1,5 +1,19 @@
 # Trạng thái hiện tại
 
+## Xác minh Task 08 bằng admin production — 2026-07-20
+
+- Tài khoản được cung cấp đăng nhập Supabase Auth và form production thành công; hồ sơ có role `admin`, active.
+- Dashboard cùng toàn bộ tám route quản trị bắt buộc trả HTTP 200 trong admin session; unauthenticated protection vẫn redirect về login.
+- Task 08 đã hoàn thành các mục login, route protection, dashboard, xem đăng ký và xem tư vấn.
+- Còn thiếu kiểm thử mutation thực tế; CRUD chưa có Delete và editor chưa quản lý quan hệ nhiều dòng. Task 08 vẫn chưa hoàn thành.
+
+## Cập nhật Task 09 — 2026-07-20
+
+- Task 09 đã hoàn thiện phần QA source: sửa metadata title, thêm sitemap/robots, trang 404 và bật Image Optimization cho ảnh Supabase.
+- Production `https://vuthinh.io.vn` đã xác minh HTTPS, route public, redirect admin và HTTP 404; production hiện chưa có sitemap/robots do source mới chưa push/redeploy.
+- Lint/build đạt. Task 09 chưa hoàn thành Definition of Done vì chưa kiểm tra trực quan ba viewport, chưa submit/đối chiếu form production bằng dữ liệu thật, chưa test admin có session và chưa bàn giao tài khoản.
+- Worktree có thay đổi Task 08 và migration từ trước phiên; chưa commit/push để tránh gộp thay đổi chưa được xác nhận.
+
 ## Cập nhật Task 08 — 2026-07-18
 
 - Task 08 — Admin cơ bản: **chưa hoàn thành**.
