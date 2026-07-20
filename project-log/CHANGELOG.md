@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-07-20 — SEO metadata, thương hiệu và JSON-LD
+
+- Added: SEO config dùng chung và JSON-LD component an toàn.
+- Changed: metadata/canonical/Open Graph/Twitter cho public pages; careers detail dùng metadata theo slug.
+- Added: EducationalOrganization/WebSite, Course, Article, Person và FAQPage structured data từ dữ liệu thật.
+- Verified: lint/build đạt; 16 public route runtime có metadata đầy đủ; năm nhóm JSON-LD khả dụng parse hợp lệ, trừ Article chưa có bản ghi published để chạy runtime.
+
 ## 2026-07-20 — Hoàn thành Task 09
 
 - Deployed: commit `69124e1` qua Vercel; robots, sitemap, metadata và 404 mới đã live.

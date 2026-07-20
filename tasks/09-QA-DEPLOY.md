@@ -88,3 +88,40 @@ Website hoạt động được trên domain thật và nhận đăng ký thực
 - Không có ảnh nội dung thật được tải tại năm route chính ở thời điểm QA; source không có `<img>` thô và ảnh Supabase bắt buộc đi qua Image Optimization.
 - Tài liệu bàn giao nằm tại `docs/DEPLOYMENT_HANDOFF.md`; mật khẩu/secret không được lưu trong repository. Chủ sở hữu tiếp tục giữ và quản lý quyền GitHub, Vercel, Supabase và domain.
 - Task 09 hoàn thành Definition of Done: domain HTTPS hoạt động và form production nhận được đăng ký thực tế.
+
+## Hoàn thiện SEO mục 2–4 — 2026-07-20
+
+### Phạm vi hoàn thành
+
+- Chuẩn hóa metadata cho public pages: title, description, canonical, Open Graph và Twitter card dùng chung qua `src/lib/seo.ts`.
+- Trang chủ có metadata tuyệt đối cho thương hiệu; root layout khai báo `applicationName`, creator, publisher, metadata base và tín hiệu thương hiệu nhất quán.
+- Bổ sung `generateMetadata` theo slug cho `/careers/[slug]`; course, blog, resource và expert tiếp tục đọc đúng dữ liệu Supabase hiện đang render.
+- Metadata route động không tìm thấy đặt `noindex`; `/privacy-policy` tiếp tục redirect canonical sang `/privacy`; các success/admin page giữ `noindex`.
+- Thêm JSON-LD Server Component an toàn, escape ký tự `<` trước khi chèn script.
+- Trang chủ xuất `EducationalOrganization` và `WebSite`; organization dùng đúng khóa public trong `site_settings`, chỉ nhận social URL HTTP/HTTPS.
+- Chi tiết khóa học xuất `Course`, bài blog xuất `Article`, chuyên gia xuất `Person`, FAQ xuất `FAQPage` từ đúng dữ liệu đang hiển thị.
+
+### File tạo hoặc sửa
+
+- Tạo `src/lib/seo.ts`, `src/components/common/JsonLd.tsx`.
+- Sửa root layout, trang chủ và metadata các public list/form/legal pages.
+- Sửa route động course, blog, resource, expert, careers và FAQ để bổ sung metadata/JSON-LD phù hợp.
+- Không sửa sitemap, robots, database, admin hoặc nội dung nghiệp vụ.
+
+### Quyết định kỹ thuật
+
+- Không tự tạo logo, địa chỉ, social profile, rating, lịch khai giảng hoặc dữ liệu doanh nghiệp chưa có.
+- `Course` chỉ có `Offer` khi giá là số thật; `Article`, `Person` và `FAQPage` chỉ xuất field hiện diện trong type/service.
+- Không thêm `JobPosting` trong phiên này vì yêu cầu structured data ưu tiên course/post/FAQ/expert và dữ liệu job hiện chưa đủ để mở rộng an toàn.
+
+### Vấn đề còn lại
+
+- Database hiện chưa có blog post published trong sitemap nên `Article` đã lint/build nhưng chưa có bản ghi thật để kiểm tra runtime HTML.
+- Chưa có logo/OG image thương hiệu chính thức; không tạo hoặc dùng ảnh giả trong metadata.
+
+### Kiểm tra
+
+- `npm.cmd run lint`: đạt.
+- `npm.cmd run build`: đạt; 25 route build thành công.
+- Runtime production build local: 16 public route HTTP 200 và đều có canonical, description, Open Graph, Twitter.
+- JSON-LD parse thành công: `EducationalOrganization`, `WebSite`, `Course`, `Person`, `FAQPage`.

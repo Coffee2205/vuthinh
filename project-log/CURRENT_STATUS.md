@@ -1,5 +1,12 @@
 # Trạng thái hiện tại
 
+## SEO metadata, thương hiệu và JSON-LD — 2026-07-20
+
+- Hoàn thiện đúng ba mục SEO được yêu cầu: metadata public pages, tín hiệu thương hiệu Vũ Thịnh và structured data.
+- 16 public route runtime có canonical/description/Open Graph/Twitter; careers detail có metadata theo slug.
+- JSON-LD hợp lệ cho EducationalOrganization/WebSite, Course, Article, Person và FAQPage; Article chưa có dữ liệu published để kiểm tra runtime.
+- Lint/build đạt; không thay đổi sitemap, robots, database, admin hoặc nội dung nghiệp vụ.
+
 ## Hoàn thành Task 09 — 2026-07-20
 
 - Commit `69124e1` đã push `origin/dev` và được Vercel triển khai thành công lên `https://vuthinh.io.vn`.

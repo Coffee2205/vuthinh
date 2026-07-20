@@ -2,15 +2,21 @@ import type { Metadata } from "next";
 import { Be_Vietnam_Pro } from "next/font/google";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { siteConfig } from "@/lib/seo";
 import "./globals.css";
 
 const beVietnamPro = Be_Vietnam_Pro({ variable: "--font-be-vietnam-pro", subsets: ["latin", "vietnamese"], weight: ["400", "500", "600", "700"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
-  title: { default: "Vũ Thịnh | Hệ sinh thái giáo dục gia đình", template: "%s | Vũ Thịnh" },
-  description: "Chương trình tiếng Trung, kỹ năng sống và phát triển nội tâm dành cho gia đình.",
-  openGraph: { type: "website", locale: "vi_VN", siteName: "Vũ Thịnh", title: "Vũ Thịnh | Hệ sinh thái giáo dục gia đình", description: "Chương trình tiếng Trung, kỹ năng sống và phát triển nội tâm dành cho gia đình." },
+  metadataBase: new URL(siteConfig.url),
+  applicationName: siteConfig.name,
+  title: { default: siteConfig.title, template: `%s | ${siteConfig.name}` },
+  description: siteConfig.description,
+  alternates: { canonical: "/" },
+  creator: siteConfig.name,
+  publisher: siteConfig.name,
+  openGraph: { type: "website", locale: "vi_VN", siteName: siteConfig.name, title: siteConfig.title, description: siteConfig.description, url: "/" },
+  twitter: { card: "summary", title: siteConfig.title, description: siteConfig.description },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

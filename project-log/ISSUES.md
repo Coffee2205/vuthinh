@@ -496,3 +496,9 @@ Source QA đã lint/build đạt và domain HTTPS hoạt động, nhưng chưa c
 **Trạng thái:** Open — Blocker hoàn thành Task 08
 
 Admin production đã đăng nhập và đọc được toàn bộ route/bảng bắt buộc. Tuy nhiên editor mới có insert/update, chưa có Delete hoặc quy ước archive đầy đủ; quan hệ nhiều dòng chưa quản lý và chưa chạy mutation QA thực tế cho năm module nội dung cùng ba loại request.
+
+## ISSUE-037 — Thiếu dữ liệu thật để xác minh toàn bộ structured data
+
+**Trạng thái:** Open — Không chặn build
+
+`Article` JSON-LD đã triển khai từ type/service blog nhưng database hiện không có bài published trong sitemap để kiểm tra runtime. Logo và OG image thương hiệu chính thức cũng chưa có; không tạo tài sản giả. Cần kiểm tra lại khi chủ sở hữu publish bài và cung cấp asset chính thức.

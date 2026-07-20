@@ -6,16 +6,49 @@ import { BlogCard, formatBlogDate } from "@/components/blog/BlogCard";
 import { BlogPostContent } from "@/components/blog/BlogPostContent";
 import { Breadcrumbs } from "@/components/common/Breadcrumbs";
 import { Container } from "@/components/common/Container";
+import { JsonLd } from "@/components/common/JsonLd";
 import { getBlogPostBySlug } from "@/services/blog.service";
+import { absoluteUrl, createPageMetadata, siteConfig } from "@/lib/seo";
 import type { BlogRelatedConsultationService, BlogRelatedCourse } from "@/types/blog";
 
 const money = (value: number, currency: string) => new Intl.NumberFormat("vi-VN", { style: "currency", currency }).format(value);
 const coursePrice = (course: BlogRelatedCourse) => course.price != null ? money(course.price, course.currency) : course.price_display || "Liên hệ";
 const servicePrice = (service: BlogRelatedConsultationService) => service.price != null ? money(service.price, service.currency) : service.price_from != null ? `Từ ${money(service.price_from, service.currency)}` : "Liên hệ";
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> { try { const { slug } = await params; const post = await getBlogPostBySlug(slug); if (!post) return { title: "Không tìm thấy bài viết" }; const title = post.seo_title || post.title; const description = post.seo_description || post.excerpt || "Bài viết kiến thức tại Vũ Thịnh."; const url = post.canonical_url || `/blog/${post.slug}`; return { title, description, alternates: { canonical: url }, authors: post.author ? [{ name: post.author.full_name }] : undefined, openGraph: { title, description, url, type: "article", publishedTime: post.published_at || undefined, modifiedTime: post.updated_at, authors: post.author ? [post.author.full_name] : undefined, ...(post.cover_image_url ? { images: [{ url: post.cover_image_url, alt: post.cover_image_alt || post.title }] } : {}) } } } catch (error) { console.error("[blog metadata]", error); return { title: "Bài viết", description: "Kiến thức và phương pháp học tập tại Vũ Thịnh." } } }
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  try {
+    const { slug } = await params;
+    const post = await getBlogPostBySlug(slug);
+    if (!post) return { title: "Không tìm thấy bài viết", robots: { index: false, follow: false } };
+    const title = post.seo_title || post.title;
+    const description = post.seo_description || post.excerpt || "Bài viết kiến thức tại Vũ Thịnh.";
+    const url = post.canonical_url || `/blog/${post.slug}`;
+    const image = post.cover_image_url ? { url: post.cover_image_url, alt: post.cover_image_alt || post.title } : null;
+    const base = createPageMetadata({ title, description, path: url, type: "article", image });
+    return {
+      ...base,
+      authors: post.author ? [{ name: post.author.full_name }] : undefined,
+      openGraph: {
+        type: "article",
+        title: `${title} | ${siteConfig.name}`,
+        description,
+        url,
+        siteName: siteConfig.name,
+        locale: "vi_VN",
+        publishedTime: post.published_at || undefined,
+        modifiedTime: post.updated_at,
+        authors: post.author ? [post.author.full_name] : undefined,
+        images: image ? [image] : undefined,
+      },
+    };
+  } catch (error) {
+    console.error("[blog metadata]", error);
+    return createPageMetadata({ title: "Bài viết", description: "Kiến thức và phương pháp học tập tại Vũ Thịnh.", path: "/blog" });
+  }
+}
 
-export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) { const { slug } = await params; const post = await getBlogPostBySlug(slug); if (!post) notFound(); return <main>
+export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) { const { slug } = await params; const post = await getBlogPostBySlug(slug); if (!post) notFound(); const url = absoluteUrl(post.canonical_url || `/blog/${post.slug}`); const structuredData = { "@context": "https://schema.org", "@type": "Article", "@id": `${url}#article`, headline: post.title, description: post.seo_description || post.excerpt || undefined, image: post.cover_image_url || undefined, datePublished: post.published_at || undefined, dateModified: post.updated_at, mainEntityOfPage: url, inLanguage: "vi", author: post.author ? { "@type": "Person", name: post.author.full_name, url: absoluteUrl("/expert") } : { "@type": "Organization", name: siteConfig.name }, publisher: { "@type": "EducationalOrganization", "@id": `${siteConfig.url}/#organization`, name: siteConfig.name, url: siteConfig.url } }; return <main>
+  <JsonLd data={structuredData} />
   <article><header className="bg-gradient-to-b from-white to-blue-50 py-12 sm:py-16"><Container><Breadcrumbs items={[{label:"Trang chủ",href:"/"},{label:"Blog",href:"/blog"},{label:post.title}]} /><div className="mx-auto mt-8 max-w-4xl text-center"><p className="text-sm font-bold uppercase tracking-[.12em] text-brand-green">{post.category?.name ?? "Kiến thức"}</p><h1 className="mt-4 text-4xl font-bold leading-tight tracking-tight text-slate-950 sm:text-5xl">{post.title}</h1>{post.excerpt && <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-600">{post.excerpt}</p>}<div className="mt-6 flex flex-wrap justify-center gap-x-4 gap-y-2 text-sm text-slate-500"><span>{post.author?.full_name ?? "Ban biên tập Vũ Thịnh"}</span><span>{formatBlogDate(post.published_at)}</span>{post.updated_at.slice(0,10) !== post.published_at?.slice(0,10) && <span>Cập nhật {formatBlogDate(post.updated_at)}</span>}{post.reading_time_minutes && <span>{post.reading_time_minutes} phút đọc</span>}</div>{post.tags.length > 0 && <ul className="mt-5 flex flex-wrap justify-center gap-2" aria-label="Thẻ bài viết">{post.tags.map((tag)=><li key={tag.id} className="rounded-full bg-white px-3 py-1 text-sm text-slate-600">#{tag.name}</li>)}</ul>}</div>{post.cover_image_url ? <div className="relative mx-auto mt-10 aspect-[16/9] max-w-5xl overflow-hidden rounded-3xl"><Image src={post.cover_image_url} alt={post.cover_image_alt || `Ảnh bài viết ${post.title}`} fill priority className="object-cover" /></div> : <div className="mx-auto mt-10 grid aspect-[16/7] max-w-5xl place-items-center rounded-3xl bg-gradient-to-br from-blue-100 to-emerald-100 text-sm font-bold uppercase tracking-[.15em] text-brand-blue">Vũ Thịnh · Kiến thức</div>}</Container></header>
   <section className="py-14 sm:py-16"><Container><BlogPostContent content={post.content} /></Container></section>
   {post.author && <section className="border-y border-slate-200 bg-slate-50 py-10" aria-labelledby="author-heading"><Container><div className="mx-auto flex max-w-3xl flex-col gap-5 rounded-2xl bg-white p-6 sm:flex-row sm:items-center">{post.author.avatar_url ? <Image src={post.author.avatar_url} alt={`Chân dung ${post.author.full_name}`} width={96} height={96} className="size-24 rounded-full object-cover" /> : <div className="grid size-24 shrink-0 place-items-center rounded-full bg-blue-100 text-2xl font-bold text-brand-blue" aria-hidden="true">VT</div>}<div><p className="text-sm font-semibold text-brand-green">Tác giả</p><h2 id="author-heading" className="mt-1 text-2xl font-bold text-slate-950">{post.author.full_name}</h2><p className="mt-1 text-slate-600">{post.author.professional_title}</p><Link href="/expert" className="mt-3 inline-block font-semibold text-brand-blue underline underline-offset-4">Xem trang chuyên gia</Link></div></div></Container></section>}

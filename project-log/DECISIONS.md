@@ -318,3 +318,7 @@ Sitemap luôn xuất các route public tĩnh và dùng `Promise.allSettled` cho 
 ## 2026-07-20 — Chỉ xác nhận CRUD sau mutation có thể hoàn tác
 
 Admin login, protection, dashboard và quyền đọc được đánh dấu khi đã kiểm tra production bằng session thật. Các mục CRUD/status tiếp tục để mở cho tới khi có bản ghi QA riêng, kiểm tra insert/update/delete hoặc archive và hoàn tác sạch; không dùng dữ liệu khách hàng thật để thử mutation.
+
+## 2026-07-20 — SEO chỉ xuất dữ liệu có thật và đang render
+
+Metadata dùng helper chung để giữ canonical/Open Graph/Twitter nhất quán. JSON-LD giới hạn ở EducationalOrganization/WebSite, Course, Article, Person và FAQPage; chỉ dùng field từ type/service/site settings hiện tại. Không suy đoán logo, rating, địa chỉ cấu trúc, lịch khai giảng hoặc JobPosting khi dữ liệu chưa đủ.

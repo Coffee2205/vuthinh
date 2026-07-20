@@ -4,9 +4,10 @@ import { Breadcrumbs } from "@/components/common/Breadcrumbs";
 import { Container } from "@/components/common/Container";
 import { ConsultationForm } from "@/components/consultation/ConsultationForm";
 import { ConsultationServiceCard } from "@/components/expert/ConsultationServiceCard";
+import { createPageMetadata } from "@/lib/seo";
 import { getExpertProfileBySlug } from "@/services/expert.service";
 
-export const metadata: Metadata = { title: "Đăng ký tư vấn", description: "Đăng ký đánh giá năng lực và xây dựng lộ trình học tập cùng chuyên gia Vũ Thịnh.", alternates: { canonical: "/consultation" } };
+export const metadata: Metadata = createPageMetadata({ title: "Đăng ký tư vấn", description: "Đăng ký đánh giá năng lực và xây dựng lộ trình học tập cùng chuyên gia Vũ Thịnh.", path: "/consultation" });
 export default async function ConsultationPage({ searchParams }: { searchParams: Promise<{ service?: string }> }) {
   const [{ service: serviceSlug }, expert] = await Promise.all([searchParams, getExpertProfileBySlug("vu-thinh")]);
   if (!expert) notFound();

@@ -1,5 +1,12 @@
 # Việc tiếp theo
 
+## Sau SEO mục 2–4
+
+1. Deploy thay đổi SEO khi người dùng yêu cầu và kiểm tra HTML production sau deploy.
+2. Khi có blog post published thật, xác minh `Article` JSON-LD bằng URL đó; không tạo bài giả để test.
+3. Chỉ bổ sung logo/OG image organization khi chủ sở hữu cung cấp tài sản chính thức và quyền sử dụng.
+4. Không tự chuyển sang các phần SEO khác ngoài metadata, thương hiệu và JSON-LD.
+
 ## Sau khi hoàn thành Task 09
 
 1. Không còn bước kỹ thuật bắt buộc của Task 09.
