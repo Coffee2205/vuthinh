@@ -100,3 +100,7 @@
 
 1. Admin xóa bản ghi QA Task 06 sau đối chiếu.
 2. Kiểm tra submission thật trên Vercel khi cấu hình env production.
+
+## Sau cập nhật logo
+
+1. Push commit logo để Vercel triển khai, sau đó kiểm tra Header/Footer và ảnh chia sẻ trên domain production.

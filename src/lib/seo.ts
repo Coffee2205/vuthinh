@@ -6,6 +6,9 @@ export const siteConfig = {
   title: "Vũ Thịnh | Hệ sinh thái giáo dục gia đình",
   description:
     "Vũ Thịnh đồng hành cùng gia đình qua chương trình tiếng Trung, kỹ năng sống và phát triển nội tâm.",
+  mark: "/images/brand/vu-thinh-mark-transparent.png",
+  wordmark: "/images/brand/vu-thinh-wordmark-transparent.png",
+  socialImage: "/images/brand/vu-thinh-wordmark-white.png",
 } as const;
 
 type PageMetadataOptions = {
@@ -23,7 +26,10 @@ export function createPageMetadata({
   image,
   type = "website",
 }: PageMetadataOptions): Metadata {
-  const images = image ? [image] : undefined;
+  const socialImage = image ?? {
+    url: siteConfig.socialImage,
+    alt: `Logo ${siteConfig.name}`,
+  };
 
   return {
     title,
@@ -36,13 +42,13 @@ export function createPageMetadata({
       siteName: siteConfig.name,
       locale: "vi_VN",
       type,
-      images,
+      images: [socialImage],
     },
     twitter: {
-      card: image ? "summary_large_image" : "summary",
+      card: "summary_large_image",
       title: `${title} | ${siteConfig.name}`,
       description,
-      images: image ? [image.url] : undefined,
+      images: [socialImage.url],
     },
   };
 }

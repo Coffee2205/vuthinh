@@ -125,3 +125,10 @@ Website hoạt động được trên domain thật và nhận đăng ký thực
 - `npm.cmd run build`: đạt; 25 route build thành công.
 - Runtime production build local: 16 public route HTTP 200 và đều có canonical, description, Open Graph, Twitter.
 - JSON-LD parse thành công: `EducationalOrganization`, `WebSite`, `Course`, `Person`, `FAQPage`.
+
+## Bổ sung bộ nhận diện logo — 2026-07-20
+
+- Đã đưa ba logo chính thức vào `public/images/brand` với tên file ổn định.
+- Logo biểu tượng nền trong suốt dùng ở Header và favicon; logo có chữ nền trong suốt dùng ở Footer; logo có chữ nền trắng dùng làm ảnh Open Graph/Twitter mặc định và `EducationalOrganization.logo`.
+- `npm.cmd run lint`: đạt.
+- `npm.cmd run build`: đạt; TypeScript và 25 route build thành công.

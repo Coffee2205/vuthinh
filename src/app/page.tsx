@@ -15,8 +15,8 @@ export const metadata: Metadata = {
   title: { absolute: siteConfig.title },
   description: siteConfig.description,
   alternates: { canonical: "/" },
-  openGraph: { title: siteConfig.title, description: siteConfig.description, url: "/", type: "website", siteName: siteConfig.name, locale: "vi_VN" },
-  twitter: { card: "summary", title: siteConfig.title, description: siteConfig.description },
+  openGraph: { title: siteConfig.title, description: siteConfig.description, url: "/", type: "website", siteName: siteConfig.name, locale: "vi_VN", images: [{ url: siteConfig.socialImage, alt: `Logo ${siteConfig.name}` }] },
+  twitter: { card: "summary_large_image", title: siteConfig.title, description: siteConfig.description, images: [siteConfig.socialImage] },
 };
 
 function text(value: unknown) { return typeof value === "string" && value.trim() ? value.trim() : undefined }
@@ -35,6 +35,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ "
         "@id": `${siteConfig.url}/#organization`,
         name: organizationName,
         url: siteConfig.url,
+        logo: new URL(siteConfig.socialImage, siteConfig.url).toString(),
         description: organizationDescription,
         email: text(settings.contact.email),
         telephone: text(settings.contact.phone),

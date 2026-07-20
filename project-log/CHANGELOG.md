@@ -794,6 +794,23 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 - Production runtime `/expert` trả HTTP 200 và có đủ nội dung empty state.
 - Source có một `main`, một `h1`, section liên kết heading bằng `aria-labelledby` và danh sách semantic.
 
+## 2026-07-20 — Tích hợp bộ logo chính thức
+
+### Added
+
+- Ba asset thương hiệu tại `public/images/brand`: mark trong suốt, wordmark trong suốt và wordmark nền trắng.
+
+### Changed
+
+- Header/Footer thay logo chữ tạm bằng asset chính thức.
+- Metadata toàn site có favicon và ảnh Open Graph/Twitter mặc định.
+- JSON-LD `EducationalOrganization` khai báo logo chính thức.
+
+### Verified
+
+- `npm.cmd run lint` đạt.
+- `npm.cmd run build` đạt; 25 route build thành công.
+
 ## 2026-07-17 — Bắt đầu Task 05 với khung danh mục Blog
 
 ### Added

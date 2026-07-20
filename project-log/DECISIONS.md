@@ -322,3 +322,7 @@ Admin login, protection, dashboard và quyền đọc được đánh dấu khi 
 ## 2026-07-20 — SEO chỉ xuất dữ liệu có thật và đang render
 
 Metadata dùng helper chung để giữ canonical/Open Graph/Twitter nhất quán. JSON-LD giới hạn ở EducationalOrganization/WebSite, Course, Article, Person và FAQPage; chỉ dùng field từ type/service/site settings hiện tại. Không suy đoán logo, rating, địa chỉ cấu trúc, lịch khai giảng hoặc JobPosting khi dữ liệu chưa đủ.
+
+## 2026-07-20 — Phân vai ba biến thể logo chính thức
+
+Logo biểu tượng nền trong suốt dùng cho vị trí nhỏ và favicon; logo có chữ nền trong suốt dùng ở Footer; logo có chữ nền trắng dùng cho Open Graph/Twitter và `EducationalOrganization.logo` để nhận diện rõ trên nền do nền tảng tìm kiếm hoặc mạng xã hội kiểm soát.

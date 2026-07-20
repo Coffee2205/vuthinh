@@ -361,3 +361,8 @@ Chờ người dùng chỉ định. Catalog đã kết nối Supabase; bước v
 
 - Home tải course published và render form thật dùng Zod/Server Action/service trial registration.
 - Có error/pending/success, payload allowlist; lint/build/runtime đạt.
+
+## Bộ nhận diện logo — 2026-07-20
+
+- Ba asset logo chính thức đã nằm tại `public/images/brand` và được dùng đúng ngữ cảnh ở Header, Footer, favicon, metadata chia sẻ và JSON-LD tổ chức.
+- Lint/build đạt sau thay đổi; 25 route build thành công.
