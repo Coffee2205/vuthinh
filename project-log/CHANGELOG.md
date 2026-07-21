@@ -1,5 +1,30 @@
 # Changelog
 
+## 2026-07-21 — Tích hợp ảnh Blog từ Supabase Storage
+
+### Added
+
+- Cấu hình bucket `Public-Media`, ánh xạ bốn cover bài viết và bốn thumbnail khóa học theo slug.
+- Alt text cho bốn ảnh bài viết do chủ sở hữu cung cấp.
+
+### Changed
+
+- Blog service dùng ảnh Storage khi `cover_image_url` trong database đang trống, đồng thời tiếp tục ưu tiên URL do admin quản lý.
+- Course service dùng bốn object trong `courses` khi thumbnail tương ứng trong database đang trống.
+- Sửa object path Blog từ `Post` thành `post` đúng chữ hoa/thường trên Storage.
+
+### Verified
+
+- Bốn object trong `Public-Media/post` và bốn object khóa học được cung cấp trả HTTP 200 với MIME ảnh hợp lệ.
+- `npm.cmd run lint` và `npm.cmd run build` đạt; TypeScript và 24 trang tĩnh build thành công.
+- Runtime `/blog` và chi tiết bài HSK trả HTTP 200, có URL Storage cùng alt text trong HTML.
+- Endpoint tối ưu ảnh Next.js cho Blog và khóa học trả HTTP 200 với MIME tương ứng.
+- Runtime `/courses` có đủ bốn filename; cả bốn thumbnail tối ưu trả HTTP 200 và `image/png`.
+
+### Known issues
+
+- Chưa có tên object cho chuyên gia, tài liệu và câu chuyện.
+
 ## 2026-07-20 — SEO metadata, thương hiệu và JSON-LD
 
 - Added: SEO config dùng chung và JSON-LD component an toàn.

@@ -1,4 +1,5 @@
 import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { getCourseThumbnailMedia } from "@/config/public-media";
 import type { Course, CourseFilters, CourseSort, OrderedContent, ProgramCategory } from "@/types/course";
 
 type Row = Record<string, unknown>;
@@ -32,7 +33,9 @@ function mapCourse(row: Row): Course {
   return {
     id: String(row.id), title: String(row.title), slug: String(row.slug),
     shortDescription: String(row.short_description), description: String(row.description),
-    thumbnailUrl: row.thumbnail_url ? String(row.thumbnail_url) : null,
+    thumbnailUrl: row.thumbnail_url
+      ? String(row.thumbnail_url)
+      : getCourseThumbnailMedia(String(row.slug))?.url ?? null,
     category: { id: String(category.id), name: String(category.name), slug: String(category.slug), program: { id: String(program.id), name: String(program.name), slug: String(program.slug) } },
     levelLabel: String(row.level_label), levelFrom: row.level_from ? String(row.level_from) : null, levelTo: row.level_to ? String(row.level_to) : null,
     sessionCount: Number(row.session_count), sessionDurationMinutes: row.session_duration_minutes == null ? null : Number(row.session_duration_minutes),

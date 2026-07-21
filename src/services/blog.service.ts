@@ -1,4 +1,5 @@
 import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { getBlogCoverMedia } from "@/config/public-media";
 import type { BlogAuthor, BlogCategory, BlogFilters, BlogPost, BlogPostDetail, BlogPostListItem, BlogRelatedConsultationService, BlogRelatedCourse, BlogTag } from "@/types/blog";
 
 type Row = Record<string, unknown>;
@@ -9,7 +10,16 @@ function mapList(row: Row): BlogPostListItem {
   const { content: _content, blog_categories, experts, blog_post_tags, ...post } = row;
   void _content;
   const tags = Array.isArray(blog_post_tags) ? blog_post_tags.map((item) => one<BlogTag>((item as Row).blog_tags)).filter((tag): tag is BlogTag => Boolean(tag)) : [];
-  return { ...(post as unknown as Omit<BlogPost, "content">), category: one<BlogCategory>(blog_categories), author: one<BlogAuthor>(experts), tags };
+  const storedPost = post as unknown as Omit<BlogPost, "content">;
+  const storageCover = storedPost.cover_image_url ? null : getBlogCoverMedia(storedPost.slug);
+  return {
+    ...storedPost,
+    cover_image_url: storedPost.cover_image_url || storageCover?.url || null,
+    cover_image_alt: storedPost.cover_image_alt || storageCover?.alt || null,
+    category: one<BlogCategory>(blog_categories),
+    author: one<BlogAuthor>(experts),
+    tags,
+  };
 }
 const relationSelect = `${listColumns},blog_categories(id,name,slug,description,display_order,is_active),experts(id,full_name,slug,professional_title,avatar_url),blog_post_tags(blog_tags(id,name,slug,is_active))`;
 

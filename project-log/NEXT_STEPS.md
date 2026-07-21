@@ -1,5 +1,10 @@
 # Việc tiếp theo
 
+## Sau tích hợp Public-Media — 2026-07-21
+
+1. Cung cấp tên file trong các thư mục chuyên gia, tài liệu và câu chuyện để ánh xạ theo slug/bản ghi.
+2. Khi có quyền admin phù hợp, lưu URL ảnh trực tiếp vào các cột media trong database; service hiện ưu tiên dữ liệu database.
+
 ## Sau SEO mục 2–4
 
 1. Deploy thay đổi SEO khi người dùng yêu cầu và kiểm tra HTML production sau deploy.

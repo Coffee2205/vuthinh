@@ -1,5 +1,15 @@
 # Trạng thái hiện tại
 
+## Ảnh bài viết từ Supabase Storage — 2026-07-21
+
+- Đã kết nối bốn ảnh trong `Public-Media/post` với bốn bài blog và bốn ảnh trong `Public-Media/courses` với toàn bộ bốn khóa học hiện có theo slug.
+- Blog service ưu tiên URL ảnh do admin lưu trong database; khi URL trống, dùng object public đã được chủ sở hữu cung cấp và xác minh HTTP 200.
+- Chuyên gia, tài liệu và câu chuyện chưa được ánh xạ do chưa có danh sách tên file trong các thư mục tương ứng.
+- Lint/build đạt ngày 2026-07-21.
+- Runtime production local xác nhận danh sách và chi tiết Blog render URL/alt ảnh Storage; server kiểm tra đã được dừng sau QA.
+- Lỗi phân biệt hoa/thường `Post`/`post` đã được sửa; endpoint tối ưu ảnh Blog và khóa học đều trả HTTP 200.
+- `/courses` render đủ bốn thumbnail; cả bốn ảnh tối ưu trả HTTP 200 và `image/png`.
+
 ## SEO metadata, thương hiệu và JSON-LD — 2026-07-20
 
 - Hoàn thiện đúng ba mục SEO được yêu cầu: metadata public pages, tín hiệu thương hiệu Vũ Thịnh và structured data.

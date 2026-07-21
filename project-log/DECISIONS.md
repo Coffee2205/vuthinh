@@ -1,5 +1,9 @@
 # Nhật ký quyết định
 
+## 2026-07-21 — Ảnh Storage có fallback theo slug, database vẫn là nguồn ưu tiên
+
+Các cột URL media trong database tiếp tục là nguồn ưu tiên. Với nội dung có URL đang trống, service chỉ ánh xạ slug sang object đã được chủ sở hữu cung cấp và xác minh trong bucket public `Public-Media`; URL được tạo từ biến môi trường thay vì hard-code Supabase project. Object path giữ nguyên chữ hoa/thường vì Supabase Storage phân biệt ký tự. Khi admin bổ sung URL vào database, dữ liệu đó tự động thay thế fallback.
+
 ## 2026-07-18 — Kiến trúc Task 08
 
 - Một cấp quyền `admin` từ `user_profiles`; không hard-code email/UUID.

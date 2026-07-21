@@ -107,3 +107,10 @@
 - Đã xóa các file SQL cũ trong `supabase/` vì không còn là schema đang được áp dụng cho project hiện tại.
 - `/programs`, `/courses` và `/courses/[slug]` bắt buộc đọc dữ liệu qua `course.service` → Supabase server client.
 - Thiếu env hoặc lỗi database sẽ hiển thị error state, không âm thầm dùng dữ liệu thay thế.
+
+## Tích hợp ảnh khóa học từ Supabase Storage — 2026-07-21
+
+- Ánh xạ cả bốn khóa học hiện có với bốn object trong `Public-Media/courses` khi `thumbnail_url` trong database đang trống.
+- Database vẫn được ưu tiên; URL Storage chỉ là fallback cho object đã được chủ sở hữu cung cấp.
+- Bốn URL gốc, trang danh sách/chi tiết khóa học và endpoint tối ưu ảnh Next.js đều trả HTTP 200; lint/build đạt.
+- Runtime `/courses` xác nhận đủ bốn filename trong HTML; cả bốn request qua Next Image Optimizer trả HTTP 200 và `image/png`.

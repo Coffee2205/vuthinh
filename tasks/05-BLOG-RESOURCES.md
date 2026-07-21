@@ -62,3 +62,13 @@
 - Không update `download_count` từ client, không dùng service-role và không hard-code tài nguyên.
 - Supabase project đang cấu hình vẫn trả HTTP 404 cho cả bốn bảng Resources; source/build hoàn thành nhưng dữ liệu, nested relation, RLS insert event và redirect thật chưa thể kiểm tra runtime.
 - Kiểm tra: lint đạt; build đạt; `/resources` và `/resources/[slug]` đều là dynamic routes.
+
+## Tích hợp ảnh bài viết từ Supabase Storage — 2026-07-21
+
+- Bucket public `Public-Media` được dùng cho media website; bốn ảnh trong thư mục `post` đã được xác minh trả HTTP 200 và đúng MIME ảnh.
+- Thêm cấu hình ánh xạ slug bài viết sang object path tại `src/config/public-media.ts`; service ưu tiên `cover_image_url` trong database và chỉ dùng ảnh Storage đã xác nhận khi cột này đang trống.
+- URL public được tạo từ `NEXT_PUBLIC_SUPABASE_URL`, có encode từng segment và không chứa project URL hoặc key hard-code.
+- Bổ sung alt text mô tả cho cả bốn ảnh. Chưa ánh xạ khóa học, chuyên gia, tài liệu và câu chuyện vì chưa có danh sách tên file tương ứng.
+- Kiểm tra: `npm.cmd run lint` đạt; `npm.cmd run build` đạt ngày 2026-07-21, toàn bộ route compile và TypeScript thành công.
+- Runtime production local có kết nối Supabase: `/blog` và `/blog/hsk-la-gi-va-nen-bat-dau-tu-cap-do-nao` trả HTTP 200; HTML có URL `Public-Media/post`, tên file HSK và alt text tương ứng.
+- Sửa lỗi hiển thị ngày 2026-07-21: Supabase Storage phân biệt hoa/thường, object thật nằm trong `post` thay vì `Post`; endpoint tối ưu ảnh Next.js hiện trả HTTP 200 và `image/jpeg`.

@@ -1,5 +1,11 @@
 # Vấn đề và giới hạn đang tồn tại
 
+## ISSUE-039 — Chưa có danh sách object media ngoài Blog
+
+**Trạng thái:** Open — Không chặn build
+
+Bucket `Public-Media` không cho publishable key liệt kê object. Bốn object trong `post` và bốn object khóa học đã được chủ sở hữu cung cấp và xác minh, nhưng chưa có tên file cho chuyên gia, tài liệu và câu chuyện nên chưa thể ánh xạ an toàn mà không đoán dữ liệu.
+
 ## ISSUE-035 — Chưa có tài khoản admin có thể kiểm tra
 
 **Trạng thái:** Open — blocker xác minh Auth/RLS/mutation
