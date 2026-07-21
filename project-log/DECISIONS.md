@@ -357,3 +357,7 @@ HSK 5 và HSK 6 tiếp tục dùng cơ chế hiện có: `thumbnail_url` trong d
 ## 2026-07-21 — Logo PNG nền đen hiển thị dưới dạng huy hiệu tròn
 
 Logo mới không có alpha và có vùng đen thừa phía dưới. Header/Footer dùng `object-cover object-top` trong khung tròn thay vì blend trên nền sáng; metadata trỏ trực tiếp tới asset gốc 492×623. Tên Vũ Thịnh tiếp tục render bằng text để đảm bảo nhận diện và accessibility.
+
+## 2026-07-21 — Ảnh nền đầu trang được điều khiển tại public shell
+
+Các trang public dùng chung một pseudo-element tại vùng mở đầu thay vì lặp `next/image` trong từng page. Ảnh chỉ phủ phần đầu, overlay sáng giữ nội dung hiện hữu dễ đọc; hero trang chủ giữ cách render tối ưu/priority riêng. Selector yêu cầu `main` là con trực tiếp của `site-shell` và loại trừ `.admin-root`, vì vậy không tác động giao diện quản trị.

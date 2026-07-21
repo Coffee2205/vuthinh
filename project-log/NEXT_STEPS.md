@@ -133,3 +133,8 @@
 
 1. Deploy source mới và kiểm tra card/hero ảnh của `/courses`, `/courses/luyen-thi-hsk-5` và `/courses/luyen-thi-hsk-6` trên production.
 2. Có thể lưu trực tiếp `courses/hsk5.jpg` và `courses/hsk6.jpg` vào `thumbnail_url` qua admin để database trở thành nguồn cấu hình duy nhất; mapping hiện tại tiếp tục là fallback.
+
+## Sau cập nhật ảnh nền đầu trang
+
+1. Deploy và kiểm tra trực quan các route đại diện `/about`, `/courses`, course detail, `/blog`, blog detail, `/expert`, `/consultation`, `/privacy` trên mobile/desktop.
+2. Xác nhận `/admin/login` và dashboard admin không nhận ảnh nền public.

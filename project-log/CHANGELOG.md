@@ -949,3 +949,9 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 - Thêm mapping `luyen-thi-hsk-5` → `courses/hsk5.jpg` và `luyen-thi-hsk-6` → `courses/hsk6.jpg`.
 - Giữ ưu tiên `thumbnail_url` từ database và chỉ dùng mapping khi field trống.
 - Xác minh hai ảnh Storage HTTP 200, `image/jpeg`; lint/build đạt.
+
+## 2026-07-21 — Dùng ảnh Vietnam–China ở đầu mọi trang public
+
+- Thêm `site-shell` cho vùng nội dung public và nền dùng chung từ `vietnam-china-trade-street-hero.webp`.
+- Giới hạn ảnh ở vùng đầu trang, bổ sung overlay sáng và giữ hero riêng của trang chủ.
+- Loại trừ admin/admin login; lint/build đạt.

@@ -180,3 +180,11 @@ Website hoạt động được trên domain thật và nhận đăng ký thực
 - [x] Chữ, hover, focus và viền đạt độ tương phản trên nền tối.
 - [x] Lint/build đạt; chưa commit và chưa push.
 - [x] Logo Header/Footer crop chính giữa, bỏ phần thừa đầu trên/dưới; lint/build đạt.
+
+## Ảnh nền dùng chung ở đầu trang public — 2026-07-21
+
+- Dùng `vietnam-china-trade-street-hero.webp` trong vùng mở đầu của mọi trang public qua lớp `site-shell` và CSS dùng chung.
+- Ảnh giới hạn tối đa 28rem ở đầu trang, có overlay trắng trong suốt để giữ màu chữ, card và form hiện tại dễ đọc.
+- Trang chủ giữ hero ảnh/overlay tối riêng; admin và admin login được loại trừ.
+- File sửa: `src/app/layout.tsx`, `src/app/globals.css`, `src/components/home/HeroSection.tsx`.
+- Không có vấn đề source mới; `npm.cmd run lint` và `npm.cmd run build` đạt.

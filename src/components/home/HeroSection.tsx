@@ -5,7 +5,7 @@ import { heroContent } from "@/data/home";
 
 export function HeroSection() {
   return (
-    <section className="relative isolate overflow-hidden bg-brand-blue-soft py-16 sm:py-20 lg:py-24">
+    <section className="site-hero-image relative isolate overflow-hidden bg-brand-blue-soft py-16 sm:py-20 lg:py-24">
       <Image
         src="/images/backgrounds/vietnam-china-trade-street-hero.webp"
         alt=""

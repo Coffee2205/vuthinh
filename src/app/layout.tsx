@@ -25,5 +25,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="vi" className={`${beVietnamPro.variable} h-full antialiased`}><body className="flex min-h-full flex-col"><Header /><div className="flex flex-1 flex-col">{children}</div><Footer /></body></html>;
+  return <html lang="vi" className={`${beVietnamPro.variable} h-full antialiased`}><body className="flex min-h-full flex-col"><Header /><div className="site-shell flex flex-1 flex-col">{children}</div><Footer /></body></html>;
 }

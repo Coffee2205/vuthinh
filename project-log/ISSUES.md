@@ -538,3 +538,7 @@ Favicon source đã đạt yêu cầu kỹ thuật; Google không bảo đảm h
 ## Cập nhật ảnh khóa học HSK 5 và HSK 6 — 2026-07-21
 
 Hai object `courses/hsk5.jpg` và `courses/hsk6.jpg` đã được xác minh public HTTP 200 và ánh xạ với hai khóa published tương ứng. Không còn issue thiếu ảnh cho 6 khóa học hiện có; production cần deploy source mới để nhận mapping.
+
+## Cập nhật ảnh nền đầu trang public — 2026-07-21
+
+Không có issue source mới; lint/build đạt. Cần QA trực quan sau deploy trên các route đại diện và hai viewport để xác nhận mức overlay/crop phù hợp với nội dung production dài/ngắn khác nhau.

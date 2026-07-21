@@ -427,3 +427,9 @@ Chờ người dùng chỉ định. Catalog đã kết nối Supabase; bước v
 
 - Các section nền trắng trên Home gồm Trust, Expert, Parent Testimonials và Trial Registration dùng gradient 135° `#fff8fa → #faf4f8 → #f4eef7`.
 - Card, form và admin giữ nền riêng để bảo toàn tương phản. Lint/build đạt; chưa commit, chưa push.
+
+## Ảnh nền đầu trang public dùng chung — 2026-07-21
+
+- `vietnam-china-trade-street-hero.webp` được dùng ở vùng đầu của toàn bộ trang public, bao gồm route danh sách, chi tiết, form, pháp lý và trạng thái thành công.
+- Lớp phủ sáng giữ nguyên hệ màu chữ hiện tại; ảnh chỉ phủ tối đa 28rem để không làm nhiễu nội dung phía dưới.
+- Trang chủ tiếp tục dùng hero tối riêng; toàn bộ admin được loại trừ. Lint/build đạt.
