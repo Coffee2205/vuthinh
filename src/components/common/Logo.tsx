@@ -11,22 +11,20 @@ export function Logo({ variant = "compact" }: LogoProps) {
   return (
     <Link
       href="/"
-      className="inline-flex min-h-11 items-center gap-2 rounded-lg font-bold text-brand-blue focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-blue"
+      className={`inline-flex min-h-11 items-center rounded-lg font-bold text-brand-blue focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-blue ${isWordmark ? "gap-3" : "gap-2"}`}
       aria-label="Vũ Thịnh - Trang chủ"
     >
       <Image
-        src={
-          isWordmark
-            ? "/images/brand/vu-thinh-wordmark-transparent.png"
-            : "/images/brand/vu-thinh-mark-transparent.png"
-        }
+        src="/images/brand/vu-thinh-logo-color.png"
         alt=""
-        width={isWordmark ? 112 : 44}
-        height={isWordmark ? 112 : 44}
-        className={isWordmark ? "size-28 object-contain" : "size-11 object-contain"}
+        width={492}
+        height={623}
+        sizes={isWordmark ? "112px" : "56px"}
+        className={isWordmark ? "size-28 shrink-0 rounded-full object-cover object-center" : "size-14 shrink-0 rounded-full object-cover object-center"}
         priority={!isWordmark}
+        unoptimized
       />
-      {!isWordmark && <span className="text-xl">Vũ Thịnh</span>}
+      <span className={isWordmark ? "text-2xl" : "text-xl"}>Vũ Thịnh</span>
     </Link>
   );
 }

@@ -16,8 +16,8 @@ export const metadata: Metadata = {
   creator: siteConfig.name,
   publisher: siteConfig.organizationName,
   icons: {
-    icon: [{ url: "/favicon.png", type: "image/png", sizes: "512x512" }],
-    apple: [{ url: "/favicon.png", type: "image/png", sizes: "512x512" }],
+    icon: [{ url: "/images/brand/vu-thinh-logo-color.png", type: "image/png", sizes: "492x623" }],
+    apple: [{ url: "/images/brand/vu-thinh-logo-color.png", type: "image/png", sizes: "492x623" }],
   },
   robots: { index: true, follow: true },
   openGraph: { type: "website", locale: "vi_VN", siteName: siteConfig.name, title: siteConfig.title, description: siteConfig.description, url: "/", images: [{ url: siteConfig.socialImage, alt: `Logo ${siteConfig.name}` }] },

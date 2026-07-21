@@ -393,3 +393,20 @@ Chờ người dùng chỉ định. Catalog đã kết nối Supabase; bước v
 - Public metadata/canonical/index control đạt; admin noindex/nofollow; course/blog/resource detail có BreadcrumbList khớp breadcrumb giao diện.
 - Lint/build và runtime audit các route bắt buộc đạt.
 - Favicon tìm kiếm dùng URL ổn định `/favicon.png`, kích thước 512×512 và được khai báo trực tiếp trong metadata.
+## Ảnh nền Hero mới — 2026-07-21
+
+- Hero trang chủ dùng `public/images/backgrounds/vietnam-china-trade-street-hero.webp` qua `next/image`, tải ưu tiên và responsive `100vw`.
+- Hai lớp gradient sáng giữ độ đọc của nội dung/CTA; crop ưu tiên vùng 62% trên mobile và căn giữa từ desktop.
+- Lint và production build đạt; chưa commit, chưa push.
+## Logo màu mới — 2026-07-21
+
+- `images (1).png` được chuyển thành `public/images/brand/vu-thinh-logo-color.png` và dùng thống nhất cho Header, Footer, favicon, JSON-LD/SEO social image.
+- Asset 492×623 có nền đen đặc nên giao diện crop thành huy hiệu tròn: 56px Header, 112px Footer, giữ phần hoa văn phía trên và không chỉnh sửa file gốc.
+- Lint và production build đạt; chưa commit, chưa push.
+## Header Dark purple-grey — 2026-07-21
+
+- Header desktop và menu mobile dùng nền `#3D3242`, viền trắng 10% và shadow nhẹ.
+- Navigation/menu chuyển sang chữ trắng 85%, hover champagne; logo text champagne để giữ tương phản.
+- Lint/build đạt; chưa commit, chưa push.
+- Hero dùng gradient tối từ trái `#241B2B` sang Dark purple-grey `#3D3242`, giảm dần về bên phải; headline/description/eyebrow đổi sang màu sáng để giữ tương phản. Lint/build đạt.
+- Logo Header/Footer crop theo chính giữa (`object-center`), loại khoảng đen thừa cân đối ở đầu trên/dưới và giữ trọn cụm hoa văn trung tâm. Lint/build đạt.

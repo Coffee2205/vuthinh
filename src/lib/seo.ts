@@ -7,9 +7,9 @@ export const siteConfig = {
   title: "Vũ Thịnh – Giáo dục tiếng Trung và phát triển bản thân",
   description:
     "Vũ Thịnh Education cung cấp chương trình tiếng Trung, luyện thi HSK, kỹ năng sống, quản lý cảm xúc và tư vấn học tập phù hợp cho từng gia đình.",
-  mark: "/images/brand/vu-thinh-mark-transparent.png",
-  wordmark: "/images/brand/vu-thinh-wordmark-transparent.png",
-  socialImage: "/images/brand/vu-thinh-wordmark-white.png",
+  mark: "/images/brand/vu-thinh-logo-color.png",
+  wordmark: "/images/brand/vu-thinh-logo-color.png",
+  socialImage: "/images/brand/vu-thinh-logo-color.png",
 } as const;
 
 type PageMetadataOptions = {

@@ -248,3 +248,9 @@ Tạo trang chủ thuyết phục phụ huynh và dẫn người dùng đến đ
 - Thay form preview bị khóa bằng form lấy course published từ Supabase.
 - Server Action/Zod lưu allowlist vào `trial_registrations`; có validation, database error, pending và success state.
 - Lint/build đạt; runtime `/` HTTP 200 và không còn thông báo form chưa mở.
+## Cập nhật ảnh Hero — 2026-07-21
+
+- [x] Dùng `vietnam-china-trade-street-hero.webp` làm nền Hero bằng `next/image`.
+- [x] Cấu hình priority, responsive crop và overlay đảm bảo nội dung dễ đọc.
+- [x] Lint/build đạt; chưa commit và chưa push.
+- [x] Gradient Hero tối bên trái, nhẹ dần sang phải; chữ và eyebrow có tương phản phù hợp. Lint/build đạt.

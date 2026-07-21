@@ -168,3 +168,15 @@ Website hoạt động được trên domain thật và nhận đăng ký thực
 - Server Action cho phép payload 6 MB để validation ứng dụng giới hạn ảnh ở 5 MB.
 - Course, Blog, Resource, Expert và Success Story chuẩn hóa URL/path trước khi render hoặc tạo metadata; URL ngoài được giữ tương thích và bỏ optimizer khi hostname không được allowlist.
 - Không dùng Supabase Image Transformation và chưa chuyển đổi WebP tự động; file JPG/PNG/WebP hợp lệ được giữ nguyên để tránh thêm dependency/crop ngoài ý muốn.
+## Logo màu từ `images (1).png` — 2026-07-21
+
+- [x] Đưa asset vào thư mục brand với tên ổn định.
+- [x] Dùng thống nhất cho Header, Footer, metadata, favicon và structured-data logo.
+- [x] Xử lý nền đen bằng crop tròn, không chỉnh sửa ảnh gốc.
+- [x] Lint/build đạt; chưa commit và chưa push.
+## Header Dark purple-grey — 2026-07-21
+
+- [x] Nền Header/menu mobile `#3D3242`.
+- [x] Chữ, hover, focus và viền đạt độ tương phản trên nền tối.
+- [x] Lint/build đạt; chưa commit và chưa push.
+- [x] Logo Header/Footer crop chính giữa, bỏ phần thừa đầu trên/dưới; lint/build đạt.
