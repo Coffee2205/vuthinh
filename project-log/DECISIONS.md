@@ -346,6 +346,14 @@ Favicon dùng file convention `src/app/icon.png` 512×512 của App Router thay 
 Tên hiển thị thương hiệu vẫn là `Vũ Thịnh`, còn tên tổ chức có ngữ cảnh là `Vũ Thịnh Education`. Root title/H1 nêu rõ giáo dục tiếng Trung và phát triển bản thân. BreadcrumbList được sinh cùng component breadcrumb giao diện, nên chỉ xuất hiện tại detail page thực sự hiển thị đường dẫn điều hướng.
 
 Favicon phục vụ Google Search dùng asset public tại `/favicon.png` thay cho URL file-convention có query hash, nhằm giữ URL ổn định giữa các lần build.
+
+## 2026-07-21 — Ảnh chuyên gia local là fallback cho Supabase
+
+Ảnh chuyên gia do người dùng cung cấp được lưu bằng đường dẫn public ổn định và dùng chung cho trang chủ, hồ sơ, metadata và JSON-LD. `/expert` vẫn ưu tiên `avatar_url` hợp lệ từ Supabase để không cản luồng quản trị nội dung; ảnh local chỉ thay thế trạng thái thiếu avatar.
+
+## 2026-07-21 — Mở rộng mapping ảnh khóa học theo slug
+
+HSK 5 và HSK 6 tiếp tục dùng cơ chế hiện có: `thumbnail_url` trong database được ưu tiên, còn object Storage do chủ sở hữu cung cấp được ánh xạ theo slug khi field này trống. Không ghi ngược database hoặc đổi schema trong cập nhật giao diện này.
 ## 2026-07-21 — Logo PNG nền đen hiển thị dưới dạng huy hiệu tròn
 
 Logo mới không có alpha và có vùng đen thừa phía dưới. Header/Footer dùng `object-cover object-top` trong khung tròn thay vì blend trên nền sáng; metadata trỏ trực tiếp tới asset gốc 492×623. Tên Vũ Thịnh tiếp tục render bằng text để đảm bảo nhận diện và accessibility.

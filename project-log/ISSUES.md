@@ -530,3 +530,11 @@ Database hiện có bài blog published và `Article` đã được kiểm tra r
 Source, sitemap và robots đã sẵn sàng nhưng cần chủ sở hữu thêm/xác minh property domain, gửi sitemap và theo dõi index/rich results sau khi commit được Vercel triển khai.
 
 Favicon source đã đạt yêu cầu kỹ thuật; Google không bảo đảm hiển thị và có thể mất vài ngày đến vài tuần sau khi crawl lại trang chủ.
+
+## Cập nhật dữ liệu ảnh chuyên gia — 2026-07-21
+
+Ảnh chuyên gia thật đã được cung cấp và tích hợp vào trang chủ cùng `/expert`; phần thiếu ảnh chuyên gia không còn là giới hạn. ISSUE về nội dung Kinh nghiệm của Task 04 vẫn Open vì ảnh không cung cấp dữ liệu số năm/timeline kinh nghiệm.
+
+## Cập nhật ảnh khóa học HSK 5 và HSK 6 — 2026-07-21
+
+Hai object `courses/hsk5.jpg` và `courses/hsk6.jpg` đã được xác minh public HTTP 200 và ánh xạ với hai khóa published tương ứng. Không còn issue thiếu ảnh cho 6 khóa học hiện có; production cần deploy source mới để nhận mapping.

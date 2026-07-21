@@ -258,3 +258,9 @@ Tạo trang chủ thuyết phục phụ huynh và dẫn người dùng đến đ
 
 - [x] Trust, Expert, Parent Testimonials và Trial Registration dùng gradient 135° được cung cấp.
 - [x] Card/form giữ nền riêng; lint/build đạt; chưa commit và chưa push.
+
+## Ảnh chuyên gia trên trang chủ — 2026-07-21
+
+- [x] Thay khối minh họa `VT` bằng ảnh chuyên gia thật tại `public/images/expert/vu-thinh.png`.
+- [x] Dùng `next/image`, crop responsive và overlay nhẹ để giữ nội dung trạng thái dễ đọc.
+- [x] Dữ liệu đường dẫn/alt ảnh tách tại `src/data/expert.ts`; lint/build đạt.

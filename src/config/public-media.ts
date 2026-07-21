@@ -36,6 +36,14 @@ const courseThumbnailBySlug: Record<string, { path: string; alt: string }> = {
     path: "courses/Luyen_thi_HSK4.png",
     alt: "Khóa luyện thi HSK 4",
   },
+  "luyen-thi-hsk-5": {
+    path: "courses/hsk5.jpg",
+    alt: "Khóa luyện thi HSK 5",
+  },
+  "luyen-thi-hsk-6": {
+    path: "courses/hsk6.jpg",
+    alt: "Khóa luyện thi HSK 6",
+  },
 };
 
 export function getBlogCoverMedia(slug: string) {

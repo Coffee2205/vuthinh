@@ -1,24 +1,25 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/common/Container";
 import { expertContent } from "@/data/home";
+import { expertPhoto } from "@/data/expert";
 
 export function ExpertSection() {
   return (
     <section className="section-soft-gradient py-16 sm:py-20 lg:py-24" aria-labelledby="expert-heading">
       <Container>
         <div className="grid overflow-hidden rounded-[2rem] border border-slate-200 bg-brand-blue-soft lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="relative grid min-h-80 place-items-center overflow-hidden bg-brand-blue p-8 sm:min-h-96">
-            <div className="absolute -left-20 -top-20 size-64 rounded-full bg-white/10" aria-hidden="true" />
-            <div className="absolute -bottom-24 -right-20 size-72 rounded-full bg-brand-yellow/20" aria-hidden="true" />
-            <div className="relative text-center text-white">
-              <div className="mx-auto grid size-28 place-items-center rounded-full border border-white/25 bg-white/10 text-4xl font-bold" aria-hidden="true">
-                VT
-              </div>
-              <p className="mt-6 max-w-xs text-sm font-semibold leading-6 text-blue-50">
+          <div className="relative min-h-80 overflow-hidden bg-brand-blue sm:min-h-96">
+            <Image
+              src={expertPhoto.src}
+              alt={expertPhoto.alt}
+              fill
+              sizes="(min-width: 1024px) 42vw, 100vw"
+              className="scale-125 object-cover object-center"
+            />
+            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/80 via-slate-950/35 to-transparent px-6 pb-6 pt-24 text-white sm:px-8 sm:pb-8">
+              <p className="max-w-md text-sm font-semibold leading-6">
                 {expertContent.status}
-              </p>
-              <p className="mt-2 max-w-sm text-xs leading-5 text-blue-100">
-                {expertContent.note}
               </p>
             </div>
           </div>

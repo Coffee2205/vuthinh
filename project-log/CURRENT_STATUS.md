@@ -1,5 +1,18 @@
 # Trạng thái hiện tại
 
+## Ảnh Storage cho khóa HSK 5 và HSK 6 — 2026-07-21
+
+- Supabase public hiện có 6 khóa học published và 6 object trong `Public-Media/courses`.
+- Đã ghép `luyen-thi-hsk-5` với `courses/hsk5.jpg`, `luyen-thi-hsk-6` với `courses/hsk6.jpg`; `thumbnail_url` database vẫn là nguồn ưu tiên.
+- Hai ảnh gốc trả HTTP 200, `image/jpeg`; lint/build đạt.
+
+## Ảnh chuyên gia trên trang chủ và `/expert` — 2026-07-21
+
+- Đã đưa ảnh `Vu-thinh.png` do người dùng cung cấp vào `public/images/expert/vu-thinh.png`.
+- Trang chủ hiển thị toàn cảnh buổi học trong section chuyên gia; `/expert` crop về phía chuyên gia trong khung dọc.
+- Hồ sơ ưu tiên `avatar_url` từ Supabase nếu có và dùng ảnh local làm fallback; metadata/JSON-LD nhận cùng URL ảnh đang render.
+- Lint/build đạt; Task 04 vẫn còn mục Kinh nghiệm do chưa có dữ liệu/schema được xác nhận.
+
 ## Hệ thống upload và hiển thị media Supabase — 2026-07-21
 
 - Đã triển khai helper media dùng chung, upload/remove/replace server-side, mapping folder tập trung và tương thích URL/path/local/null.

@@ -1,3 +1,8 @@
+export const expertPhoto = {
+  src: "/images/expert/vu-thinh.png",
+  alt: "Chuyên gia Vũ Thịnh hướng dẫn học viên trong một buổi học tiếng Trung",
+} as const;
+
 export const consultationProcess = [
   { title: "Gửi yêu cầu", description: "Chia sẻ mục tiêu, hiện trạng và dịch vụ bạn quan tâm." },
   { title: "Xác nhận lịch", description: "Trung tâm liên hệ để thống nhất thời gian và hình thức phù hợp." },

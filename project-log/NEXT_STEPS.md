@@ -123,3 +123,13 @@
 1. Gửi sitemap production trong Google Search Console và yêu cầu index các URL ưu tiên.
 2. Theo dõi Page indexing, Rich results và Core Web Vitals sau khi Google crawl lại.
 3. Dùng URL Inspection yêu cầu index lại trang chủ để Google cập nhật favicon; thời gian xử lý có thể từ vài ngày đến vài tuần.
+
+## Sau cập nhật ảnh chuyên gia
+
+1. Deploy thay đổi và kiểm tra crop ảnh tại trang chủ cùng `/expert` trên mobile, tablet và desktop production.
+2. Nếu muốn quản lý ảnh hoàn toàn qua admin, upload ảnh này vào folder expert của `Public-Media` và lưu path vào `experts.avatar_url`; ảnh local hiện vẫn là fallback an toàn.
+
+## Sau cập nhật ảnh HSK 5 và HSK 6
+
+1. Deploy source mới và kiểm tra card/hero ảnh của `/courses`, `/courses/luyen-thi-hsk-5` và `/courses/luyen-thi-hsk-6` trên production.
+2. Có thể lưu trực tiếp `courses/hsk5.jpg` và `courses/hsk6.jpg` vào `thumbnail_url` qua admin để database trở thành nguồn cấu hình duy nhất; mapping hiện tại tiếp tục là fallback.

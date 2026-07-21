@@ -114,3 +114,11 @@
 - Database vẫn được ưu tiên; URL Storage chỉ là fallback cho object đã được chủ sở hữu cung cấp.
 - Bốn URL gốc, trang danh sách/chi tiết khóa học và endpoint tối ưu ảnh Next.js đều trả HTTP 200; lint/build đạt.
 - Runtime `/courses` xác nhận đủ bốn filename trong HTML; cả bốn request qua Next Image Optimizer trả HTTP 200 và `image/png`.
+
+## Bổ sung ảnh khóa HSK 5 và HSK 6 — 2026-07-21
+
+- Đối chiếu 6 khóa học published với 6 object trong `Public-Media/courses`; hai khóa mới có `thumbnail_url` trống.
+- Ánh xạ `luyen-thi-hsk-5` tới `courses/hsk5.jpg` và `luyen-thi-hsk-6` tới `courses/hsk6.jpg` trong `src/config/public-media.ts`.
+- Giữ nguyên ưu tiên ảnh từ database; mapping Storage chỉ được dùng khi `thumbnail_url` trống.
+- Hai URL Storage trả HTTP 200, `image/jpeg`; `npm.cmd run lint` và `npm.cmd run build` đạt.
+- Không có vấn đề source mới; cần deploy để production nhận mapping mới.

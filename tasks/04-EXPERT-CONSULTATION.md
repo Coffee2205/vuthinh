@@ -67,3 +67,12 @@
 - Không có bảng/logic kinh nghiệm trong service và type hiện tại; checkbox giữ `[ ]` để không tạo số năm hay timeline giả.
 - Task 04 bị chặn ở dữ liệu/schema cho đúng một mục này; không chuyển sang Task 05 trong phiên rà soát.
 - Kiểm tra sau rà soát: `npm.cmd run lint` đạt; `npm.cmd run build` đạt (lần đầu trong sandbox lỗi tải Google Fonts, chạy lại có network thành công).
+
+## Cập nhật ảnh chuyên gia — 2026-07-21
+
+- Đưa ảnh người dùng cung cấp vào `public/images/expert/vu-thinh.png` và hiển thị trong phần đầu `/expert`.
+- Ảnh local là fallback khi `avatar_url` trong Supabase chưa có; avatar do admin cấu hình sau này vẫn được ưu tiên.
+- Khung dọc dùng crop lệch phải để giữ chuyên gia làm chủ thể; alt mô tả đúng bối cảnh buổi học.
+- File sửa: `src/data/expert.ts`, `src/services/expert.service.ts`, `src/components/expert/ExpertProfile.tsx`.
+- Vấn đề còn lại: mục Kinh nghiệm vẫn chờ dữ liệu/schema đã xác nhận; thay đổi ảnh không tự bổ sung nội dung này.
+- Kiểm tra: `npm.cmd run lint` và `npm.cmd run build` đều đạt ngày 2026-07-21.
