@@ -1,5 +1,6 @@
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { getCourseThumbnailMedia } from "@/config/public-media";
+import { getPublicMediaUrl } from "@/lib/supabase/storage";
 import type { Course, CourseFilters, CourseSort, OrderedContent, ProgramCategory } from "@/types/course";
 
 type Row = Record<string, unknown>;
@@ -33,9 +34,7 @@ function mapCourse(row: Row): Course {
   return {
     id: String(row.id), title: String(row.title), slug: String(row.slug),
     shortDescription: String(row.short_description), description: String(row.description),
-    thumbnailUrl: row.thumbnail_url
-      ? String(row.thumbnail_url)
-      : getCourseThumbnailMedia(String(row.slug))?.url ?? null,
+    thumbnailUrl: getPublicMediaUrl(row.thumbnail_url ? String(row.thumbnail_url) : getCourseThumbnailMedia(String(row.slug))?.url),
     category: { id: String(category.id), name: String(category.name), slug: String(category.slug), program: { id: String(program.id), name: String(program.name), slug: String(program.slug) } },
     levelLabel: String(row.level_label), levelFrom: row.level_from ? String(row.level_from) : null, levelTo: row.level_to ? String(row.level_to) : null,
     sessionCount: Number(row.session_count), sessionDurationMinutes: row.session_duration_minutes == null ? null : Number(row.session_duration_minutes),
@@ -76,7 +75,7 @@ export async function getActivePrograms(): Promise<ProgramCategory[]> {
   return (data as Row[]).map((row) => {
     const categories = Array.isArray(row.course_categories) ? row.course_categories as Row[] : [];
     const courseCount = categories.reduce((sum, item) => sum + (Array.isArray(item.courses) ? (item.courses as Row[]).filter((course) => course.status === "published").length : 0), 0);
-    return { id: String(row.id), name: String(row.name), slug: String(row.slug), shortDescription: String(row.short_description), description: String(row.description), imageUrl: row.image_url ? String(row.image_url) : null, targetAudience: row.target_audience ? String(row.target_audience) : null, displayOrder: Number(row.display_order ?? 0), courseCount, isCore: String(row.slug).startsWith("tieng-trung") || String(row.slug) === "luyen-thi-hsk" };
+    return { id: String(row.id), name: String(row.name), slug: String(row.slug), shortDescription: String(row.short_description), description: String(row.description), imageUrl: getPublicMediaUrl(row.image_url ? String(row.image_url) : null), targetAudience: row.target_audience ? String(row.target_audience) : null, displayOrder: Number(row.display_order ?? 0), courseCount, isCore: String(row.slug).startsWith("tieng-trung") || String(row.slug) === "luyen-thi-hsk" };
   });
 }
 

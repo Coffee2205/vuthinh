@@ -52,3 +52,13 @@
 - Đánh dấu hoàn thành đăng nhập, bảo vệ route, dashboard, xem đăng ký và xem tư vấn.
 - Chưa đánh dấu năm mục CRUD hoặc cập nhật trạng thái vì chưa chạy mutation tạo/sửa/xóa/status thực tế. Editor hiện cũng chưa có thao tác Delete và chưa quản lý quan hệ nhiều dòng.
 - `npm.cmd run lint` và `npm.cmd run build`: kết quả gần nhất đều đạt ngày 2026-07-20.
+
+## Quản lý ảnh Supabase Storage — 2026-07-21
+
+- Bổ sung input file, preview, thay ảnh, gỡ ảnh, pending và lỗi tiếng Việt cho editor khóa học, bài viết, tài liệu và cảm nhận.
+- Upload chạy trong Server Action sau `requireAdmin()`, server tự chọn folder và record UUID; chỉ nhận JPG/PNG/WebP tối đa 5 MB, tên file timestamp + UUID, `upsert: false`.
+- Database tiếp tục dùng các field thật `thumbnail_url`, `cover_image_url`, `image_url` nhưng upload mới lưu storage path thay vì URL đầy đủ.
+- Create upload trước rồi insert bằng UUID sinh tại server; insert lỗi sẽ xóa ảnh mới. Edit upload ảnh mới, update DB, sau đó mới xóa ảnh cũ. Gỡ ảnh update DB về null rồi mới xóa object.
+- Archive không xóa ảnh; editor hiện không có hard-delete record nên không bổ sung delete flow ngoài phạm vi.
+- Chưa đánh dấu CRUD hoàn thành: migration Storage chưa được áp dụng vào production và chưa có admin session trong phiên để thử upload/replace/remove thật.
+- Test helper, lint và build đạt; public runtime và Image Optimizer đạt.

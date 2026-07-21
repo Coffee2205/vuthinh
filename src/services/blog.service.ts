@@ -1,5 +1,6 @@
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { getBlogCoverMedia } from "@/config/public-media";
+import { getPublicMediaUrl } from "@/lib/supabase/storage";
 import type { BlogAuthor, BlogCategory, BlogFilters, BlogPost, BlogPostDetail, BlogPostListItem, BlogRelatedConsultationService, BlogRelatedCourse, BlogTag } from "@/types/blog";
 
 type Row = Record<string, unknown>;
@@ -12,12 +13,13 @@ function mapList(row: Row): BlogPostListItem {
   const tags = Array.isArray(blog_post_tags) ? blog_post_tags.map((item) => one<BlogTag>((item as Row).blog_tags)).filter((tag): tag is BlogTag => Boolean(tag)) : [];
   const storedPost = post as unknown as Omit<BlogPost, "content">;
   const storageCover = storedPost.cover_image_url ? null : getBlogCoverMedia(storedPost.slug);
+  const author = one<BlogAuthor>(experts);
   return {
     ...storedPost,
-    cover_image_url: storedPost.cover_image_url || storageCover?.url || null,
+    cover_image_url: getPublicMediaUrl(storedPost.cover_image_url || storageCover?.url),
     cover_image_alt: storedPost.cover_image_alt || storageCover?.alt || null,
     category: one<BlogCategory>(blog_categories),
-    author: one<BlogAuthor>(experts),
+    author: author ? { ...author, avatar_url: getPublicMediaUrl(author.avatar_url) } : null,
     tags,
   };
 }

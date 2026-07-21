@@ -1,5 +1,11 @@
 # Vấn đề và giới hạn đang tồn tại
 
+## ISSUE-040 — Migration và mutation media production chưa được xác minh
+
+**Trạng thái:** Open — Chặn xác nhận hoàn thành upload admin
+
+Source/migration media đã test helper, lint, build và public runtime, nhưng phiên này không có quyền quản trị database hoặc admin session để áp dụng migration và chạy upload/replace/remove thật. Cần áp dụng migration mới, sau đó QA có thể hoàn tác cho bốn editor và xác minh anonymous insert/update/delete bị từ chối. Expert có `avatar_url` và public display đã hỗ trợ path, nhưng project không có admin expert nên không tạo route mới ngoài phạm vi.
+
 ## ISSUE-039 — Chưa có danh sách object media ngoài Blog
 
 **Trạng thái:** Open — Không chặn build

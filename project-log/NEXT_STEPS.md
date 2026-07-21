@@ -1,5 +1,12 @@
 # Việc tiếp theo
 
+## Sau triển khai media admin — 2026-07-21
+
+1. Áp dụng migration `202607210001_configure_public_media_storage.sql` vào Supabase production.
+2. Đăng nhập admin và chạy QA có thể hoàn tác cho create/replace/remove ở courses, posts, resources và testimonials.
+3. Xác minh object nằm đúng folder record UUID, database lưu path, ảnh cũ bị xóa sau DB success và anonymous mutation bị từ chối.
+4. Chỉ đánh dấu phần media/CRUD hoàn thành sau khi QA thật đạt; expert chưa có admin editor nên không mở module mới.
+
 ## Sau tích hợp Public-Media — 2026-07-21
 
 1. Cung cấp tên file trong các thư mục chuyên gia, tài liệu và câu chuyện để ánh xạ theo slug/bản ghi.

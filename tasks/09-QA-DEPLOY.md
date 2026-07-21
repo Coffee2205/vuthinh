@@ -161,3 +161,10 @@ Website hoạt động được trên domain thật và nhận đăng ký thực
 
 - Chuyển favicon sang URL ổn định `/favicon.png`, PNG vuông 512×512 và khai báo `rel="icon"`/`apple-touch-icon` trong root metadata.
 - Trang chủ và favicon đều được robots cho phép crawl; cần yêu cầu Google index lại trang chủ và chờ hệ thống xử lý.
+
+## Cấu hình ảnh Storage chặt hơn — 2026-07-21
+
+- `next.config.ts` chỉ cho Image Optimizer tải đúng hostname Supabase hiện tại và pathname `/storage/v1/object/public/Public-Media/**`.
+- Server Action cho phép payload 6 MB để validation ứng dụng giới hạn ảnh ở 5 MB.
+- Course, Blog, Resource, Expert và Success Story chuẩn hóa URL/path trước khi render hoặc tạo metadata; URL ngoài được giữ tương thích và bỏ optimizer khi hostname không được allowlist.
+- Không dùng Supabase Image Transformation và chưa chuyển đổi WebP tự động; file JPG/PNG/WebP hợp lệ được giữ nguyên để tránh thêm dependency/crop ngoài ý muốn.

@@ -1,5 +1,13 @@
 # Nhật ký quyết định
 
+## 2026-07-21 — Media lưu path, upload server-side và giữ bucket thực tế
+
+- Giữ bucket ID đang vận hành `Public-Media` thay vì đổi sang `public-media`, tránh làm hỏng object/URL hiện có do Storage phân biệt hoa thường.
+- Field database hiện hữu vẫn giữ tên có hậu tố `_url`, nhưng upload mới lưu storage path; helper chung chuyển path thành URL và giữ nguyên URL đầy đủ/local path.
+- Upload chạy trong Server Action với session admin, folder do server map theo section và UUID record; không tin folder/tên file từ client và không dùng service-role.
+- Không thêm thư viện nén hoặc crop. File JPG/PNG/WebP tối đa 5 MB được giữ định dạng; WebP tự động chỉ xem xét khi có pipeline hình ảnh được kiểm thử riêng.
+- Replace theo thứ tự upload → DB update → xóa cũ; DB lỗi rollback file mới. Archive giữ file vì Task 08 hiện không có hard-delete record.
+
 ## 2026-07-21 — Ảnh Storage có fallback theo slug, database vẫn là nguồn ưu tiên
 
 Các cột URL media trong database tiếp tục là nguồn ưu tiên. Với nội dung có URL đang trống, service chỉ ánh xạ slug sang object đã được chủ sở hữu cung cấp và xác minh trong bucket public `Public-Media`; URL được tạo từ biến môi trường thay vì hard-code Supabase project. Object path giữ nguyên chữ hoa/thường vì Supabase Storage phân biệt ký tự. Khi admin bổ sung URL vào database, dữ liệu đó tự động thay thế fallback.

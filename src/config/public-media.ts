@@ -1,4 +1,4 @@
-const publicMediaBucket = "Public-Media";
+import { getPublicMediaUrl } from "@/lib/supabase/storage";
 
 const blogCoverBySlug: Record<string, { path: string; alt: string }> = {
   "hsk-la-gi-va-nen-bat-dau-tu-cap-do-nao": {
@@ -37,18 +37,6 @@ const courseThumbnailBySlug: Record<string, { path: string; alt: string }> = {
     alt: "Khóa luyện thi HSK 4",
   },
 };
-
-export function getPublicMediaUrl(path: string): string | null {
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL?.replace(/\/$/, "");
-  if (!supabaseUrl) return null;
-
-  const encodedPath = path
-    .split("/")
-    .map((segment) => encodeURIComponent(segment))
-    .join("/");
-
-  return `${supabaseUrl}/storage/v1/object/public/${encodeURIComponent(publicMediaBucket)}/${encodedPath}`;
-}
 
 export function getBlogCoverMedia(slug: string) {
   const media = blogCoverBySlug[slug];

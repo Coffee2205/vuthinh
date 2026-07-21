@@ -330,6 +330,18 @@ src/
 
 ## 7. Definition of Done kỹ thuật
 
+### Media public và upload admin
+
+```text
+Admin editor → Server Action → requireAdmin → Supabase Storage → database media path
+Public service → getPublicMediaUrl(path | URL | local | null) → next/image
+```
+
+- Bucket thực tế: `Public-Media`; upload mới dùng `courses`, `posts`, `resources`, `experts`, `testimonials`, mỗi object nằm dưới record UUID.
+- Các field URL hiện hữu tiếp tục được dùng nhưng giá trị mới là storage path; helper giữ tương thích URL đầy đủ, URL ngoài, local path và null.
+- Replace luôn upload mới và update database trước khi xóa object cũ; database lỗi sẽ rollback object vừa upload.
+- Storage mutation dùng JWT admin hiện tại và RLS trên `user_profiles.role = 'admin'`, `is_active = true`; không dùng service-role trong web app.
+
 ## Support pages triển khai ở Task 06
 
 ```text

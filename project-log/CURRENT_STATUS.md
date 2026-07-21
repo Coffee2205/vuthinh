@@ -1,5 +1,14 @@
 # Trạng thái hiện tại
 
+## Hệ thống upload và hiển thị media Supabase — 2026-07-21
+
+- Đã triển khai helper media dùng chung, upload/remove/replace server-side, mapping folder tập trung và tương thích URL/path/local/null.
+- Bốn editor hiện hữu (course, post, resource, testimonial) có file input, preview, replace/remove, pending và validation JPG/PNG/WebP tối đa 5 MB.
+- Public service chuẩn hóa ảnh cho course/program, blog/author, resource/related course, expert và success story; success story đã hiển thị ảnh thật bằng `next/image`.
+- Migration mới cấu hình bucket thực tế `Public-Media`, public read và admin-only mutation theo `user_profiles`; chưa áp dụng production trong phiên này.
+- 8 test helper đạt; lint/build đạt; bảy public route HTTP 200, Image Optimizer HTTP 200; unauthenticated admin editor vẫn redirect 307.
+- Upload/replace/remove thật bằng admin chưa được kiểm tra nên CRUD Task 08 chưa được đánh dấu hoàn thành.
+
 ## Ảnh bài viết từ Supabase Storage — 2026-07-21
 
 - Đã kết nối bốn ảnh trong `Public-Media/post` với bốn bài blog và bốn ảnh trong `Public-Media/courses` với toàn bộ bốn khóa học hiện có theo slug.

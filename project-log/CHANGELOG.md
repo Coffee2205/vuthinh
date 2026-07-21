@@ -1,5 +1,29 @@
 # Changelog
 
+## 2026-07-21 — Media upload và public display
+
+### Added
+
+- Helper URL/path/validation, storage upload/remove/replace và folder mapping dùng chung.
+- Admin media field có preview, replace/remove, lỗi accessible và submit pending cho bốn module hiện hữu.
+- Migration bucket/policy `Public-Media` và 8 test helper media.
+- Hiển thị ảnh cho success story.
+
+### Changed
+
+- Public services chuẩn hóa media path/URL cho course, blog, resource, expert và success story.
+- Next Image allowlist thu hẹp về đúng project/bucket; Server Action body limit 6 MB, validation ảnh 5 MB.
+- Admin lưu storage path và xử lý replace theo thứ tự an toàn, không còn dùng URL text làm phương thức ảnh chính.
+
+### Verified
+
+- `npm.cmd test`: 8/8 đạt; `npm.cmd run lint` và `npm.cmd run build` đạt.
+- Course/blog/resource/expert/success-story runtime HTTP 200; Image Optimizer trả HTTP 200; admin không session redirect 307.
+
+### Known issues
+
+- Migration chưa áp dụng và chưa QA upload/replace/remove bằng admin thật; không đánh dấu Task 08 CRUD hoàn thành.
+
 ## 2026-07-21 — Tích hợp ảnh Blog từ Supabase Storage
 
 ### Added

@@ -1,4 +1,5 @@
 import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { getPublicMediaUrl } from "@/lib/supabase/storage";
 import type { ConsultationService, Expert, ExpertFaq, ExpertQualification, ExpertSpecialization } from "@/types/expert";
 
 function fail(context: string, message: string): never {
@@ -9,7 +10,8 @@ function fail(context: string, message: string): never {
 export async function getActiveExpertBySlug(slug: string) {
   const { data, error } = await createSupabaseServerClient().from("experts").select("*").eq("slug", slug).eq("is_active", true).maybeSingle();
   if (error) fail("Không thể tải hồ sơ chuyên gia", error.message);
-  return data as Omit<Expert, "expert_qualifications" | "expert_specializations" | "consultation_services" | "expert_faqs"> | null;
+  if (!data) return null;
+  return { ...data, avatar_url: getPublicMediaUrl(data.avatar_url) } as Omit<Expert, "expert_qualifications" | "expert_specializations" | "consultation_services" | "expert_faqs">;
 }
 
 export async function getExpertQualifications(expertId: string) {
