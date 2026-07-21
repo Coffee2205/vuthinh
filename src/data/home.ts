@@ -12,8 +12,8 @@ export const heroContent = {
     label: "Đăng ký học thử",
   },
   secondaryAction: {
-    href: "/programs",
-    label: "Khám phá chương trình",
+    href: "/courses",
+    label: "Khám phá khóa học",
   },
   focusAreas: [
     {
@@ -70,8 +70,8 @@ export const programsContent = {
   description:
     "Khám phá các hướng học được xây dựng cho nhiều độ tuổi và mục tiêu, trong đó tiếng Trung là nền tảng đào tạo trọng tâm.",
   action: {
-    href: "/programs",
-    label: "Xem tất cả chương trình",
+    href: "/courses",
+    label: "Xem tất cả khóa học",
   },
   groups: [
     {
@@ -172,21 +172,15 @@ export const parentTestimonialsContent = {
 
 export const featuredContent = {
   eyebrow: "Góc kiến thức",
-  title: "Nội dung đồng hành cùng việc học và nuôi dưỡng gia đình",
+  title: "Kiến thức đồng hành cùng việc học và nuôi dưỡng gia đình",
   description:
-    "Blog và tài liệu miễn phí sẽ chia sẻ kiến thức về tiếng Trung, kỹ năng sống và phát triển con người.",
+    "Blog chia sẻ kiến thức về tiếng Trung, kỹ năng sống và phát triển con người.",
   channels: [
     {
       symbol: "文",
       title: "Bài viết nổi bật",
       status: "Các bài viết đã được biên tập và xuất bản đang được cập nhật.",
       action: { href: "/blog", label: "Khám phá Blog" },
-    },
-    {
-      symbol: "本",
-      title: "Tài liệu miễn phí",
-      status: "Các tài liệu có link xem hoặc tải hợp lệ đang được cập nhật.",
-      action: { href: "/resources", label: "Xem Tài liệu" },
     },
   ],
   note: "Chỉ nội dung đã được xác nhận trạng thái xuất bản và quyền sử dụng mới xuất hiện tại đây.",

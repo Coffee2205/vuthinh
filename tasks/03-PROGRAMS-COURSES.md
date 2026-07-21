@@ -122,3 +122,10 @@
 - Giữ nguyên ưu tiên ảnh từ database; mapping Storage chỉ được dùng khi `thumbnail_url` trống.
 - Hai URL Storage trả HTTP 200, `image/jpeg`; `npm.cmd run lint` và `npm.cmd run build` đạt.
 - Không có vấn đề source mới; cần deploy để production nhận mapping mới.
+
+## Gỡ trang Chương trình — 2026-07-21
+
+- Theo yêu cầu người dùng, xóa route public `/programs` cùng loading/error state; lịch sử triển khai trước đây được giữ nguyên trong task.
+- CTA chương trình tại Hero và section trang chủ chuyển sang `/courses`; Header/Footer/Sitemap không còn `/programs`.
+- Không xóa taxonomy chương trình trong Supabase hoặc bộ lọc chương trình tại `/courses`.
+- Lint/build đạt; production build không còn route `/programs`.

@@ -138,3 +138,8 @@
 
 1. Deploy và kiểm tra trực quan các route đại diện `/about`, `/courses`, course detail, `/blog`, blog detail, `/expert`, `/consultation`, `/privacy` trên mobile/desktop.
 2. Xác nhận `/admin/login` và dashboard admin không nhận ảnh nền public.
+
+## Sau khi gỡ Programs và Resources public
+
+1. Sau deploy, xác nhận `/programs`, `/resources` và resource detail cũ trả 404.
+2. Kiểm tra Header/Footer/Home/Sitemap production không còn link tới hai route; `/courses` và `/blog` tiếp tục HTTP 200.

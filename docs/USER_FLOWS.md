@@ -53,11 +53,11 @@
 
 Giai đoạn 1 không khóa lịch realtime và không tự động chống trùng lịch.
 
-## 3. Luồng đọc blog và tài liệu
+## 3. Luồng đọc blog
 
-1. Người dùng truy cập Blog hoặc Tài liệu.
+1. Người dùng truy cập Blog.
 2. Lọc theo danh mục nếu có.
-3. Mở bài viết/tài liệu.
+3. Mở bài viết.
 4. Xem nội dung.
 5. Chọn CTA phù hợp:
    - Xem khóa học.
@@ -71,15 +71,6 @@ Giai đoạn 1 không khóa lịch realtime và không tự động chống trù
 3. Người dùng mở `/blog/[slug]`; slug không hợp lệ đi tới trang không tìm thấy.
 4. Bài viết hiển thị Markdown, tác giả/nguồn và các quan hệ có trong database.
 5. Người dùng có thể mở khóa học liên quan hoặc form tư vấn đã chọn service.
-
-### Luồng Tài liệu triển khai ở Task 05
-
-1. `/resources` tải danh sách tài liệu published từ Supabase.
-2. Người dùng xem loại, mô tả và trạng thái tài liệu.
-3. Nếu có link hợp lệ, người dùng mở tệp hoặc nguồn ngoài trong tab mới.
-4. Nếu chưa có link hoặc chưa có tài liệu, giao diện thông báo rõ và không tạo lượt tải giả.
-5. Với tài nguyên public, Server Action kiểm tra lại bản ghi, ghi download event rồi chuyển tới file/link ngoài.
-6. Với tài nguyên cần đăng ký, website không lộ link; form nhận tài liệu chờ yêu cầu nghiệp vụ riêng.
 
 ## 4. Luồng quản trị nội dung
 

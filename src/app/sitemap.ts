@@ -1,19 +1,16 @@
 import type { MetadataRoute } from "next";
 import { getPublishedBlogPosts } from "@/services/blog.service";
 import { getPublishedCourses } from "@/services/course.service";
-import { getPublishedResources } from "@/services/resource.service";
 
 const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://vuthinh.io.vn").replace(/\/$/, "");
 
 const staticPaths = [
   "",
   "/about",
-  "/programs",
   "/courses",
   "/expert",
   "/consultation",
   "/blog",
-  "/resources",
   "/success-stories",
   "/faq",
   "/careers",
@@ -30,10 +27,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: path === "" ? 1 : 0.7,
   }));
 
-  const [courses, posts, resources] = await Promise.allSettled([
+  const [courses, posts] = await Promise.allSettled([
     getPublishedCourses(),
     getPublishedBlogPosts(),
-    getPublishedResources(),
   ]);
 
   if (courses.status === "fulfilled") {
@@ -51,15 +47,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: post.updated_at,
       changeFrequency: "monthly" as const,
       priority: 0.7,
-    })));
-  }
-
-  if (resources.status === "fulfilled") {
-    entries.push(...resources.value.map((resource) => ({
-      url: `${siteUrl}/resources/${resource.slug}`,
-      lastModified: resource.updated_at,
-      changeFrequency: "monthly" as const,
-      priority: 0.6,
     })));
   }
 

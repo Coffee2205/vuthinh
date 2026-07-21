@@ -955,3 +955,10 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 - Thêm `site-shell` cho vùng nội dung public và nền dùng chung từ `vietnam-china-trade-street-hero.webp`.
 - Giới hạn ảnh ở vùng đầu trang, bổ sung overlay sáng và giữ hero riêng của trang chủ.
 - Loại trừ admin/admin login; lint/build đạt.
+
+## 2026-07-21 — Gỡ trang Programs và Resources
+
+- Xóa `/programs`, `/resources`, `/resources/[slug]` và các state/action route liên quan.
+- Gỡ liên kết khỏi Header, Footer, Home và sitemap; chuyển CTA chương trình sang `/courses`.
+- Giữ admin/dữ liệu Resources cùng taxonomy dùng cho bộ lọc khóa học.
+- Lint/build đạt; route manifest không còn hai nhóm route public.

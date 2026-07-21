@@ -72,3 +72,10 @@
 - Kiểm tra: `npm.cmd run lint` đạt; `npm.cmd run build` đạt ngày 2026-07-21, toàn bộ route compile và TypeScript thành công.
 - Runtime production local có kết nối Supabase: `/blog` và `/blog/hsk-la-gi-va-nen-bat-dau-tu-cap-do-nao` trả HTTP 200; HTML có URL `Public-Media/post`, tên file HSK và alt text tương ứng.
 - Sửa lỗi hiển thị ngày 2026-07-21: Supabase Storage phân biệt hoa/thường, object thật nằm trong `post` thay vì `Post`; endpoint tối ưu ảnh Next.js hiện trả HTTP 200 và `image/jpeg`.
+
+## Gỡ trang Tài liệu — 2026-07-21
+
+- Theo yêu cầu người dùng, xóa route public `/resources`, `/resources/[slug]` và các loading/error/not-found/action đi kèm.
+- Header, sitemap và khối kiến thức trang chủ không còn liên kết tới tài liệu; khối này chỉ giữ Blog.
+- Giữ `/admin/resources`, service/type/component và dữ liệu Supabase để không xóa dữ liệu hoặc khả năng quản trị.
+- Lint/build đạt; production build không còn route public Resources.

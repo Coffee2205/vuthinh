@@ -50,12 +50,10 @@ Sau khi hoàn thành Giai đoạn 1, website phải:
 
 - Trang chủ.
 - Giới thiệu.
-- Chương trình đào tạo.
 - Danh sách và chi tiết khóa học.
 - Hồ sơ một chuyên gia.
 - Đăng ký tư vấn.
 - Blog và chi tiết bài viết.
-- Tài liệu miễn phí.
 - Thành quả học viên và cảm nhận phụ huynh.
 - FAQ.
 - Tuyển dụng.

@@ -1,2 +1,0 @@
-"use client";
-export default function ResourcesError({ reset }: { reset: () => void }) { return <main className="mx-auto max-w-3xl px-4 py-24 text-center"><h1 className="text-3xl font-bold text-slate-950">Chưa thể tải tài liệu</h1><p className="mt-4 text-slate-600">Thư viện đang tạm thời gián đoạn. Vui lòng thử lại sau.</p><button type="button" onClick={reset} className="button-primary mt-6">Thử lại</button></main> }

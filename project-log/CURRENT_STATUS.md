@@ -433,3 +433,10 @@ Chờ người dùng chỉ định. Catalog đã kết nối Supabase; bước v
 - `vietnam-china-trade-street-hero.webp` được dùng ở vùng đầu của toàn bộ trang public, bao gồm route danh sách, chi tiết, form, pháp lý và trạng thái thành công.
 - Lớp phủ sáng giữ nguyên hệ màu chữ hiện tại; ảnh chỉ phủ tối đa 28rem để không làm nhiễu nội dung phía dưới.
 - Trang chủ tiếp tục dùng hero tối riêng; toàn bộ admin được loại trừ. Lint/build đạt.
+
+## Gỡ `/programs` và `/resources` khỏi website public — 2026-07-21
+
+- Đã xóa hai route danh sách, resource detail và toàn bộ route state/action chỉ phục vụ Resources.
+- Header, Footer, Home CTA, Home featured content và sitemap không còn liên kết/URL tới hai trang đã gỡ.
+- `/courses` thay thế đích điều hướng chương trình; `/admin/resources` và dữ liệu Supabase được giữ nguyên.
+- Lint/build đạt; route manifest không còn `/programs`, `/resources` hoặc `/resources/[slug]`.

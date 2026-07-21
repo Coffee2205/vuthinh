@@ -24,7 +24,7 @@ export function FeaturedContentSection() {
           </p>
         </div>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
+        <div className="mx-auto mt-10 grid max-w-3xl gap-6">
           {featuredContent.channels.map((channel) => (
             <article
               key={channel.title}

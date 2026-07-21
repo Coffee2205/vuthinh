@@ -542,3 +542,7 @@ Hai object `courses/hsk5.jpg` và `courses/hsk6.jpg` đã được xác minh pub
 ## Cập nhật ảnh nền đầu trang public — 2026-07-21
 
 Không có issue source mới; lint/build đạt. Cần QA trực quan sau deploy trên các route đại diện và hai viewport để xác nhận mức overlay/crop phù hợp với nội dung production dài/ngắn khác nhau.
+
+## Gỡ Programs và Resources public — 2026-07-21
+
+Không có issue source mới. Các URL cũ sẽ chủ động trả 404 sau deploy; dữ liệu Resources vẫn tồn tại và admin vẫn quản lý được nhưng không có trang xem công khai cho đến khi có quyết định mới.

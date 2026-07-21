@@ -361,3 +361,7 @@ Logo mới không có alpha và có vùng đen thừa phía dưới. Header/Foot
 ## 2026-07-21 — Ảnh nền đầu trang được điều khiển tại public shell
 
 Các trang public dùng chung một pseudo-element tại vùng mở đầu thay vì lặp `next/image` trong từng page. Ảnh chỉ phủ phần đầu, overlay sáng giữ nội dung hiện hữu dễ đọc; hero trang chủ giữ cách render tối ưu/priority riêng. Selector yêu cầu `main` là con trực tiếp của `site-shell` và loại trừ `.admin-root`, vì vậy không tác động giao diện quản trị.
+
+## 2026-07-21 — Gỡ Programs và Resources chỉ ở bề mặt public
+
+Theo yêu cầu người dùng, `/programs` và toàn bộ `/resources` không còn là route công khai. Không xóa bảng/dữ liệu Supabase hoặc `/admin/resources`; taxonomy chương trình vẫn phục vụ bộ lọc `/courses`. Các CTA chương trình chuyển thẳng tới danh sách khóa học và nội dung kiến thức trang chủ chỉ giữ Blog.
