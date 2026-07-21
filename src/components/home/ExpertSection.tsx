@@ -4,7 +4,7 @@ import { expertContent } from "@/data/home";
 
 export function ExpertSection() {
   return (
-    <section className="bg-white py-16 sm:py-20 lg:py-24" aria-labelledby="expert-heading">
+    <section className="section-soft-gradient py-16 sm:py-20 lg:py-24" aria-labelledby="expert-heading">
       <Container>
         <div className="grid overflow-hidden rounded-[2rem] border border-slate-200 bg-brand-blue-soft lg:grid-cols-[0.9fr_1.1fr]">
           <div className="relative grid min-h-80 place-items-center overflow-hidden bg-brand-blue p-8 sm:min-h-96">

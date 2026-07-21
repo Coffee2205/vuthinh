@@ -3,7 +3,7 @@ import { trustContent } from "@/data/home";
 
 export function TrustSection() {
   return (
-    <section className="bg-white py-16 sm:py-20 lg:py-24" aria-labelledby="trust-heading">
+    <section className="section-soft-gradient py-16 sm:py-20 lg:py-24" aria-labelledby="trust-heading">
       <Container>
         <div className="grid gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:gap-16">
           <div className="max-w-xl lg:sticky lg:top-8 lg:self-start">

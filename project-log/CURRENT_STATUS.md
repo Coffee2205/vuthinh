@@ -410,3 +410,7 @@ Chờ người dùng chỉ định. Catalog đã kết nối Supabase; bước v
 - Lint/build đạt; chưa commit, chưa push.
 - Hero dùng gradient tối từ trái `#241B2B` sang Dark purple-grey `#3D3242`, giảm dần về bên phải; headline/description/eyebrow đổi sang màu sáng để giữ tương phản. Lint/build đạt.
 - Logo Header/Footer crop theo chính giữa (`object-center`), loại khoảng đen thừa cân đối ở đầu trên/dưới và giữ trọn cụm hoa văn trung tâm. Lint/build đạt.
+## Gradient nền section xen kẽ — 2026-07-21
+
+- Các section nền trắng trên Home gồm Trust, Expert, Parent Testimonials và Trial Registration dùng gradient 135° `#fff8fa → #faf4f8 → #f4eef7`.
+- Card, form và admin giữ nền riêng để bảo toàn tương phản. Lint/build đạt; chưa commit, chưa push.

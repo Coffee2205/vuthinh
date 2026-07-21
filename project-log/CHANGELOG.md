@@ -931,3 +931,8 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 - Lint/build đạt; chưa commit và chưa push.
 - Điều chỉnh Hero tối bên trái, trong dần về bên phải; chuyển headline sang trắng, điểm nhấn champagne và nội dung phụ trắng mờ. Lint/build đạt.
 - Đổi crop logo từ ưu tiên phía trên sang chính giữa để giữ đầy đủ hoa văn và bỏ phần thừa đầu trên/dưới. Lint/build đạt.
+## 2026-07-21 — Gradient nhẹ cho section nền trắng
+
+- Thêm utility `section-soft-gradient` với gradient hồng–tím rất nhạt.
+- Áp dụng cho bốn section xen kẽ trên trang chủ; không áp dụng card/admin.
+- Lint/build đạt; chưa commit và chưa push.

@@ -4,7 +4,7 @@ import { parentTestimonialsContent } from "@/data/home";
 export function ParentTestimonialsSection() {
   return (
     <section
-      className="bg-white py-16 sm:py-20 lg:py-24"
+      className="section-soft-gradient py-16 sm:py-20 lg:py-24"
       aria-labelledby="parent-testimonials-heading"
     >
       <Container>

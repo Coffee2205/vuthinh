@@ -18,4 +18,6 @@ body:has(.admin-root) > header, body:has(.admin-root) > footer { display: none; 
 
 @layer components {
   .button-primary { @apply inline-flex min-h-11 items-center justify-center rounded-lg bg-brand-blue px-5 py-2 text-center text-sm font-semibold text-white transition-colors hover:bg-brand-blue-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue; }
+  .section-soft-gradient,
+  #trial-registration { background: linear-gradient(135deg, #fff8fa 0%, #faf4f8 48%, #f4eef7 100%); }
 }

@@ -254,3 +254,7 @@ Tạo trang chủ thuyết phục phụ huynh và dẫn người dùng đến đ
 - [x] Cấu hình priority, responsive crop và overlay đảm bảo nội dung dễ đọc.
 - [x] Lint/build đạt; chưa commit và chưa push.
 - [x] Gradient Hero tối bên trái, nhẹ dần sang phải; chữ và eyebrow có tương phản phù hợp. Lint/build đạt.
+## Gradient section nền trắng — 2026-07-21
+
+- [x] Trust, Expert, Parent Testimonials và Trial Registration dùng gradient 135° được cung cấp.
+- [x] Card/form giữ nền riêng; lint/build đạt; chưa commit và chưa push.
