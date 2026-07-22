@@ -1,5 +1,9 @@
 # Vấn đề và giới hạn đang tồn tại
 
+## Cập nhật tinh gọn trang chủ — 2026-07-22
+
+- Không phát sinh issue mới; lint và build đều đạt sau khi gỡ bốn section khỏi `/`.
+
 ## ISSUE-040 — Migration và mutation media production chưa được xác minh
 
 **Trạng thái:** Open — Chặn xác nhận hoàn thành upload admin

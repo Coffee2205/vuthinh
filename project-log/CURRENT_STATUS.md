@@ -1,5 +1,11 @@
 # Trạng thái hiện tại
 
+## Tinh gọn nội dung trang chủ — 2026-07-22
+
+- Trang chủ không còn hiển thị Hành trình học tập, Thành quả học viên, Cảm nhận phụ huynh và Góc kiến thức.
+- Các component/dữ liệu nguồn và trang public độc lập được giữ nguyên; thay đổi chỉ tác động bố cục `/`.
+- Lint/build đạt.
+
 ## Ảnh Storage cho khóa HSK 5 và HSK 6 — 2026-07-21
 
 - Supabase public hiện có 6 khóa học published và 6 object trong `Public-Media/courses`.

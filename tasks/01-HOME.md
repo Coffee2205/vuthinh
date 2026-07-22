@@ -9,11 +9,11 @@ Tạo trang chủ thuyết phục phụ huynh và dẫn người dùng đến đ
 - [x] Hero.
 - [x] Vì sao phụ huynh tin tưởng.
 - [x] Chương trình học nổi bật.
-- [x] Hành trình học tập.
+- [x] Hành trình học tập — đã gỡ khỏi trang chủ theo yêu cầu ngày 2026-07-22.
 - [x] Giới thiệu chuyên gia.
-- [x] Thành quả học viên.
-- [x] Cảm nhận phụ huynh.
-- [x] Bài viết/tài liệu nổi bật.
+- [x] Thành quả học viên — đã gỡ khỏi trang chủ theo yêu cầu ngày 2026-07-22.
+- [x] Cảm nhận phụ huynh — đã gỡ khỏi trang chủ theo yêu cầu ngày 2026-07-22.
+- [x] Bài viết/tài liệu nổi bật — đã gỡ khỏi trang chủ theo yêu cầu ngày 2026-07-22.
 - [x] Form đăng ký học thử.
 - [x] CTA cuối trang.
 
@@ -23,6 +23,15 @@ Tạo trang chủ thuyết phục phụ huynh và dẫn người dùng đến đ
 - Khối tiếng Trung phải nổi bật hơn các mảng khác.
 - CTA chính là đăng ký học thử.
 - Responsive đầy đủ.
+
+## Tinh gọn trang chủ — 2026-07-22
+
+- File sửa: `src/app/page.tsx`.
+- Ngừng import và render bốn section: Hành trình học tập, Thành quả học viên, Cảm nhận phụ huynh và Góc kiến thức.
+- Giữ nguyên component, dữ liệu và các trang public độc lập để không làm mất chức năng ngoài trang chủ.
+- Không có vấn đề còn tồn tại từ thay đổi này.
+- `npm.cmd run lint`: đạt.
+- `npm.cmd run build`: đạt; 23 trang tĩnh được tạo và toàn bộ route biên dịch thành công.
 
 ## Tiêu chí hoàn thành
 

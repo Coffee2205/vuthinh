@@ -1,5 +1,10 @@
 # Nhật ký quyết định
 
+## 2026-07-22 — Chỉ gỡ bốn section khỏi trang chủ
+
+- Ngừng import/render Hành trình học tập, Thành quả học viên, Cảm nhận phụ huynh và Góc kiến thức tại `/`.
+- Không xóa component, dữ liệu nguồn, route `/success-stories`, `/blog` hoặc chức năng admin vì yêu cầu chỉ giới hạn ở trang chủ.
+
 ## 2026-07-21 — Media lưu path, upload server-side và giữ bucket thực tế
 
 - Giữ bucket ID đang vận hành `Public-Media` thay vì đổi sang `public-media`, tránh làm hỏng object/URL hiện có do Storage phân biệt hoa thường.

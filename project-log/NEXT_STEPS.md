@@ -1,5 +1,9 @@
 # Việc tiếp theo
 
+## Sau tinh gọn trang chủ — 2026-07-22
+
+- Không có bước kỹ thuật bắt buộc còn lại cho yêu cầu này; chỉ cần deploy khi người dùng muốn đưa thay đổi lên production.
+
 ## Sau triển khai media admin — 2026-07-21
 
 1. Áp dụng migration `202607210001_configure_public_media_storage.sql` vào Supabase production.

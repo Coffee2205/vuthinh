@@ -1,5 +1,17 @@
 # Changelog
 
+## 2026-07-22 — Tinh gọn trang chủ
+
+### Changed
+
+- Gỡ Hành trình học tập, Thành quả học viên, Cảm nhận phụ huynh và Góc kiến thức khỏi luồng render trang chủ.
+- Giữ nguyên dữ liệu, component và các route độc lập liên quan.
+
+### Verification
+
+- `npm.cmd run lint`: đạt.
+- `npm.cmd run build`: đạt.
+
 ## 2026-07-21 — Media upload và public display
 
 ### Added
