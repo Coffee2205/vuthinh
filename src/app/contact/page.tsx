@@ -29,7 +29,7 @@ return (
                         </div>
                         <div>
                             <dt className="font-semibold text-slate-900">Địa chỉ</dt>
-                            <dd>{String(contact.address||"Đang cập nhật")}</dd>
+                            <dd>{String(contact.address||"Đường Cầu vồng, Vinhomes Grand Park city Thủ Đức")}</dd>
                         </div>
                     </dl>
                 </div>
