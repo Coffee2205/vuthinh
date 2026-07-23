@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-07-23 — Thuật ngữ và hồ sơ giảng viên
+
+- Đổi nội dung public-facing “Chuyên gia” thành “Giảng viên”, giữ route `/expert` và cấu trúc nội bộ.
+- Cập nhật hồ sơ Huỳnh Anh Ngữ (Vũ Thịnh), học vấn, kinh nghiệm, lĩnh vực giảng dạy, CTA, metadata và Person JSON-LD.
+- Thêm migration đúng record Supabase đã xác minh; không thay schema hoặc dữ liệu khóa học.
+- Kiểm tra: lint/build đạt; test 8/8 đạt.
+
 ## 2026-07-22 — Tinh gọn trang chủ
 
 ### Changed

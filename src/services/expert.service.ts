@@ -1,6 +1,6 @@
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { getPublicMediaUrl } from "@/lib/supabase/storage";
-import { expertPhoto } from "@/data/expert";
+import { expertPhoto, lecturerProfile } from "@/data/expert";
 import type { ConsultationService, Expert, ExpertFaq, ExpertQualification, ExpertSpecialization } from "@/types/expert";
 
 function fail(context: string, message: string): never {
@@ -10,20 +10,32 @@ function fail(context: string, message: string): never {
 
 export async function getActiveExpertBySlug(slug: string) {
   const { data, error } = await createSupabaseServerClient().from("experts").select("*").eq("slug", slug).eq("is_active", true).maybeSingle();
-  if (error) fail("Không thể tải hồ sơ chuyên gia", error.message);
+  if (error) fail("Không thể tải hồ sơ giảng viên", error.message);
   if (!data) return null;
-  return { ...data, avatar_url: getPublicMediaUrl(data.avatar_url) ?? expertPhoto.src } as Omit<Expert, "expert_qualifications" | "expert_specializations" | "consultation_services" | "expert_faqs">;
+  return {
+    ...data,
+    full_name: lecturerProfile.fullName,
+    professional_title: lecturerProfile.jobTitle,
+    short_bio: lecturerProfile.shortBio,
+    biography: lecturerProfile.biography,
+    avatar_url: getPublicMediaUrl(data.avatar_url) ?? expertPhoto.src,
+  } as Omit<Expert, "expert_qualifications" | "expert_specializations" | "consultation_services" | "expert_faqs">;
 }
 
 export async function getExpertQualifications(expertId: string) {
   const { data, error } = await createSupabaseServerClient().from("expert_qualifications").select("*").eq("expert_id", expertId).order("display_order");
-  if (error) fail("Không thể tải học vấn chuyên gia", error.message);
-  return (data ?? []) as ExpertQualification[];
+  if (error) fail("Không thể tải học vấn giảng viên", error.message);
+  return (data ?? []).map((item, index) => index === 0 ? {
+    ...item,
+    title: lecturerProfile.education.degree,
+    institution: lecturerProfile.education.institution,
+    description: null,
+  } : item) as ExpertQualification[];
 }
 
 export async function getExpertSpecializations(expertId: string) {
   const { data, error } = await createSupabaseServerClient().from("expert_specializations").select("*").eq("expert_id", expertId).order("display_order");
-  if (error) fail("Không thể tải chuyên môn chuyên gia", error.message);
+  if (error) fail("Không thể tải lĩnh vực giảng dạy", error.message);
   return (data ?? []) as ExpertSpecialization[];
 }
 
@@ -40,8 +52,12 @@ export async function getExpertServices(expertId: string) {
 
 export async function getExpertFaqs(expertId: string) {
   const { data, error } = await createSupabaseServerClient().from("expert_faqs").select("*").eq("expert_id", expertId).eq("is_active", true).order("display_order");
-  if (error) fail("Không thể tải FAQ chuyên gia", error.message);
-  return (data ?? []) as ExpertFaq[];
+  if (error) fail("Không thể tải FAQ giảng viên", error.message);
+  return (data ?? []).map((faq) => ({
+    ...faq,
+    question: faq.question.replaceAll("Chuyên gia", "Giảng viên").replaceAll("chuyên gia", "giảng viên"),
+    answer: faq.answer.replaceAll("Chuyên gia", "Giảng viên").replaceAll("chuyên gia", "giảng viên"),
+  })) as ExpertFaq[];
 }
 
 export async function getExpertProfileBySlug(slug: string): Promise<Expert | null> {

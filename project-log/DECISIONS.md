@@ -1,5 +1,11 @@
 # Nhật ký quyết định
 
+## 2026-07-23 — Thuật ngữ và URL giảng viên
+
+- Giữ route/canonical `/expert` và tên nội bộ `expert*` để không phá link hoặc quan hệ database; chỉ đổi nội dung hiển thị sang “Giảng viên”.
+- Giữ `Person` JSON-LD với dữ liệu thật; không thêm award, rating, review hoặc credentials.
+- Không thêm field/schema kinh nghiệm: dùng `experts.biography` và qualification hiện hữu theo slug/quan hệ đã xác minh.
+
 ## 2026-07-22 — Chỉ gỡ bốn section khỏi trang chủ
 
 - Ngừng import/render Hành trình học tập, Thành quả học viên, Cảm nhận phụ huynh và Góc kiến thức tại `/`.

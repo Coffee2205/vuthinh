@@ -18,9 +18,8 @@ export function ExpertSection() {
               className="scale-125 object-cover object-center"
             />
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/80 via-slate-950/35 to-transparent px-6 pb-6 pt-24 text-white sm:px-8 sm:pb-8">
-              <p className="max-w-md text-sm font-semibold leading-6">
-                {expertContent.status}
-              </p>
+              <p className="text-xl font-bold">{expertContent.fullName}</p>
+              <p className="mt-1 text-sm font-semibold">Tên thường gọi: {expertContent.alternateName}</p>
             </div>
           </div>
 

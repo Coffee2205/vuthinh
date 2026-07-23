@@ -1,5 +1,11 @@
 # Vấn đề và giới hạn đang tồn tại
 
+## Migration hồ sơ giảng viên chưa áp dụng production — 2026-07-23
+
+- Trạng thái: Open.
+- Publishable key chịu RLS và trả 0 row khi thử cập nhật đúng record `vu-thinh`; không dùng key đặc quyền hoặc thay policy.
+- Migration đã tạo; source service đang chiếu dữ liệu xác nhận để UI/build không hiển thị hồ sơ cũ. Cần áp dụng migration bằng quyền quản trị và đối chiếu production.
+
 ## Cập nhật tinh gọn trang chủ — 2026-07-22
 
 - Không phát sinh issue mới; lint và build đều đạt sau khi gỡ bốn section khỏi `/`.

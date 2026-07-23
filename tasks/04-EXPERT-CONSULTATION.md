@@ -76,3 +76,12 @@
 - File sửa: `src/data/expert.ts`, `src/services/expert.service.ts`, `src/components/expert/ExpertProfile.tsx`.
 - Vấn đề còn lại: mục Kinh nghiệm vẫn chờ dữ liệu/schema đã xác nhận; thay đổi ảnh không tự bổ sung nội dung này.
 - Kiểm tra: `npm.cmd run lint` và `npm.cmd run build` đều đạt ngày 2026-07-21.
+
+## Cập nhật thuật ngữ và hồ sơ giảng viên — 2026-07-23
+
+- [x] Nội dung public-facing đổi từ “Chuyên gia” sang “Giảng viên”; giữ route `/expert` và tên nội bộ `expert*` để tương thích.
+- [x] Hồ sơ hiển thị Huỳnh Anh Ngữ, tên thường gọi Vũ Thịnh, học vấn Cử nhân Ngữ văn Trung và bốn dòng kinh nghiệm đúng dữ liệu được cung cấp.
+- [x] Metadata/Open Graph và Person JSON-LD có `alternateName`, `jobTitle`, `alumniOf`, `knowsAbout` từ dữ liệu thật.
+- Nguồn dữ liệu: migration `202607230001_update_lecturer_profile.sql`; service chiếu cùng dữ liệu đã xác nhận trước khi migration production được áp dụng. Admin hiện không có module hồ sơ giảng viên.
+- Giới hạn: publishable key bị RLS từ chối update (0 row); migration chưa áp dụng production.
+- Không sửa schema hoặc dữ liệu khóa học. Lint/build đạt; test 8/8 đạt.

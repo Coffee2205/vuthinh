@@ -1,5 +1,11 @@
 # Việc tiếp theo
 
+## Sau cập nhật hồ sơ giảng viên — 2026-07-23
+
+1. Chủ dự án duyệt và áp dụng `supabase/migrations/202607230001_update_lecturer_profile.sql` bằng quy trình có quyền quản trị.
+2. Sau migration, xác minh record `vu-thinh`; chỉ bỏ lớp chiếu dữ liệu trong service khi database đã đồng bộ hoặc có admin hồ sơ ở task riêng.
+3. Không chuyển sang task khác nếu chưa có yêu cầu mới.
+
 ## Sau tinh gọn trang chủ — 2026-07-22
 
 - Không có bước kỹ thuật bắt buộc còn lại cho yêu cầu này; chỉ cần deploy khi người dùng muốn đưa thay đổi lên production.

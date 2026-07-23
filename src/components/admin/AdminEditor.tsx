@@ -6,7 +6,7 @@ import { getPublicMediaUrl } from "@/lib/supabase/storage";
 import { editorConfigs, type EditorSection } from "@/services/admin/editor.service";
 
 const labels: Record<string, string> = {
-  category_id: "Danh mục ID", author_expert_id: "Tác giả/chuyên gia ID", title: "Tiêu đề", slug: "Slug",
+  category_id: "Danh mục ID", author_expert_id: "Tác giả/giảng viên ID", title: "Tiêu đề", slug: "Slug",
   short_description: "Mô tả ngắn", description: "Mô tả", level_label: "Cấp độ", level_from: "Trình độ đầu vào",
   level_to: "Trình độ đầu ra", session_count: "Số buổi", session_duration_minutes: "Phút mỗi buổi",
   duration_text: "Thời lượng hiển thị", study_format: "Hình thức học", class_size_text: "Sĩ số", price: "Giá",

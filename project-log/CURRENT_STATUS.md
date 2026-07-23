@@ -1,5 +1,12 @@
 # Trạng thái hiện tại
 
+## Hồ sơ giảng viên — 2026-07-23
+
+- Public-facing đã đổi “Chuyên gia” thành “Giảng viên”; hồ sơ Huỳnh Anh Ngữ (Vũ Thịnh), học vấn, kinh nghiệm, metadata và Person JSON-LD đã cập nhật.
+- Giữ `/expert`, canonical/sitemap và tên nội bộ `expert*`; không chỉnh dữ liệu khóa học.
+- Migration Supabase chưa áp dụng production do publishable key không có quyền update; service bảo đảm source build hiển thị dữ liệu được xác nhận.
+- Lint/build đạt; test 8/8 đạt.
+
 ## Tinh gọn nội dung trang chủ — 2026-07-22
 
 - Trang chủ không còn hiển thị Hành trình học tập, Thành quả học viên, Cảm nhận phụ huynh và Góc kiến thức.

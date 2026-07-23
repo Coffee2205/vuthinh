@@ -6,7 +6,7 @@ const navigation = [
   { href: "/", label: "Trang chủ" },
   { href: "/about", label: "Giới thiệu" },
   { href: "/courses", label: "Khóa học" },
-  { href: "/expert", label: "Chuyên gia" },
+  { href: "/expert", label: "Giảng viên" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Liên hệ" },
 ];

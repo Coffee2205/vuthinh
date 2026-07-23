@@ -3,7 +3,7 @@ import { z } from "zod";
 const optionalText = (max: number) => z.string().trim().max(max, `Tối đa ${max} ký tự`).transform((value) => value || null);
 
 export const consultationRequestSchema = z.object({
-  expert_id: z.string().uuid("Chuyên gia không hợp lệ"),
+  expert_id: z.string().uuid("Giảng viên không hợp lệ"),
   service_id: z.string().uuid("Dịch vụ không hợp lệ").nullable(),
   full_name: z.string().trim().min(2, "Họ tên cần ít nhất 2 ký tự").max(150, "Họ tên tối đa 150 ký tự"),
   phone: z.string().trim().min(8, "Số điện thoại cần ít nhất 8 ký tự").max(30, "Số điện thoại tối đa 30 ký tự").regex(/^\+?[0-9][0-9 .()-]{6,28}[0-9]$/, "Số điện thoại không hợp lệ"),

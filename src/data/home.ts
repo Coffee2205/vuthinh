@@ -141,14 +141,14 @@ export const learningJourneyContent = {
 } as const;
 
 export const expertContent = {
-  eyebrow: "Chuyên gia đồng hành",
+  eyebrow: "Giảng viên đồng hành",
   title: "Kết nối giáo dục với sự thấu hiểu mỗi gia đình",
   description:
-    "Chuyên gia đồng hành trong việc lắng nghe nhu cầu, định hướng chương trình và kết nối ngôn ngữ với kỹ năng sống, cảm xúc và giá trị con người.",
-  status: "Thông tin hồ sơ chuyên gia đang được cập nhật",
-  note: "Tên, hình ảnh, kinh nghiệm và chứng chỉ sẽ chỉ hiển thị sau khi được xác nhận.",
-  focusAreas: ["Định hướng học tập", "Tiếng Trung", "Kỹ năng & cảm xúc"],
-  profileAction: { href: "/expert", label: "Xem trang chuyên gia" },
+    "Giảng viên đồng hành trong quá trình đánh giá nhu cầu, định hướng lộ trình và kết nối việc học tiếng Trung với kỹ năng sống, cảm xúc và giá trị phát triển cá nhân.",
+  fullName: "Huỳnh Anh Ngữ",
+  alternateName: "Vũ Thịnh",
+  focusAreas: ["Tiếng Trung", "Định hướng học tập", "Kỹ năng sống và cảm xúc", "Đào tạo và huấn luyện"],
+  profileAction: { href: "/expert", label: "Xem trang giảng viên" },
   consultationAction: { href: "/consultation", label: "Đăng ký tư vấn" },
 } as const;
 
