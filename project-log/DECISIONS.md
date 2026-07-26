@@ -382,3 +382,6 @@ Theo yêu cầu người dùng, `/programs` và toàn bộ `/resources` không c
 - Seed theo slug, tự lấy khóa ngoại danh mục/tác giả và cho phép chạy lại an toàn.
 - Chưa gán ảnh bìa vì chưa có tài sản và quyền sử dụng được xác nhận.
 - Ảnh Blog mới dùng mapping fallback theo slug trong source; `cover_image_url` từ database vẫn có độ ưu tiên cao hơn để admin có thể thay ảnh mà không sửa code.
+- Phân trang Blog dùng server-side Supabase `range` với page size cố định 12; không tải toàn bộ bài về rồi cắt trên UI.
+- Theo yêu cầu công khai tất cả bài, migration chuyển cả trạng thái `draft`/`archived` sang `published`; bài cũ giữ ngày đăng, bài null/tương lai được đưa về thời điểm chạy.
+- Toàn bộ ảnh Blog tiếp tục ánh xạ theo slug làm fallback; không ghi đè ảnh do admin lưu trong `cover_image_url`.

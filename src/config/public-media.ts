@@ -53,6 +53,50 @@ const blogCoverBySlug: Record<string, { path: string; alt: string }> = {
     path: "post/Tieng_trung_trong_thuong_mai.png",
     alt: "Tiếng Trung được sử dụng trong kinh doanh và thương mại",
   },
+  "hoc-tieng-trung-co-giup-hoc-them-ngon-ngu-khac-khong": {
+    path: "post/hoc-tieng-trung-giup-hoc-ngon-ngu-khac.webp",
+    alt: "Người học sử dụng kinh nghiệm tiếng Trung để tiếp cận ngôn ngữ khác",
+  },
+  "hoc-tieng-trung-ren-tu-duy-he-thong-qua-bo-thu-va-cau-tao-chu": {
+    path: "post/bo-thu.webp",
+    alt: "Các bộ thủ và cấu tạo chữ Hán giúp rèn tư duy hệ thống",
+  },
+  "tieng-trung-giup-ket-noi-voi-nhieu-cong-dong-hon": {
+    path: "post/da-ngon-ngu.jpg",
+    alt: "Tiếng Trung giúp kết nối với cộng đồng đa ngôn ngữ",
+  },
+  "hoc-tieng-trung-giup-tang-su-tu-tin-trong-giao-tiep": {
+    path: "post/tang-tu-tin.jpg",
+    alt: "Người học tự tin hơn khi giao tiếp bằng tiếng Trung",
+  },
+  "loi-ich-cua-tieng-trung-voi-nganh-du-lich-va-dich-vu": {
+    path: "post/du-lich-va-dich-vu.webp",
+    alt: "Tiếng Trung được ứng dụng trong ngành du lịch và dịch vụ",
+  },
+  "hoc-tieng-trung-de-hieu-ro-hon-ve-am-thuc-va-doi-song": {
+    path: "post/am-thuc-va-loi-song.jpg",
+    alt: "Ẩm thực và đời sống được khám phá qua tiếng Trung",
+  },
+  "tieng-trung-ho-tro-muc-tieu-du-hoc-nhu-the-nao": {
+    path: "post/ho-tro-du-hoc.jpg",
+    alt: "Tiếng Trung hỗ trợ người học chuẩn bị mục tiêu du học",
+  },
+  "hoc-tieng-trung-tao-thoi-quen-hoc-tap-ben-vung": {
+    path: "post/tao-thoi-quen-hoc.jpg",
+    alt: "Người học xây dựng thói quen học tiếng Trung bền vững",
+  },
+  "tieng-trung-giup-nang-cao-kha-nang-lang-nghe": {
+    path: "post/ho-tro-nghe.jpg",
+    alt: "Luyện nghe tiếng Trung giúp nâng cao khả năng lắng nghe",
+  },
+  "hoc-tieng-trung-giup-hieu-cong-nghe-va-san-pham-tu-nguon-goc": {
+    path: "post/hieu-nguon-goc.webp",
+    alt: "Tiếng Trung giúp tìm hiểu công nghệ và sản phẩm từ nguồn gốc",
+  },
+  "vi-sao-hoc-tieng-trung-la-mot-khoan-dau-tu-dai-han": {
+    path: "post/dau-tu-dai-han.webp",
+    alt: "Học tiếng Trung là một khoản đầu tư kiến thức dài hạn",
+  },
 };
 
 const courseThumbnailBySlug: Record<string, { path: string; alt: string }> = {

@@ -97,3 +97,26 @@
 - Service tiếp tục ưu tiên `cover_image_url` do admin lưu; mapping chỉ làm fallback khi database đang để trống.
 - 9/9 URL public trả HTTP 200 và đúng MIME ảnh; lint/build đạt.
 - 11 bài còn lại trong bộ 20 bài chưa có object ảnh tương ứng trong `Public-Media/post`.
+
+## Phân trang Blog 12 bài mỗi trang — 2026-07-26
+
+- Bổ sung truy vấn phân trang server-side bằng Supabase `range` và `count: exact`; mỗi trang danh sách lấy tối đa 12 bài published hợp lệ.
+- `/blog?page=2` hiển thị trang kế tiếp; query `category` được giữ nguyên khi bấm Trang trước/Trang sau, còn chọn danh mục luôn bắt đầu lại từ trang 1.
+- Trang vượt quá tổng số trang được redirect về trang cuối có dữ liệu; giá trị `page` thiếu, sai hoặc không dương dùng trang 1.
+- Tạo `BlogPagination` responsive, có nhãn điều hướng, trạng thái vô hiệu hóa và chỉ render khi có từ hai trang.
+- Runtime với 13 bài public: trang 1 có 12 bài và liên kết trang 2; trang 2 có bài còn lại. Lint/build đạt.
+
+## SQL công khai toàn bộ bài Blog — 2026-07-26
+
+- Tạo `supabase/migrations/202607260002_publish_all_blog_posts.sql` để chuyển toàn bộ `blog_posts` sang `published`.
+- Bài có `published_at` null hoặc trong tương lai được đưa về thời điểm chạy migration; bài đã công khai trong quá khứ giữ nguyên ngày đăng.
+- Migration có transaction và bước kiểm tra, tự rollback nếu vẫn còn bài bị ẩn bởi trạng thái hoặc thời gian xuất bản.
+- Chưa chạy trên Supabase production; chủ sở hữu cần chạy file trong SQL Editor.
+
+## Hoàn tất ảnh cho toàn bộ 24 bài Blog — 2026-07-26
+
+- Đọc lại `Public-Media/post` và bổ sung 11 mapping còn thiếu vào `src/config/public-media.ts`.
+- Ghép ảnh cho các bài: học ngôn ngữ khác, bộ thủ, cộng đồng, tự tin, du lịch/dịch vụ, ẩm thực, du học, thói quen bền vững, lắng nghe, công nghệ/sản phẩm và đầu tư dài hạn.
+- Kết hợp 4 ảnh bài cũ và 9 ảnh đã ghép trước đó, toàn bộ 24 bài hiện có đều có ảnh fallback theo slug.
+- Không đổi tên, di chuyển hoặc xóa object Storage; `cover_image_url` trong database vẫn được ưu tiên nếu admin đặt ảnh riêng.
+- 11/11 URL mới trả HTTP 200 và đúng MIME; `npm.cmd run lint`, `npm.cmd run build` và `git diff --check` đạt.

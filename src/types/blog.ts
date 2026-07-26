@@ -16,3 +16,4 @@ export interface BlogRelatedConsultationService { id: string; name: string; slug
 export type BlogRelatedPost = BlogPostListItem;
 export interface BlogPostDetail extends BlogPostListItem { content: string; related_courses: BlogRelatedCourse[]; related_consultation_services: BlogRelatedConsultationService[]; related_posts: BlogRelatedPost[] }
 export interface BlogFilters { categorySlug?: string; limit?: number; offset?: number; featured?: boolean }
+export interface PaginatedBlogPosts { posts: BlogPostListItem[]; total: number; page: number; pageSize: number; totalPages: number }

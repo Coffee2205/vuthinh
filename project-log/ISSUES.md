@@ -561,3 +561,6 @@ Không có issue source mới. Các URL cũ sẽ chủ động trả 404 sau dep
 - Bộ 20 bài đã được chuẩn bị dưới dạng migration nhưng chưa được duyệt chuyên môn hoặc áp dụng production.
 - 20 bài chưa có ảnh bìa được xác nhận quyền sử dụng; giao diện sẽ dùng placeholder hiện có nếu migration được chạy nguyên trạng.
 - Cập nhật: 9/20 bài mới đã có ảnh Storage và được ánh xạ; 11 bài còn lại vẫn dùng placeholder.
+- Không có issue source mới từ phân trang Blog; cần QA production sau deploy với tổng bài và chính sách RLS tại thời điểm thực tế.
+- Public Supabase vẫn chỉ trả 13 bài cho đến khi migration công khai toàn bộ Blog được chạy bằng quyền database phù hợp.
+- Vấn đề thiếu ảnh cho 11 bài Blog còn lại đã được giải quyết bằng các object mới trong `Public-Media/post`.

@@ -159,3 +159,6 @@
 - Sau khi duyệt, chạy migration trong Supabase SQL Editor và xác minh `/blog` cùng 20 trang chi tiết.
 - Bổ sung ảnh bìa có quyền sử dụng nếu muốn; không dùng ảnh từ trang tham khảo khi chưa được cấp phép.
 - Khi có thêm ảnh cho 11 bài còn lại, đặt tên theo slug hoặc cung cấp bảng đối chiếu để ánh xạ chính xác.
+- Sau khi deploy, kiểm tra `/blog`, `/blog?page=2` và một danh mục có nhiều hơn 12 bài trên production.
+- Chạy `supabase/migrations/202607260002_publish_all_blog_posts.sql` trong Supabase SQL Editor, sau đó kiểm tra tổng số bài public.
+- Sau deploy, kiểm tra trực quan ảnh của 24 bài trên hai trang Blog và một số trang chi tiết đại diện.

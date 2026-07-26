@@ -13,6 +13,21 @@
 - 9 URL ảnh gốc trả HTTP 200 và đúng MIME; lint/build đạt.
 - 11 bài còn lại trong bộ 20 bài chưa có ảnh Storage tương ứng.
 
+## Phân trang Blog — 2026-07-26
+
+- Danh sách `/blog` hiển thị tối đa 12 bài mỗi trang, phân trang phía server và giữ bộ lọc danh mục trong URL.
+- Runtime với 13 bài public xác nhận trang 1 có 12 bài, trang 2 có phần còn lại; lint/build đạt.
+
+## SQL công khai toàn bộ Blog — 2026-07-26
+
+- Đã chuẩn bị migration chuyển toàn bộ bài sang `published` và loại bỏ thời gian xuất bản tương lai/null.
+- Migration chưa được áp dụng production; public Supabase hiện vẫn chỉ expose 13 bài cho đến khi chạy SQL.
+
+## Hoàn tất ảnh cho 24 bài Blog — 2026-07-26
+
+- Đã bổ sung 11 mapping ảnh còn lại; toàn bộ 24 bài hiện có đều có ảnh Storage fallback theo slug.
+- 11 URL mới đã xác minh HTTP 200; lint/build đạt.
+
 ## Hồ sơ giảng viên — 2026-07-23
 
 - Public-facing đã đổi “Chuyên gia” thành “Giảng viên”; hồ sơ Huỳnh Anh Ngữ (Vũ Thịnh), học vấn, kinh nghiệm, metadata và Person JSON-LD đã cập nhật.

@@ -986,3 +986,6 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 - Thêm migration seed 20 bài Blog nguyên bản về lợi ích học tiếng Trung, kèm danh mục và metadata SEO.
 - Cập nhật trạng thái, bước tiếp theo, quyết định và issue vận hành nội dung.
 - Ánh xạ 9 ảnh mới trong Supabase Storage vào đúng bài Blog theo slug; không thay đổi object hoặc dữ liệu database.
+- Thêm phân trang server-side cho Blog, tối đa 12 bài mỗi trang và giữ bộ lọc danh mục qua URL.
+- Thêm migration công khai toàn bộ bài Blog, xử lý cả trạng thái chưa published và ngày xuất bản null/tương lai.
+- Hoàn tất mapping ảnh Supabase Storage cho toàn bộ 24 bài Blog hiện có.

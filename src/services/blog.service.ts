@@ -1,7 +1,7 @@
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { getBlogCoverMedia } from "@/config/public-media";
 import { getPublicMediaUrl } from "@/lib/supabase/storage";
-import type { BlogAuthor, BlogCategory, BlogFilters, BlogPost, BlogPostDetail, BlogPostListItem, BlogRelatedConsultationService, BlogRelatedCourse, BlogTag } from "@/types/blog";
+import type { BlogAuthor, BlogCategory, BlogFilters, BlogPost, BlogPostDetail, BlogPostListItem, BlogRelatedConsultationService, BlogRelatedCourse, BlogTag, PaginatedBlogPosts } from "@/types/blog";
 
 type Row = Record<string, unknown>;
 const listColumns = "id,category_id,author_expert_id,title,slug,excerpt,cover_image_url,cover_image_alt,status,is_featured,reading_time_minutes,seo_title,seo_description,canonical_url,source_title,source_url,source_publisher,source_accessed_at,source_note,published_at,display_order,created_at,updated_at";
@@ -39,6 +39,39 @@ export async function getPublishedBlogPosts(filters: BlogFilters = {}): Promise<
 }
 export function getFeaturedBlogPosts() { return getPublishedBlogPosts({ featured: true, limit: 2 }) }
 export function getBlogPostsByCategorySlug(categorySlug: string) { return getPublishedBlogPosts({ categorySlug }) }
+
+export async function getPaginatedBlogPosts({ categorySlug, page, pageSize }: { categorySlug?: string; page: number; pageSize: number }): Promise<PaginatedBlogPosts> {
+  const supabase = createSupabaseServerClient();
+  let categoryId: string | undefined;
+  if (categorySlug) {
+    const { data, error } = await supabase.from("blog_categories").select("id").eq("slug", categorySlug).eq("is_active", true).maybeSingle();
+    if (error) fail("Không thể tải danh mục blog", error);
+    if (!data) return { posts: [], total: 0, page, pageSize, totalPages: 1 };
+    categoryId = data.id;
+  }
+
+  const offset = (page - 1) * pageSize;
+  let query = supabase
+    .from("blog_posts")
+    .select(relationSelect, { count: "exact" })
+    .eq("status", "published")
+    .or(`published_at.is.null,published_at.lte.${new Date().toISOString()}`)
+    .order("published_at", { ascending: false, nullsFirst: false })
+    .order("display_order")
+    .range(offset, offset + pageSize - 1);
+  if (categoryId) query = query.eq("category_id", categoryId);
+
+  const { data, count, error } = await query;
+  if (error) fail("Không thể tải bài viết", error);
+  const total = count ?? 0;
+  return {
+    posts: (data ?? []).map((row) => mapList(row as Row)),
+    total,
+    page,
+    pageSize,
+    totalPages: Math.max(1, Math.ceil(total / pageSize)),
+  };
+}
 
 async function getRelatedCoursesByPostIdWithClient(postId: string): Promise<BlogRelatedCourse[]> { const { data, error } = await createSupabaseServerClient().from("blog_post_courses").select("courses(id,title,slug,level_label,session_count,price,price_display,currency)").eq("post_id", postId).limit(3); if (error) fail("Không thể tải khóa học liên quan", error); return (data ?? []).map((row) => one<BlogRelatedCourse>((row as Row).courses)).filter((item): item is BlogRelatedCourse => Boolean(item)) }
 export const getRelatedCoursesByPostId = getRelatedCoursesByPostIdWithClient;
