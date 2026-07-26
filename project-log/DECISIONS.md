@@ -376,3 +376,9 @@ Các trang public dùng chung một pseudo-element tại vùng mở đầu thay 
 ## 2026-07-21 — Gỡ Programs và Resources chỉ ở bề mặt public
 
 Theo yêu cầu người dùng, `/programs` và toàn bộ `/resources` không còn là route công khai. Không xóa bảng/dữ liệu Supabase hoặc `/admin/resources`; taxonomy chương trình vẫn phục vụ bộ lọc `/courses`. Các CTA chương trình chuyển thẳng tới danh sách khóa học và nội dung kiến thức trang chủ chỉ giữ Blog.
+# Quyết định nội dung Blog — 2026-07-26
+
+- LearnIT4students chỉ là tham khảo về cấu trúc trình bày; 20 bài được biên soạn mới để tránh sao chép nội dung.
+- Seed theo slug, tự lấy khóa ngoại danh mục/tác giả và cho phép chạy lại an toàn.
+- Chưa gán ảnh bìa vì chưa có tài sản và quyền sử dụng được xác nhận.
+- Ảnh Blog mới dùng mapping fallback theo slug trong source; `cover_image_url` từ database vẫn có độ ưu tiên cao hơn để admin có thể thay ảnh mà không sửa code.

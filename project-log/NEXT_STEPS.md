@@ -153,3 +153,9 @@
 
 1. Sau deploy, xác nhận `/programs`, `/resources` và resource detail cũ trả 404.
 2. Kiểm tra Header/Footer/Home/Sitemap production không còn link tới hai route; `/courses` và `/blog` tiếp tục HTTP 200.
+# Bước tiếp theo — cập nhật 2026-07-26
+
+- Chủ sở hữu/chuyên môn rà soát 20 bài trong `supabase/migrations/202607260001_seed_20_chinese_learning_benefit_posts.sql`.
+- Sau khi duyệt, chạy migration trong Supabase SQL Editor và xác minh `/blog` cùng 20 trang chi tiết.
+- Bổ sung ảnh bìa có quyền sử dụng nếu muốn; không dùng ảnh từ trang tham khảo khi chưa được cấp phép.
+- Khi có thêm ảnh cho 11 bài còn lại, đặt tên theo slug hoặc cung cấp bảng đối chiếu để ánh xạ chính xác.

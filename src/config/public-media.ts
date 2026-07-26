@@ -17,6 +17,42 @@ const blogCoverBySlug: Record<string, { path: string; alt: string }> = {
     path: "post/Tu_vung_tieng_trung.jpg",
     alt: "Minh họa phương pháp học từ vựng tiếng Trung hiệu quả",
   },
+  "hoc-tieng-trung-mo-rong-co-hoi-nghe-nghiep-nhu-the-nao": {
+    path: "post/tieng-trung-mo-rong-cong-viec.jpg",
+    alt: "Người đi làm sử dụng tiếng Trung để mở rộng cơ hội nghề nghiệp",
+  },
+  "7-loi-ich-cua-viec-hoc-tieng-trung-doi-voi-sinh-vien": {
+    path: "post/loi-ich-tieng-tung-voi-sinh-vien.jpg",
+    alt: "Sinh viên học tiếng Trung để phát triển kiến thức và kỹ năng",
+  },
+  "vi-sao-nguoi-di-lam-nen-hoc-tieng-trung": {
+    path: "post/vi-sao-len-hoc-tieng-trung.jpg",
+    alt: "Người đi làm học tiếng Trung phục vụ công việc",
+  },
+  "hoc-tieng-trung-giup-tiep-can-van-hoa-sau-hon": {
+    path: "post/van_hoa_trung_hoa.png",
+    alt: "Văn hóa Trung Hoa được khám phá thông qua việc học tiếng Trung",
+  },
+  "tieng-trung-giup-ich-gi-khi-di-du-lich": {
+    path: "post/tieng_trung_khi_du_lich.webp",
+    alt: "Du khách sử dụng tiếng Trung trong chuyến đi",
+  },
+  "hoc-chu-han-co-the-ren-su-tap-trung-ra-sao": {
+    path: "post/hoc_chu_han.webp",
+    alt: "Người học luyện viết chữ Hán và khả năng tập trung",
+  },
+  "loi-ich-cua-viec-hoc-tieng-trung-tu-som-cho-tre": {
+    path: "post/hoc_tieng_trung_tu_be.jpg",
+    alt: "Trẻ em làm quen với tiếng Trung từ sớm",
+  },
+  "hoc-tieng-trung-giup-mo-rong-nguon-tai-lieu-nhu-the-nao": {
+    path: "post/Mo_rong_nguon_tai_lieu.jpg",
+    alt: "Người học tiếp cận thêm tài liệu bằng tiếng Trung",
+  },
+  "tieng-trung-va-loi-ich-trong-kinh-doanh-thuong-mai": {
+    path: "post/Tieng_trung_trong_thuong_mai.png",
+    alt: "Tiếng Trung được sử dụng trong kinh doanh và thương mại",
+  },
 };
 
 const courseThumbnailBySlug: Record<string, { path: string; alt: string }> = {

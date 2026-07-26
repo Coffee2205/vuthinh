@@ -1,5 +1,18 @@
 # Trạng thái hiện tại
 
+## Bộ 20 bài Blog về lợi ích học tiếng Trung — 2026-07-26
+
+- Đã chuẩn bị migration Supabase gồm 20 bài nguyên bản, một danh mục mới và metadata tương thích schema Blog production hiện tại.
+- Migration chưa được áp dụng production; cần duyệt nội dung rồi chạy trong Supabase SQL Editor.
+- Không thay đổi giao diện, service hoặc schema.
+- Lint/build đạt.
+
+## Ảnh Storage cho 9 bài Blog mới — 2026-07-26
+
+- Đã ánh xạ 9 object mới trong `Public-Media/post` với đúng 9 slug Blog tương ứng.
+- 9 URL ảnh gốc trả HTTP 200 và đúng MIME; lint/build đạt.
+- 11 bài còn lại trong bộ 20 bài chưa có ảnh Storage tương ứng.
+
 ## Hồ sơ giảng viên — 2026-07-23
 
 - Public-facing đã đổi “Chuyên gia” thành “Giảng viên”; hồ sơ Huỳnh Anh Ngữ (Vũ Thịnh), học vấn, kinh nghiệm, metadata và Person JSON-LD đã cập nhật.

@@ -79,3 +79,21 @@
 - Header, sitemap và khối kiến thức trang chủ không còn liên kết tới tài liệu; khối này chỉ giữ Blog.
 - Giữ `/admin/resources`, service/type/component và dữ liệu Supabase để không xóa dữ liệu hoặc khả năng quản trị.
 - Lint/build đạt; production build không còn route public Resources.
+
+## Bộ 20 bài viết về lợi ích học tiếng Trung — 2026-07-26
+
+- Tạo migration `supabase/migrations/202607260001_seed_20_chinese_learning_benefit_posts.sql` gồm 20 bài Markdown nguyên bản, metadata SEO, excerpt, thời gian đọc và ngày xuất bản.
+- Bổ sung danh mục `Lợi ích học tiếng Trung`; liên kết tác giả active theo slug `vu-thinh`, không hard-code UUID production.
+- Migration chạy lại an toàn bằng `ON CONFLICT (slug) DO UPDATE` và tự kiểm tra đủ 20 bài trước khi commit transaction.
+- LearnIT4students chỉ được tham khảo cách tổ chức dạng cẩm nang; không sao chép nội dung. Ảnh bìa giữ `null` vì chưa có tài sản được xác nhận quyền sử dụng.
+- Chưa áp dụng migration lên production; nội dung cần chủ sở hữu/chuyên môn duyệt trước khi chạy trong Supabase SQL Editor.
+- Kiểm tra: đủ 20 slug và 20 khối Markdown; `git diff --check`, `npm.cmd run lint` và `npm.cmd run build` đều đạt.
+
+## Ánh xạ ảnh Storage cho 9 bài Blog mới — 2026-07-26
+
+- Đọc trực tiếp `Public-Media/post` và đối chiếu tên object với slug/title trong `blog_posts`.
+- Bổ sung 9 ánh xạ vào `src/config/public-media.ts`: nghề nghiệp, sinh viên, người đi làm, văn hóa, du lịch, chữ Hán, trẻ em, nguồn tài liệu và thương mại.
+- Giữ nguyên tên object thực tế, bao gồm `loi-ich-tieng-tung-voi-sinh-vien.jpg` và `vi-sao-len-hoc-tieng-trung.jpg`; không đổi tên hoặc xóa file trên Storage.
+- Service tiếp tục ưu tiên `cover_image_url` do admin lưu; mapping chỉ làm fallback khi database đang để trống.
+- 9/9 URL public trả HTTP 200 và đúng MIME ảnh; lint/build đạt.
+- 11 bài còn lại trong bộ 20 bài chưa có object ảnh tương ứng trong `Public-Media/post`.

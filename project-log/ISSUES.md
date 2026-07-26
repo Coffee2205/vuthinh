@@ -556,3 +556,8 @@ Không có issue source mới; lint/build đạt. Cần QA trực quan sau deplo
 ## Gỡ Programs và Resources public — 2026-07-21
 
 Không có issue source mới. Các URL cũ sẽ chủ động trả 404 sau deploy; dữ liệu Resources vẫn tồn tại và admin vẫn quản lý được nhưng không có trang xem công khai cho đến khi có quyết định mới.
+# Cập nhật nội dung Blog — 2026-07-26
+
+- Bộ 20 bài đã được chuẩn bị dưới dạng migration nhưng chưa được duyệt chuyên môn hoặc áp dụng production.
+- 20 bài chưa có ảnh bìa được xác nhận quyền sử dụng; giao diện sẽ dùng placeholder hiện có nếu migration được chạy nguyên trạng.
+- Cập nhật: 9/20 bài mới đã có ảnh Storage và được ánh xạ; 11 bài còn lại vẫn dùng placeholder.
