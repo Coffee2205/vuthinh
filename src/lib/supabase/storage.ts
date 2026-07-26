@@ -4,7 +4,7 @@ export const PUBLIC_IMAGE_MIME_TYPES = ["image/jpeg", "image/png", "image/webp"]
 
 export const MEDIA_FOLDERS = {
   courses: "courses",
-  posts: "posts",
+  posts: "post",
   resources: "resources",
   testimonials: "testimonials",
   experts: "experts",
@@ -13,7 +13,7 @@ export const MEDIA_FOLDERS = {
 export type MediaFolder = (typeof MEDIA_FOLDERS)[keyof typeof MEDIA_FOLDERS];
 
 const storageObjectMarker = `/storage/v1/object/public/${PUBLIC_MEDIA_BUCKET}/`;
-const supportedRoots = new Set<string>([...Object.values(MEDIA_FOLDERS), "post"]);
+const supportedRoots = new Set<string>(Object.values(MEDIA_FOLDERS));
 
 function getSupabaseUrl() {
   return process.env.NEXT_PUBLIC_SUPABASE_URL?.replace(/\/$/, "") ?? null;

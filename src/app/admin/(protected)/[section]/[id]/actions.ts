@@ -11,9 +11,10 @@ import { editorConfigs, isEditorSection } from "@/services/admin/editor.service"
 
 const slugPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const uuidPattern = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
-const urlFields = new Set(["file_url", "external_url", "source_url"]);
-const numberFields = new Set(["session_count", "session_duration_minutes", "price", "original_price", "display_order"]);
+const urlFields = new Set(["file_url", "external_url", "source_url", "canonical_url"]);
+const numberFields = new Set(["session_count", "session_duration_minutes", "price", "original_price", "display_order", "reading_time_minutes"]);
 const booleanFields = new Set(["is_featured", "is_active", "consent_confirmed"]);
+const uuidFields = new Set(["category_id", "author_expert_id"]);
 const publicPathBySection = { courses: "/courses", posts: "/blog", resources: "/resources", testimonials: "/success-stories", faqs: "/faq" } as const;
 
 function editorError(list: string, id: string, code: string): never {
@@ -43,6 +44,7 @@ export async function saveEditor(formData: FormData) {
     if (!raw) { payload[field] = null; continue; }
     if (raw.length > 50000) editorError(config.list, requestedId, "validation");
     if (field === "slug" && !slugPattern.test(raw)) editorError(config.list, requestedId, "slug");
+    if (uuidFields.has(field) && !uuidPattern.test(raw)) editorError(config.list, requestedId, "validation");
     if (urlFields.has(field) && !z.url().safeParse(raw).success) editorError(config.list, requestedId, "url");
     if (numberFields.has(field)) {
       const value = Number(raw);
@@ -52,6 +54,8 @@ export async function saveEditor(formData: FormData) {
   }
 
   if (section === "testimonials" && payload.status === "published" && payload.consent_confirmed !== true) editorError(config.list, requestedId, "consent");
+  if ("status" in payload && !["draft", "published", "archived"].includes(String(payload.status))) editorError(config.list, requestedId, "validation");
+  if (section === "posts" && (!payload.category_id || !payload.title || !payload.slug || !payload.excerpt || !payload.content)) editorError(config.list, requestedId, "validation");
   if ("status" in payload && payload.status === "published" && !payload.published_at) payload.published_at = new Date().toISOString();
 
   const db = await createSupabaseAuthServerClient();
@@ -99,5 +103,6 @@ export async function saveEditor(formData: FormData) {
 
   revalidatePath(config.list);
   revalidatePath(publicPathBySection[section]);
+  if (section === "posts" && payload.slug) revalidatePath(`/blog/${String(payload.slug)}`);
   redirect(config.list);
 }

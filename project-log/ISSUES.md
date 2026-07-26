@@ -564,3 +564,9 @@ Không có issue source mới. Các URL cũ sẽ chủ động trả 404 sau dep
 - Không có issue source mới từ phân trang Blog; cần QA production sau deploy với tổng bài và chính sách RLS tại thời điểm thực tế.
 - Public Supabase vẫn chỉ trả 13 bài cho đến khi migration công khai toàn bộ Blog được chạy bằng quyền database phù hợp.
 - Vấn đề thiếu ảnh cho 11 bài Blog còn lại đã được giải quyết bằng các object mới trong `Public-Media/post`.
+- Migration ghi liên kết ảnh vào database chưa được chạy production; trước thời điểm đó ảnh vẫn hoạt động qua mapping fallback trong source.
+- Lỗi temporary table khi chạy SQL Editor đã được xử lý bằng phiên bản migration không phụ thuộc session; cần chạy lại toàn bộ file đã sửa.
+- Admin Blog mới chưa được test mutation production; phải áp dụng migration Storage RLS thư mục `post` trước khi upload ảnh qua Admin.
+- Migration ảnh khóa học chưa được chạy production; trước thời điểm đó public course vẫn dùng mapping fallback trong source.
+- Resolved: migration ảnh khóa học đã được áp dụng, Supabase public trả đủ 6 path; fallback source đã được gỡ.
+- Migration đổi tên tác giả Blog sang Vũ Thịnh chưa được chạy production; trước khi chạy, public relation vẫn trả Huỳnh Anh Ngữ.

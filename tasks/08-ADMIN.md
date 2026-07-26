@@ -62,3 +62,13 @@
 - Archive không xóa ảnh; editor hiện không có hard-delete record nên không bổ sung delete flow ngoài phạm vi.
 - Chưa đánh dấu CRUD hoàn thành: migration Storage chưa được áp dụng vào production và chưa có admin session trong phiên để thử upload/replace/remove thật.
 - Test helper, lint và build đạt; public runtime và Image Optimizer đạt.
+
+## Đồng bộ Admin bài viết với schema Blog hiện tại — 2026-07-26
+
+- Form bài viết dùng dropdown danh mục active và giảng viên active thay vì yêu cầu nhập UUID thủ công.
+- Bổ sung các trường đang có trong `blog_posts`: thời gian đọc, canonical URL, ngày truy cập nguồn và thứ tự hiển thị; các trường nội dung chính có validation bắt buộc.
+- Upload ảnh bài viết dùng `post/{record-id}/{timestamp-uuid}.{ext}` và lưu object path vào `cover_image_url`; alt ảnh được tự điền từ tiêu đề nếu để trống.
+- Public Blog đọc trực tiếp `cover_image_url`/`cover_image_alt` từ Supabase và không còn fallback mapping theo slug trong source.
+- Tạo migration `202607260004_allow_admin_blog_post_media.sql` cập nhật Storage RLS cho thư mục `post`.
+- Supabase public xác nhận 24/24 bài có `cover_image_url` và `cover_image_alt`, toàn bộ dùng path `post/...` hợp lệ.
+- Lint/build đạt; mutation upload thật cần chạy migration policy và kiểm tra bằng admin production.

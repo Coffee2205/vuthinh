@@ -120,3 +120,27 @@
 - Kết hợp 4 ảnh bài cũ và 9 ảnh đã ghép trước đó, toàn bộ 24 bài hiện có đều có ảnh fallback theo slug.
 - Không đổi tên, di chuyển hoặc xóa object Storage; `cover_image_url` trong database vẫn được ưu tiên nếu admin đặt ảnh riêng.
 - 11/11 URL mới trả HTTP 200 và đúng MIME; `npm.cmd run lint`, `npm.cmd run build` và `git diff --check` đạt.
+
+## Lưu liên kết ảnh Blog trực tiếp trong database — 2026-07-26
+
+- Tạo `supabase/migrations/202607260003_link_blog_post_storage_images.sql` để cập nhật `cover_image_url` và `cover_image_alt` cho đủ 24 slug.
+- Migration lưu object path tương đối trong bucket `Public-Media`, đúng với helper media và admin editor hiện tại.
+- Trước khi update, SQL kiểm tra đủ 24 bài và đủ 24 object trong `storage.objects`; sai mapping sẽ làm transaction thất bại thay vì cập nhật một phần.
+- Mapping fallback trong source vẫn được giữ để website không mất ảnh trước khi migration được áp dụng; sau khi chạy, database trở thành nguồn ảnh ưu tiên.
+- Chưa áp dụng migration lên Supabase production trong phiên này.
+- Kiểm tra: đủ 24 mapping; `git diff --check`, `npm.cmd run lint` và `npm.cmd run build` đạt.
+- Sửa tương thích Supabase SQL Editor sau lỗi `relation blog_image_mappings does not exist`: bỏ temporary table, dùng CTE `VALUES` trong cùng câu update và kiểm tra sau update trong transaction.
+
+## Tối ưu LCP ảnh bài Blog nổi bật — 2026-07-26
+
+- `BlogCard` nhận tùy chọn `eager`; tối đa hai ảnh trong khối Bài viết nổi bật dùng `loading="eager"` vì có thể trở thành LCP.
+- Các card trong danh sách phân trang và bài liên quan tiếp tục lazy-load để tránh tải đồng loạt.
+- `npm.cmd run lint`, `npm.cmd run build` và `git diff --check` đạt.
+
+## SQL đổi tên tác giả Blog thành Vũ Thịnh — 2026-07-26
+
+- Tạo `supabase/migrations/202607260006_rename_blog_author_to_vu_thinh.sql` để đổi `experts.full_name` từ `Huỳnh Anh Ngữ` thành `Vũ Thịnh`.
+- 24 bài hiện tại dùng cùng `author_expert_id`, nên tên tác giả trên danh sách, chi tiết, metadata Article và dropdown Admin được cập nhật qua relation, không update từng bài.
+- Migration kiểm tra có tác giả nguồn, không còn tên cũ và có bài liên kết với tên mới trước khi commit.
+- Không thay thế chuỗi trong nội dung bài hoặc các hồ sơ/người gửi form không liên quan.
+- Migration có thể chạy lại khi tên đã là Vũ Thịnh; `git diff --check`, lint và build đạt.

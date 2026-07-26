@@ -28,6 +28,42 @@
 - Đã bổ sung 11 mapping ảnh còn lại; toàn bộ 24 bài hiện có đều có ảnh Storage fallback theo slug.
 - 11 URL mới đã xác minh HTTP 200; lint/build đạt.
 
+## Liên kết ảnh Blog trong database — 2026-07-26
+
+- Đã chuẩn bị migration lưu trực tiếp 24 Storage path và alt text vào `blog_posts`.
+- Migration chưa áp dụng production; mapping source tiếp tục làm fallback an toàn.
+- Đủ 24 mapping; lint/build đạt.
+
+## Admin Blog và ảnh trực tiếp từ Supabase — 2026-07-26
+
+- Form Admin bài viết đã đồng bộ các cột hiện tại, dùng dropdown danh mục/tác giả và upload vào `post/{record-id}`.
+- Public Blog chỉ đọc ảnh từ `blog_posts.cover_image_url`; mapping slug trong source đã được gỡ.
+- Có migration Storage RLS cho thư mục `post`; lint/build đạt, chưa test mutation admin production.
+- Supabase public xác nhận 24/24 bài có ảnh và alt trực tiếp trong database.
+
+## Tối ưu LCP Blog — 2026-07-26
+
+- Ảnh bài nổi bật trên `/blog` được tải eager; ảnh danh sách và bài liên quan tiếp tục lazy-load.
+- Lint/build đạt.
+
+## Liên kết ảnh khóa học trong database — 2026-07-26
+
+- Đã chuẩn bị migration lưu trực tiếp 6 Storage path vào `courses.thumbnail_url`, có kiểm tra course/object và rollback khi thiếu.
+- Migration chưa áp dụng production; 6 `thumbnail_url` hiện vẫn null và source mapping tiếp tục làm fallback.
+- Đủ 6 mapping; lint/build đạt.
+
+## Course database-only media — 2026-07-26
+
+- Supabase xác nhận 6/6 khóa học có ảnh trực tiếp trong `thumbnail_url`.
+- Public Course đã gỡ mapping slug và chỉ đọc ảnh từ database; file config mapping media đã được xóa.
+- Runtime `/courses` xác nhận đủ 6 ảnh; lint/build đạt.
+
+## SQL đổi tên tác giả Blog — 2026-07-26
+
+- Đã chuẩn bị migration đổi `experts.full_name` từ Huỳnh Anh Ngữ sang Vũ Thịnh; 24 bài nhận tên mới qua khóa ngoại tác giả.
+- Migration chưa áp dụng production.
+- Lint/build đạt.
+
 ## Hồ sơ giảng viên — 2026-07-23
 
 - Public-facing đã đổi “Chuyên gia” thành “Giảng viên”; hồ sơ Huỳnh Anh Ngữ (Vũ Thịnh), học vấn, kinh nghiệm, metadata và Person JSON-LD đã cập nhật.

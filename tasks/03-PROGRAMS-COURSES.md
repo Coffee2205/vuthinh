@@ -129,3 +129,20 @@
 - CTA chương trình tại Hero và section trang chủ chuyển sang `/courses`; Header/Footer/Sitemap không còn `/programs`.
 - Không xóa taxonomy chương trình trong Supabase hoặc bộ lọc chương trình tại `/courses`.
 - Lint/build đạt; production build không còn route `/programs`.
+
+## Lưu ảnh khóa học trực tiếp trong database — 2026-07-26
+
+- Tạo `supabase/migrations/202607260005_link_course_storage_images.sql` theo cùng cấu trúc migration ảnh Blog.
+- SQL ánh xạ 6 slug khóa học với 6 object trong `Public-Media/courses` và lưu path tương đối vào `courses.thumbnail_url`.
+- Migration chỉ update mapping có cả course và object thật; bước kiểm tra cuối yêu cầu đủ đúng 6 khóa học, nếu thiếu sẽ rollback transaction.
+- Không thêm `thumbnail_alt` vì schema hiện tại không có cột này; giao diện đang tạo alt từ `course.title`.
+- Chưa áp dụng migration production; mapping source hiện tại vẫn làm fallback cho đến khi SQL được chạy.
+- Kiểm tra: đủ 6 mapping; `git diff --check`, `npm.cmd run lint` và `npm.cmd run build` đạt.
+
+## Course đọc ảnh trực tiếp từ Supabase — 2026-07-26
+
+- Supabase public xác nhận 6/6 khóa học có `thumbnail_url` dạng object path `courses/...` hợp lệ.
+- `course.service` chỉ đọc `courses.thumbnail_url` và chuyển path thành URL public qua `getPublicMediaUrl`; không còn fallback theo slug.
+- Xóa `src/config/public-media.ts` vì Blog và Course đều đã chuyển sang database-only, không còn consumer.
+- Admin Course tiếp tục upload vào `courses/{record-id}/...` và lưu object path trực tiếp vào `thumbnail_url`.
+- Runtime production local `/courses` trả HTTP 200 và render đủ đúng 6 filename Storage; lint/build và `git diff --check` đạt.

@@ -162,3 +162,8 @@
 - Sau khi deploy, kiểm tra `/blog`, `/blog?page=2` và một danh mục có nhiều hơn 12 bài trên production.
 - Chạy `supabase/migrations/202607260002_publish_all_blog_posts.sql` trong Supabase SQL Editor, sau đó kiểm tra tổng số bài public.
 - Sau deploy, kiểm tra trực quan ảnh của 24 bài trên hai trang Blog và một số trang chi tiết đại diện.
+- Chạy `supabase/migrations/202607260003_link_blog_post_storage_images.sql` trong SQL Editor để database quản lý trực tiếp ảnh của 24 bài.
+- Chạy tiếp `supabase/migrations/202607260004_allow_admin_blog_post_media.sql`, sau đó thử tạo/sửa một bài và upload/replace/remove ảnh bằng tài khoản admin.
+- Chạy `supabase/migrations/202607260005_link_course_storage_images.sql` để database quản lý trực tiếp ảnh của 6 khóa học.
+- Sau deploy, kiểm tra `/courses`, 6 trang chi tiết và thao tác upload/replace/remove ảnh Course qua Admin.
+- Chạy `supabase/migrations/202607260006_rename_blog_author_to_vu_thinh.sql`, sau đó kiểm tra tên tác giả trên `/blog`, trang chi tiết và Admin.

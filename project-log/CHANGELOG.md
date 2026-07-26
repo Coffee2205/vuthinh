@@ -989,3 +989,10 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 - Thêm phân trang server-side cho Blog, tối đa 12 bài mỗi trang và giữ bộ lọc danh mục qua URL.
 - Thêm migration công khai toàn bộ bài Blog, xử lý cả trạng thái chưa published và ngày xuất bản null/tương lai.
 - Hoàn tất mapping ảnh Supabase Storage cho toàn bộ 24 bài Blog hiện có.
+- Thêm migration lưu trực tiếp 24 đường dẫn ảnh Storage và alt text vào `blog_posts`.
+- Sửa migration liên kết ảnh để chạy trong Supabase SQL Editor mà không dùng temporary table.
+- Đồng bộ form Admin bài viết với schema hiện tại, chuyển upload sang thư mục `post` và để public Blog đọc ảnh trực tiếp từ database/Supabase.
+- Tải eager ảnh bài Blog nổi bật để xử lý cảnh báo Largest Contentful Paint.
+- Thêm migration lưu trực tiếp 6 đường dẫn ảnh Storage vào `courses.thumbnail_url`.
+- Chuyển public Course sang đọc ảnh database-only và xóa config mapping media theo slug.
+- Thêm migration đổi tên tác giả Blog từ Huỳnh Anh Ngữ thành Vũ Thịnh qua bảng `experts`.

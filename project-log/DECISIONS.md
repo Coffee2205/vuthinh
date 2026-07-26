@@ -385,3 +385,8 @@ Theo yêu cầu người dùng, `/programs` và toàn bộ `/resources` không c
 - Phân trang Blog dùng server-side Supabase `range` với page size cố định 12; không tải toàn bộ bài về rồi cắt trên UI.
 - Theo yêu cầu công khai tất cả bài, migration chuyển cả trạng thái `draft`/`archived` sang `published`; bài cũ giữ ngày đăng, bài null/tương lai được đưa về thời điểm chạy.
 - Toàn bộ ảnh Blog tiếp tục ánh xạ theo slug làm fallback; không ghi đè ảnh do admin lưu trong `cover_image_url`.
+- Đường dẫn ảnh lưu trong database là object path tương đối như `post/ten-file.jpg`, không lưu URL Supabase đầy đủ; helper tạo URL public theo môi trường.
+- Admin upload bài viết dùng thống nhất thư mục `post`; public Blog không còn hard-code quan hệ slug–ảnh, database là nguồn duy nhất cho ảnh bài viết.
+- Ảnh khóa học lưu object path tương đối trong `courses.thumbnail_url`; alt text tiếp tục được tạo từ tên khóa học vì schema không có `thumbnail_alt`.
+- Course và Blog đều dùng database làm nguồn ảnh duy nhất; không duy trì mapping slug–object trong source.
+- Tên tác giả Blog được quản lý tại `experts.full_name`; không nhân bản tên sang từng `blog_posts`.
