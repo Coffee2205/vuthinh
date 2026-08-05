@@ -44,6 +44,7 @@
 - RLS QA: contact/trial/course insert thành công; public select rỗng; payload `status` bị HTTP 401. Job application chưa insert hợp lệ vì chưa có job published.
 - Bản ghi QA có tên `Codex QA Task 06`, email `qa-task06@example.invalid`, marker `TEST_ONLY_TASK06`; admin cần xóa sau đối chiếu.
 - Lint/build đạt. Runtime toàn bộ route chính HTTP 200; Careers slug sai hiển thị not-found.
+
 ## Bổ sung form học thử trang chủ — 2026-07-18
 
 - Form tại `#trial-registration` dùng cùng service/Zod/Server Action với route đăng ký và redirect success về section.

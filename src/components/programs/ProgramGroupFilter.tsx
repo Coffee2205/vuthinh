@@ -11,12 +11,17 @@ const filters = [
   { label: "Phát triển con người", value: "human" },
 ] as const;
 
-export function ProgramGroupFilter({ programs }: { programs: ProgramCategory[] }) {
+export function ProgramGroupFilter({
+  programs,
+}: {
+  programs: ProgramCategory[];
+}) {
   const [activeFilter, setActiveFilter] = useState("all");
   const visiblePrograms = programs.filter((program) => {
     if (activeFilter === "all") return true;
     if (activeFilter === "chinese") return program.isCore;
-    if (activeFilter === "life") return ["ky-nang-song", "quan-tri-cam-xuc"].includes(program.slug);
+    if (activeFilter === "life")
+      return ["ky-nang-song", "quan-tri-cam-xuc"].includes(program.slug);
     return program.slug === "gia-tri-song-va-hanh-phuc";
   });
 
@@ -48,11 +53,17 @@ export function ProgramGroupFilter({ programs }: { programs: ProgramCategory[] }
         })}
       </div>
 
-      <p className="mt-5 text-sm text-slate-600" role="status" aria-live="polite">
+      <p
+        className="mt-5 text-sm text-slate-600"
+        role="status"
+        aria-live="polite"
+      >
         Hiển thị {visiblePrograms.length} nhóm chương trình
       </p>
 
-      <div className="mt-5"><ProgramGrid programs={visiblePrograms} /></div>
+      <div className="mt-5">
+        <ProgramGrid programs={visiblePrograms} />
+      </div>
     </div>
   );
 }

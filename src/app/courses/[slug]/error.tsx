@@ -1,2 +1,24 @@
 "use client";
-export default function CourseError({ reset }: { error: Error; reset: () => void }) { return <main className="grid min-h-[55vh] place-items-center px-4 py-16 text-center"><div><p className="text-sm font-bold uppercase tracking-wider text-brand-blue">Không thể tải dữ liệu</p><h1 className="mt-3 text-3xl font-bold text-slate-950">Chi tiết khóa học đang tạm gián đoạn</h1><p className="mt-3 text-slate-600">Vui lòng thử lại sau ít phút.</p><button type="button" onClick={reset} className="button-primary mt-6">Thử lại</button></div></main>; }
+export default function CourseError({
+  reset,
+}: {
+  error: Error;
+  reset: () => void;
+}) {
+  return (
+    <main className="grid min-h-[55vh] place-items-center px-4 py-16 text-center">
+      <div>
+        <p className="text-sm font-bold uppercase tracking-wider text-brand-blue">
+          Không thể tải dữ liệu
+        </p>
+        <h1 className="mt-3 text-3xl font-bold text-slate-950">
+          Chi tiết khóa học đang tạm gián đoạn
+        </h1>
+        <p className="mt-3 text-slate-600">Vui lòng thử lại sau ít phút.</p>
+        <button type="button" onClick={reset} className="button-primary mt-6">
+          Thử lại
+        </button>
+      </div>
+    </main>
+  );
+}

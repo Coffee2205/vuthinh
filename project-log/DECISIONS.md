@@ -321,15 +321,19 @@ Mỗi quyết định phải ghi ngày, nội dung, lý do và ảnh hưởng.
 **Lý do:** Bộ lọc cần state/event trình duyệt, trong khi phần còn lại không cần JavaScript phía client.
 
 **Ảnh hưởng:** Bốn lựa chọn lọc hoạt động không cần database hoặc thư viện mới; dữ liệu vẫn nằm trong `src/data/programs.ts` và phạm vi client được giới hạn.
+
 ## 2026-07-18 — Blog dùng service nhiều query và Markdown an toàn
 
 Quyết định: routes Blog chỉ đọc qua `blog.service`; quan hệ được query riêng và Markdown render bằng `react-markdown`/`remark-gfm`. Không tạo schema, migration hoặc fallback bài viết khi database chưa expose bảng.
+
 ## 2026-07-18 — Tạm bỏ qua Task 04 và tiếp tục Task 05
 
 Theo chỉ đạo trực tiếp của người dùng, blocker Kinh nghiệm của Task 04 tiếp tục được giữ Open nhưng không chặn việc triển khai phần Tài liệu của Task 05. `/resources` dùng dynamic rendering và chỉ hiển thị URL HTTP/HTTPS từ database.
+
 ## 2026-07-18 — Download tài nguyên public qua Server Action
 
 Resource public không liên kết trực tiếp từ card. Trang chi tiết gọi Server Action để kiểm tra lại resource published/public, ghi `resource_download_events` rồi redirect; resource cần đăng ký không lộ URL và chưa mở rộng thành newsletter/form thu lead.
+
 ## 2026-07-18 — Public forms Task 06 dùng một form component và payload allowlist
 
 Contact, trial/course và job application dùng chung Client Component cho pending/field errors, nhưng mỗi Server Action có Zod schema và danh sách cột riêng. CV không được upload khi private Storage chưa triển khai; pháp lý chỉ là nội dung tạm có cảnh báo cần duyệt.
@@ -365,6 +369,7 @@ Favicon phục vụ Google Search dùng asset public tại `/favicon.png` thay c
 ## 2026-07-21 — Mở rộng mapping ảnh khóa học theo slug
 
 HSK 5 và HSK 6 tiếp tục dùng cơ chế hiện có: `thumbnail_url` trong database được ưu tiên, còn object Storage do chủ sở hữu cung cấp được ánh xạ theo slug khi field này trống. Không ghi ngược database hoặc đổi schema trong cập nhật giao diện này.
+
 ## 2026-07-21 — Logo PNG nền đen hiển thị dưới dạng huy hiệu tròn
 
 Logo mới không có alpha và có vùng đen thừa phía dưới. Header/Footer dùng `object-cover object-top` trong khung tròn thay vì blend trên nền sáng; metadata trỏ trực tiếp tới asset gốc 492×623. Tên Vũ Thịnh tiếp tục render bằng text để đảm bảo nhận diện và accessibility.
@@ -376,6 +381,7 @@ Các trang public dùng chung một pseudo-element tại vùng mở đầu thay 
 ## 2026-07-21 — Gỡ Programs và Resources chỉ ở bề mặt public
 
 Theo yêu cầu người dùng, `/programs` và toàn bộ `/resources` không còn là route công khai. Không xóa bảng/dữ liệu Supabase hoặc `/admin/resources`; taxonomy chương trình vẫn phục vụ bộ lọc `/courses`. Các CTA chương trình chuyển thẳng tới danh sách khóa học và nội dung kiến thức trang chủ chỉ giữ Blog.
+
 # Quyết định nội dung Blog — 2026-07-26
 
 - LearnIT4students chỉ là tham khảo về cấu trúc trình bày; 20 bài được biên soạn mới để tránh sao chép nội dung.

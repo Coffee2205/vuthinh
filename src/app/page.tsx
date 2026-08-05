@@ -11,18 +11,58 @@ export const metadata: Metadata = {
   title: { absolute: siteConfig.title },
   description: siteConfig.description,
   alternates: { canonical: "/" },
-  openGraph: { title: siteConfig.title, description: siteConfig.description, url: "/", type: "website", siteName: siteConfig.name, locale: "vi_VN", images: [{ url: siteConfig.socialImage, alt: `Logo ${siteConfig.name}` }] },
-  twitter: { card: "summary_large_image", title: siteConfig.title, description: siteConfig.description, images: [siteConfig.socialImage] },
+  openGraph: {
+    title: siteConfig.title,
+    description: siteConfig.description,
+    url: "/",
+    type: "website",
+    siteName: siteConfig.name,
+    locale: "vi_VN",
+    images: [{ url: siteConfig.socialImage, alt: `Logo ${siteConfig.name}` }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.title,
+    description: siteConfig.description,
+    images: [siteConfig.socialImage],
+  },
 };
 
-function text(value: unknown) { return typeof value === "string" && value.trim() ? value.trim() : undefined }
-function webUrl(value: unknown) { const candidate = text(value); if (!candidate) return undefined; try { const url = new URL(candidate); return url.protocol === "https:" || url.protocol === "http:" ? candidate : undefined } catch { return undefined } }
+function text(value: unknown) {
+  return typeof value === "string" && value.trim() ? value.trim() : undefined;
+}
+function webUrl(value: unknown) {
+  const candidate = text(value);
+  if (!candidate) return undefined;
+  try {
+    const url = new URL(candidate);
+    return url.protocol === "https:" || url.protocol === "http:"
+      ? candidate
+      : undefined;
+  } catch {
+    return undefined;
+  }
+}
 
-export default async function Home({ searchParams }: { searchParams: Promise<{ "trial-submitted"?: string }> }) {
-  const [params, settings] = await Promise.all([searchParams, getPublicSiteSettings()]);
+export default async function Home({
+  searchParams,
+}: {
+  searchParams: Promise<{ "trial-submitted"?: string }>;
+}) {
+  const [params, settings] = await Promise.all([
+    searchParams,
+    getPublicSiteSettings(),
+  ]);
   const organizationName = text(settings.organization.name) || siteConfig.name;
-  const organizationDescription = text(settings.organization.tagline) || siteConfig.description;
-  const sameAs = [settings.contact.facebook_url, settings.contact.youtube_url, settings.contact.zalo_url].map(webUrl).filter((value): value is string => Boolean(value));
+  const organizationDescription =
+    text(settings.organization.tagline) || siteConfig.description;
+  const sameAs = [
+    settings.contact.facebook_url,
+    settings.contact.youtube_url,
+    settings.contact.zalo_url,
+  ]
+    .map(webUrl)
+    .filter((value): value is string => Boolean(value));
   const homeStructuredData = {
     "@context": "https://schema.org",
     "@graph": [

@@ -449,23 +449,27 @@ Chờ người dùng chỉ định. Catalog đã kết nối Supabase; bước v
 - Hỗ trợ `public` và `registration_required` mà không công khai link cần bảo vệ hoặc update count từ client.
 - Lint/build đạt; hai route Resources dynamic, có loading/error/empty/not-found.
 - Bốn bảng Resources vẫn trả HTTP 404 ở project local nên runtime database/RLS chưa xác minh; không chuyển Task 06.
+
 ## Task 06 — Blocker database Support Pages — 2026-07-18
 
 - Đã kiểm tra chín bảng được yêu cầu; toàn bộ trả HTTP 404 từ Supabase project hiện tại.
 - Không có schema nguồn local để xây payload form an toàn; Task 06 chưa bắt đầu sửa source và mọi checkbox giữ chưa hoàn thành.
 - Không tạo schema trùng, không hard-code dữ liệu và không chuyển Task 07.
+
 ## Task 07 — Audit database/forms/RLS — 2026-07-18
 
 - Env example và Supabase server/browser client đạt yêu cầu không lộ service-role.
 - Consultation validation/service/action dùng allowlist và RLS kiểm thử đạt cho published/active content, private submissions và cột `status` bị cấm.
 - Source chưa có các form Task 06; nhiều bảng không được PostgREST expose, nên database types và RLS tổng thể chưa thể hoàn thành.
 - Lint/build đạt; Task 07 vẫn đang bị chặn và không chuyển Task 08.
+
 ## Task 06 — Support Pages hoàn thành chức năng — 2026-07-18
 
 - Đã triển khai success stories, FAQ, careers/detail/application, contact, trial/course registration, privacy và terms.
 - FAQ/site settings đọc được dữ liệu; story/job chưa có published data nên dùng empty state.
 - Contact/trial/course RLS insert đạt; public select rỗng và cột status bị chặn. Job valid insert chờ job published.
 - Lint/build/runtime routes đạt; không chuyển Task 07 theo phạm vi phiên.
+
 ## Form học thử trang chủ kết nối Supabase — 2026-07-18
 
 - Home tải course published và render form thật dùng Zod/Server Action/service trial registration.
@@ -483,16 +487,19 @@ Chờ người dùng chỉ định. Catalog đã kết nối Supabase; bước v
 - Public metadata/canonical/index control đạt; admin noindex/nofollow; course/blog/resource detail có BreadcrumbList khớp breadcrumb giao diện.
 - Lint/build và runtime audit các route bắt buộc đạt.
 - Favicon tìm kiếm dùng URL ổn định `/favicon.png`, kích thước 512×512 và được khai báo trực tiếp trong metadata.
+
 ## Ảnh nền Hero mới — 2026-07-21
 
 - Hero trang chủ dùng `public/images/backgrounds/vietnam-china-trade-street-hero.webp` qua `next/image`, tải ưu tiên và responsive `100vw`.
 - Hai lớp gradient sáng giữ độ đọc của nội dung/CTA; crop ưu tiên vùng 62% trên mobile và căn giữa từ desktop.
 - Lint và production build đạt; chưa commit, chưa push.
+
 ## Logo màu mới — 2026-07-21
 
 - `images (1).png` được chuyển thành `public/images/brand/vu-thinh-logo-color.png` và dùng thống nhất cho Header, Footer, favicon, JSON-LD/SEO social image.
 - Asset 492×623 có nền đen đặc nên giao diện crop thành huy hiệu tròn: 56px Header, 112px Footer, giữ phần hoa văn phía trên và không chỉnh sửa file gốc.
 - Lint và production build đạt; chưa commit, chưa push.
+
 ## Header Dark purple-grey — 2026-07-21
 
 - Header desktop và menu mobile dùng nền `#3D3242`, viền trắng 10% và shadow nhẹ.
@@ -500,6 +507,7 @@ Chờ người dùng chỉ định. Catalog đã kết nối Supabase; bước v
 - Lint/build đạt; chưa commit, chưa push.
 - Hero dùng gradient tối từ trái `#241B2B` sang Dark purple-grey `#3D3242`, giảm dần về bên phải; headline/description/eyebrow đổi sang màu sáng để giữ tương phản. Lint/build đạt.
 - Logo Header/Footer crop theo chính giữa (`object-center`), loại khoảng đen thừa cân đối ở đầu trên/dưới và giữ trọn cụm hoa văn trung tâm. Lint/build đạt.
+
 ## Gradient nền section xen kẽ — 2026-07-21
 
 - Các section nền trắng trên Home gồm Trust, Expert, Parent Testimonials và Trial Registration dùng gradient 135° `#fff8fa → #faf4f8 → #f4eef7`.

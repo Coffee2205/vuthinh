@@ -35,8 +35,12 @@ export function CoreValuesSection() {
               >
                 {String(index + 1).padStart(2, "0")}
               </span>
-              <h3 className="mt-5 text-xl font-bold text-slate-950">{value.title}</h3>
-              <p className="mt-3 leading-7 text-slate-600">{value.description}</p>
+              <h3 className="mt-5 text-xl font-bold text-slate-950">
+                {value.title}
+              </h3>
+              <p className="mt-3 leading-7 text-slate-600">
+                {value.description}
+              </p>
             </li>
           ))}
         </ul>

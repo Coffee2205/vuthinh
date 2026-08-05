@@ -1,3 +1,114 @@
 import { updateRequestStatus } from "@/app/admin/(protected)/actions";
 import { dateCell } from "@/lib/admin-page";
-export function RequestTable({rows,kind,statuses}:{rows:Record<string,unknown>[];kind:'course'|'trial'|'consultation';statuses:readonly string[]}){return <div className="overflow-x-auto rounded-xl border bg-white">{rows.length?<table className="w-full min-w-[1000px] text-left text-sm"><thead className="bg-slate-50"><tr>{['Họ tên','Điện thoại','Email','Thông tin','Trạng thái','Ngày tạo','Cập nhật'].map(x=><th key={x} scope="col" className="px-4 py-3">{x}</th>)}</tr></thead><tbody>{rows.map(r=><tr key={String(r.id)} className="border-t"><td className="px-4 py-3 font-semibold">{String(r.full_name??'—')}</td><td className="px-4 py-3">{String(r.phone??'—')}</td><td className="px-4 py-3">{String(r.email??'—')}</td><td className="max-w-xs px-4 py-3"><details><summary className="cursor-pointer text-brand-blue">Xem chi tiết</summary><pre className="mt-2 whitespace-pre-wrap font-sans text-xs">{Object.entries(r).filter(([k])=>!['id','full_name','phone','email','status','created_at','updated_at'].includes(k)).map(([k,v])=>`${k}: ${String(v??'—')}`).join('\n')}</pre></details></td><td className="px-4 py-3">{String(r.status??'—')}</td><td className="px-4 py-3">{dateCell(r.created_at)}</td><td className="px-4 py-3"><form action={updateRequestStatus} className="flex min-w-56 flex-col gap-2"><input type="hidden" name="id" value={String(r.id)}/><input type="hidden" name="kind" value={kind}/><label className="sr-only" htmlFor={`status-${r.id}`}>Trạng thái</label><select id={`status-${r.id}`} name="status" defaultValue={String(r.status??'new')} className="min-h-11 rounded-lg border px-2">{statuses.map(s=><option key={s}>{s}</option>)}</select><label className="sr-only" htmlFor={`note-${r.id}`}>Ghi chú quản trị</label><textarea id={`note-${r.id}`} name="admin_note" defaultValue={String(r.admin_note??'')} maxLength={2000} placeholder="Ghi chú quản trị" className="rounded-lg border p-2"/><button className="min-h-11 rounded-lg bg-brand-blue px-3 font-semibold text-white">Lưu trạng thái</button></form></td></tr>)}</tbody></table>:<p className="p-10 text-center text-slate-600">Chưa có dữ liệu phù hợp.</p>}</div>}
+export function RequestTable({
+  rows,
+  kind,
+  statuses,
+}: {
+  rows: Record<string, unknown>[];
+  kind: "course" | "trial" | "consultation";
+  statuses: readonly string[];
+}) {
+  return (
+    <div className="overflow-x-auto rounded-xl border bg-white">
+      {rows.length ? (
+        <table className="w-full min-w-[1000px] text-left text-sm">
+          <thead className="bg-slate-50">
+            <tr>
+              {[
+                "Họ tên",
+                "Điện thoại",
+                "Email",
+                "Thông tin",
+                "Trạng thái",
+                "Ngày tạo",
+                "Cập nhật",
+              ].map((x) => (
+                <th key={x} scope="col" className="px-4 py-3">
+                  {x}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((r) => (
+              <tr key={String(r.id)} className="border-t">
+                <td className="px-4 py-3 font-semibold">
+                  {String(r.full_name ?? "—")}
+                </td>
+                <td className="px-4 py-3">{String(r.phone ?? "—")}</td>
+                <td className="px-4 py-3">{String(r.email ?? "—")}</td>
+                <td className="max-w-xs px-4 py-3">
+                  <details>
+                    <summary className="cursor-pointer text-brand-blue">
+                      Xem chi tiết
+                    </summary>
+                    <pre className="mt-2 whitespace-pre-wrap font-sans text-xs">
+                      {Object.entries(r)
+                        .filter(
+                          ([k]) =>
+                            ![
+                              "id",
+                              "full_name",
+                              "phone",
+                              "email",
+                              "status",
+                              "created_at",
+                              "updated_at",
+                            ].includes(k),
+                        )
+                        .map(([k, v]) => `${k}: ${String(v ?? "—")}`)
+                        .join("\n")}
+                    </pre>
+                  </details>
+                </td>
+                <td className="px-4 py-3">{String(r.status ?? "—")}</td>
+                <td className="px-4 py-3">{dateCell(r.created_at)}</td>
+                <td className="px-4 py-3">
+                  <form
+                    action={updateRequestStatus}
+                    className="flex min-w-56 flex-col gap-2"
+                  >
+                    <input type="hidden" name="id" value={String(r.id)} />
+                    <input type="hidden" name="kind" value={kind} />
+                    <label className="sr-only" htmlFor={`status-${r.id}`}>
+                      Trạng thái
+                    </label>
+                    <select
+                      id={`status-${r.id}`}
+                      name="status"
+                      defaultValue={String(r.status ?? "new")}
+                      className="min-h-11 rounded-lg border px-2"
+                    >
+                      {statuses.map((s) => (
+                        <option key={s}>{s}</option>
+                      ))}
+                    </select>
+                    <label className="sr-only" htmlFor={`note-${r.id}`}>
+                      Ghi chú quản trị
+                    </label>
+                    <textarea
+                      id={`note-${r.id}`}
+                      name="admin_note"
+                      defaultValue={String(r.admin_note ?? "")}
+                      maxLength={2000}
+                      placeholder="Ghi chú quản trị"
+                      className="rounded-lg border p-2"
+                    />
+                    <button className="min-h-11 rounded-lg bg-brand-blue px-3 font-semibold text-white">
+                      Lưu trạng thái
+                    </button>
+                  </form>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      ) : (
+        <p className="p-10 text-center text-slate-600">
+          Chưa có dữ liệu phù hợp.
+        </p>
+      )}
+    </div>
+  );
+}

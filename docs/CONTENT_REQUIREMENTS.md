@@ -14,16 +14,16 @@ Quy ước số lượng:
 
 ## 2. Ưu tiên bàn giao
 
-| Mức | Nhóm thông tin | Lý do |
-| --- | --- | --- |
-| P0 | Khóa học đang tuyển sinh | Đang chặn phần Danh sách khóa học của Task 03 |
-| P0 | Thương hiệu, liên hệ, tên miền | Dùng xuyên suốt Header, Footer, SEO, form và deploy |
-| P0 | Hồ sơ chuyên gia và dịch vụ tư vấn | Cần cho `/expert` và `/consultation` |
-| P1 | Hồ sơ trung tâm và nội dung thương hiệu cần duyệt | Thay các trạng thái chờ trên `/about` |
-| P1 | Ảnh thật và quyền sử dụng | Cần hoàn thiện giao diện production |
-| P1 | Bài viết, tài liệu, thành quả, cảm nhận và FAQ | Cần cho các trang nội dung và social proof |
-| P1 | Nội dung liên hệ, tuyển dụng và pháp lý | Cần hoàn thiện toàn bộ public routes |
-| P0 trước deploy | Tài khoản/hạ tầng và quy trình xử lý form | Cần nhận đăng ký thật, quản trị và đưa website lên domain |
+| Mức             | Nhóm thông tin                                    | Lý do                                                     |
+| --------------- | ------------------------------------------------- | --------------------------------------------------------- |
+| P0              | Khóa học đang tuyển sinh                          | Đang chặn phần Danh sách khóa học của Task 03             |
+| P0              | Thương hiệu, liên hệ, tên miền                    | Dùng xuyên suốt Header, Footer, SEO, form và deploy       |
+| P0              | Hồ sơ chuyên gia và dịch vụ tư vấn                | Cần cho `/expert` và `/consultation`                      |
+| P1              | Hồ sơ trung tâm và nội dung thương hiệu cần duyệt | Thay các trạng thái chờ trên `/about`                     |
+| P1              | Ảnh thật và quyền sử dụng                         | Cần hoàn thiện giao diện production                       |
+| P1              | Bài viết, tài liệu, thành quả, cảm nhận và FAQ    | Cần cho các trang nội dung và social proof                |
+| P1              | Nội dung liên hệ, tuyển dụng và pháp lý           | Cần hoàn thiện toàn bộ public routes                      |
+| P0 trước deploy | Tài khoản/hạ tầng và quy trình xử lý form         | Cần nhận đăng ký thật, quản trị và đưa website lên domain |
 
 ## 3. Quy cách bàn giao chung
 
@@ -52,32 +52,32 @@ Quy ước số lượng:
 
 ## 4. Thương hiệu và thông tin liên hệ
 
-| Mục cần cung cấp | Số lượng | Định dạng/trường bắt buộc | Dùng tại |
-| --- | --- | --- | --- |
-| Tên thương hiệu chính thức | 1 bộ | Tên đầy đủ, tên viết tắt, cách viết hoa, tên pháp lý nếu cần | Toàn website, metadata, pháp lý |
-| Logo chính thức | 1 bộ, khuyến nghị 3 biến thể | SVG + PNG trong suốt; logo màu, nền sáng, nền tối; favicon/icon vuông | Header, Footer, favicon, Open Graph |
-| Thông điệp thương hiệu | 1 câu chính + tối đa 2 câu phụ | Văn bản đã duyệt | Hero, About, SEO |
-| Hotline | Tối thiểu 1 | Số hiển thị, số bấm gọi, giờ tiếp nhận | Header/Footer, Contact, CTA |
-| Email | Tối thiểu 1 | Email công khai; khuyến nghị thêm email nhận form | Footer, Contact, form |
-| Địa chỉ | Mỗi cơ sở 1 bản ghi | Tên cơ sở, địa chỉ đầy đủ, giờ mở cửa | Contact, Footer |
-| Kênh mạng xã hội | Mỗi kênh 1 URL | Facebook, Zalo, YouTube/TikTok nếu dùng | Footer, Contact |
-| Google Maps | Mỗi cơ sở 1 URL | Link chia sẻ và/hoặc mã nhúng được phép dùng | Contact |
-| Tên miền | 1 | Domain chính thức, chủ tài khoản đăng ký, quyền cấu hình DNS | Production, SEO |
+| Mục cần cung cấp           | Số lượng                       | Định dạng/trường bắt buộc                                             | Dùng tại                            |
+| -------------------------- | ------------------------------ | --------------------------------------------------------------------- | ----------------------------------- |
+| Tên thương hiệu chính thức | 1 bộ                           | Tên đầy đủ, tên viết tắt, cách viết hoa, tên pháp lý nếu cần          | Toàn website, metadata, pháp lý     |
+| Logo chính thức            | 1 bộ, khuyến nghị 3 biến thể   | SVG + PNG trong suốt; logo màu, nền sáng, nền tối; favicon/icon vuông | Header, Footer, favicon, Open Graph |
+| Thông điệp thương hiệu     | 1 câu chính + tối đa 2 câu phụ | Văn bản đã duyệt                                                      | Hero, About, SEO                    |
+| Hotline                    | Tối thiểu 1                    | Số hiển thị, số bấm gọi, giờ tiếp nhận                                | Header/Footer, Contact, CTA         |
+| Email                      | Tối thiểu 1                    | Email công khai; khuyến nghị thêm email nhận form                     | Footer, Contact, form               |
+| Địa chỉ                    | Mỗi cơ sở 1 bản ghi            | Tên cơ sở, địa chỉ đầy đủ, giờ mở cửa                                 | Contact, Footer                     |
+| Kênh mạng xã hội           | Mỗi kênh 1 URL                 | Facebook, Zalo, YouTube/TikTok nếu dùng                               | Footer, Contact                     |
+| Google Maps                | Mỗi cơ sở 1 URL                | Link chia sẻ và/hoặc mã nhúng được phép dùng                          | Contact                             |
+| Tên miền                   | 1                              | Domain chính thức, chủ tài khoản đăng ký, quyền cấu hình DNS          | Production, SEO                     |
 
 Liên quan: `ISSUE-002`, `ISSUE-004`, `ISSUE-006`.
 
 ## 5. Nội dung trang chủ cần xác nhận
 
-| Khối | Số lượng | Nội dung cần cung cấp/duyệt | Hình ảnh |
-| --- | --- | --- | --- |
-| Hero | 1 bộ | Eyebrow, tiêu đề, mô tả ngắn, nhãn CTA; xác nhận thông điệp hiện có hoặc gửi bản thay thế | 1 ảnh Hero ngang chính, khuyến nghị thêm 1 ảnh dự phòng |
-| Vì sao phụ huynh tin tưởng | 4 ý hiện có | Duyệt/sửa tên và mô tả từng nguyên tắc; không dùng claim chưa có bằng chứng | 0–4 ảnh tùy định hướng |
-| Hành trình học tập | 4 bước hiện có | Duyệt đúng quy trình tư vấn, xếp lớp, bắt đầu học và theo dõi thực tế | Không bắt buộc |
-| Chương trình nổi bật | Tối thiểu 3 khóa hoặc nhóm | Chọn mục muốn ghim, thứ tự, nhãn CTA | 1 thumbnail/mục nếu hiển thị khóa cụ thể |
-| Chuyên gia nổi bật | 1 | Lấy từ hồ sơ chuyên gia đã duyệt | 1 chân dung |
-| Thành quả học viên | Tối thiểu 1 để bỏ empty state; khuyến nghị 3–6 | Lấy từ case study đã duyệt | 1–3 ảnh/case |
-| Cảm nhận phụ huynh | Tối thiểu 1; khuyến nghị 3–6 | Lấy từ phản hồi đã đồng ý công bố | Ảnh tùy phạm vi đồng ý |
-| Nội dung nổi bật | Tối thiểu 1 bài + 1 tài liệu; khuyến nghị 3 mỗi loại | Chỉ định bản ghi nổi bật đã xuất bản | 1 thumbnail/bản ghi |
+| Khối                       | Số lượng                                             | Nội dung cần cung cấp/duyệt                                                               | Hình ảnh                                                |
+| -------------------------- | ---------------------------------------------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------------------- |
+| Hero                       | 1 bộ                                                 | Eyebrow, tiêu đề, mô tả ngắn, nhãn CTA; xác nhận thông điệp hiện có hoặc gửi bản thay thế | 1 ảnh Hero ngang chính, khuyến nghị thêm 1 ảnh dự phòng |
+| Vì sao phụ huynh tin tưởng | 4 ý hiện có                                          | Duyệt/sửa tên và mô tả từng nguyên tắc; không dùng claim chưa có bằng chứng               | 0–4 ảnh tùy định hướng                                  |
+| Hành trình học tập         | 4 bước hiện có                                       | Duyệt đúng quy trình tư vấn, xếp lớp, bắt đầu học và theo dõi thực tế                     | Không bắt buộc                                          |
+| Chương trình nổi bật       | Tối thiểu 3 khóa hoặc nhóm                           | Chọn mục muốn ghim, thứ tự, nhãn CTA                                                      | 1 thumbnail/mục nếu hiển thị khóa cụ thể                |
+| Chuyên gia nổi bật         | 1                                                    | Lấy từ hồ sơ chuyên gia đã duyệt                                                          | 1 chân dung                                             |
+| Thành quả học viên         | Tối thiểu 1 để bỏ empty state; khuyến nghị 3–6       | Lấy từ case study đã duyệt                                                                | 1–3 ảnh/case                                            |
+| Cảm nhận phụ huynh         | Tối thiểu 1; khuyến nghị 3–6                         | Lấy từ phản hồi đã đồng ý công bố                                                         | Ảnh tùy phạm vi đồng ý                                  |
+| Nội dung nổi bật           | Tối thiểu 1 bài + 1 tài liệu; khuyến nghị 3 mỗi loại | Chỉ định bản ghi nổi bật đã xuất bản                                                      | 1 thumbnail/bản ghi                                     |
 
 Liên quan: `ISSUE-007`, `ISSUE-008`, `ISSUE-010`, `ISSUE-012`, `ISSUE-013`, `ISSUE-014`.
 
@@ -98,13 +98,13 @@ Tối thiểu 1 bộ hồ sơ chính thức, gồm:
 
 ### 6.2. Các tuyên bố cần duyệt bản cuối
 
-| Nội dung | Số lượng hiện có cần duyệt | Kết quả bàn giao |
-| --- | --- | --- |
-| Tầm nhìn | 1 tuyên bố + 3 hướng | Giữ nguyên, chỉnh sửa hoặc thay thế toàn bộ |
-| Sứ mệnh | 1 tuyên bố + 4 trách nhiệm | Bản chữ cuối đã duyệt |
-| Giá trị cốt lõi | 4 giá trị | Tên và mô tả từng giá trị |
-| Triết lý giáo dục | 1 tuyên bố + 3 trụ cột | Bản được khách hàng và người phụ trách chuyên môn duyệt |
-| Phương pháp đào tạo | 1 bộ nếu muốn công bố | Nguyên tắc, cách tổ chức học, cách đánh giá; không suy diễn từ triết lý |
+| Nội dung            | Số lượng hiện có cần duyệt | Kết quả bàn giao                                                        |
+| ------------------- | -------------------------- | ----------------------------------------------------------------------- |
+| Tầm nhìn            | 1 tuyên bố + 3 hướng       | Giữ nguyên, chỉnh sửa hoặc thay thế toàn bộ                             |
+| Sứ mệnh             | 1 tuyên bố + 4 trách nhiệm | Bản chữ cuối đã duyệt                                                   |
+| Giá trị cốt lõi     | 4 giá trị                  | Tên và mô tả từng giá trị                                               |
+| Triết lý giáo dục   | 1 tuyên bố + 3 trụ cột     | Bản được khách hàng và người phụ trách chuyên môn duyệt                 |
+| Phương pháp đào tạo | 1 bộ nếu muốn công bố      | Nguyên tắc, cách tổ chức học, cách đánh giá; không suy diễn từ triết lý |
 
 Liên quan: `ISSUE-016` đến `ISSUE-020`.
 
@@ -118,29 +118,29 @@ Liên quan: `ISSUE-016` đến `ISSUE-020`.
 
 ### 7.2. Mỗi khóa học là một bản ghi
 
-| Trường | Bắt buộc | Định dạng/yêu cầu |
-| --- | --- | --- |
-| Tên khóa học | Có | Tên chính thức, duy nhất |
-| Slug | Có | Chữ thường không dấu, duy nhất |
-| Nhóm chương trình/danh mục | Có | Chọn từ taxonomy đã duyệt |
-| Mô tả ngắn | Có | 40–80 từ, dùng trên card và SEO excerpt |
-| Nội dung chi tiết | Có | 500–1.500 từ hoặc tài liệu nguồn đủ để biên tập |
-| Đối tượng | Có | Độ tuổi/nhóm người học và điều kiện phù hợp |
-| Trình độ đầu vào | Có | Ví dụ: chưa biết, sơ cấp; ghi “Không yêu cầu” nếu đúng |
-| Mục tiêu học tập | Có | Khuyến nghị 3–6 mục tiêu có thể kiểm chứng |
-| Nội dung/chương trình học | Có | Các học phần/chủ đề theo thứ tự; khuyến nghị 4–12 mục |
-| Thời lượng | Có | Tổng tuần/tháng/buổi và số phút mỗi buổi nếu đã chốt |
-| Hình thức học | Có | Online/offline/kết hợp; cá nhân/nhóm; địa điểm nếu offline |
-| Lịch học/khai giảng | Nếu công bố | Ngày bắt đầu, thứ, khung giờ, múi giờ; hoặc ghi “Liên hệ” |
-| Học phí | Có | Số VND + cách hiển thị, hoặc trạng thái `Liên hệ` |
-| Chính sách liên quan | Nếu có | Học thử, bảo lưu, hoàn/hủy, ưu đãi và thời hạn áp dụng |
-| Giảng viên/phụ trách | Nếu công bố | Liên kết hồ sơ đã được phép hiển thị |
-| Ảnh đại diện | Có | 1 ảnh ngang `16:9`/`4:3`, cạnh dài tối thiểu 1600 px |
-| Ảnh bổ sung | Khuyến nghị | 2–5 ảnh thật/lớp học cho trang chi tiết |
-| Trạng thái | Có | `draft`, `published` hoặc `archived` |
-| Nổi bật | Có | Có/Không |
-| Ngày xuất bản | Khi published | `YYYY-MM-DD` |
-| SEO | Có trước production | Meta title, meta description, ảnh chia sẻ; có thể duyệt từ bản biên tập |
+| Trường                     | Bắt buộc            | Định dạng/yêu cầu                                                       |
+| -------------------------- | ------------------- | ----------------------------------------------------------------------- |
+| Tên khóa học               | Có                  | Tên chính thức, duy nhất                                                |
+| Slug                       | Có                  | Chữ thường không dấu, duy nhất                                          |
+| Nhóm chương trình/danh mục | Có                  | Chọn từ taxonomy đã duyệt                                               |
+| Mô tả ngắn                 | Có                  | 40–80 từ, dùng trên card và SEO excerpt                                 |
+| Nội dung chi tiết          | Có                  | 500–1.500 từ hoặc tài liệu nguồn đủ để biên tập                         |
+| Đối tượng                  | Có                  | Độ tuổi/nhóm người học và điều kiện phù hợp                             |
+| Trình độ đầu vào           | Có                  | Ví dụ: chưa biết, sơ cấp; ghi “Không yêu cầu” nếu đúng                  |
+| Mục tiêu học tập           | Có                  | Khuyến nghị 3–6 mục tiêu có thể kiểm chứng                              |
+| Nội dung/chương trình học  | Có                  | Các học phần/chủ đề theo thứ tự; khuyến nghị 4–12 mục                   |
+| Thời lượng                 | Có                  | Tổng tuần/tháng/buổi và số phút mỗi buổi nếu đã chốt                    |
+| Hình thức học              | Có                  | Online/offline/kết hợp; cá nhân/nhóm; địa điểm nếu offline              |
+| Lịch học/khai giảng        | Nếu công bố         | Ngày bắt đầu, thứ, khung giờ, múi giờ; hoặc ghi “Liên hệ”               |
+| Học phí                    | Có                  | Số VND + cách hiển thị, hoặc trạng thái `Liên hệ`                       |
+| Chính sách liên quan       | Nếu có              | Học thử, bảo lưu, hoàn/hủy, ưu đãi và thời hạn áp dụng                  |
+| Giảng viên/phụ trách       | Nếu công bố         | Liên kết hồ sơ đã được phép hiển thị                                    |
+| Ảnh đại diện               | Có                  | 1 ảnh ngang `16:9`/`4:3`, cạnh dài tối thiểu 1600 px                    |
+| Ảnh bổ sung                | Khuyến nghị         | 2–5 ảnh thật/lớp học cho trang chi tiết                                 |
+| Trạng thái                 | Có                  | `draft`, `published` hoặc `archived`                                    |
+| Nổi bật                    | Có                  | Có/Không                                                                |
+| Ngày xuất bản              | Khi published       | `YYYY-MM-DD`                                                            |
+| SEO                        | Có trước production | Meta title, meta description, ảnh chia sẻ; có thể duyệt từ bản biên tập |
 
 Không công bố cam kết đầu ra, tỷ lệ đỗ, số học viên hoặc chứng nhận nếu không có căn cứ và phê duyệt. Liên quan: `ISSUE-009`.
 
@@ -148,15 +148,15 @@ Không công bố cam kết đầu ra, tỷ lệ đỗ, số học viên hoặc 
 
 ### 8.1. Một hồ sơ chuyên gia
 
-| Mục | Số lượng | Yêu cầu |
-| --- | --- | --- |
-| Thông tin định danh | 1 bộ | Họ tên, slug, chức danh hiện tại |
-| Tiểu sử | 1 bản ngắn + 1 bản đầy đủ | 80–150 từ và 500–1.000 từ |
-| Chuyên môn | Khuyến nghị 3–8 mục | Tên chuyên môn và mô tả nếu cần |
-| Kinh nghiệm | Các mục được phép công bố | Số năm chỉ dùng khi đã xác nhận; có thể dùng timeline thay thế |
-| Chứng chỉ | 0 hoặc tất cả chứng chỉ muốn công bố | Tên, đơn vị cấp, ngày cấp, tệp/link kiểm chứng; không bắt buộc nếu không có |
-| Ảnh | Tối thiểu 1; khuyến nghị 3–5 | 1 chân dung chính + ảnh giảng dạy/tư vấn |
-| Video giới thiệu | 0–1 | Link YouTube/Vimeo nếu có |
+| Mục                 | Số lượng                             | Yêu cầu                                                                     |
+| ------------------- | ------------------------------------ | --------------------------------------------------------------------------- |
+| Thông tin định danh | 1 bộ                                 | Họ tên, slug, chức danh hiện tại                                            |
+| Tiểu sử             | 1 bản ngắn + 1 bản đầy đủ            | 80–150 từ và 500–1.000 từ                                                   |
+| Chuyên môn          | Khuyến nghị 3–8 mục                  | Tên chuyên môn và mô tả nếu cần                                             |
+| Kinh nghiệm         | Các mục được phép công bố            | Số năm chỉ dùng khi đã xác nhận; có thể dùng timeline thay thế              |
+| Chứng chỉ           | 0 hoặc tất cả chứng chỉ muốn công bố | Tên, đơn vị cấp, ngày cấp, tệp/link kiểm chứng; không bắt buộc nếu không có |
+| Ảnh                 | Tối thiểu 1; khuyến nghị 3–5         | 1 chân dung chính + ảnh giảng dạy/tư vấn                                    |
+| Video giới thiệu    | 0–1                                  | Link YouTube/Vimeo nếu có                                                   |
 
 ### 8.2. Dịch vụ và quy trình tư vấn
 
@@ -209,13 +209,13 @@ Liên quan: `ISSUE-014`.
 
 ## 11. FAQ, tuyển dụng, liên hệ và pháp lý
 
-| Trang/nhóm | Số lượng | Nội dung cần cung cấp |
-| --- | --- | --- |
-| FAQ | Tối thiểu 5; khuyến nghị 10–20 | Câu hỏi, câu trả lời, danh mục, thứ tự, trạng thái; nên phủ khóa học, học phí, học thử, lịch học, tư vấn, bảo lưu/hủy |
-| Tuyển dụng | 1 trạng thái chung + mỗi vị trí 1 bản ghi | Có/không tuyển; tên vị trí, mô tả, yêu cầu, địa điểm/hình thức, hạn nhận, cách ứng tuyển; nếu chưa tuyển cần câu chữ empty state đã duyệt |
-| Liên hệ | 1 bộ | Hotline, email, địa chỉ, giờ làm việc, Maps, mạng xã hội, thời gian phản hồi dự kiến, chủ đề form |
-| Chính sách bảo mật | 1 bản được chủ sở hữu duyệt | Đơn vị thu thập, dữ liệu thu thập, mục đích, thời gian lưu, bên nhận dữ liệu, quyền người dùng, bảo mật, trẻ vị thành niên, cookie nếu có, liên hệ, ngày hiệu lực |
-| Điều khoản sử dụng | 1 bản được chủ sở hữu duyệt | Phạm vi dịch vụ, trách nhiệm người dùng, sở hữu trí tuệ, giới hạn trách nhiệm, liên kết ngoài, thay đổi điều khoản, luật áp dụng, liên hệ, ngày hiệu lực |
+| Trang/nhóm         | Số lượng                                  | Nội dung cần cung cấp                                                                                                                                             |
+| ------------------ | ----------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| FAQ                | Tối thiểu 5; khuyến nghị 10–20            | Câu hỏi, câu trả lời, danh mục, thứ tự, trạng thái; nên phủ khóa học, học phí, học thử, lịch học, tư vấn, bảo lưu/hủy                                             |
+| Tuyển dụng         | 1 trạng thái chung + mỗi vị trí 1 bản ghi | Có/không tuyển; tên vị trí, mô tả, yêu cầu, địa điểm/hình thức, hạn nhận, cách ứng tuyển; nếu chưa tuyển cần câu chữ empty state đã duyệt                         |
+| Liên hệ            | 1 bộ                                      | Hotline, email, địa chỉ, giờ làm việc, Maps, mạng xã hội, thời gian phản hồi dự kiến, chủ đề form                                                                 |
+| Chính sách bảo mật | 1 bản được chủ sở hữu duyệt               | Đơn vị thu thập, dữ liệu thu thập, mục đích, thời gian lưu, bên nhận dữ liệu, quyền người dùng, bảo mật, trẻ vị thành niên, cookie nếu có, liên hệ, ngày hiệu lực |
+| Điều khoản sử dụng | 1 bản được chủ sở hữu duyệt               | Phạm vi dịch vụ, trách nhiệm người dùng, sở hữu trí tuệ, giới hạn trách nhiệm, liên kết ngoài, thay đổi điều khoản, luật áp dụng, liên hệ, ngày hiệu lực          |
 
 Nội dung pháp lý nên được người có thẩm quyền hoặc tư vấn pháp lý rà soát; đội phát triển không tự xác nhận tính phù hợp pháp luật.
 
@@ -249,15 +249,15 @@ Form học thử hiện chưa nhận dữ liệu thật do chưa có Supabase v�
 
 ## 14. Tài khoản và hạ tầng cần có trước production
 
-| Hạng mục | Số lượng | Chủ sở hữu/đầu vào cần có |
-| --- | --- | --- |
-| Supabase project | 1 production | Tài khoản tổ chức, region, quyền quản trị; khóa bí mật chỉ cấu hình qua biến môi trường |
-| Vercel project | 1 production | Tài khoản tổ chức và quyền deploy |
-| GitHub repository | 1 | Quyền phù hợp cho deploy/CI |
-| Tên miền và DNS | 1 domain chính | Tài khoản thuộc khách hàng, quyền cập nhật DNS |
-| Admin ban đầu | Tối thiểu 1 | Họ tên, email, số điện thoại nếu cần; không ghi mật khẩu vào tài liệu |
-| Email gửi/nhận thông báo | Tối thiểu 1 | Địa chỉ, người quản lý, cấu hình nhà cung cấp nếu triển khai email |
-| Analytics/Search Console | Khuyến nghị 1 bộ | Tài khoản tổ chức và quyền truy cập |
+| Hạng mục                 | Số lượng         | Chủ sở hữu/đầu vào cần có                                                               |
+| ------------------------ | ---------------- | --------------------------------------------------------------------------------------- |
+| Supabase project         | 1 production     | Tài khoản tổ chức, region, quyền quản trị; khóa bí mật chỉ cấu hình qua biến môi trường |
+| Vercel project           | 1 production     | Tài khoản tổ chức và quyền deploy                                                       |
+| GitHub repository        | 1                | Quyền phù hợp cho deploy/CI                                                             |
+| Tên miền và DNS          | 1 domain chính   | Tài khoản thuộc khách hàng, quyền cập nhật DNS                                          |
+| Admin ban đầu            | Tối thiểu 1      | Họ tên, email, số điện thoại nếu cần; không ghi mật khẩu vào tài liệu                   |
+| Email gửi/nhận thông báo | Tối thiểu 1      | Địa chỉ, người quản lý, cấu hình nhà cung cấp nếu triển khai email                      |
+| Analytics/Search Console | Khuyến nghị 1 bộ | Tài khoản tổ chức và quyền truy cập                                                     |
 
 ## 15. Cấu trúc gói bàn giao đề xuất
 

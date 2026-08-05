@@ -6,7 +6,10 @@ import { expertPhoto } from "@/data/expert";
 
 export function ExpertSection() {
   return (
-    <section className="section-soft-gradient py-16 sm:py-20 lg:py-24" aria-labelledby="expert-heading">
+    <section
+      className="section-soft-gradient py-16 sm:py-20 lg:py-24"
+      aria-labelledby="expert-heading"
+    >
       <Container>
         <div className="grid overflow-hidden rounded-[2rem] border border-slate-200 bg-brand-blue-soft lg:grid-cols-[0.9fr_1.1fr]">
           <div className="relative min-h-80 overflow-hidden bg-brand-blue sm:min-h-96">
@@ -19,7 +22,9 @@ export function ExpertSection() {
             />
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/80 via-slate-950/35 to-transparent px-6 pb-6 pt-24 text-white sm:px-8 sm:pb-8">
               <p className="text-xl font-bold">{expertContent.fullName}</p>
-              <p className="mt-1 text-sm font-semibold">Tên thường gọi: {expertContent.alternateName}</p>
+              <p className="mt-1 text-sm font-semibold">
+                Tên thường gọi: {expertContent.alternateName}
+              </p>
             </div>
           </div>
 
@@ -27,22 +32,39 @@ export function ExpertSection() {
             <p className="text-sm font-bold uppercase tracking-[0.14em] text-brand-green">
               {expertContent.eyebrow}
             </p>
-            <h2 id="expert-heading" className="mt-4 text-3xl font-bold leading-tight tracking-tight text-slate-950 sm:text-4xl">
+            <h2
+              id="expert-heading"
+              className="mt-4 text-3xl font-bold leading-tight tracking-tight text-slate-950 sm:text-4xl"
+            >
               {expertContent.title}
             </h2>
-            <p className="mt-5 text-lg leading-8 text-slate-600">{expertContent.description}</p>
-            <ul className="mt-7 flex flex-wrap gap-2" aria-label="Các hướng đồng hành">
+            <p className="mt-5 text-lg leading-8 text-slate-600">
+              {expertContent.description}
+            </p>
+            <ul
+              className="mt-7 flex flex-wrap gap-2"
+              aria-label="Các hướng đồng hành"
+            >
               {expertContent.focusAreas.map((area) => (
-                <li key={area} className="rounded-full border border-blue-100 bg-white px-4 py-2 text-sm font-semibold text-slate-700">
+                <li
+                  key={area}
+                  className="rounded-full border border-blue-100 bg-white px-4 py-2 text-sm font-semibold text-slate-700"
+                >
                   {area}
                 </li>
               ))}
             </ul>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link href={expertContent.consultationAction.href} className="button-primary px-6">
+              <Link
+                href={expertContent.consultationAction.href}
+                className="button-primary px-6"
+              >
                 {expertContent.consultationAction.label}
               </Link>
-              <Link href={expertContent.profileAction.href} className="inline-flex min-h-11 items-center justify-center rounded-lg border border-brand-blue bg-white px-6 py-2 text-sm font-semibold text-brand-blue hover:bg-blue-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue">
+              <Link
+                href={expertContent.profileAction.href}
+                className="inline-flex min-h-11 items-center justify-center rounded-lg border border-brand-blue bg-white px-6 py-2 text-sm font-semibold text-brand-blue hover:bg-blue-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue"
+              >
                 {expertContent.profileAction.label}
               </Link>
             </div>

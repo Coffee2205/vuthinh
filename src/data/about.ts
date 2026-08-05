@@ -70,7 +70,8 @@ export const visionContent = {
 
 export const missionContent = {
   eyebrow: "Sứ mệnh",
-  title: "Tạo những điểm chạm rõ ràng giữa việc học và nhu cầu của mỗi gia đình",
+  title:
+    "Tạo những điểm chạm rõ ràng giữa việc học và nhu cầu của mỗi gia đình",
   description:
     "Vũ Thịnh xác định vai trò đồng hành bằng việc cung cấp thông tin dễ hiểu, mở ra cơ hội tìm hiểu chương trình và kết nối các khía cạnh phát triển của người học.",
   responsibilities: [

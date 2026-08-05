@@ -2,7 +2,11 @@ import { Container } from "@/components/common/Container";
 import { ProgramGroupFilter } from "@/components/programs/ProgramGroupFilter";
 import type { ProgramCategory } from "@/types/course";
 
-export function ProgramGroupsSection({ programs }: { programs: ProgramCategory[] }) {
+export function ProgramGroupsSection({
+  programs,
+}: {
+  programs: ProgramCategory[];
+}) {
   return (
     <section
       className="bg-slate-50 py-16 sm:py-20 lg:py-24"
@@ -20,8 +24,8 @@ export function ProgramGroupsSection({ programs }: { programs: ProgramCategory[]
             Khám phá các hướng học tại Vũ Thịnh
           </h1>
           <p className="mt-5 text-lg leading-8 text-slate-600">
-            Tiếng Trung là trọng tâm, bên cạnh các chương trình bổ trợ về kỹ năng,
-            cảm xúc và giá trị sống dành cho gia đình.
+            Tiếng Trung là trọng tâm, bên cạnh các chương trình bổ trợ về kỹ
+            năng, cảm xúc và giá trị sống dành cho gia đình.
           </p>
         </div>
 

@@ -147,7 +147,12 @@ export const expertContent = {
     "Giảng viên đồng hành trong quá trình đánh giá nhu cầu, định hướng lộ trình và kết nối việc học tiếng Trung với kỹ năng sống, cảm xúc và giá trị phát triển cá nhân.",
   fullName: "Huỳnh Anh Ngữ",
   alternateName: "Vũ Thịnh",
-  focusAreas: ["Tiếng Trung", "Định hướng học tập", "Kỹ năng sống và cảm xúc", "Đào tạo và huấn luyện"],
+  focusAreas: [
+    "Tiếng Trung",
+    "Định hướng học tập",
+    "Kỹ năng sống và cảm xúc",
+    "Đào tạo và huấn luyện",
+  ],
   profileAction: { href: "/expert", label: "Xem trang giảng viên" },
   consultationAction: { href: "/consultation", label: "Đăng ký tư vấn" },
 } as const;
@@ -155,7 +160,8 @@ export const expertContent = {
 export const studentOutcomesContent = {
   eyebrow: "Thành quả học viên",
   title: "Ghi nhận hành trình bằng những câu chuyện có thật",
-  description: "Khu vực này sẽ chỉ công bố kết quả và hình ảnh đã được học viên, phụ huynh cùng trung tâm xác nhận.",
+  description:
+    "Khu vực này sẽ chỉ công bố kết quả và hình ảnh đã được học viên, phụ huynh cùng trung tâm xác nhận.",
   status: "Dữ liệu thành quả đang được cập nhật",
   note: "Chúng tôi không sử dụng số liệu, hình ảnh hoặc kết quả minh họa chưa được kiểm chứng.",
   action: { href: "/success-stories", label: "Xem trang thành quả" },

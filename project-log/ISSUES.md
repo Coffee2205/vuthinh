@@ -458,6 +458,7 @@ Một số phần cũ vẫn mô tả Task 03/blocker Supabase, trong khi source/
 - CTA dẫn tới form preview đang khóa; giới hạn vận hành tiếp tục được theo dõi tại `ISSUE-015`.
 - Route `/consultation` chưa được triển khai vì thuộc Task 04; không tạo link tới route này trong Task 02.
 - Các nội dung thương hiệu cần duyệt tiếp tục được theo dõi tại `ISSUE-016` đến `ISSUE-020`.
+
 ## ISSUE-028 — Schema Blog chưa được expose trong Supabase project hiện tại
 
 **Trạng thái:** Open — REST public trả HTTP 404 cho cả bảy bảng blog, nên chưa đọc được 4 bài mẫu hoặc xác minh relation/RLS runtime. Cần xác minh schema/seed ở đúng project, reload schema cache và public select policy.
@@ -471,6 +472,7 @@ Một số phần cũ vẫn mô tả Task 03/blocker Supabase, trong khi source/
 **Trạng thái:** Open — Blocker hoàn thành Task 04
 
 Public query expert `vu-thinh` ngày 2026-07-18 xác nhận không có `experience_years`, `experience` hoặc nội dung tương đương. Cần khách hàng cung cấp nội dung đã duyệt và quyết định cấu trúc lưu trữ trước khi triển khai; không dùng dữ liệu suy đoán.
+
 ## ISSUE-031 — Bảng resources chưa tồn tại trong Supabase
 
 **Trạng thái:** Open — Blocker runtime Task 05
@@ -481,6 +483,7 @@ REST public trả HTTP 404 và PostgREST báo không tìm thấy `public.resourc
 
 - Yêu cầu phiên cho biết bốn bảng đã tồn tại, nhưng public REST của project trong `.env.local` vẫn trả HTTP 404 cho cả `resource_categories`, `resources`, `resource_courses` và `resource_download_events`.
 - Chưa thể xác minh tên cột thực tế, nested course relation, public select policy hoặc public insert download event; issue tiếp tục Open.
+
 ## ISSUE-032 — Chín bảng Support chưa được expose trong Supabase project hiện tại
 
 **Trạng thái:** Open — Blocker Task 06
@@ -494,11 +497,13 @@ Public REST trả HTTP 404 cho `success_stories`, `faq_categories`, `faqs`, `job
 **Trạng thái:** Open
 
 Chưa có success story consent-confirmed hoặc job published nên chưa test UI dữ liệu/job application hợp lệ. Contact settings đang null; CV private Storage chưa triển khai; privacy/terms cần phê duyệt pháp lý. Ba bản ghi QA Task 06 cần admin xóa.
+
 ## ISSUE-033 — Task 07 không thể hoàn tất types/forms/RLS với schema hiện tại
 
 **Trạng thái:** Open — Blocker Task 07
 
 Source chỉ có consultation form; contact/trial/course/job/resource registration chưa được triển khai. Các bảng tương ứng trả HTTP 404 và Supabase OpenAPI schema yêu cầu secret API key, nên không thể sinh database types hoặc test RLS đầy đủ chỉ bằng publishable key. Phần đã xác minh: public chỉ thấy course published/expert active, không đọc consultation submissions và không thể gửi cột `status`.
+
 ## Cập nhật ISSUE-015 — Resolved 2026-07-18
 
 Form học thử trang chủ đã kết nối `trial_registrations` qua Zod/Server Action/service, có pending/error/success; RLS insert/private select đã kiểm tra.
@@ -556,6 +561,7 @@ Không có issue source mới; lint/build đạt. Cần QA trực quan sau deplo
 ## Gỡ Programs và Resources public — 2026-07-21
 
 Không có issue source mới. Các URL cũ sẽ chủ động trả 404 sau deploy; dữ liệu Resources vẫn tồn tại và admin vẫn quản lý được nhưng không có trang xem công khai cho đến khi có quyết định mới.
+
 # Cập nhật nội dung Blog — 2026-07-26
 
 - Bộ 20 bài đã được chuẩn bị dưới dạng migration nhưng chưa được duyệt chuyên môn hoặc áp dụng production.

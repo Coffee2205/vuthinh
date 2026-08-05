@@ -252,17 +252,20 @@ Tạo trang chủ thuyết phục phụ huynh và dẫn người dùng đến đ
 - Hoàn thành toàn bộ 10 section theo checklist ở phạm vi giao diện trang chủ.
 - Lint, build và production runtime đạt tại lần kiểm tra cuối ngày 2026-07-15.
 - Các giới hạn dữ liệu, route đích và form backend vẫn được theo dõi trong `project-log/ISSUES.md` và thuộc các task sau.
+
 ## Kích hoạt form học thử trên trang chủ — 2026-07-18
 
 - Thay form preview bị khóa bằng form lấy course published từ Supabase.
 - Server Action/Zod lưu allowlist vào `trial_registrations`; có validation, database error, pending và success state.
 - Lint/build đạt; runtime `/` HTTP 200 và không còn thông báo form chưa mở.
+
 ## Cập nhật ảnh Hero — 2026-07-21
 
 - [x] Dùng `vietnam-china-trade-street-hero.webp` làm nền Hero bằng `next/image`.
 - [x] Cấu hình priority, responsive crop và overlay đảm bảo nội dung dễ đọc.
 - [x] Lint/build đạt; chưa commit và chưa push.
 - [x] Gradient Hero tối bên trái, nhẹ dần sang phải; chữ và eyebrow có tương phản phù hợp. Lint/build đạt.
+
 ## Gradient section nền trắng — 2026-07-21
 
 - [x] Trust, Expert, Parent Testimonials và Trial Registration dùng gradient 135° được cung cấp.

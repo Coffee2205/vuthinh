@@ -101,23 +101,27 @@
 - Runtime dữ liệu Blog và phần `/resources` còn lại của Task 05.
 - Các schema ngoài catalog, form lưu dữ liệu thật, Supabase Auth/Storage.
 - Admin, AI, thanh toán hoặc LMS.
+
 ## Bước gần nhất Task 06
 
 1. Xác minh `NEXT_PUBLIC_SUPABASE_URL` đang trỏ tới project chứa chín bảng Support.
 2. Reload PostgREST schema cache hoặc cung cấp DDL/tên cột nếu bảng ở project khác.
 3. Sau khi REST đọc được bảng, triển khai lần lượt Success Stories, FAQ, Careers, Contact, Trial/Course Registration và trang pháp lý.
+
 ## Bước gần nhất Task 07
 
 1. Cấu hình `.env.local` tới đúng project chứa toàn bộ schema hoặc expose/reload các bảng đang thiếu.
 2. Sinh `database.types.ts` bằng Supabase CLI/secret ở môi trường quản trị an toàn, không đưa secret vào browser/repository.
 3. Hoàn thành Task 06 forms trước, sau đó test allowlist, length, duplicate submit, public insert/private select cho từng bảng.
 4. Chỉ đánh dấu RLS hoàn thành khi mọi bảng content/form đã được kiểm tra bằng publishable key.
+
 ## Sau Task 06
 
 1. Admin xóa ba bản ghi QA `Codex QA Task 06` sau khi đối chiếu trạng thái mặc định.
 2. Thêm story có consent và job published để kiểm tra card/detail/job application hợp lệ.
 3. Cung cấp contact settings thật và nội dung privacy/terms đã được tư vấn pháp lý duyệt.
 4. Không bắt đầu Task 07/08 cho đến khi người dùng yêu cầu.
+
 ## Sau khi kích hoạt form trang chủ
 
 1. Admin xóa bản ghi QA Task 06 sau đối chiếu.
@@ -153,6 +157,7 @@
 
 1. Sau deploy, xác nhận `/programs`, `/resources` và resource detail cũ trả 404.
 2. Kiểm tra Header/Footer/Home/Sitemap production không còn link tới hai route; `/courses` và `/blog` tiếp tục HTTP 200.
+
 # Bước tiếp theo — cập nhật 2026-07-26
 
 - Chủ sở hữu/chuyên môn rà soát 20 bài trong `supabase/migrations/202607260001_seed_20_chinese_learning_benefit_posts.sql`.

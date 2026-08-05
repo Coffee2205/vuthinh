@@ -1,2 +1,47 @@
-import Link from"next/link";import{AdminList}from"@/components/admin/AdminList";import{dateCell,parseAdminParams}from"@/lib/admin-page";import{getAdminRows}from"@/services/admin/admin-data.service";
-export default async function Page({searchParams}:{searchParams:Promise<Record<string,string|undefined>>}){const p=await parseAdminParams(searchParams);const d=await getAdminRows('faqs',{...p,searchColumn:'question'});return <AdminList title="FAQ" {...d} {...p} statuses={[]} createHref="/admin/faqs/new" columns={[{key:'question',label:'Câu hỏi',format:(v,r)=><Link className="font-semibold text-brand-blue" href={`/admin/faqs/${r.id}`}>{String(v)}</Link>},{key:'is_active',label:'Active',format:v=>v?'Có':'Không'},{key:'is_featured',label:'Featured',format:v=>v?'Có':'Không'},{key:'display_order',label:'Thứ tự'},{key:'updated_at',label:'Cập nhật',format:dateCell}]}/>}
+import Link from "next/link";
+import { AdminList } from "@/components/admin/AdminList";
+import { dateCell, parseAdminParams } from "@/lib/admin-page";
+import { getAdminRows } from "@/services/admin/admin-data.service";
+export default async function Page({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | undefined>>;
+}) {
+  const p = await parseAdminParams(searchParams);
+  const d = await getAdminRows("faqs", { ...p, searchColumn: "question" });
+  return (
+    <AdminList
+      title="FAQ"
+      {...d}
+      {...p}
+      statuses={[]}
+      createHref="/admin/faqs/new"
+      columns={[
+        {
+          key: "question",
+          label: "Câu hỏi",
+          format: (v, r) => (
+            <Link
+              className="font-semibold text-brand-blue"
+              href={`/admin/faqs/${r.id}`}
+            >
+              {String(v)}
+            </Link>
+          ),
+        },
+        {
+          key: "is_active",
+          label: "Active",
+          format: (v) => (v ? "Có" : "Không"),
+        },
+        {
+          key: "is_featured",
+          label: "Featured",
+          format: (v) => (v ? "Có" : "Không"),
+        },
+        { key: "display_order", label: "Thứ tự" },
+        { key: "updated_at", label: "Cập nhật", format: dateCell },
+      ]}
+    />
+  );
+}

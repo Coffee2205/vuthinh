@@ -28,11 +28,23 @@ export interface ConsultationRequest {
 
 export type ConsultationRequestInput = Pick<
   ConsultationRequest,
-  | "expert_id" | "service_id" | "full_name" | "phone" | "email"
-  | "consulting_for" | "student_age" | "current_level" | "learning_goal"
-  | "target_date_text" | "available_study_time" | "current_difficulty"
-  | "preferred_date" | "preferred_time_slot" | "consultation_format"
-  | "note" | "privacy_accepted"
+  | "expert_id"
+  | "service_id"
+  | "full_name"
+  | "phone"
+  | "email"
+  | "consulting_for"
+  | "student_age"
+  | "current_level"
+  | "learning_goal"
+  | "target_date_text"
+  | "available_study_time"
+  | "current_difficulty"
+  | "preferred_date"
+  | "preferred_time_slot"
+  | "consultation_format"
+  | "note"
+  | "privacy_accepted"
 >;
 
 export interface ConsultationFormState {

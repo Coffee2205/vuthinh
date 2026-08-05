@@ -24,30 +24,47 @@ export async function uploadPublicImage(
   folder: `${MediaFolder}/${string}`,
 ): Promise<MediaOperationResult> {
   const validationError = validatePublicImage(file);
-  if (validationError) return { ok: false, code: "invalid", message: validationError };
+  if (validationError)
+    return { ok: false, code: "invalid", message: validationError };
 
   const extension = extensionByMime[file.type];
   const path = `${folder}/${Date.now()}-${crypto.randomUUID()}.${extension}`;
   const bytes = new Uint8Array(await file.arrayBuffer());
-  const { error } = await db.storage.from(PUBLIC_MEDIA_BUCKET).upload(path, bytes, {
-    cacheControl: "31536000",
-    contentType: file.type,
-    upsert: false,
-  });
+  const { error } = await db.storage
+    .from(PUBLIC_MEDIA_BUCKET)
+    .upload(path, bytes, {
+      cacheControl: "31536000",
+      contentType: file.type,
+      upsert: false,
+    });
 
   if (error) {
-    console.error("[storage] Public image upload failed", { code: error.name, size: file.size, limit: MAX_PUBLIC_IMAGE_BYTES });
-    return { ok: false, code: "upload", message: "Không thể tải ảnh lên. Vui lòng thử lại." };
+    console.error("[storage] Public image upload failed", {
+      code: error.name,
+      size: file.size,
+      limit: MAX_PUBLIC_IMAGE_BYTES,
+    });
+    return {
+      ok: false,
+      code: "upload",
+      message: "Không thể tải ảnh lên. Vui lòng thử lại.",
+    };
   }
   return { ok: true, path };
 }
 
-export async function removePublicImage(db: SupabaseClient, pathOrUrl: string | null | undefined) {
+export async function removePublicImage(
+  db: SupabaseClient,
+  pathOrUrl: string | null | undefined,
+) {
   const path = getPublicMediaPath(pathOrUrl);
   if (!path) return { ok: true as const, removed: false };
   const { error } = await db.storage.from(PUBLIC_MEDIA_BUCKET).remove([path]);
   if (error) {
-    console.error("[storage] Public image removal failed", { code: error.name, path });
+    console.error("[storage] Public image removal failed", {
+      code: error.name,
+      path,
+    });
     return { ok: false as const, removed: false };
   }
   return { ok: true as const, removed: true };
@@ -71,9 +88,17 @@ export async function replacePublicImage({
 
   if (!(await persist(uploaded.path))) {
     await removePublicImage(db, uploaded.path);
-    return { ok: false as const, code: "upload" as const, message: "Không thể lưu đường dẫn ảnh. Ảnh mới đã được hoàn tác." };
+    return {
+      ok: false as const,
+      code: "upload" as const,
+      message: "Không thể lưu đường dẫn ảnh. Ảnh mới đã được hoàn tác.",
+    };
   }
 
   const removed = await removePublicImage(db, oldValue);
-  return { ok: true as const, path: uploaded.path, oldFileRemovalFailed: !removed.ok };
+  return {
+    ok: true as const,
+    path: uploaded.path,
+    oldFileRemovalFailed: !removed.ok,
+  };
 }

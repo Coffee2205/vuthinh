@@ -8,7 +8,12 @@ import { MissionSection } from "@/components/about/MissionSection";
 import { VisionSection } from "@/components/about/VisionSection";
 import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = createPageMetadata({ title: "Giới thiệu", description: "Tìm hiểu định hướng hệ sinh thái giáo dục gia đình Vũ Thịnh với tiếng Trung là trọng tâm.", path: "/about" });
+export const metadata: Metadata = createPageMetadata({
+  title: "Giới thiệu",
+  description:
+    "Tìm hiểu định hướng hệ sinh thái giáo dục gia đình Vũ Thịnh với tiếng Trung là trọng tâm.",
+  path: "/about",
+});
 
 export default function AboutPage() {
   return (

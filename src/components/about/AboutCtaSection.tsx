@@ -37,7 +37,9 @@ export function AboutCtaSection() {
             >
               {aboutCtaContent.action.label}
             </Link>
-            <p className="mt-5 text-sm leading-6 text-slate-500">{aboutCtaContent.note}</p>
+            <p className="mt-5 text-sm leading-6 text-slate-500">
+              {aboutCtaContent.note}
+            </p>
           </div>
         </div>
       </Container>

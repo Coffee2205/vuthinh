@@ -4,7 +4,72 @@ import { PublicSubmissionForm } from "@/components/forms/PublicSubmissionForm";
 import { trialRegistrationContent } from "@/data/home";
 import { getPublishedCourseOptions } from "@/services/support.service";
 
-export async function TrialRegistrationSection({ submitted = false }: { submitted?: boolean }) {
+export async function TrialRegistrationSection({
+  submitted = false,
+}: {
+  submitted?: boolean;
+}) {
   const courses = await getPublishedCourseOptions();
-  return <section id="trial-registration" className="bg-white py-16 sm:py-20 lg:py-24" aria-labelledby="trial-registration-heading"><Container><div className="grid gap-10 lg:grid-cols-[.8fr_1.2fr] lg:gap-16"><div><p className="text-sm font-bold uppercase tracking-[.14em] text-brand-blue">{trialRegistrationContent.eyebrow}</p><h2 id="trial-registration-heading" className="mt-4 text-3xl font-bold leading-tight text-slate-950 sm:text-4xl">{trialRegistrationContent.title}</h2><p className="mt-5 text-lg leading-8 text-slate-600">{trialRegistrationContent.description}</p><div className="mt-8 rounded-2xl border border-blue-100 bg-blue-50 p-5 text-sm leading-6 text-blue-950"><p className="font-bold">Đăng ký được lưu an toàn</p><p className="mt-1">Thông tin gửi đi là yêu cầu học thử. Đội ngũ sẽ liên hệ để xác nhận khóa học và thời gian phù hợp.</p></div></div><div>{submitted?<div role="status" className="rounded-2xl border border-green-200 bg-green-50 p-6 text-green-900"><h3 className="text-xl font-bold">Đã ghi nhận đăng ký học thử</h3><p className="mt-2 leading-7">Cảm ơn bạn. Đội ngũ Vũ Thịnh sẽ liên hệ để xác nhận thông tin.</p></div>:courses.length?<PublicSubmissionForm action={submitHomeTrial} kind="registration" courses={courses} label="Gửi đăng ký học thử"/>:<div className="rounded-2xl border border-dashed border-slate-300 bg-slate-50 p-6"><h3 className="text-xl font-bold">Chưa có khóa học đang mở</h3><p className="mt-2 text-slate-600">Danh sách khóa học published đang được cập nhật.</p></div>}</div></div></Container></section>;
+  return (
+    <section
+      id="trial-registration"
+      className="bg-white py-16 sm:py-20 lg:py-24"
+      aria-labelledby="trial-registration-heading"
+    >
+      <Container>
+        <div className="grid gap-10 lg:grid-cols-[.8fr_1.2fr] lg:gap-16">
+          <div>
+            <p className="text-sm font-bold uppercase tracking-[.14em] text-brand-blue">
+              {trialRegistrationContent.eyebrow}
+            </p>
+            <h2
+              id="trial-registration-heading"
+              className="mt-4 text-3xl font-bold leading-tight text-slate-950 sm:text-4xl"
+            >
+              {trialRegistrationContent.title}
+            </h2>
+            <p className="mt-5 text-lg leading-8 text-slate-600">
+              {trialRegistrationContent.description}
+            </p>
+            <div className="mt-8 rounded-2xl border border-blue-100 bg-blue-50 p-5 text-sm leading-6 text-blue-950">
+              <p className="font-bold">Đăng ký được lưu an toàn</p>
+              <p className="mt-1">
+                Thông tin gửi đi là yêu cầu học thử. Đội ngũ sẽ liên hệ để xác
+                nhận khóa học và thời gian phù hợp.
+              </p>
+            </div>
+          </div>
+          <div>
+            {submitted ? (
+              <div
+                role="status"
+                className="rounded-2xl border border-green-200 bg-green-50 p-6 text-green-900"
+              >
+                <h3 className="text-xl font-bold">
+                  Đã ghi nhận đăng ký học thử
+                </h3>
+                <p className="mt-2 leading-7">
+                  Cảm ơn bạn. Đội ngũ Vũ Thịnh sẽ liên hệ để xác nhận thông tin.
+                </p>
+              </div>
+            ) : courses.length ? (
+              <PublicSubmissionForm
+                action={submitHomeTrial}
+                kind="registration"
+                courses={courses}
+                label="Gửi đăng ký học thử"
+              />
+            ) : (
+              <div className="rounded-2xl border border-dashed border-slate-300 bg-slate-50 p-6">
+                <h3 className="text-xl font-bold">Chưa có khóa học đang mở</h3>
+                <p className="mt-2 text-slate-600">
+                  Danh sách khóa học published đang được cập nhật.
+                </p>
+              </div>
+            )}
+          </div>
+        </div>
+      </Container>
+    </section>
+  );
 }

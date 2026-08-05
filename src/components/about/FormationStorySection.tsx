@@ -34,7 +34,9 @@ export function FormationStorySection() {
             <h3 className="mt-6 text-xl font-bold text-slate-950">
               {formationStoryContent.status}
             </h3>
-            <p className="mt-3 leading-7 text-slate-600">{formationStoryContent.note}</p>
+            <p className="mt-3 leading-7 text-slate-600">
+              {formationStoryContent.note}
+            </p>
             <ul className="mt-6 grid gap-3 text-sm text-slate-700 sm:grid-cols-2">
               {formationStoryContent.requiredInformation.map((item) => (
                 <li key={item} className="rounded-xl bg-slate-50 px-4 py-3">

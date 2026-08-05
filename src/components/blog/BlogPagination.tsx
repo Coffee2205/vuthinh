@@ -8,11 +8,22 @@ function pageHref(page: number, category?: string) {
   return query ? `/blog?${query}` : "/blog";
 }
 
-export function BlogPagination({ page, totalPages, category }: { page: number; totalPages: number; category?: string }) {
+export function BlogPagination({
+  page,
+  totalPages,
+  category,
+}: {
+  page: number;
+  totalPages: number;
+  category?: string;
+}) {
   if (totalPages <= 1) return null;
 
   return (
-    <nav className="mt-10 flex items-center justify-between gap-4" aria-label="Phân trang bài viết">
+    <nav
+      className="mt-10 flex items-center justify-between gap-4"
+      aria-label="Phân trang bài viết"
+    >
       <Link
         href={pageHref(page - 1, category)}
         aria-disabled={page <= 1}

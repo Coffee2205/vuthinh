@@ -20,7 +20,11 @@ export function Logo({ variant = "compact" }: LogoProps) {
         width={492}
         height={623}
         sizes={isWordmark ? "112px" : "56px"}
-        className={isWordmark ? "size-28 shrink-0 rounded-full object-cover object-center" : "size-14 shrink-0 rounded-full object-cover object-center"}
+        className={
+          isWordmark
+            ? "size-28 shrink-0 rounded-full object-cover object-center"
+            : "size-14 shrink-0 rounded-full object-cover object-center"
+        }
         priority={!isWordmark}
         unoptimized
       />

@@ -932,17 +932,20 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 - `npm.cmd run build` đạt; `/blog` được prerender tĩnh.
 - Production runtime `/blog` trả HTTP 200 và có đủ nội dung empty state.
 - Source có một `main`, một `h1`, section liên kết heading bằng `aria-labelledby` và danh sách semantic.
+
 ## 2026-07-21 — Dùng ảnh Vietnam–China trade street cho Hero
 
 - Thay nền màu/blur trang trí của Home Hero bằng ảnh WebP người dùng cung cấp.
 - Thêm overlay gradient responsive để giữ tương phản, không thay nội dung hoặc CTA.
 - Lint/build đạt; chưa commit và chưa push.
+
 ## 2026-07-21 — Dùng `images (1).png` làm logo website
 
 - Thêm `public/images/brand/vu-thinh-logo-color.png`.
 - Cập nhật Logo Header/Footer, `siteConfig` mark/wordmark/socialImage và icon/apple icon.
 - Crop ảnh nền đen thành huy hiệu tròn 56px/112px, giữ đúng vùng hoa văn.
 - Lint/build đạt; chưa commit và chưa push.
+
 ## 2026-07-21 — Đổi Header sang Dark purple-grey
 
 - Nền Header và mobile navigation dùng `#3D3242`.
@@ -950,6 +953,7 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 - Lint/build đạt; chưa commit và chưa push.
 - Điều chỉnh Hero tối bên trái, trong dần về bên phải; chuyển headline sang trắng, điểm nhấn champagne và nội dung phụ trắng mờ. Lint/build đạt.
 - Đổi crop logo từ ưu tiên phía trên sang chính giữa để giữ đầy đủ hoa văn và bỏ phần thừa đầu trên/dưới. Lint/build đạt.
+
 ## 2026-07-21 — Gradient nhẹ cho section nền trắng
 
 - Thêm utility `section-soft-gradient` với gradient hồng–tím rất nhạt.
@@ -981,6 +985,7 @@ Tài liệu này ghi các thay đổi quan trọng của dự án. Không cần 
 - Gỡ liên kết khỏi Header, Footer, Home và sitemap; chuyển CTA chương trình sang `/courses`.
 - Giữ admin/dữ liệu Resources cùng taxonomy dùng cho bộ lọc khóa học.
 - Lint/build đạt; route manifest không còn hai nhóm route public.
+
 # 2026-07-26
 
 - Thêm migration seed 20 bài Blog nguyên bản về lợi ích học tiếng Trung, kèm danh mục và metadata SEO.

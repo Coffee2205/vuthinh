@@ -2,19 +2,294 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/common/Container";
 import { ConsultationServiceCard } from "@/components/expert/ConsultationServiceCard";
-import { consultationProcess, expertPhoto, lecturerProfile } from "@/data/expert";
+import {
+  consultationProcess,
+  expertPhoto,
+  lecturerProfile,
+} from "@/data/expert";
 import { shouldBypassImageOptimization } from "@/lib/supabase/storage";
 import type { Expert } from "@/types/expert";
 
 export function ExpertProfile({ expert }: { expert: Expert }) {
-  return <>
-    <section className="bg-gradient-to-b from-brand-blue-soft to-white py-14 sm:py-20"><Container><div className="grid items-center gap-10 lg:grid-cols-[.85fr_1.15fr] lg:gap-16"><div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-3xl bg-gradient-to-br from-blue-100 to-emerald-100">{expert.avatar_url ? <Image src={expert.avatar_url} alt={expert.avatar_url === expertPhoto.src ? expertPhoto.alt : `Giảng viên ${expert.full_name}`} fill priority sizes="(min-width: 1024px) 40vw, 90vw" className={expert.avatar_url === expertPhoto.src ? "scale-125 object-cover object-[78%_50%]" : "object-cover"} unoptimized={shouldBypassImageOptimization(expert.avatar_url)} /> : <div className="grid h-full place-items-center"><span className="grid size-24 place-items-center rounded-3xl bg-white text-3xl font-extrabold text-brand-blue shadow-sm" aria-hidden="true">HA</span><span className="sr-only">Chưa có ảnh chân dung giảng viên</span></div>}</div><div><p className="text-sm font-bold uppercase tracking-[0.14em] text-brand-blue">Giảng viên đồng hành</p><h1 className="mt-4 text-4xl font-bold tracking-tight text-slate-950 sm:text-5xl">Giảng viên {expert.full_name}</h1><p className="mt-3 text-xl font-semibold text-brand-green">Tên thường gọi: {lecturerProfile.alternateName}</p><p className="mt-2 font-medium text-slate-700">{expert.professional_title}</p>{expert.short_bio && <p className="mt-6 text-lg leading-8 text-slate-600">{expert.short_bio}</p>}<Link href="/consultation" className="button-primary mt-7">Đăng ký tư vấn với giảng viên</Link></div></div></Container></section>
-    <section className="py-14 sm:py-20" aria-labelledby="expert-about"><Container><div className="grid gap-10 lg:grid-cols-[1.15fr_.85fr]"><div><h2 id="expert-about" className="text-3xl font-bold text-slate-950">Kinh nghiệm</h2>{expert.biography && <p className="mt-5 whitespace-pre-line leading-8 text-slate-600">{expert.biography}</p>}{expert.consultation_philosophy && <blockquote className="mt-6 rounded-2xl border-l-4 border-brand-green bg-emerald-50 p-6 leading-8 text-emerald-950">{expert.consultation_philosophy}</blockquote>}</div><div className="rounded-2xl bg-slate-50 p-6"><h3 className="text-lg font-bold text-slate-950">Ngôn ngữ sử dụng</h3><ul className="mt-4 flex flex-wrap gap-2">{expert.languages.map((language) => <li key={language} className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-slate-700">{language}</li>)}</ul></div></div></Container></section>
-    {expert.expert_qualifications.length > 0 && <section className="bg-slate-50 py-14 sm:py-20" aria-labelledby="expert-qualifications"><Container><h2 id="expert-qualifications" className="text-3xl font-bold text-slate-950">Học vấn</h2><ul className="mt-7 grid gap-5 sm:grid-cols-2">{expert.expert_qualifications.map((item) => <li key={item.id} className="rounded-2xl border border-slate-200 bg-white p-6"><p className="text-xs font-bold uppercase tracking-wider text-brand-blue">Học vấn</p><h3 className="mt-2 text-xl font-bold text-slate-950">{item.title}</h3>{item.institution && <p className="mt-2 font-medium text-slate-700">{item.institution}</p>}{item.description && <p className="mt-3 leading-7 text-slate-600">{item.description}</p>}</li>)}</ul></Container></section>}
-    <section className="py-14 sm:py-20" aria-labelledby="expert-specializations"><Container><h2 id="expert-specializations" className="text-3xl font-bold text-slate-950">Lĩnh vực giảng dạy</h2><ul className="mt-7 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">{lecturerProfile.teachingAreas.map((area, index) => <li key={area} className="rounded-2xl border border-slate-200 p-6"><span className="text-sm font-extrabold text-brand-blue" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span><h3 className="mt-3 text-lg font-bold text-slate-950">{area}</h3></li>)}</ul></Container></section>
-    <section className="bg-blue-50 py-14 sm:py-20" aria-labelledby="consultation-services"><Container><h2 id="consultation-services" className="text-3xl font-bold text-slate-950">Dịch vụ tư vấn</h2>{expert.consultation_services.length ? <ul className="mt-7 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">{expert.consultation_services.map((service) => <li key={service.id}><ConsultationServiceCard service={service} /></li>)}</ul> : <p className="mt-5 rounded-2xl bg-white p-6 text-slate-600">Dịch vụ đang được cập nhật.</p>}</Container></section>
-    <section className="py-14 sm:py-20" aria-labelledby="consultation-process"><Container><h2 id="consultation-process" className="text-3xl font-bold text-slate-950">Quy trình tư vấn</h2><ol className="mt-7 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">{consultationProcess.map((step, index) => <li key={step.title} className="rounded-2xl border border-slate-200 p-5"><span className="grid size-9 place-items-center rounded-full bg-brand-blue text-sm font-bold text-white">{index + 1}</span><h3 className="mt-4 font-bold text-slate-950">{step.title}</h3><p className="mt-2 text-sm leading-6 text-slate-600">{step.description}</p></li>)}</ol></Container></section>
-    {expert.expert_faqs.length > 0 && <section className="bg-slate-50 py-14 sm:py-20" aria-labelledby="expert-faq"><Container><div className="mx-auto max-w-3xl"><h2 id="expert-faq" className="text-3xl font-bold text-slate-950">Câu hỏi thường gặp</h2><div className="mt-7 grid gap-3">{expert.expert_faqs.map((faq) => <details key={faq.id} className="group rounded-2xl border border-slate-200 bg-white p-5"><summary className="cursor-pointer list-none font-bold text-slate-950 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-blue">{faq.question}</summary><p className="mt-4 leading-7 text-slate-600">{faq.answer}</p></details>)}</div></div></Container></section>}
-    <section className="bg-brand-blue py-14 text-white sm:py-18" aria-labelledby="expert-final-cta"><Container><div className="mx-auto max-w-3xl text-center"><h2 id="expert-final-cta" className="text-3xl font-bold">Bắt đầu từ một lộ trình rõ ràng</h2><p className="mt-4 leading-7 text-blue-100">Chọn dịch vụ phù hợp hoặc gửi yêu cầu để cùng giảng viên làm rõ nhu cầu học tập.</p><Link href="/consultation" className="mt-7 inline-flex min-h-11 items-center justify-center rounded-lg bg-white px-5 py-2 font-semibold text-brand-blue focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Đăng ký tư vấn với giảng viên</Link></div></Container></section>
-  </>;
+  return (
+    <>
+      <section className="bg-gradient-to-b from-brand-blue-soft to-white py-14 sm:py-20">
+        <Container>
+          <div className="grid items-center gap-10 lg:grid-cols-[.85fr_1.15fr] lg:gap-16">
+            <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-3xl bg-gradient-to-br from-blue-100 to-emerald-100">
+              {expert.avatar_url ? (
+                <Image
+                  src={expert.avatar_url}
+                  alt={
+                    expert.avatar_url === expertPhoto.src
+                      ? expertPhoto.alt
+                      : `Giảng viên ${expert.full_name}`
+                  }
+                  fill
+                  priority
+                  sizes="(min-width: 1024px) 40vw, 90vw"
+                  className={
+                    expert.avatar_url === expertPhoto.src
+                      ? "scale-125 object-cover object-[78%_50%]"
+                      : "object-cover"
+                  }
+                  unoptimized={shouldBypassImageOptimization(expert.avatar_url)}
+                />
+              ) : (
+                <div className="grid h-full place-items-center">
+                  <span
+                    className="grid size-24 place-items-center rounded-3xl bg-white text-3xl font-extrabold text-brand-blue shadow-sm"
+                    aria-hidden="true"
+                  >
+                    HA
+                  </span>
+                  <span className="sr-only">
+                    Chưa có ảnh chân dung giảng viên
+                  </span>
+                </div>
+              )}
+            </div>
+            <div>
+              <p className="text-sm font-bold uppercase tracking-[0.14em] text-brand-blue">
+                Giảng viên đồng hành
+              </p>
+              <h1 className="mt-4 text-4xl font-bold tracking-tight text-slate-950 sm:text-5xl">
+                Giảng viên {expert.full_name}
+              </h1>
+              <p className="mt-3 text-xl font-semibold text-brand-green">
+                Tên thường gọi: {lecturerProfile.alternateName}
+              </p>
+              <p className="mt-2 font-medium text-slate-700">
+                {expert.professional_title}
+              </p>
+              {expert.short_bio && (
+                <p className="mt-6 text-lg leading-8 text-slate-600">
+                  {expert.short_bio}
+                </p>
+              )}
+              <Link href="/consultation" className="button-primary mt-7">
+                Đăng ký tư vấn với giảng viên
+              </Link>
+            </div>
+          </div>
+        </Container>
+      </section>
+      <section className="py-14 sm:py-20" aria-labelledby="expert-about">
+        <Container>
+          <div className="grid gap-10 lg:grid-cols-[1.15fr_.85fr]">
+            <div>
+              <h2
+                id="expert-about"
+                className="text-3xl font-bold text-slate-950"
+              >
+                Kinh nghiệm
+              </h2>
+              {expert.biography && (
+                <p className="mt-5 whitespace-pre-line leading-8 text-slate-600">
+                  {expert.biography}
+                </p>
+              )}
+              {expert.consultation_philosophy && (
+                <blockquote className="mt-6 rounded-2xl border-l-4 border-brand-green bg-emerald-50 p-6 leading-8 text-emerald-950">
+                  {expert.consultation_philosophy}
+                </blockquote>
+              )}
+            </div>
+            <div className="rounded-2xl bg-slate-50 p-6">
+              <h3 className="text-lg font-bold text-slate-950">
+                Ngôn ngữ sử dụng
+              </h3>
+              <ul className="mt-4 flex flex-wrap gap-2">
+                {expert.languages.map((language) => (
+                  <li
+                    key={language}
+                    className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-slate-700"
+                  >
+                    {language}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </Container>
+      </section>
+      {expert.expert_qualifications.length > 0 && (
+        <section
+          className="bg-slate-50 py-14 sm:py-20"
+          aria-labelledby="expert-qualifications"
+        >
+          <Container>
+            <h2
+              id="expert-qualifications"
+              className="text-3xl font-bold text-slate-950"
+            >
+              Học vấn
+            </h2>
+            <ul className="mt-7 grid gap-5 sm:grid-cols-2">
+              {expert.expert_qualifications.map((item) => (
+                <li
+                  key={item.id}
+                  className="rounded-2xl border border-slate-200 bg-white p-6"
+                >
+                  <p className="text-xs font-bold uppercase tracking-wider text-brand-blue">
+                    Học vấn
+                  </p>
+                  <h3 className="mt-2 text-xl font-bold text-slate-950">
+                    {item.title}
+                  </h3>
+                  {item.institution && (
+                    <p className="mt-2 font-medium text-slate-700">
+                      {item.institution}
+                    </p>
+                  )}
+                  {item.description && (
+                    <p className="mt-3 leading-7 text-slate-600">
+                      {item.description}
+                    </p>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </Container>
+        </section>
+      )}
+      <section
+        className="py-14 sm:py-20"
+        aria-labelledby="expert-specializations"
+      >
+        <Container>
+          <h2
+            id="expert-specializations"
+            className="text-3xl font-bold text-slate-950"
+          >
+            Lĩnh vực giảng dạy
+          </h2>
+          <ul className="mt-7 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {lecturerProfile.teachingAreas.map((area, index) => (
+              <li
+                key={area}
+                className="rounded-2xl border border-slate-200 p-6"
+              >
+                <span
+                  className="text-sm font-extrabold text-brand-blue"
+                  aria-hidden="true"
+                >
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <h3 className="mt-3 text-lg font-bold text-slate-950">
+                  {area}
+                </h3>
+              </li>
+            ))}
+          </ul>
+        </Container>
+      </section>
+      <section
+        className="bg-blue-50 py-14 sm:py-20"
+        aria-labelledby="consultation-services"
+      >
+        <Container>
+          <h2
+            id="consultation-services"
+            className="text-3xl font-bold text-slate-950"
+          >
+            Dịch vụ tư vấn
+          </h2>
+          {expert.consultation_services.length ? (
+            <ul className="mt-7 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {expert.consultation_services.map((service) => (
+                <li key={service.id}>
+                  <ConsultationServiceCard service={service} />
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className="mt-5 rounded-2xl bg-white p-6 text-slate-600">
+              Dịch vụ đang được cập nhật.
+            </p>
+          )}
+        </Container>
+      </section>
+      <section
+        className="py-14 sm:py-20"
+        aria-labelledby="consultation-process"
+      >
+        <Container>
+          <h2
+            id="consultation-process"
+            className="text-3xl font-bold text-slate-950"
+          >
+            Quy trình tư vấn
+          </h2>
+          <ol className="mt-7 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
+            {consultationProcess.map((step, index) => (
+              <li
+                key={step.title}
+                className="rounded-2xl border border-slate-200 p-5"
+              >
+                <span className="grid size-9 place-items-center rounded-full bg-brand-blue text-sm font-bold text-white">
+                  {index + 1}
+                </span>
+                <h3 className="mt-4 font-bold text-slate-950">{step.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-slate-600">
+                  {step.description}
+                </p>
+              </li>
+            ))}
+          </ol>
+        </Container>
+      </section>
+      {expert.expert_faqs.length > 0 && (
+        <section
+          className="bg-slate-50 py-14 sm:py-20"
+          aria-labelledby="expert-faq"
+        >
+          <Container>
+            <div className="mx-auto max-w-3xl">
+              <h2 id="expert-faq" className="text-3xl font-bold text-slate-950">
+                Câu hỏi thường gặp
+              </h2>
+              <div className="mt-7 grid gap-3">
+                {expert.expert_faqs.map((faq) => (
+                  <details
+                    key={faq.id}
+                    className="group rounded-2xl border border-slate-200 bg-white p-5"
+                  >
+                    <summary className="cursor-pointer list-none font-bold text-slate-950 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-blue">
+                      {faq.question}
+                    </summary>
+                    <p className="mt-4 leading-7 text-slate-600">
+                      {faq.answer}
+                    </p>
+                  </details>
+                ))}
+              </div>
+            </div>
+          </Container>
+        </section>
+      )}
+      <section
+        className="bg-brand-blue py-14 text-white sm:py-18"
+        aria-labelledby="expert-final-cta"
+      >
+        <Container>
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 id="expert-final-cta" className="text-3xl font-bold">
+              Bắt đầu từ một lộ trình rõ ràng
+            </h2>
+            <p className="mt-4 leading-7 text-blue-100">
+              Chọn dịch vụ phù hợp hoặc gửi yêu cầu để cùng giảng viên làm rõ
+              nhu cầu học tập.
+            </p>
+            <Link
+              href="/consultation"
+              className="mt-7 inline-flex min-h-11 items-center justify-center rounded-lg bg-white px-5 py-2 font-semibold text-brand-blue focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            >
+              Đăng ký tư vấn với giảng viên
+            </Link>
+          </div>
+        </Container>
+      </section>
+    </>
+  );
 }

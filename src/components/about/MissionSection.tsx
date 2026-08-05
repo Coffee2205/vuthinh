@@ -30,7 +30,10 @@ export function MissionSection() {
                 key={responsibility.title}
                 className="rounded-2xl border border-blue-100 bg-white p-6 sm:p-7"
               >
-                <span className="text-sm font-bold text-brand-blue" aria-hidden="true">
+                <span
+                  className="text-sm font-bold text-brand-blue"
+                  aria-hidden="true"
+                >
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <h3 className="mt-3 text-xl font-bold text-slate-950">
@@ -43,7 +46,9 @@ export function MissionSection() {
             ))}
           </ol>
         </div>
-        <p className="mt-8 text-sm leading-6 text-slate-500">{missionContent.note}</p>
+        <p className="mt-8 text-sm leading-6 text-slate-500">
+          {missionContent.note}
+        </p>
       </Container>
     </section>
   );

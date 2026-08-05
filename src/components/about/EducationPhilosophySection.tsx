@@ -41,7 +41,9 @@ export function EducationPhilosophySection() {
                     {principle.label}
                   </p>
                   <h3 className="mt-2 text-xl font-bold">{principle.title}</h3>
-                  <p className="mt-3 leading-7 text-slate-300">{principle.description}</p>
+                  <p className="mt-3 leading-7 text-slate-300">
+                    {principle.description}
+                  </p>
                 </div>
               </li>
             ))}

@@ -1,1 +1,22 @@
-export function CoursePageSkeleton() { return <div className="animate-pulse bg-slate-50 py-12" aria-busy="true" aria-label="Đang tải nội dung khóa học"><div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><div className="h-4 w-52 rounded bg-slate-200" /><div className="mt-8 grid gap-8 lg:grid-cols-2"><div className="aspect-[16/10] rounded-3xl bg-slate-200" /><div><div className="h-4 w-40 rounded bg-slate-200" /><div className="mt-5 h-12 w-4/5 rounded bg-slate-200" /><div className="mt-6 h-36 rounded-2xl bg-slate-200" /></div></div></div><span className="sr-only">Đang tải…</span></div>; }
+export function CoursePageSkeleton() {
+  return (
+    <div
+      className="animate-pulse bg-slate-50 py-12"
+      aria-busy="true"
+      aria-label="Đang tải nội dung khóa học"
+    >
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="h-4 w-52 rounded bg-slate-200" />
+        <div className="mt-8 grid gap-8 lg:grid-cols-2">
+          <div className="aspect-[16/10] rounded-3xl bg-slate-200" />
+          <div>
+            <div className="h-4 w-40 rounded bg-slate-200" />
+            <div className="mt-5 h-12 w-4/5 rounded bg-slate-200" />
+            <div className="mt-6 h-36 rounded-2xl bg-slate-200" />
+          </div>
+        </div>
+      </div>
+      <span className="sr-only">Đang tải…</span>
+    </div>
+  );
+}
